@@ -1,0 +1,382 @@
+% ****************************************************************************************************
+% classicthesis-config.tex 
+% formerly known as loadpackages.sty, classicthesis-ldpkg.sty, and classicthesis-preamble.sty 
+% Use it at the beginning of your ClassicThesis.tex, or as a LaTeX Preamble 
+% in your ClassicThesis.{tex,lyx} with \input{classicthesis-config}
+% ****************************************************************************************************  
+% If you like the classicthesis, then I would appreciate a postcard. 
+% My address can be found in the file ClassicThesis.pdf. A collection 
+% of the postcards I received so far is available online at 
+% http://postcards.miede.de
+% ****************************************************************************************************
+
+% ****************************************************************************************************
+% 1. Configure classicthesis for your needs here, e.g., remove "drafting" below 
+% in order to deactivate the time-stamp on the pages
+% ****************************************************************************************************
+\PassOptionsToPackage{eulerchapternumbers,listings,drafting,%
+				 pdfspacing,%floatperchapter,%linedheaders,%
+				 subfig,beramono,eulermath,parts}{classicthesis}										
+% ********************************************************************
+% Available options for classicthesis.sty 
+% (see ClassicThesis.pdf for more information):
+% drafting
+% parts nochapters linedheaders
+% eulerchapternumbers beramono eulermath pdfspacing minionprospacing
+% tocaligned dottedtoc manychapters
+% listings floatperchapter subfig
+% ********************************************************************
+
+% ********************************************************************
+% Triggers for this config
+% ******************************************************************** 
+\usepackage{ifthen}
+\newboolean{enable-backrefs} % enable backrefs in the bibliography
+\setboolean{enable-backrefs}{false} % true false
+% ****************************************************************************************************
+
+
+% ****************************************************************************************************
+% 2. Personal data and user ad-hoc commands
+% ****************************************************************************************************
+\newcommand{\myTitle}{Bachelortheses\xspace}
+\newcommand{\mySubtitle}{Katze \and Hund\xspace}
+\newcommand{\myDegree}{\xspace}
+\newcommand{\myName}{Tim Benedikt Herbstrith\xspace}
+\newcommand{\myProf}{Put name here\xspace}
+\newcommand{\myOtherProf}{Put name here\xspace}
+\newcommand{\mySupervisor}{Put name here\xspace}
+\newcommand{\myFaculty}{Put data here\xspace}
+\newcommand{\myDepartment}{Put data here\xspace}
+\newcommand{\myUni}{Put data here\xspace}
+\newcommand{\myLocation}{Vienna\xspace}
+\newcommand{\myTime}{July 2015\xspace}
+\newcommand{\myVersion}{version 0.1.1\xspace}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\mt}{\mapsto}
+
+% ********************************************************************
+% Setup, finetuning, and useful commands
+% ********************************************************************
+\newcounter{dummy} % necessary for correct hyperlinks (to index, bib, etc.)
+\newlength{\abcd} % for ab..z string length calculation
+\providecommand{\mLyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
+\newcommand{\ie}{i.\,e.}
+\newcommand{\Ie}{I.\,e.}
+\newcommand{\eg}{e.\,g.}
+\newcommand{\Eg}{E.\,g.}
+
+% New- and Renewcommands
+\newcommand{\seq}[2][n]{#2_{1},\ldots,#2_{#1}}
+\newcommand{\nicefrac}[2]{#1/#2}
+\newcommand{\MtN}{\nicefrac{M}{N}}
+\newcommand{\MTN}{\faktor{M}{N}}
+\newcommand{\T}{T^{(2)}}
+\newcommand{\VT}{V\left(\T\right)}
+\newcommand{\ET}{E\left(\T\right)}
+\newcommand{\ST}[1]{\T_{#1}}
+\newcommand{\VST}[1]{V\left(\ST{#1}\right)}
+\newcommand{\EST}[1]{E\left(\ST{#1}\right)}
+\newcommand{\AutT}{\Aut\left(\T\right)}
+\newcommand{\St}[2][]{\mathrm{St}_{#1}(#2)}
+% ****************************************************************************************************
+
+
+% ****************************************************************************************************
+% 3. Loading some handy packages
+% ****************************************************************************************************
+% ******************************************************************** 
+% Packages with options that might require adjustments
+% ******************************************************************** 
+\PassOptionsToPackage{utf8}{inputenc}	% latin9 (ISO-8859-9) = latin1+"Euro sign"
+ \usepackage{inputenc}				
+
+%\PassOptionsToPackage{ngerman,american}{babel}   % change this to your language(s)
+% Spanish languages need extra options in order to work with this template
+%\PassOptionsToPackage{spanish,es-lcroman}{babel}
+ \usepackage{babel}
+ \usepackage{csquotes}				
+
+% BibLaTex
+\usepackage[style=numeric,backend=bibtex]{biblatex}
+\addbibresource{./parts/content/References2012}
+\addbibresource{./parts/content/References2013}		
+
+\PassOptionsToPackage{fleqn}{amsmath}		% math environments and more by the AMS 
+ \usepackage{amsmath,amsfonts,amssymb,amsthm}
+
+% ********************************************************************
+% Math, Operators and Theorems
+\usepackage{thmtools}	% More Flexibility in Theorem Styles + Provides in Combination with ref-Packages the 
+						% Possibility to Refer to Theorem Style in Reference.
+\usepackage{faktor}		% Displays factor groups
+
+\numberwithin{equation}{section}
+
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\C}{\mathbb{C}}
+\DeclareMathOperator{\F}{\mathbb{F}}
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\id}{id}
+
+\DeclareMathOperator{\kernel}{ker}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\End}{\mathrm{End}}
+\DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Mod}{\mathrm{mod}}
+\DeclareMathOperator{\D}{\mathrm{D}}
+\DeclareMathOperator{\lcm}{\mathrm{lcm}}
+\DeclareMathOperator{\ord}{\mathrm{ord}}
+
+
+
+\declaretheorem[
+	name=Theorem,
+  	refname={theorem,theorems},		%Lower Case Versions of Theorem Type
+  	Refname={Theorem,Theorems},
+  	numberwithin=section]{thm}
+\declaretheorem[
+	name=Lemma,
+	refname={lemma,lemmas},
+	Refname={Lemma,Lemmas},
+	sibling=thm]{lem}
+\declaretheorem[
+	name=Proposition,
+	refname={proposition,propositions},
+	Refname={Proposition,Propositions},
+	sibling=thm]{pro}
+\declaretheorem[
+	name=Corollary,
+	refname={corollary,corollarys},
+	Refname={Corollary,Corollarys},
+	sibling=thm]{cor}
+
+\declaretheorem[
+	name=Definition,
+	style=definition,
+	numbered=no]{defin}
+\declaretheorem[
+	name=Example,
+	style=definition,
+	numbered=no]{exam}
+	
+\declaretheorem[
+	name=Remark,
+	style=remark,
+	numbered=no]{rem}
+
+% ********************************************************************
+%TikZ and TikZ-Styles
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+%\pgfrealjobname{HerbstrithBachelorthesis}
+%\usetikzlibrary{external}
+%\tikzexternalize[prefix=figures/]
+
+\usepackage{pgfcore}
+\usetikzlibrary{arrows}
+%\usepackage{pgfbaselayers}
+%\usepackage{pgfbaseimage} %Externalize Graphics
+
+\tikzstyle{every node}=[circle,draw=black,font=\small,text=black,inner sep=1pt, minimum size=5mm]
+\tikzstyle{edge from parent}=[draw=black]
+\tikzstyle{st}=[black!20, line join=round, line width=2mm]
+\tikzstyle{st1}=[black!40, line join=round, line width=2mm]
+
+\tikzstyle{bgn}=[node distance=6mm, font=normal]
+\tikzstyle{hlarrow}=[<->, shorten <=1pt, shorten >=1pt, draw, thick]
+
+\tikzstyle{level 1}=[sibling distance=60mm]
+\tikzstyle{level 2}=[sibling distance=30mm]
+\tikzstyle{level 3}=[sibling distance=15mm]
+\tikzstyle{level 4}=[sibling distance=7.5mm]
+\tikzstyle{level 5}=[sibling distance=3.75mm, level distance=5mm]
+
+
+% ******************************************************************** 
+% General useful packages
+% ******************************************************************** 
+\PassOptionsToPackage{T1}{fontenc} % T2A for cyrillics
+	\usepackage{fontenc}     
+\usepackage{textcomp} % fix warning with missing font shapes
+\usepackage{scrhack} % fix warnings when using KOMA with listings package          
+\usepackage{xspace} % to get the spacing after macros right  
+\usepackage{mparhack} % get marginpar right
+\usepackage{fixltx2e} % fixes some LaTeX stuff 
+\PassOptionsToPackage{printonlyused,smaller}{acronym}
+	\usepackage{acronym} % nice macros for handling all acronyms in the thesis
+%\renewcommand*{\acsfont}[1]{\textssc{#1}} % for MinionPro
+\renewcommand{\bflabel}[1]{{#1}\hfill} % fix the list of acronyms
+% ****************************************************************************************************
+
+
+% ****************************************************************************************************
+% 4. Setup floats: tables, (sub)figures, and captions
+% ****************************************************************************************************
+\usepackage{tabularx} % better tables
+	\setlength{\extrarowheight}{3pt} % increase table row height
+\newcommand{\tableheadline}[1]{\multicolumn{1}{c}{\spacedlowsmallcaps{#1}}}
+\newcommand{\myfloatalign}{\centering} % to be used with each float for alignment
+\usepackage{caption}
+\captionsetup{format=hang,font=small}
+\usepackage{subfig} 
+
+\usepackage{enumitem}
+\newlist{thmlist}{enumerate}{1}			% thmlist-s may only be used in theorem environments
+\setlist[thmlist]{label=(\roman{thmlisti}), ref=\thethm.(\roman{thmlisti}),noitemsep}
+\newlist{exlist}{enumerate}{1}
+\setlist[exlist]{label=(\arabic{exlisti}), ref=(\arabic{exlisti}),noitemsep,leftmargin=0pt,itemindent=2\parindent}
+\newlist{plist}{enumerate}{1}
+\setlist[plist]{label=(\roman{plisti}), ref=(\roman{plisti}),noitemsep,leftmargin=0pt,itemindent=2\parindent}
+\newlist{clist}{enumerate}{2}
+\setlist[clist]{label*=(\alph*), ref=(\alph*),noitemsep,leftmargin=0pt,itemindent=2\parindent} 
+
+\usepackage{multienum}
+% ****************************************************************************************************
+
+
+% ****************************************************************************************************
+% 5. Setup code listings
+% ****************************************************************************************************
+\usepackage{listings} 
+%\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % for special keywords
+\lstset{language=[5.2]Mathematica,%C++,
+    keywordstyle=\color{RoyalBlue},%\bfseries,
+    basicstyle=\small\ttfamily,
+    %identifierstyle=\color{NavyBlue},
+    commentstyle=\color{Green}\ttfamily,
+    stringstyle=\rmfamily,
+    numbers=none,%left,%
+    numberstyle=\scriptsize,%\tiny
+    stepnumber=5,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frameround=ftff,
+    frame=single,
+    belowcaptionskip=.75\baselineskip
+    %frame=L
+} 
+% ****************************************************************************************************    		   
+
+
+% ****************************************************************************************************
+% 6. PDFLaTeX, hyperreferences and citation backreferences
+% ****************************************************************************************************
+% ********************************************************************
+% Using PDFLaTeX
+% ********************************************************************
+\PassOptionsToPackage{hyperfootnotes=false,pdfpagelabels}{hyperref}
+	\usepackage{hyperref}  % backref linktocpage pagebackref
+\pdfcompresslevel=9
+\pdfadjustspacing=1 
+\PassOptionsToPackage{pdftex}{graphicx}
+	\usepackage{graphicx} 
+
+% ********************************************************************
+% Setup the style of the backrefs from the bibliography
+% (translate the options to any language you use)
+% ********************************************************************
+\newcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
+\newcommand{\backrefcitedsinglestring}[1]{(Cited on page~#1.)}
+\newcommand{\backrefcitedmultistring}[1]{(Cited on pages~#1.)}
+\ifthenelse{\boolean{enable-backrefs}}%
+{%
+		\PassOptionsToPackage{hyperpageref}{backref}
+		\usepackage{backref} % to be loaded after hyperref package 
+		   \renewcommand{\backreftwosep}{ and~} % separate 2 pages
+		   \renewcommand{\backreflastsep}{, and~} % separate last of longer list
+		   \renewcommand*{\backref}[1]{}  % disable standard
+		   \renewcommand*{\backrefalt}[4]{% detailed backref
+		      \ifcase #1 %
+		         \backrefnotcitedstring%
+		      \or%
+		         \backrefcitedsinglestring{#2}%
+		      \else%
+		         \backrefcitedmultistring{#2}%
+		      \fi}%
+}{\relax}    
+
+% ********************************************************************
+% Hyperreferences
+% ********************************************************************
+\hypersetup{%
+    %draft,	% = no hyperlinking at all (useful in b/w printouts)
+    colorlinks=false, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    % uncomment the following line if you want to have black links (e.g., for printing)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%nesting=true,%frenchlinks,%
+    urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    pdftitle={\myTitle},%
+    pdfauthor={\textcopyright\ \myName, \myUni, \myFaculty},%
+    pdfsubject={},%
+    pdfkeywords={},%
+    pdfcreator={pdfLaTeX},%
+    pdfproducer={LaTeX with hyperref and classicthesis}%
+}   
+
+% ********************************************************************
+% Setup autoreferences
+% ********************************************************************
+\usepackage[capitalize]{cleveref}
+
+\Crefname{thm}{Thm.}{Thms.}
+\Crefname{lem}{Lemma}{Lemmas.}
+\Crefname{pro}{Prop.}{Props.}
+\Crefname{cor}{Cor.}{Cors.}
+
+\addtotheorempostheadhook[thm]{\crefalias{thmlisti}{thm}}
+\addtotheorempostheadhook[lem]{\crefalias{thmlisti}{lem}}
+\addtotheorempostheadhook[pro]{\crefalias{thmlisti}{pro}}
+\addtotheorempostheadhook[cor]{\crefalias{thmlisti}{cor}}
+
+
+
+% ****************************************************************************************************
+% 7. Last calls before the bar closes
+% ****************************************************************************************************
+% ********************************************************************
+% Development Stuff
+% ********************************************************************
+\listfiles
+%\PassOptionsToPackage{l2tabu,orthodox,abort}{nag}
+%	\usepackage{nag}
+%\PassOptionsToPackage{warning, all}{onlyamsmath}
+%	\usepackage{onlyamsmath}
+
+% ********************************************************************
+% Last, but not least...
+% ********************************************************************
+\usepackage{classicthesis} 
+% ****************************************************************************************************
+
+
+% ****************************************************************************************************
+% 8. Further adjustments (experimental)
+% ****************************************************************************************************
+% ********************************************************************
+% Changing the text area
+% ********************************************************************
+%\linespread{1.05} % a bit more for Palatino
+%\areaset[current]{312pt}{761pt} % 686 (factor 2.2) + 33 head + 42 head \the\footskip
+%\setlength{\marginparwidth}{7em}%
+%\setlength{\marginparsep}{2em}%
+
+% ********************************************************************
+% Using different fonts
+% ********************************************************************
+%\usepackage[oldstylenums]{kpfonts} % oldstyle notextcomp
+%\usepackage[osf]{libertine}
+%\usepackage{hfoldsty} % Computer Modern with osf
+%\usepackage[light,condensed,math]{iwona}
+%\renewcommand{\sfdefault}{iwona}
+%\usepackage{lmodern} % <-- no osf support :-(
+%\usepackage[urw-garamond]{mathdesign} <-- no osf support :-(
+% ****************************************************************************************************

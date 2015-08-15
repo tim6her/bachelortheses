@@ -1,0 +1,111 @@
+ \begin{defin}
+Let $M,M'$ be two modules over a unital ring $R$ and let $\varphi : M \ra M'$ be a mapping. 
+\begin{exlist}
+\item We call $\varphi$ a \emph{module-homomorphism} or \textit{$R$-linear}, if it satisfies
+\begin{exlist}
+\item $\varphi(x+y)=\varphi(x)+\varphi(y)$ and
+\item $\varphi(ax)=a\varphi(x)$
+\end{exlist}
+for all $x,y \in M$ and all $a \in R$.
+\item A (module-)homomorphism is called \textit{monomorphism}, if it is injective. An \emph{epimorphism} is a surjective homomorphism. A bijective homomorphism is referred to as \textit{isomorphism}. If $M=M'$ we call $\varphi$ an \textit{endomorphism}. A bijective endomorphism is called \textit{automorphism}.
+\item For a homomorphism $\varphi$ we define the subset $\ker(\varphi)\subseteq M$ by $\ker(\varphi):=\lbrace x\in M \mid \varphi(x)=0\rbrace$ and call it the \emph{kernel of $\varphi$}. The subset $\im(\varphi)\subseteq M'$ is defined by $\im(\varphi):=\lbrace y\in M' \mid \exists x\in M\colon \varphi(x)=y\rbrace$. This set is called \emph{image of $\varphi$}.
+\end{exlist}
+\end{defin}
+
+Note that the first postulate in the definition of a module-homomorphism implies that $\varphi$ is a group-homomorphism. We can therefore apply statements of group-homomorphisms to module-homomorphisms. For example every module-homomorphism $\varphi\colon M\rightarrow M'$ satisfies $\varphi(0)=0$ and $\varphi(-x)=-\varphi(x)$.
+
+\begin{exam}
+\begin{enumerate}
+\item Given a modul $M$, the mapping $\id_M\colon M \rightarrow M$ defined by $x\mapsto x$ is an automorphism. We  call this mapping the \emph{identity} (mapping) on $M$.
+\item Let $M, M'$ be $R$-modules. The mapping $\varphi\colon M\rightarrow M'$ defined by $x\mapsto 0$ is a homomorphism with $\ker(\varphi)=M$. 
+\item Let $G, H$ be two $\Z$-modules like the one defined in Example~\secref{ex.module}{ex.Z module}, then every group-homomorphism $\varphi\colon G\rightarrow H$ is a module-homomorphism. To prove this one verifies $\varphi(rx)=r\varphi(x)$ for all $r\in\Z$, $z\geq 0$ per induction on $r$. If $r<0$, we note that 
+\begin{equation*}
+\varphi(rx)=\varphi(-1(\lvert r\rvert x))=-\varphi(\lvert r\rvert x)=-\lvert r\rvert\varphi(x)=r\varphi(x).
+\end{equation*}
+\end{enumerate}
+\end{exam}
+
+\begin{lemma}\label{lm.Composition of Homo} Let $M, N, O$ be $R$-modules and $\varphi\colon M\rightarrow N$, $\psi\colon N\rightarrow O$ homomorphisms, then $\psi\circ\varphi\colon M\rightarrow O$ is a homomorphism.
+\end{lemma}
+\begin{proof}
+Regarding group-homomorphisms, the above statement holds. Hence, it is enough to prove the compatibility with scalar multiplication. Let therefore $a$ be in $R$ and $x$ be in $N$, then $\psi(\varphi(ax))=\psi(a\varphi(x))=a\psi(\varphi(x))$.
+\end{proof}
+
+One verifies easily that Lemma~\ref{lm.Composition of Homo} holds for monomorphisms as well, i.e. let $M, N, O$ be $R$-modules and $\varphi\colon M\rightarrow N$, $\psi\colon N\rightarrow O$ monomorphisms, then $\psi\circ\varphi\colon N\rightarrow O$ is a monomorphism. Moreover, the statement remains true for epi- and isomorphisms.
+
+\begin{lemma}
+Let $M,M'$ be $R$-modules and $\varphi\colon M\rightarrow M'$ a homomorphism, then the following statements hold:
+\begin{exlist}
+\item Let $N$ be a submodule of $M$ and $N'$ a submodule of $M'$ then $\varphi(N)\leq M'$ and $\varphi^{-1}(N') \leq M$.
+\item $\ker(\varphi)\leq M$ and $\im(\varphi)\leq M'$.
+\item The mapping $\varphi$ is a monomorphism if and only if $\ker(\varphi)={0}$.
+\end{exlist}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+\item We notice that $\varphi(N)$ is an Abelian subgroup of $M'$ and $\varphi^{-1}(N')$ is an Abelian subgroup of $M$. Hence, it is enough to verify that these groups are closed under scalar multiplication. For this purpose, let $a$ be an arbitrary element in $R$ and $y$ be in $\varphi(N)$, then there exists an $x\in N$ such that $\varphi(x)=y$. We note $a\varphi(x)=\varphi(ax)\in\varphi(N)$, because $ax\in N$. If $x$ is an element of $\varphi^{-1}(N')$, then there exists a $y\in N'$ such that $\varphi(x)=y$ and we have $\varphi(ax)=a\varphi(x)=ay\in N'$, from which follows $ax\in \varphi^{-1}(N')$.
+\item Considering $N=M$ and $N'=\lbrace 0\rbrace$ statement (ii) follows from (i).
+\item Since $\varphi$ viewed as a group-homomorphism is injective iff $\ker(\varphi)={0}$, this statement is clear.
+\end{enumerate}
+\end{proof}
+
+\begin{lemma}
+Let $M,M'$ be $R$-modules and $\varphi\colon M\rightarrow M'$ a homomorphism, then the following statements hold:
+\begin{exlist}
+\item If $\varphi$ is an isomorphism then $\varphi^{-1}$ is an isomorphism.
+\item The mapping $\varphi$ is an isomorphism if and only if there exits a homomorphism $\psi\colon M'\rightarrow M$ such that $\psi\circ\varphi=\id_M$ and $\varphi\circ\psi=\id_{M'}$.
+\end{exlist}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+\item Owing to the fact that $\varphi^{-1}$ is a group-isomorphism, it is enough to verify the compatibility with scalar multiplication. Let therefore $a$ be an arbitrary element in $R$ and $y$ in $M'$, then there exists an $x\in M$ such that $\varphi(x)=y$. Hence, we have
+\begin{equation*}
+\varphi^{-1}(ay)=\varphi^{-1}(a\varphi(x))=\varphi^{-1}(\varphi(ax))=ax=a\varphi^{-1}(y).
+\end{equation*}
+\item Since $\varphi$ is bijective viewed as a group-homomorphism iff this condition is met, statement (ii) is clear.
+\end{enumerate}
+\end{proof}
+
+We will continue with a brief study of the algebraic structure of module-homomorphisms.
+
+\begin{prop}\label{prop.Homomorphisms are Module}
+Let $M,M'$ be modules over the unital ring $R$ and let $\Hom_R(M,M')$ denote the set of all homomorphisms $\varphi\colon M\to M'$, then
+\begin{exlist}
+\item \label{prop.Homomorphisms are Group} $\Hom_R(M,M')$ is an Abelian group, with respect to the operation $+\colon\Hom_R(M,M')\times\Hom_R(M,M')\to\Hom_R(M,M')$ defined by $(\varphi+\psi)(x)=\varphi(x)+\psi(x)$.
+\item If $R$ is commutative, then $\Hom_R(M,M')$ is an $R$-module, with respect to the operations $+$ and $\ast\colon R\times\Hom_R(M,M')\to\Hom_R(M,M')$ defined by $(a\ast\varphi)(x)=a\varphi(x)$.
+\end{exlist}
+\end{prop}
+\begin{proof}
+\begin{enumerate}
+\item Let $\Hom(M,M')$ denote the set of all group-homomorphisms of $M$ to $M'$, then $(\Hom(M,M'),+)$ is an Abelian group. Hence, it is enough to verify that $\Hom_R(M,M')\subseteq\Hom(M,M')$ is a subgroup. Given two homomorphisms $\varphi,\psi\in\Hom_R(M,M')$ and an element $a\in R$, we find
+\begin{equation*}
+(\varphi-\psi)(ax)=\varphi(ax)-\psi(ax)=a\varphi(x)-a\psi(x)=a(\varphi(x)-\psi(x))=a(\varphi-\psi)(x)
+\end{equation*}
+and the claim follows.
+\item The mapping $a\ast\varphi$ is a homomorphism for all $a\in R$ since the following identities hold for arbitrary $x,y\in M$ and an arbitrary $b\in R$:
+\begin{exlist}
+\item $(a\ast\varphi)(x+y)=a\varphi(x+y)=a\varphi(x)+a\varphi(y)=(a\ast\varphi)(x)+(a\ast\varphi)(y)$ and
+\item $(a\ast\varphi)(bx)=a\varphi(bx)=ab\varphi(x)=ba\varphi(x)=b(a\ast\varphi)(x)$.
+\end{exlist} 
+
+
+Secondly, we need to prove the four module-axioms, for this purpose we consider two homomorphisms $\varphi,\psi\in\Hom_R(M,M')$ and two arbitrary elements $a,b\in R$. We find
+\begin{exlist}
+\item $(1\ast\varphi)(x)=1\varphi(x)=\varphi(x)$,
+\item $(a\ast(b\ast\varphi))(x)=a(b\ast\varphi)(x)=a(b\varphi(x))=(ab)\varphi(x)=((ab)\ast\varphi(x))$,
+\item $(a\ast(\varphi+\psi))(x)=a(\varphi+\psi)(x)=a(\varphi(x)+\psi(x))=a\varphi(x)+a\psi(x)=(a\ast\varphi + a\ast\psi)(x)$ and
+\item $((a+b)\ast\varphi)(x)=(a+b)\varphi(x)=a\varphi(x)+b\varphi(x)=(a\ast\varphi+b\ast\varphi)(x)$.
+\end{exlist}
+\end{enumerate}
+\end{proof}
+
+\begin{rem}
+Let $M$ a module over a commutative unital ring $R$. If we view $R$ as a module over itself like we did in Example~\secref{ex.module}{ex.RingAsModule}, Proposition~\ref{prop.Homomorphisms are Module} implies that $\Hom_R(R,M)$ is an $R$-module. The mapping $F\colon\Hom_R(R,M)\to M$ defined by $\varphi\mapsto\varphi(1)$ is a homomorphism, because 
+\begin{equation*}
+F(\varphi+\psi)=(\varphi+\psi)(1)=\varphi(1)+\psi(1)=F(\varphi)+F(\psi)
+\end{equation*}
+and $F(a\varphi)=a\varphi(1)=aF(\varphi)$ hold for all $\varphi,\psi\in\Hom_R(R,M)$ and for all $a\in R$. Given an $x\in M$, consider the mapping $\varphi_x\colon R\to M$ defined by $a\mapsto ax$. This mapping is a homomorphism, because of module axiom (ii) and (iv). We note, that $F(\varphi_x)=x$ and see that $F$ is surjective. The mapping $F$ is injective, because for all $\varphi\in\ker(F)$, we have $\varphi(a)=\varphi(a1)=a\varphi(1)=0$ and therefore $\varphi=0$. It follows that $\ker(F)=\lbrace 0\rbrace$, which implies the claim. The argumentation above shows
+\begin{equation*}
+\Hom_R(R,M)\cong M.
+\end{equation*}
+\end{rem}

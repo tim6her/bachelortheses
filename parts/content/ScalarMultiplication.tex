@@ -1,0 +1,130 @@
+\begin{defin} Let $(M,+)$ be an Abelian group and $(R,+,\cdot)$ be a ring with 1. We call the triple $(M,+,\ast)$, where $\ast\colon R\times M\ra M$, $(a,x)\mt a\ast x$ is an operation, that fulfils the following four axioms:
+\begin{multienumerate}
+\mitemxx{$1\ast x=x$,}{$a\ast(b\ast x)=(a\cdot b)\ast x$,}
+\mitemxx{$a\ast(x+y)=a\ast x+a\ast y$ and}{$(a+b)\ast x=a\ast x+b\ast x$}
+\end{multienumerate}
+for all $a,b \in R$ and all $x,y \in M$, a \emph{left $R$-module} or a \textit{left module} over $R$.
+\end{defin}
+
+Analogously one can define a right $R$-module. More precisely: Given an unital ring $(R,+,\cdot)$ an Abelian group $(M,+)$ endowed by an operation $\ast\colon M \times R \ra G$, $(x,a)\mt x\ast a$, such that for all $x,y\in M$ and all $a,b\in R$ we have
+\begin{multienumerate}
+\mitemxx{$x\ast 1=x$,}{$(x\ast a)\ast b=x\ast (a\cdot b)$,}
+\mitemxx{$(x+y)\ast a=x\ast a+y\ast a$ and}{$x\ast (a+b)=x\ast a+x\ast b$,}
+\end{multienumerate}
+is called a \emph{right $R$-module.}
+
+\begin{rem}
+\begin{enumerate}
+\item For all rings $R:=(S,+,\cdot)$ we define the \textit{opposite Ring} $R^{op}:=(S,+,\circ)$ of $R$ as the ring with the operation $\circ$, defined by $a\circ b:= b\cdot a$ for all $a,b \in S$. Let $(M,+,\ast)$ be a right $R$-module . By defining $x\tilde{\ast}a:=a\ast x$ for all $a\in S$ and all $x\in M$, the module $(M,+,\tilde{\ast})$ becomes a left $R^{op}$-module. Hence, all statements on left modules can be translated into equivalent findings on right modules and vice versa. In the following we shall therefore exclusively deal with left modules and will simply write module instead of left module.
+\item When it is clear which operations are meant, we will note $M$ instead of $(M,+,\ast)$ for such a left module over the ring $(R,+,\cdot)$. Furthermore, we will write $ax$ instead of $a\ast x$ and $ab$ instead of $a\cdot b$.
+\item In analogy to vector spaces we call the operation $\ast$ \emph{scalar multiplication}.
+\end{enumerate}
+\end{rem}
+
+\begin{exam}\label{ex.module}
+\begin{enumerate}
+\item Every field $F$ is especially a unital ring. Hence an $F$-vector space is an $F$-module. Therefore one can view modules as a generalization of vector spaces.
+\item Every unital ring $(R,+,\cdot)$ is a module over itself, if we define $a\ast b:= a\cdot b$. \label{ex.RingAsModule}
+\item Consider the trivial group $\lbrace 0\rbrace$. This Abelian group is a module over any unital ring. Therefore, this module is called \emph{trivial}. See Lemma~\ref{lm.basicProp}.(ii) for details.
+\item Given a vector space $V$ over a field $F$, let $\End_F(V)$ denote the set of all $F$-linear maps of $V$ into itself. Then $\End_F(V)$ is a unital ring with respect to point-wise addition and composition of mappings. We define the operation $\Phi:\End_F(V)\times V \ra V$ by $(\varphi,x) \mt \varphi(x)$, which satisfies
+\begin{exlist}
+\item $\Phi(\id, x)=\id(x)=x$,
+\item $\Phi(\psi,\Phi(\varphi,x))=\Phi(\psi,\varphi (x))=\psi(\varphi(x))=(\psi\circ\varphi)(x)=\Phi(\psi\circ\varphi,x)$,
+\item $\Phi(\varphi,x+y)=\varphi(x+y)=\varphi(x)+\varphi(y)=\Phi (\varphi,x)+\Phi (\varphi,y)$ and
+\item $\Phi(\varphi+\psi,x)=(\varphi+\psi)(x)=\varphi(x)+\psi(x)=\Phi(\varphi,x)+\Phi (\varphi,y)$
+\end{exlist}
+for all $x,y\in V$ and all $\varphi, \psi \in \End_F(V)$. Hence, $(V,+,\Phi)$ is an $\End_F(V)$-module. This example originated in a comment by \cite{lang2002algebra} on page 118.\label{exam.Vector Space as EndFV-module}
+\item \label{ex.Z module} Let $(G,+)$ be an Abelian group. We define an operation $\ast : \Z\times G \ra G$ by
+\begin{equation*}
+r\ast x:=\left. \begin{cases}
+\overbrace{x+x+\ldots+x}^{r \textnormal{ addends}} & \textnormal{if } r>0 \\ 
+0 & \textnormal{if } r=0\\ 
+-(\underbrace{x+x+\ldots+x}_{\lvert r\rvert \textnormal{ addends}}) & \textnormal{if } r<0
+\end{cases} \right.
+\end{equation*}
+This operation satisfies all module axioms. Hence, every Abelian group can be viewed as a $\Z$-module.
+\item \label{ex.genModule} Let $(M,+)$ be an Abelian group. The set $\End(M)$ of all group-endomorphisms of $M$ is a unital ring, with respect to point-wise addition and composition of mappings. For an arbitrary unital ring $R$ and a ring-homomorphism $\varphi\colon R\to\End(M)$, which satisfies $\varphi(1)=\id$, we define the operation $\ast\colon R\times M\rightarrow M$ by $a\ast x:=(\varphi (a))(x)$. This operation has the following properties:
+\begin{exlist}
+\item $1\ast x=(\varphi(1))(x)=\id(x)=x$,
+\item $a\ast(b\ast x)=a\ast(\varphi(b))(x)=\varphi(a)((\varphi(b))(x))=(\varphi(a)\circ \varphi(b))(x)=(\varphi(ab))(x)=(ab)\ast x$,
+\item $a\ast(x+y)=(\varphi(a))(x+y)=(\varphi(a))(x)+(\varphi(a))(y)=a\ast x+a\ast y$ and
+\item $(a+b)\ast x= (\varphi(a+b))(x)=(\varphi(a))(x)+(\varphi(b))(x)=a\ast x+b\ast x$
+\end{exlist}
+for all $a,b\in R$ and all $x,y\in M$. Hence $(M,+,\ast)$ is a module.
+\end{enumerate}
+\end{exam}
+
+In Example~\secref{ex.module}{ex.genModule} we have seen that every ring-homomorphism $\varphi\colon R\rightarrow\End(M)$ induces exactly one scalar multiplication, such that $a\ast x=(\varphi(a))(x)$. On the other hand, one verifies easily that every scalar multiplication induces one and only one ring-homomorphism $\varphi\colon R\rightarrow\End(M)$, such that $(\varphi(a))(x)=a\ast x$. Let now $M$ be an $R$-module. For an arbitrary $a\in R$ consider the mapping $\ell_a\colon M\rightarrow M$ defined by $x\mapsto a\ast x$. As a result of module axiom (iii) we see $\ell_a$ is a group-homomorphism. We define a mapping $\varphi\colon R\rightarrow \End(M)$ by $a \mapsto \ell_a$. At first, we note that module axiom (i) implies $\varphi(1)=\id$. Let $a,b$ be two arbitrary elements in $R$, then
+\begin{align*}
+(\varphi(a+b))(x)=\ell_{a+b}(x)=(a+b)x\overset{\text{Ax. (iv)}}{=}ax+bx=\ell_a(x)+\ell_b(x)=(\varphi(a)+\varphi(b))(x)\\
+\intertext{and}
+(\varphi(ab))(x)=\ell_{ab}(x)=(ab)x\overset{\text{Ax. (ii)}}{=}a(bx)=\ell_a(\ell_b(x))=(\varphi(a)\circ \varphi(b))(x).
+\end{align*}
+Hence, $\varphi$ is a ring-homomorphism and we have found the desired form. Due to the construction of $\varphi$ this ring-homomorphism is  unique. 
+
+\begin{lem}\label{lm.basicProp}For any $R$-module $M$, the following identities hold for all elements $a,\seq{a}\in R$ and all $x,\seq[m]{x}\in M$:
+\begin{multienumerate}
+\mitemxx{$0x=0$,}{$a0=0$,}
+\mitemxx{$(-1)x=-x$,}{$(-a)x=a(-x)=-(ax)$,}
+\mitemxx{$(a_1-a_2)x=a_1x-a_2x$,}{$a(x_1-x_2)=ax_1-ax_2$ and}
+\mitemx{$\sum\limits^n_{i=1}a_i\sum\limits^m_{j=1}x_i=\sum\limits^n_{i=1}\sum\limits^m_{j=1}a_ix_j$.}
+\end{multienumerate} 
+\end{lem}
+\begin{proof}
+For all $x\in M$ we have
+\begin{equation*}
+0=0x-0x=(0+0)x-0x=0x+0x-0x=0x,
+\end{equation*}
+which implies (i). The second identity can be shown analogously. For an arbitrary $x\in M$ we find 
+\begin{equation*}
+0\overset{\text{(i)}}{=}0x=(1+(-1))x=x+(-1)x.
+\end{equation*}
+The uniqueness of the inverse implies (iii). Claim (iv) follows easily from (iii). To prove (v), one notes
+\begin{equation*} 
+(a_1-a_2)x=(a_1+(-a_2))x=a_1x+(-a_2)x\overset{\text{(iv)}}{=}a_1x-a_2x.
+\end{equation*}
+One proves (vi) analogously. The generalization of the last two module axioms which can be found in (vii) is shown via induction on $n$ and $m$.
+\end{proof}
+
+\begin{defin}Let $M$ be a module over a unital Ring $R$ and $N$ be a non-empty subset of $M$. We call $N$ a \emph{submodule} of $M$ and note $N\leq M$, if $N$ is a module itself, with respect to the restrictions of the operations of $M$ to $N$.
+\end{defin}  
+
+\begin{lem}
+Let $M$ be an $R$-module and $N\subseteq M$ be a non-empty subset, then the following statements are equivalent:
+\begin{exlist}
+\item $N$ is a submodule of $M$.
+\item $x+y\in N$ and $ax\in N$ for all $a\in R$ and for all $x,y\in N$
+\end{exlist}
+\label{lm.SubMod}
+\end{lem}
+\begin{proof}
+Implication (i)$\Rightarrow$(ii) is clear. To prove the other direction, we consider two elements $x,y\in N$. We know $-1\in R$ which implies $-y=(-1)y\in N$ and therefore $x-y\in N$. Hence, $(N,+)$ is a group. Since the addition is commutative on the whole set $M$, the group $(N,+)$ is Abelian. The same argument can be applied to verify the four module axioms. Therefore $N$ is a submodule of $M$. 
+\end{proof}
+
+\begin{exam}\begin{enumerate}
+\item Every module $M$ contains the submodules $M$ and $\lbrace 0\rbrace$. Therefore, these submodules are called \emph{trivial}.
+\item Given a vector space $V$, the linear subspaces of $V$ are its submodules.
+\item If we view a unital ring $R$ as a left module over itself, being a submodule of $R$ is equivalent to being a left ideal of $R$.
+\item An $F$-vector space $V$ viewed as a module over the ring of its endomorphisms $\End_F(V)$ contains only the trivial submodules. See Example~\secref{exam.Bases of Modules}{exam. Generating set of V over EndFV} for further details.
+\item In the case of an Abelian group $G$ viewed as a $\Z$-module, being a submodule is equivalent to being a subgroup.
+\end{enumerate}\end{exam}
+
+\begin{lem} \label{lem.submodules}
+Let $M$ be an $R$-module, then the following statements hold:
+\begin{exlist}
+\item Given a non-empty index set $I$ and $N_i\leq M\;\forall i\in I$, then the intersection $\bigcap\limits_{i\in I}N_i$ is a submodule of $M$. \label{lm.IntersectionOfSubmods}
+\item Given a positive integer $n\in\Z$ and $N_i\leq M\;\forall i\in \lbrace 0,1,\ldots,n\rbrace$, then the  set of sums 
+\begin{equation*}
+\sum\limits_{i=0}^n N_i:=\left\lbrace x\in M\middle\arrowvert\forall i\in\lbrace 0,1,\ldots ,n\rbrace ,\exists x_i\in N_i\colon x=\sum_{i=0}^nx_i\right\rbrace
+\end{equation*}
+is a submodule of $M$.
+\item Let $N_1$ and $N_2$ be submodules of $M$, then $N_1\cup N_2\leq M$ is equivalent to $N_1\subseteq N_2$ or $N_2\subseteq N_1$.
+\end{exlist}
+\end{lem}
+\begin{proof}
+\begin{enumerate}
+\item Let $x,y$ be in $\bigcap_{i\in I}N_i$, then $x,y\in N_i$ for all $i\in I$. It follows $x+y\in N_i$ for all $i\in I$, which implies $x+y\in \bigcap_{i\in I}N_i$. Furthermore, we have $\lambda x \in N_i$ for all $i\in I$ and therefore $\lambda x \in\bigcap_{i\in I}N_i$ for an arbitrary $\lambda$ in $R$. Lemma \ref{lm.SubMod} implies now, that $\bigcap_{i\in I}N_i$ is a submodule of $M$.
+\item Suppose $x,y\in \sum_{i=0}^n N_i$ then there exist $x_i,y_i\in N_i$ for $0\leq i\leq n$ such that $x=\sum_{i=0}^{n}x_i$ and $y=\sum_{i=0}^{n}y_i$. We have $x+y=\sum_{i=0}^{n}x_i+y_i$ and $x_i+y_i\in N_i$ for all $0\leq i\leq n$. Hence, $x+y\in \sum_{i=0}^n N_i$. Given an $a\in R$ we notice $ax=a\sum_{i=0}^{n}x_i=\sum_{i=0}^{n}ax_i$ and $ax_i\in N_i$ for $0\leq i\leq n$.
+\item ($\Rightarrow$) Suppose $N_1\subsetneq N_2$ and $N_2\subsetneq N_1$, then there exists an $x\in N_1\setminus N_2$ and there exists a $y\in N_2\setminus N_1$. This implies, that $x,y\in N_1\cup N_2$ and if $N_1\cup N_2$ were a submodule then $x+y$ is an element of $N_1\cup N_2$. Assuming $x+y\in N_1$ it follows that $y=-x+(x+y)$ is an element of $N_1$, which contradicts our premises. Analogously the assumption $x+y\in N_2$, implies $x=(x+y)-x\in N_2$ and again we are lead to a contradiction. The other direction of the equivalence is trivial.
+\end{enumerate}
+\end{proof}

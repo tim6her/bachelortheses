@@ -1,0 +1,101 @@
+Example~\secref{exam.Bases of Modules}{exam.basis of G} leads directly to the following definition.
+\begin{defin}
+An $R$-module $M$ is called \emph{free} over $R$ if it has a base over $R$.
+\end{defin}
+
+Theorem~\ref{theo.Homomorphisms of free modules} implies a different approach of characterising mono-, epi- and isomorphisms of free modules.
+\begin{cor}
+Let $\varphi\colon M\to M'$ be a homomorphism of $R$-modules and $B:=(v_i)_{i\in I}$ a basis of $M$ then the following statements hold.
+\begin{compactenum}
+\item $\varphi$ is injective iff $\varphi(B):=(\varphi(v_i))_{i\in I}$ is linear independent in $M'$ (over $R$).
+\item $\varphi$ is surjective iff $\varphi(B)$ is a generating set of $M'$.
+\item $\varphi$ is bijective iff $\varphi(B)$ is a basis of $M'$.
+\end{compactenum}
+\end{cor}
+\begin{proof}
+We consider the following diagram where $\gamma_{\varphi(B)}$ denotes the homomorphism $\gamma_{\varphi(B)}(a_i)_{i\in I}:=\sum_{i\in I}a_i\varphi(v_i)$.
+\begin{center}
+\begin{tikzpicture}
+  \node (M) at ( 0,1.7)  {$M$};
+  \node (M2) at (2,1.7) {$M'$}
+    	edge [<-] node[above,comment] {$\varphi$} (M);
+  \node (RI) at (1,0) {$R^{(I)}$}
+  	edge [->] node[left,comment] {$\gamma_B$} (M)
+  	edge [->] node[right,comment] {$\gamma_{\varphi(B)}$} (M2);
+\end{tikzpicture}
+\end{center}
+This diagram commutates because of the findings in Theorem~\ref{theo.Homomorphisms of free modules}. Since $\gamma_B$ is bijective $\gamma_{\varphi(B)}$ is injective or surjective respectively if and only if $\varphi$ is injective or surjective, which proves the claim.
+\end{proof}
+The proposition above implies that if $M'$ is isomorphic to the free module $M$ then $M'$ is free.
+
+
+The following example, which can be found in \cite[p.194]{jantzen2005algebra}, shows that the concept of dimensions as we know it for vector spaces can not be generalized for free modules over arbitrary rings. We will see that the cardinality of a basis of a free $R$-module is in general not unique.
+\begin{exam}
+Let $F$ be a field then the polynomial ring $F[X]$ is an $F$-vector space and the set $R:=\End_F(F[X])$ of all endomorphisms in $F[X]$ is a ring with respect to point-wise addition and composition of mappings. We view $R$ as a module over itself and find that $\id_{F[X]}$ is a basis of $R$ over $R$, since for every $\varphi\in R$ the identity $\varphi=\varphi\circ id_{F[X]}$ holds and this decomposition is unique.
+
+On the other hand we consider the endomorphisms $f_1,f_2\in R$ defined by
+\begin{eqnarray*}
+f_1(X^i):=\begin{cases} X^{\frac{i}{2}} & \text{if } 2\mid i\\ 0&\text{if } 2\nmid i\\\end{cases}, &  f_2(X^i):=\begin{cases} 0 & \text{if } 2\mid i\\ X^{\frac{i-1}{2}}&\text{if } 2\nmid i\\\end{cases}.
+\end{eqnarray*}
+The set $\lbrace f_1,f_2\rbrace$ is linearly independent over $R$ because $g_1\circ f_1+g_2\circ f_2=\mathbf{0}$ iff $g_1=g_2=\mathbf{0}$. To prove this we note that $\mathbf{0}$ denotes the mapping $F[X]\to F[X],\; p\mapsto 0$ and assume $g_1\neq\mathbf{0}$. Hence, there exists an $i\in\N$ such that $g_1(X^i)\neq 0$. Therefore, $(g_1\circ f_1+g_2\circ f_2)(X^{2i})=(g_1\circ f_1)(X^{2i})+(g_2\circ f_2)(X^{2i})=g_1(X^i)+0\neq 0$ which contradicts $g_1\circ f_1+g_2\circ f_2=\mathbf{0}$. The assumption $g_2\neq \mathbf{0}$ leads to the same contradiction. Eventually, we verify that $\lbrace f_1,f_2\rbrace$ is a basis of $R$. Let therefore $\varphi$ be an arbitrary endomorphism in $R$. We consider $g_1,g_2\in R$ defined by $g_1(X^i)=\varphi(X^{2i})$ and $g_2(X^i)=\varphi(X^{2i+1})$. These endomorphisms fulfil $g_1\circ f_1+g_2\circ f_2=\varphi$.
+
+Consequently, $R$ has a basis containing one element and a basis containing two elements which implies $R^1\cong R^2$. It follows per induction on $n$ that $R\cong R^n$ for all $n\in\N$.
+\end{exam} 
+
+We will now show that the cardinality of a finite basis of an $R$-module is unique, if $R\neq\lbrace 0\rbrace$ and $R$ is commutative.
+
+\begin{lemma}\label{lm.SigmaModule}
+Let $M$ be an $R$-module and $\mathfrak{I}$ a left ideal in $R$ then the following statements hold.
+\begin{compactenum}
+\item The subset \label{lm.Sigma}
+\begin{equation*}
+S:=\left\lbrace\sum_{i=1}^n \mathfrak{a}_ix_i\mid n\in\N, \mathfrak{a}_i\in \mathfrak{I}, x_i\in M, 1\leq i\leq n\right\rbrace
+\end{equation*}
+is a submodule of $M$.
+\item If $\mathfrak{I}$ is a (two-sided) ideal in $R$ then $\nicefrac{M}{S}$ is an $\nicefrac{R}{\mathfrak{I}}$-module, with respect to the scalar multiplication
+\begin{equation*}
+(a+\mathfrak{I})(x+S):=ax+S.
+\end{equation*}
+\end{compactenum}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+\item Let $J,K$ be finite subsets of $\N$ and $\mathfrak{a}_j\in \mathfrak{I}$ for all $j\in J$, $\mathfrak{b}_k\in \mathfrak{I}$ for all $k\in K$ and  $x_i\in M$ for all $i\in J\cup K$. We define $\mathfrak{a}_j:=0$ if $j\in K \setminus J$ and $\mathfrak{b}_k:=0$ if $k\in J\setminus K$. It follows that $\sum_{j\in J}\mathfrak{a}_jx_j\in S$, $\sum_{k\in K}\mathfrak{b}_kx_k\in S$ and therefore
+\begin{equation*}
+\sum_{j\in J}\mathfrak{a}_jx_j+\sum_{k\in K}\mathfrak{a}_kx_k=\sum_{i\in J\cup K} \mathfrak{a}_ix_i+\sum_{i\in J\cup K} \mathfrak{b}_ix_i=\sum_{i\in J\cup K} (\mathfrak{a}_i+\mathfrak{b}_i)x_i\in S.
+\end{equation*} 
+ Given an arbitrary $c\in R$ we find $c\sum_{j\in J}\mathfrak{a}_jx_j=\sum_{j\in J}c\mathfrak{a}_jx_j\in S$ since $\mathfrak{I}$ is a left ideal in $R$.
+\item At first we notice that $(\nicefrac{M}{S}, +)$ is an Abelian group since $\nicefrac{M}{S}$ is an $R$-module.
+
+Secondly, we need to verify the validity of the definition of the scalar multiplication. Let $a\equiv a'$ with respect to the equivalence relation on $R$ induced by $\mathfrak{I}$. We show that $ax\equiv a'x$ with respect to the equivalence relation on $M$ induced by $S$ for all $x\in M$. Since $a\equiv a'$ there exists an element $\mathfrak{b}\in\mathfrak{I}$ such that $a=a'+\mathfrak{b}$, therefore $ax-a'x=ax-(a-\mathfrak{b})x=\mathfrak{b}x\in S$ and the claim is proven. On the other hand, let $x\equiv x'$. One needs to verify $ax\equiv ax'$ for all $a\in R$. Since $x\equiv x'$ there exists a sum $\sum_{i=1}^n\mathfrak{b}_iy_i\in S$ such that $x=x'+\sum_{i=1}^n\mathfrak{b}_iy_i$ and therefore $ax-ax'=a\sum_{i=1}^n\mathfrak{b}_iy_i=\sum_{i=1}^na\mathfrak{b}_iy_i\in S$ since $\mathfrak{b}_i\in\mathfrak{I}$ and $\mathfrak{I}$ is an ideal.
+
+The four module axioms are now proven in a straight forward way.
+\end{enumerate}
+\end{proof}
+
+\begin{lemma}\label{lm.basis of M to Sigma}
+Let $M$ be a free $R$-module and $\mathfrak{I}$ an ideal in $R$. If we consider a basis $\seq{v}$ of $M$ over $R$ and the submodule $S$ like in Lemma~\secref{lm.SigmaModule}{lm.Sigma}, then $v_1+S,\ldots,v_n+S$ is a basis of $\nicefrac{M}{S}$ over $\nicefrac{R}{\mathfrak{I}}$.
+\end{lemma}
+\begin{proof}
+The family $v_1+S,\ldots,v_n+S$ is a generating set of $\nicefrac{M}{S}$ over $\nicefrac{R}{\mathfrak{I}}$ because for an arbitrary $x+S\in\nicefrac{M}{S}$ there exists a decomposition $x=\sum_{i=1}^na_iv_i$ which leads us to 
+\begin{equation*}
+\sum_{i=1}^n(a_i+\mathfrak{I})(v_i+S)=\sum_{i=1}^n(a_iv_i+S)=\sum_{i=1}^na_iv_i+S=x+S.
+\end{equation*}
+
+Let $a_1+\mathfrak{I},\ldots,a_n+\mathfrak{I}$ be elements of $\nicefrac{R}{\mathfrak{I}}$ that fulfil $\sum_{i=1}^n(a_i+\mathfrak{I})(v_i+S)=S$. We will prove $a_i\in\mathfrak{I}$ for $1\leq i\leq n$ then Corollary~\ref{lm.Linear Independence} implies the claim. We note that 
+\begin{equation*}
+0+S=S=\sum_{i=1}^n(a_i+\mathfrak{I})(v_i+S)=\left(\sum_{i=1}^n a_iv_i\right)+S.
+\end{equation*}
+It follows that there exists an $s\in S$ such that $0+s=\sum_{i=1}^n a_iv_i$. Let $s=\sum_{j=1}^m\mathfrak{b}_jx_j$ for $\mathfrak{b}_j\in \mathfrak{I}$ and $x_j\in M$, then there exist $c_{ij}\in R$ for $1\leq i\leq n$ and $1\leq j\leq m$ such that $x_j=\sum_{i=1}^mc_{ij}v_i$. It follows that
+\begin{equation*}
+\sum_{i=1}^n a_iv_i=s=\sum_{j=1}^m\mathfrak{b}_j\sum_{i=1}^mc_{ij}v_i=\sum_{i=1}^n\left(\sum_{j=1}^m\mathfrak{b}_jc_{ij}\right)v_i.
+\end{equation*}
+Now Lemma~\ref{lm.Linear Independence} implies $a_i=\sum_{j=1}^m\mathfrak{b}_jc_{ij}\in \mathfrak{I}$ for $1\leq i\leq n$.
+\end{proof}
+
+\begin{theo}
+Let $M$ be a free module over the commutative ring $R\neq\lbrace 0\rbrace$ then every basis of $M$ over $R$ has the same cardinality.
+\end{theo}
+\begin{proof}
+Let $\seq{v}$ and $\seq[m]{w}$ be bases of $M$. Since $R$ is commutative $R$ contains a maximal ideal $\mathfrak{I}$. (see \cite[Thm.III.3.6]{jantzen2005algebra}) Therefore, $\nicefrac{R}{\mathfrak{I}}$ is a field (see \cite[p.93]{lang2002algebra}) and $\nicefrac{M}{S}$ is a vector space, if $S$ denotes the submodule of Lemma~\secref{lm.SigmaModule}{lm.Sigma}. Lemma~\ref{lm.basis of M to Sigma} implies that $v_1+S,\ldots,v_n+S$ as well as $w_1+S,\ldots,w_m+S$ are bases of $\nicefrac{M}{S}$ over $\nicefrac{R}{\mathfrak{I}}$. Since the cardinality of bases of vector spaces is unique it follows $n=m$.
+\end{proof}

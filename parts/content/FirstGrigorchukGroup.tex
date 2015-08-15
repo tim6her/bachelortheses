@@ -1,0 +1,226 @@
+\begin{lem}\label{thm:Homomorphism psi}
+The mapping $\psi\colon\St{1}\to\AutT\times\AutT$ defined by
+\begin{equation*}
+\varphi\mapsto\left(\varphi\big\vert_{\ST{(0)}},\varphi\big\vert_{\ST{(1)}}\right)
+\end{equation*}
+is an isomorphism of groups.
+\end{lem}
+\begin{proof}
+All automorphisms $\varphi$ in $\St{1}$ leave $(0)$ and $(1)$ invariant. Hence, the restriction of $\varphi$ on the subtree $\ST{(0)}$ can be viewed as a automorphism of $\ST{(0)}.$ Since the subtree is a binary tree itself the restriction $\varphi\big\vert_{\ST{(0)}}$ is an element of $\AutT.$ An analogous argumentation for $\varphi\big\vert_{\ST{(1)}}$ proves that the mapping $\psi$ is well-defined.
+Consider the mapping $\omega\colon\AutT\times\AutT\to\St{1}$ defined by
+\begin{equation*}
+\omega(\varphi_1,\varphi_2)(v):=
+\begin{cases}
+(\emptyset)			& \text{if } v=(\emptyset)\\
+\varphi_1(v)	& \text{if } v\in\ST{(0)}\\
+\varphi_2(v)	& \text{if } v\in\ST{(1)}\\
+\end{cases}.
+\end{equation*}
+Indeed, $\omega$ is the inverse-mapping to $\psi.$ Obviously, the bijection $\psi$ is compatible with composition of mappings.
+\end{proof}
+
+Let $a\in\AutT$ be the automorphism defined by
+\begin{equation*}
+a(\seq{b})=(\lvert b_1-1 \rvert,b_2,\ldots,b_n)
+\end{equation*}
+and consider the three recursively defined automorphisms
+\begin{align*}
+b:=&\psi^{-1}(a,c),\\
+c:=&\psi^{-1}(a,d) \text{ and}\\
+d:=&\psi^{-1}(\id,b).
+\end{align*}
+
+\begin{centering}
+\begin{figure}
+\subfloat[$c(1,1,0,0)=(1,d(1,0,0))$\label{g:Automorphism c a}]{
+\beginpgfgraphicnamed{AutomorphismC1}
+\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
+\node (b) {$\emptyset$}
+  child foreach \i in {0,1} {node {\i}
+ {child foreach \j in {0,1} {node {\j}
+ {child foreach \k in {0,1} {node {\k}
+ {child foreach \l in {0,1} {node {\l}
+ {child foreach \m in {0,1} {coordinate edge from parent[dashed]}}}}}}}}};
+
+\node[very thick, fill=black, text=white] at (b-2-2-1-1) {0};	
+\foreach \from/\to in {b/b-2,b-2/b-2-2,b-2-2/b-2-2-1,b-2-2-1/b-2-2-1-1}
+	\node[very thick] at (\from) {}
+	edge[very thick] (\to);
+
+\begin{scope}[bgn]
+\node[draw=none] [above of=b-1] (ST0) {$a$};
+\node[draw=none] [above of=b-2] (ST1) {$d$};
+\end{scope}
+
+\begin{pgfonlayer}{background}
+\filldraw[st] (ST0.north) -- (b-1-1.north west) -- (b-1-1-1.west) -- (b-1-1-1-1.west) -- (b-1-1-1-1-1) -- (b-1-2-2-2-2) -- (b-1-2-2-2.east) -- (b-1-2-2.east) -- (b-1-2.north east) -- cycle;
+\filldraw[st] (ST1.north) -- (b-2-1.north west) -- (b-2-1-1.west) -- (b-2-1-1-1.west) -- (b-2-1-1-1-1) -- (b-2-2-2-2-2) -- (b-2-2-2-2.east) -- (b-2-2-2.east) -- (b-2-2.north east) -- cycle; 
+\end{pgfonlayer}
+
+\end{tikzpicture}
+\endpgfgraphicnamed
+}
+
+\subfloat[$(1,d(1,0,0))=(1,1,b(0,0))$\label{g:Automorphism c b}]{
+\beginpgfgraphicnamed{AutomorphismC2}
+\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
+\node (b) {$\emptyset$}
+  child foreach \i in {0,1} {node {\i}
+ {child foreach \j in {0,1} {node {\j}
+ {child foreach \k in {0,1} {node {\k}
+ {child foreach \l in {0,1} {node {\l}
+ {child foreach \m in {0,1} {coordinate edge from parent[dashed]}}}}}}}}};
+
+\node[very thick, fill=black, text=white] at (b-2-2-1-1) {0};	
+\foreach \from/\to in {b/b-2,b-2/b-2-2,b-2-2/b-2-2-1,b-2-2-1/b-2-2-1-1}
+	\node[very thick] at (\from) {}
+	edge[very thick] (\to);
+
+\begin{scope}[bgn]
+\node[draw=none] [above of=b-2-1] (ST0) {$\id$};
+\node[draw=none] [above of=b-2-2] (ST1) {$b$};
+\end{scope}
+
+\begin{pgfonlayer}{background}
+\filldraw[st] (ST0.north)  -- (b-2-1-1.west) -- (b-2-1-1-1.west) -- (b-2-1-1-1-1) -- (b-2-1-2-2-2) -- (b-2-1-2-2.east) -- (b-2-1-2.east) -- cycle;
+\filldraw[st] (ST1.north) -- (b-2-2-1.west) -- (b-2-2-1-1.west) -- (b-2-2-1-1-1) -- (b-2-2-2-2-2) -- (b-2-2-2-2.east) -- (b-2-2-2.east) -- cycle; 
+\end{pgfonlayer}
+
+\path[hlarrow] (b-1-1) .. controls +(1.5,-0.5) .. (b-1-2);
+
+\node[fill=white] at (b-1-1) {1};
+\node[fill=white] at (b-1-2) {0};
+\end{tikzpicture}
+\endpgfgraphicnamed
+}
+
+\subfloat[$(1,1,b(0,0))=(1,1,0,a(0))$\label{g:Automorphism c c}]{
+\beginpgfgraphicnamed{AutomorphismC3}
+\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
+\node (b) {$\emptyset$}
+  child foreach \i in {0,1} {node {\i}
+ {child foreach \j in {0,1} {node {\j}
+ {child foreach \k in {0,1} {node {\k}
+ {child foreach \l in {0,1} {node {\l}
+ {child foreach \m in {0,1} {coordinate edge from parent[dashed]}}}}}}}}};
+
+\node[very thick, fill=black, text=white] at (b-2-2-1-1) {0};	
+\foreach \from/\to in {b/b-2,b-2/b-2-2,b-2-2/b-2-2-1,b-2-2-1/b-2-2-1-1}
+	\node[very thick] at (\from) {}
+	edge[very thick] (\to);
+
+\begin{scope}[bgn]
+\node[draw=none] [above of=b-2-2-1] (ST0) {$a$};
+\node[draw=none] [above of=b-2-2-2] (ST1) {$c$};
+\end{scope}
+
+\begin{pgfonlayer}{background}
+\filldraw[st] (ST0.north)  -- (b-2-2-1-1.west) -- (b-2-2-1-1-1) -- (b-2-2-1-2-2) -- (b-2-2-1-2.east) -- cycle;
+\filldraw[st] (ST1.north) --  (b-2-2-2-1.west) -- (b-2-2-2-1-1) -- (b-2-2-2-2-2) -- (b-2-2-2-2.east) -- cycle; 
+\end{pgfonlayer}
+
+\path[hlarrow] (b-1-1) .. controls +(1.5,-0.5) .. (b-1-2);
+
+\node[fill=white] at (b-1-1) {1};
+\node[fill=white] at (b-1-2) {0};
+\end{tikzpicture}
+\endpgfgraphicnamed
+}
+
+\subfloat[$(1,1,0,a(0))=(1,1,0,1)$\label{g:Automorphism c d}]{
+\beginpgfgraphicnamed{AutomorphismC4}
+\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
+\node (b) {$\emptyset$}
+  child foreach \i in {0,1} {node {\i}
+ {child foreach \j in {0,1} {node {\j}
+ {child foreach \k in {0,1} {node {\k}
+ {child foreach \l in {0,1} {node {\l}
+ {child foreach \m in {0,1} {coordinate edge from parent[dashed]}}}}}}}}};
+
+\node[very thick, fill=black, text=white] at (b-2-2-1-1) {1};	
+\foreach \from/\to in {b/b-2,b-2/b-2-2,b-2-2/b-2-2-1,b-2-2-1/b-2-2-1-1}
+	\node[very thick] at (\from) {}
+	edge[very thick] (\to);
+	
+\path[hlarrow] (b-1-1) .. controls +(1.5,-0.5) .. (b-1-2);
+\path[hlarrow] (b-2-2-1-1) .. controls +(0.375,-0.5) .. (b-2-2-1-2);
+\path[hlarrow] (b-2-2-2-1-1) .. controls +(0.1875,-0.25) .. (b-2-2-2-1-2);
+
+\node[fill=white] at (b-1-1) {1};
+\node[fill=white] at (b-1-2) {0};
+\node[fill=white] at (b-2-2-1-2) {0};	
+
+\end{tikzpicture}
+\endpgfgraphicnamed
+}
+\caption{The image of $(1,1,0,0)$ under the automorphism $c$}
+\label{g:Automorphism c}
+\end{figure}
+\end{centering}
+
+The recursive manner of the definitions above should become clear by studying an easy example. For this purpose, it will be convenient to denote a vertex $(\seq{b},\seq[m]{c})$ by $(\mathbf{b},\mathbf{c})$ if $\mathbf{b}=(\seq{b})$ and $\mathbf{c}=(\seq[m]{c})$. Occasionally the same vertex will be symbolized by $(\seq{b},\mathbf{c})$.
+\begin{exam}
+Consider the vertex $v:=(1,1,0,0)\in\VT$. In the following we will compute its image under $c$. Automorphism $c$ applies $a$ to the left and $d$ to the right subtree of $\T$ (see \cref{g:Automorphism c a}). Since $v\in\ST{(1)}$, automorphism $d$ is applied to the subsequence $(1,0,0)$, i.e. $c(1,1,0,0)=(1,d(1,0,0))$ (see \cref{g:Automorphism c b}). As for $\ST{(0)}$, automorphism $a$ switches the positions of its left and right subtree. This is indicated by a double-tipped arrow in diagram \ref{g:Automorphism c b}.\\
+Coming back to $c(v)=(1,d(1,0,0))$, automorphism $d$ acts by the identity on $\ST{(1,0)}$ and by $b$ on $\ST{(1,1)}$. Because $v$ is in $\ST{(1,1)}$, it follows that $(1,d(1,0,0))=(1,1,b(0,0))$ (see \cref{g:Automorphism c c}). Finally, $b$ applies automorphism $a$ to the last entry of $v$ and we find $c(1,1,0,0)=(1,1,0,1)$ (see \cref{g:Automorphism c d}).
+\end{exam}
+
+Alternatively one could describe the automorphisms $a,b,c$ and $d$ as finite state automata. See \cite{de2000topics} for details on this approach. Finally, we are able to define the first Grigorchuk group $\Gamma$.
+\begin{defin}
+Let the automorphisms $a,b,c,d\in\AutT$ be defined as above. The \emph{first Grigorchuk group} is the subgroup of $\AutT$ generated by $a,b,c$ and $d$, i.e
+\begin{equation*}
+\Gamma:=\langle a,b,c,d\rangle.
+\end{equation*}
+\end{defin}
+
+From elementary group theory we know that every element of $\Gamma$ can be written in the form
+\begin{equation}\label{eq:Words in Gamma}
+a^{\varepsilon_0}\circ b^{\varepsilon_1}\circ c^{\varepsilon_2}\circ d^{\varepsilon_3}\circ\ldots\circ a^{\varepsilon_{4n}}\circ b^{\varepsilon_{4n+1}}\circ c^{\varepsilon_{4n+2}}\circ d^{\varepsilon_{4n+3}},
+\end{equation}
+for some exponents $\varepsilon_0,\ldots,\varepsilon_{4n+3}\in\Z.$ In the following we will intensively study expressions like the one in (\ref{eq:Words in Gamma}). To this end, it will be convenient to denote the composition of two automorphisms $\varphi,\psi$ of $\T$ by $\varphi\psi$ instead of $\varphi\circ\psi.$
+
+\begin{thm}\label{thm:Relations of the generators of Gamma}
+The generators $a,b,c$ and $d$ of $\Gamma$ fulfil the following identities.
+\begin{thmlist}
+\item $a^2=b^2=c^2=d^2=\id$\label{thm:Gammas Generators are Self-Inverse}
+\item $bc=cb=d,\quad bd=db=c,\quad cd=dc=b$\label{thm:Three Generators Suffice}
+\end{thmlist}
+\end{thm}
+
+The proof of \cref{thm:Gammas Generators are Self-Inverse} is taken from \cite{hudec2006burnside} whereas the proof of (ii) can be found in \cite{waddle2008grigorchuk}.
+
+\begin{proof}
+\begin{plist}
+\item The root $(\emptyset)$ is fixed under arbitrary automorphisms of $\T$. Thus, it will remain fixed under $a^2,b^2,c^2$ and $d^2$ as well. By definition the automorphism $a$ fulfils
+\begin{align*}
+a^2(\seq{b})	&=a(\lvert b_1-1\rvert,b_2,\ldots,b_n)=\\
+			&=(\lvert\lvert b_1-1\rvert-1\rvert,b_2,\ldots,b_n)=(\seq{b})
+\end{align*}
+for all vertices $(\seq{b})\in\VT$. Thus, the claim is clear for $a^2.$\\
+Since $b,c$ and $d$ are in $\St{1},$ their squares $b^2,c^2$ and $d^2$ are as well. Therefore, they leave the vertices on level 1 fixed. In regard of the homomorphism $\varphi$ as in \cref{thm:Homomorphism psi}, the squared generators of $\Gamma$ fulfil
+\begin{align*}
+\psi(b^2)	&=\psi(b)^2=(a,c)^2=(a^2,c^2)=(\id,c^2),\\
+\psi(c^2)	&=(\id,d^2) \text{ and}\\
+\psi(d^2)	&=(\id,b^2).
+\end{align*}
+These identities induce recursive definitions of $b^2,c^2$ and $d^2$, which are similar to the definitions of $b,c$ and $d$. Hence, $b^2,c^2$ and $d^2$ act upon each subtree of the form $\ST{(1,\ldots,1,0)}$ by the identity. As a consequence, the squared generators preserve each sequence containing a 0. Since there exists only one vertex on level $k$ corresponding to a sequence not containing a zero, by \cref{thm:Levels are preserved} this vertex will be fixed as well.
+\item We will prove $bc(v)=d(v)$, etc. by induction on the level $k$ of $v$.  If $k\leq 1$, the claim is clear since $b,c$ and $d$ are in $\St{1}.$ Suppose now the relations were proven for all vertices on levels lower than $k.$ We note
+\begin{equation*}
+\psi(bc)=\psi(b)\psi(c)=(a,c)(a,d)=(a^2,cd)=(\id,cd).
+\end{equation*}
+If we consider a vertex of the form $(0,b_2,\ldots,b_n)\in\VT$, we find
+\begin{equation*}
+bc(0,b_2,\ldots,b_n)=(0,\id(b_2,\ldots,b_n))=d(0,b_2,\ldots,b_n).
+\end{equation*}
+If on the other hand a vertex of the form $(1,b_2,\ldots,b_n)$ is given, by the equation above its image under $bc$ is  $(1,cd(b_2,\ldots,b_n)).$ The sequence $(b_2,\ldots,b_n)$ is of length $k-1$ and therefore the induction hypothesis implies
+\begin{equation*}
+bc(1,b_2,\ldots,b_n)=(1,cd(b_2,\ldots,b_n))=(1,b(b_2,\ldots,b_n))=d(1,b_2,\ldots,b_n).
+\end{equation*}
+Analogous arguments prove the other relations.
+\end{plist}
+\end{proof}
+
+\cref{thm:Three Generators Suffice} implies that automorphism $a$ and each pair in $\lbrace b,c,d\rbrace$ suffice to generate $\Gamma.$ A more important consequence of \cref{thm:Relations of the generators of Gamma} is that every automorphism $\gamma\in\Gamma$ is of the form
+\begin{equation}\label{eq:Reduced words in a b c d}
+\gamma=u_0au_1au_2a\ldots u_lau_{l+1},
+\end{equation}
+where $u_1\ldots u_{l}\in\lbrace b,c,d\rbrace$ and $u_0,u_{l+1}\in\lbrace \id,b,c,d\rbrace.$ If initial and terminal automorphisms $\id$ are dropped, we call an expression of the form above a \emph{reduced word in $\lbrace a,b,c,d\rbrace$}. The \emph{length} of a reduced word is the number of automorphisms that appear in it, e.g. if $u_0$ and $u_{l+1}$ are both unequal to $\id$, the word in expression \ref{eq:Reduced words in a b c d} is of length $2l+3$. By the well-ordering property of natural numbers, there exists a shortest word representing $\gamma$. The length of this word is called the \emph{length of $\gamma$} and is denoted by $\ell(\gamma)$. 

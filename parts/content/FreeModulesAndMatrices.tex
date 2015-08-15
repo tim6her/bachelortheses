@@ -1,0 +1,86 @@
+We will continue with a brief study of the connection between homomorphisms of free modules and matrices.
+
+\begin{prop}\label{prop.Commutative Diagram of Free Modules}
+Let $\varphi\colon M\to M'$ be a homomorphism of free $R$-modules, let the family $B:=(v_i)_{i\in I}$ be a base of $M$ and let $C:=(w_j)_{j\in J}$ be a base of $M'$. Then there exists a unique homomorphism $\bar{\varphi}\colon R^{(I)}\to R^{(J)}$ such that the following diagram, where $\gamma_B\colon R^{(I)}\to M$ and $\gamma_C\colon R^{(J)}\to M'$ denote mappings like the one in Theorem~\ref{lem.Generating Set Homomorphism}, commutates.
+\begin{center}
+\begin{tikzpicture}
+  \node (M) at ( 0,2)  {$M$};
+  \node (M2) at (2,2) {$M'$}
+    	edge [<-] node[above,comment] {$\varphi$} (M);
+  \node (RI) at (0,0) {$R^{(I)}$}
+  	edge [->] node[left,comment] {$\gamma_B$} (M);
+  \node (RJ) at (2,0) {$R^{(J)}$}
+  	edge [<-, dashed] node[below,comment] {$\exists !\bar{\varphi}$} (RI)
+  	edge [->] node[right,comment] {$\gamma_C$} (M2);
+\end{tikzpicture}
+\end{center}
+\end{prop}
+\begin{proof}
+Since $B$ is a base of $M$ and $C$ is a base of $M'$ the mappings $\gamma_B$ and $\gamma_C$ are isomorphisms. We define a homomorphism by $\bar{\varphi}:=\gamma_C^{-1}\circ\varphi\circ\gamma_B$. Clearly this homomorphism satisfies $\gamma_C\circ\bar{\varphi}\circ\gamma_B^{-1}=\varphi$ which proves the existence of such a homomorphism. Moreover, $\bar{\varphi}$ is unique by construction.
+\end{proof}
+
+\begin{cor}\label{cor.Matrix implies Homomorphism}
+Let $R$ be a commutative unital ring and $R^n$ a direct sum of $R$ then every matrix $A\in\mathrm{M}_{m\times n}(R)$ induces a homomorphism defined by
+\begin{equation*}
+\varphi_A\colon R^n\to R^m,\; x\mapsto Ax.
+\end{equation*}
+\end{cor}
+\begin{proof}
+Given an arbitrary pair $x,y\in R^n$ and an $a\in R$ the following identities hold
+\begin{compactenum}
+\item $\varphi_A(x+y)=A(x+y)=Ax+Ay=\varphi_A(x)+\varphi_A(y)$,
+\item $\varphi_A(ax)=A(ax)=aAx=a\varphi_A(x)$.
+\end{compactenum}
+\end{proof}
+
+\begin{rem}
+The set $\End_R(M)$ of all endomorphisms in a free $R$-module $M$ is a ring with respect to point-wise addition and composition  by Lemma~\ref{lm.Composition of Homo} and Proposition~\secref{prop.Homomorphisms are Module}{prop.Homomorphisms are Group}. If $M$ has a finite base over $R$ there exists an $n\in\N$ such that $M\cong R^n$. In Proposition~\ref{prop.Commutative Diagram of Free Modules} we have seen that there exists a bijection $\Gamma\colon\End_R(M)\to\End_R(R^n)$ defined by $\varphi\mapsto\gamma^{-1}\circ\varphi\circ\gamma$. This mapping is a isomorphism of rings because for all $\varphi,\psi\in\End_R(M)$ the following identities are satisfied:
+\begin{compactenum}
+\item $\Gamma(\varphi+\psi)=\gamma^{-1}\circ(\varphi+\psi)\circ\gamma =\gamma^{-1}\circ(\varphi\circ\gamma+\psi\circ\gamma)= (\gamma^{-1}\circ\varphi\circ\gamma)+(\gamma^{-1}\circ\psi\circ\gamma)=\Gamma(\varphi)+\Gamma(\psi)$ and
+\item $\Gamma(\varphi\circ\psi)=\gamma^{-1}\circ(\varphi\circ\psi)\circ\gamma =\gamma^{-1}\circ\varphi\circ\gamma^{-1}\circ\gamma\circ\psi\circ\gamma =\Gamma(\varphi)\circ\Gamma(\psi)$.
+\end{compactenum}
+\end{rem}
+
+\begin{prop}\label{prop.Matrix isomorph Homomorphism}
+Let $R$ be a commutative ring with 1, then $R^n$ is a module and the following isomorphism of rings exists:
+\begin{equation*}
+\End_R(R^n)\cong \mathrm{M}_n(R).
+\end{equation*}
+\end{prop}
+\begin{proof}
+We study the mapping 
+\begin{equation*}
+\left[\;\cdot\;\right]\colon\End_R(R^n)\to\mathrm{M}_n(R)\text{ defined by }[\varphi]:=
+\begin{pmatrix}
+\pi_1(\varphi(e_1)) & \pi_1(\varphi(e_2)) & \ldots & \pi_1(\varphi(e_n))\\
+\pi_2(\varphi(e_1)) & \pi_2(\varphi(e_2)) & \ldots & \pi_2(\varphi(e_n))\\
+\vdots &\vdots & &\vdots\\
+\pi_n(\varphi(e_1)) & \pi_n(\varphi(e_2)) & \ldots & \pi_n(\varphi(e_n))
+\end{pmatrix},
+\end{equation*}
+where $e_i\in R^n$ denotes the family $\left(e_{i1}\;\ldots\;e_{in}\right)^t$, $e_{ii}=1$, $e_{ij}=0$ if $i\neq j$ and $\pi_i$ is the projection on the $i$-th component. Since the $j$-th column of the matrix $[\varphi]$ equals $\varphi(e_j)$ we define the abbreviation $[\varphi]=\left(\varphi(e_1)\;\ldots\varphi(e_n)\;\right)$ for this matrix. The mapping $\left[\;\cdot\;\right]$ is a ring-homomorphism, because for every pair of module-homomorphisms $\varphi,\psi\in\End_R(R^n)$ the following identities hold:
+\begin{align*}
+[\varphi+\psi]&=\begin{pmatrix}(\varphi+\psi)(e_1) & \dots & (\varphi+\psi)(e_n)\end{pmatrix}=\begin{pmatrix}\varphi(e_1)+\psi(e_1) & \dots & \varphi(e_n)+\psi(e_n)\end{pmatrix}=\\
+&=\begin{pmatrix}\varphi(e_1) & \ldots & \varphi(e_n)\end{pmatrix}+\begin{pmatrix}\psi(e_1) & \ldots & \psi(e_n)\end{pmatrix}=[\varphi]+[\psi]
+\end{align*}
+and
+\begin{align*}
+[\varphi\circ\psi]&=\begin{pmatrix}(\varphi\circ\psi)(e_1) & \ldots & (\varphi\circ\psi)(e_n)\end{pmatrix}=\begin{pmatrix}\varphi(\psi(e_1)) & \ldots & \varphi(\psi(e_n))\end{pmatrix}=\\
+&=\begin{pmatrix}\varphi(\sum_{j=1}^n\underbrace{\pi_j(\psi(e_1))}_{\in R^n}e_j) & \ldots & \varphi(\sum_{j=1}^n\underbrace{\pi_j(\psi(e_n))}_{\in R^n}e_j)\end{pmatrix}=\\
+&=\begin{pmatrix}\sum_{j=1}^n\pi_j(\psi(e_1))\varphi(e_j) & \ldots & \sum_{j=1}^n\pi_j(\psi(e_n))\varphi(e_j)\end{pmatrix}=\\
+&=\begin{pmatrix}
+\pi_1(\sum_{j=1}^n\pi_j(\psi(e_1))\varphi(e_j)) & \ldots & \pi_1(\sum_{j=1}^n\pi_j(\psi(e_n))\varphi(e_j))\\
+\vdots & &\vdots\\
+\pi_n(\sum_{j=1}^n\pi_j(\psi(e_1))\varphi(e_j)) & \ldots & \pi_n(\sum_{j=1}^n\pi_j(\psi(e_n))\varphi(e_j))
+\end{pmatrix}=\\
+&=\begin{pmatrix}
+\sum_{j=1}^n\pi_j(\psi(e_1))\pi_1(\varphi(e_j)) & \ldots & \sum_{j=1}^n\pi_j(\psi(e_n))\pi_1(\varphi(e_j))\\
+\vdots & &\vdots\\
+\sum_{j=1}^n\pi_j(\psi(e_1))\pi_n(\varphi(e_j)) & \ldots & \sum_{j=1}^n\pi_j(\psi(e_n))\pi_n(\varphi(e_j))
+\end{pmatrix}=\\
+&=[\varphi][\psi].
+\end{align*}
+The homomorphism $[\;\cdot\;]$ is injective because $\ker([\;\cdot\;])=\lbrace 0\rbrace$. Corollary~\ref{cor.Matrix implies Homomorphism} implies the surjectivity.
+\end{proof}
+
+The proposition above implies that we can identify endomorphisms of free modules over commutative rings with matrices over these rings. Note that Proposition~\ref{prop.Matrix isomorph Homomorphism} can not be generalized to free modules over non-commutative rings because  Proposition~\ref{cor.Matrix implies Homomorphism} does not hold for non-commutative rings.

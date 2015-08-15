@@ -1,0 +1,10 @@
+\begin{exam}
+Let $F$ be a field. We consider $R=F[X_1,X_2,\ldots]$ the polynomial ring with countable infinitely many variables $X_i$ over $K$. We view $R$ as a module over itself and find that $\lbrace 1\rbrace$ is a generating set of $R$ over itself.
+
+The set $\mathfrak{I}$ of all polynomials in $R$ with constant term $a_0=0$ is an ideal in $R$ and therefore a submodule. But there is no finite generating set of $\mathfrak{I}$. If we assume that $\lbrace\seq{p}\rbrace\subseteq \mathfrak{I}$ was a generating set of $\mathfrak{I}$ we note that only a finite number $m\in\N$ of the variables $(X_i)_{i\in\N}$ appear in $\lbrace\seq{p}\rbrace$. We note $X_{i_1},\ldots,X_{i_m}$ for these $m$ variables. Hence, it exist a $k\in\N$ such that $X_k$ does not appear in $\lbrace\seq{p}\rbrace$. But it do not exist $\seq{a}\in R$ such that $X_k=\sum_{i=1}^n a_ip_i$ because only polynomials containing at least one $X_{i_\ell}$ ($1\leq\ell\leq k$) can be represented by such a sum. From which it follows $\langle\seq{p}\rangle_R\subsetneq \mathfrak{I}$.
+\end{exam}
+
+\begin{defin}
+An $R$-module $M$ is called \emph{Noetherian module} if every submodule of $M$ is finitely generated.
+\end{defin}
+

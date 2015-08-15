@@ -1,0 +1,177 @@
+In this section we will prove, that the first Grigorchuk group $\Gamma$ acts as a counterexample to the unbounded Burnside's problem. By definition $\Gamma$ is finitely generated. Thus, it suffices to prove, that $\Gamma$ is infinite and periodic. 
+
+\begin{defin}
+Given a non-negative integer $k$, we define the \emph{$k$-th stabilizer group of the first Grigorchuk group} $\St[\Gamma]{k}$ as the intersection
+\begin{equation*}
+\St[\Gamma]{k}=\St{k}\cap\Gamma.
+\end{equation*}
+\end{defin}
+\begin{rem}
+Observe that $\St[\Gamma]{k}$ is a normal subgroup of $\Gamma$.
+\end{rem}
+
+\begin{lem}\label{thm:StGamma1 is a proper subset of Gamma}
+Let $\gamma=u_0au_1a\ldots u_lau_{l+1}$ be the composition of some automorphisms $\seq[l]{u}\in\lbrace b,c,d\rbrace$ and  $u_0,u_{l+1}\in\lbrace \id,b,c,d\rbrace$, then $\gamma$ is an element of $\St[\Gamma]{1}$ if and only if $l$ is odd.
+\end{lem}
+The following proof can be found in \cite{waddle2008grigorchuk}.
+\begin{proof}
+Since $\lbrace b,c,d\rbrace\subseteq\St[\Gamma]{1}$ the group $\langle b,c,d\rangle$ is a subset of $\St[\Gamma]{1}$ as well. Hence, applying $\gamma=u_0au_1a\ldots u_lau_{l+1}$ to $\lbrace (0),(1)\rbrace$ flips the vertices $(0)$ and $(1)$ as often as $a$ occurs in $\gamma$. If $l$ is odd, $\gamma$ contains $l+1$ times the automorphism $a$. Thus, an even number of flips of $(0)$ and $(1)$ is applied, which proves $\gamma\in\St[\Gamma]{1}$. If on the other hand $l$ is even, the number of occurrences of $a$ in $\gamma$ is odd, therefore $\gamma((0))=(1)$ and $\gamma\not\in\St[\Gamma]{1}$.
+\end{proof}
+An important consequence of \cref{thm:StGamma1 is a proper subset of Gamma} is that $a\not\in\St[\Gamma]{1}$. Thus, $\St[\Gamma]{1}$ is a proper subset of $\Gamma$.
+
+\begin{thm}\label{thm:Conjugation with a inverts the performing of b c d}
+Let $\psi\colon\St{1}\to\AutT^2$ be defined as in \cref{thm:Homomorphism psi}, then the following identities hold
+\begin{align*}
+\psi(aba)&=(c,a),\\
+\psi(aca)&=(d,a) \text{ and}\\
+\psi(ada)&=(b,\id).
+\end{align*}
+\end{thm}
+\begin{proof}
+We will prove the claim for $aba$. The other results follow analogously.\\
+By \cref{thm:StGamma1 is a proper subset of Gamma} the automorphism $aba$ is in $\St[\Gamma]{1}$, thus $aba\in\St{1}$. So $\psi(aba)$ is well-defined. Consider the vertex $(0,b_2,\ldots,b_n)\in\ST{(0)}$. Computing its image under $aba$ we find
+\begin{equation*}
+aba(0,b_2,\ldots,b_n)=ab(1,b_2,\ldots,b_n)=a(1,c(b_2,\ldots,b_n))=(0,c(b_2,\ldots,b_n)).
+\end{equation*}
+Hence, $aba\big\vert_{\ST{(0)}}=c$. As for $(1,b_2,\ldots,b_n)\in\ST{(1)}$, we find
+\begin{equation*}
+aba(1,b_2,\ldots,b_n)=ab(0,b_2,\ldots,b_n)=a(1,a(b_2,\ldots,b_n))=(1,a(b_2,\ldots,b_n)),
+\end{equation*}
+which implies $aba\big\vert_{\ST{(1)}}=a$.
+\end{proof}
+\begin{rem}
+Let $\gamma=u_0au_1a\ldots u_{l-1}au_lau_{l+1}\in\St{1}$, for some $u_1\ldots u_{l}\in\lbrace b,c,d\rbrace$ and $u_0,u_{l+1}\in\lbrace \id,b,c,d\rbrace.$ Furthermore, let $\psi(u_i)=(v_{i,1},v_{i,2})$ for $1\leq 1\leq l+1$, then 
+\begin{align*}
+\psi(\gamma)	&=\psi(u_0)\psi(au_1a)\ldots\psi(u_{l-1})\psi(au_la)\psi(u_{l+1})=\\
+			&=(v_{0,1}v_{1,2}\ldots v_{l-1,1}v_{l,2}v_{l+1,1},v_{0,2}v_{1,1}\ldots v_{l-1,2}v_{l,1}v_{l+1,2})
+\end{align*}
+holds by \cref{thm:Conjugation with a inverts the performing of b c d}. As for $a\gamma a$, we find
+\begin{align*}
+\psi(a\gamma a)	&=\psi(au_0a)\psi(u_1)\ldots\psi(au_{l-1}a)\psi(u_l)\psi(au_{l+1}a)=\\
+			&=(v_{0,2}v_{1,1}\ldots v_{l-1,2}v_{l,1}v_{l+1,2},v_{0,1}v_{1,2}\ldots v_{l-1,1}v_{l,2}v_{l+1,1}).
+\end{align*}
+Thus, conjugation with $a$ switches the action of $\gamma$ on the right and the left subtree.
+\end{rem}
+\begin{lem}\label{thm:psi Gamma}
+The mapping $\psi_\Gamma\colon\St[\Gamma]{1}\to\Gamma\times\Gamma$ defined by
+\begin{equation*}
+\varphi\mapsto\left(\varphi\big\vert_{\ST{(0)}},\varphi\big\vert_{\ST{(1)}}\right)
+\end{equation*}
+is a monomorphism of groups.
+\end{lem}
+\begin{proof}
+Note that by definition $\psi_\Gamma(\gamma)=\psi(\gamma)$ for all $\gamma\in\St[\Gamma]{1}$. At first we show, that $\psi_\Gamma$ is well-defined, i.e. $\varphi\big\vert_{\ST{(0)}}$ and $\varphi\big\vert_{\ST{(1)}}$ are both in $\Gamma$ for all automorphisms $\gamma$. To that end, we distinguish three cases.
+\begin{clist}
+\item Assume the length of $\gamma$ to be odd and the reduced word $w$ of length $\ell(\gamma)$ to start with an $a$. If this is the case, then $w$ is of the form
+\begin{equation*}
+w=(au_1a)u_2\ldots (au_ma)
+\end{equation*}
+for some $\seq[m]{u}\in\lbrace b,c,d\rbrace$. Since $\gamma$ is in $\St[\Gamma]{1}$, by \cref{thm:StGamma1 is a proper subset of Gamma} there exists an integer $k$, such that $a$ occurs $2k$ times in $w$. As a consequence, $\ell(\gamma)$ equals $4k-1$ and the use of parentheses in the equation above is sound. For $\gamma_1,\gamma_2\in\AutT$, such that $\psi(\gamma)=(\gamma_1,\gamma_2)$ we deduce
+\begin{equation*}
+(\gamma_1,\gamma_2)=\psi(\gamma)=\psi(au_1a)\psi(u_2)\ldots \psi(au_ma).
+\end{equation*}
+By \cref{thm:Conjugation with a inverts the performing of b c d} $\gamma_1$ and $\gamma_2$ are both in $\Gamma$.
+\item If the length of $\gamma$ is odd and the reduced word $w$ of length $\ell(\gamma)$ starts with an $u_0\in\lbrace b,c,d\rbrace$, then $w$ is of the form
+\begin{equation*}
+w=u_0(au_1a)u_2\ldots (au_{m-1}a)u_m
+\end{equation*}
+for some $u_0\seq[m]{u}\in\lbrace b,c,d\rbrace$. Analogously to the arguments above we deduce that $\ell(\gamma)$ is congruent to 2 modulo 4, which implies that the parentheses above are valid. It follows that,
+\begin{equation*}
+(\gamma_1,\gamma_2):=\psi(\gamma)=\psi(u_0)\psi(au_1a)\psi(u_2)\ldots \psi(au_{m-1}a)\psi(u_m).
+\end{equation*}
+Again \cref{thm:Conjugation with a inverts the performing of b c d} implies that $\gamma_1$ and $\gamma_2$ are in $\Gamma$.
+\item Finally consider the case, that $\ell(\gamma)$ is even. Hence, the reduced word $w$ of length $\ell(\gamma)$ corresponding to $\gamma$ is either of the form
+\begin{align*}
+w&=(au_1a)u_2\ldots (au_ma) \text{ or}\\
+w&=u_1(au_2a)\ldots u_m,
+\end{align*}
+for some $\seq[m]{u}\in\lbrace b,c,d\rbrace$. In both cases the length of $\gamma$ is dividable by 4. Analogous arguments as above prove the claim.
+\end{clist}
+Thus far we have seen, that $\psi(\St[\Gamma]{1})$ is contained in $\Gamma\times\Gamma$. However, by the construction of $\St[\Gamma]{1}$ this implicates, that $\psi_\Gamma$ is a well-defined monomorphism of groups.
+\end{proof}
+
+\begin{thm}\label{thm:Gamma is infinite}
+The mapping $\psi_\mathrm{right}\colon\St[\Gamma]{1}\to\Gamma$, defined by
+\begin{equation*}
+\psi_\mathrm{right}(\gamma)=\gamma_2
+\end{equation*}
+if $\psi_\Gamma(\gamma)=(\gamma_1,\gamma_2)$, is a epimorphism of groups.
+\end{thm}
+\begin{proof}
+The mapping $\psi_\mathrm{right}$ is clearly a homomorphism. It fulfils
+\begin{align*}
+\psi_\mathrm{right}(d)&=b,\\
+\psi_\mathrm{right}(b)&=c \text{ and}\\
+\psi_\mathrm{right}(c)&=d
+\end{align*}
+by definition. \cref{thm:Conjugation with a inverts the performing of b c d} implies $\psi_\mathrm{right}(aba)=a$. As a consequence, $\psi_\mathrm{right}\left(\St[\Gamma]{1}\right)$ contains all generators of $\Gamma$ and the claim is proven. 
+\end{proof}
+
+In the theorem above a surjective mapping of a proper subset of $\Gamma$ onto $\Gamma$ is constructed. The existence of such a function implies that $\Gamma$ is infinite.\\
+The next lemma will show, that the first Grigorchuk group contains three subgroups which are isomorphic to some dihedral group $D_n$ of order $2n$. For this purpose it is proven, that these subgroups are generated by two elements $\sigma$ and $\tau$ of order two, such that the orders of $\sigma\tau$ and $\tau\sigma$ are equal to $n$. \textcite[Thm. 6.8]{suzuki1982group} states a rigorous proof that every group which is generated by two elements fulfilling these properties is isomorphic to the dihedral group $D_n$.
+\begin{lem}\label{thm:Dihedral groups in Gamma}
+$\Gamma$ contains the following subgroups
+\begin{thmlist}
+\item $\langle a,d\rangle\cong\D_4$,\label{thm:D4}
+\item $\langle a,c\rangle\cong\D_8$ and
+\item $\langle a,b\rangle\cong\D_{16}$.\label{thm:D16}
+\end{thmlist}
+\end{lem}
+\begin{proof}
+In \cref{thm:Gammas Generators are Self-Inverse} we have seen, that $a^2=b^2=c^2=d^2=\id$. To calculate the orders of $ad$ and $da$, remember that $\psi(d)=(\id,b)$ holds by definition and $\psi(ada)=(b,\id)$ holds by \cref{thm:Conjugation with a inverts the performing of b c d}. Thus,
+\begin{align*}
+\psi\left((ad)^2\right)&=\psi(ada)\psi(d)=(b,\id)(\id,b)=(b,b) \text{ and}\\
+\psi\left((da)^2\right)&=\psi(d)\psi(ada)=(\id,b)(b,\id)=(b,b).
+\end{align*}
+Since $(b,b)$ is of order 2 and $\psi$ is an isomorphism, the calculation above implies that the order of $ad$ and $da$ equals 4, thus (i) is proven. As for $ac$ and $ca$, \cref{thm:Gammas Generators are Self-Inverse} implies
+\begin{align}
+\psi\left((ac)^2\right)&=\psi(aca)\psi(c)=(d,a)(a,d)=(da,ad) \text{ and}\label{eq:order of ac} \\ 
+\psi\left((ca)^2\right)&=\psi(c)\psi(aca)=(a,d)(d,a)=(ad,da).\label{eq:order of ca}
+\end{align} 
+By (i) the order of $ad$ and $da$ is 4. Remember that the order of $(g,h)$ is the least common multiple of the orders of $g\in G$ and $h\in H$ for every direct product of groups $G\times H$, as long as the order of $g\in G$ and the order of $h\in H$ are finite. Thus, \cref{eq:order of ac,eq:order of ca} imply that the order of $ac$ and $ca$ is 8. Similar arguments prove, that $\psi\left((ab)^2\right)=(ca,ac)$ and $\psi\left((ba)^2\right)=(ac,ca)$, which implies together with (ii), that the order of $ab$ and $ba$ equals 16. 
+\end{proof}
+From the proof of \cref{thm:Dihedral groups in Gamma} it is clear that the order of every reduced word in the alphabet $\lbrace a,b,c,d \rbrace$ of length 2 is less or equal to 16. Finally, we are able to prove, that $\Gamma$ is indeed a counterexample to the unbounded Burnside's problem. The prove of \cref{thm:Gamma is a 2 group} can be found in \cite{de2000topics}.
+\begin{thm}\label{thm:Gamma is a 2 group}
+The first Grigorchuk group $\Gamma$ is a 2-group, i.e. for each automorphism $\gamma\in\Gamma$ there exists a non-negative integer $n$ such that
+\begin{equation*}
+\gamma^{2^n}=\id.
+\end{equation*}
+\end{thm}
+\begin{proof}
+We prove the claim by induction on the length of $\gamma$. \hypertarget{thm:Base Case}{If} $\ell(\gamma)=0$, then $\gamma=\id$. For $\ell(\gamma)=1$ the claim was proven in \cref{thm:Gammas Generators are Self-Inverse}. Finally, if $\ell(\gamma)=2$ \cref{thm:Dihedral groups in Gamma} implies $\gamma^{16}=\id$.\\
+Let now $k:=\ell(\gamma)$ be greater than 2 and let $w$ be a reduced word of length $k$ representing $\gamma$. We proceed by induction on $k$ and assume the claim was already proven for each word of length less or equal to $k-1$.\\
+\hypertarget{thm:k is odd}{At first suppose the length $k$ of $\gamma$ is odd}, then $w$ is either of the form
+\begin{align}
+w&=au_1a\ldots u_la\text{ or}\label{eq:w is odd starting and ending with an a}\\
+w&=u_0au_1a\ldots u_lau_{l+1}\label{eq:w is odd starting with u and ending with v}
+\end{align}
+for some $u_0,\ldots u_{l+1}\in\lbrace b,c,d\rbrace$. If $w$ is of the form of Expression~(\ref{eq:w is odd starting and ending with an a}), then $\gamma$ is conjugate to an automorphism $\eta$ of length $k-2$ with $\eta=u_1a\ldots u_l$. Since $\gamma$ and $\eta$ are conjugate, their orders coincide. Hence, with the induction hypothesis the claim follows. Suppose now $w$ is of the form suggested in Expression~(\ref{eq:w is odd starting with u and ending with v}). If $u_0=u_{l+1}$ one proceeds analogously to the argumentation above. If on the other hand $u_0\not=u_{l+1}$, then by \cref{thm:Three Generators Suffice} we can find an automorphism $v\in\lbrace b,c,d\rbrace$, such that $u_{l+1}v=u_0$. Thus, $\eta=vau_1a\ldots u_la$ and $\gamma$ are conjugate. Since $\ell(\eta)=k-1$, the statement follows from the induction hypothesis.\\
+Let us now suppose, that $k$ is even. Without loss of generality we assume that $w$ starts with an $a$, because we can exchange $\gamma$ with one of its conjugates $b\gamma b, c\gamma c$ or $d\gamma d$. Thus, the reduced word $w$ is of the form
+\begin{equation*}
+w=au_1 a u_2 a\ldots u_l
+\end{equation*}
+for $l=\frac{k}{2}$ and $\seq[k]{u}\in\lbrace b,c,d\rbrace$.\\
+If $l=2m$ is even, then $w$ contains an even number of automorphisms $a$. Hence, $\gamma\in\St[\Gamma]{1}$ and $(\gamma_1,\gamma_2):=\psi(\gamma)$ is well-defined. For these automorphisms the following identity holds
+\begin{equation*}
+(\gamma_1,\gamma_2)=\psi(\gamma)=\psi(au_1 a u_2 a\ldots u_l)=\psi(au_1 a)\psi(u_2)\ldots\psi(au_{l-1}a)\psi(u_l)
+\end{equation*}
+since 4 divides $k$. This identity and \cref{thm:Conjugation with a inverts the performing of b c d} imply that the lengths of $\gamma_1$ and $\gamma_2$ are lower than or equal to $l$. By the induction hypothesis there exist non-negative integers $n_1,n_2$, such that $\gamma_1^{2^{n_1}}=\gamma_2^{2^{n_2}}=\id$. The order of $(\gamma_1,\gamma_2)$ equals the least common multiple of the orders of $\gamma_1$ and $\gamma_2$ and is therefore less than or equal to $2^{\mathrm{max}(n_1,n_2)}$. Since $\psi$ is injective, the order of $\gamma$ equals the order of $\psi(\gamma)=(\gamma_1,\gamma_2)$. Thus $\gamma^{2^{\mathrm{max}(n_1,n_2)}}=\id$.\\
+Finally, let $l=\frac{k}{2}$ be odd, then $k=4m-2$ for some integer $m\geq 2$. Consider the word
+\begin{equation*}
+ww=(au_1 a) u_2 \ldots u_{l-1}(au_la)u_1 (a u_2 a)\ldots u_l
+\end{equation*}
+representing $\gamma^2$, which is of length $8m-4$ and therefore dividable by 4. As before there exist two automorphisms $\alpha,\beta\in\Gamma$ of length less than or equal to $4m-2$, such that
+\begin{align*}
+(\alpha,\beta)&=\psi(\gamma^2)=\psi(au_1 a u_2 a\ldots u_lau_1 a u_2 a\ldots u_l)=\psi(au_1 a u_2 a\ldots u_l)=\\
+&=\psi(au_1 a)\psi(u_2)\ldots\psi(au_{l-2}a)\psi(u_{l-1})\psi(au_l a)\psi(u_1)\ldots\psi(au_{l-1}a)\psi(u_l).
+\end{align*}
+We finish the proof by distinguishing three cases.
+\begin{clist}
+\item \label{p:Gamma is 2-group 1} Assume there exists a $j\in\lbrace 1,2,\ldots,l\rbrace$ such that $u_j=d$, then $\alpha$ and $\beta$ can be represented by words not longer than $4m-3=k-1$ since $\psi(d)=(\id,b)$ and $\psi(ada)=(b,\id)$. Thus, the induction hypothesis applies to $\alpha$ and $\beta$. By the same argumentation as above, we find a non-negative integer $m$ such that 
+\begin{equation*}
+(\gamma^2)^{2^m}=\gamma^{2^{m+1}}=\id.
+\end{equation*}
+\item \label{p:Gamma is 2-group 2} Assume there exists a $j\in\lbrace 1,2,\ldots,l\rbrace$ such that $u_j=c$, then $\psi(u_j)=(a,d)$ and $\psi(au_ja)=(d,a)$. Thus,  either $\alpha$ and $\beta$ are automorphisms of length $k$ containing a $d$ or the lengths of $\alpha$ and $\beta$ are smaller than $k$. If the first is the case, then \ref{p:Gamma is 2-group 1} proves the claim. If the latter is true we argue with the induction hypothesis.
+\item Finally if neither \ref{p:Gamma is 2-group 1} nor \ref{p:Gamma is 2-group 2} apply, then $\gamma\in\langle a,b\rangle\cong D_{16}$, which is a group of order $2^5=32$ by \cref{thm:D16}.
+\end{clist}
+\end{proof}

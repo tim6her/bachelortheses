@@ -1,0 +1,143 @@
+\begin{defin}
+\begin{thmlist}
+\item A (undirected) \emph{graph} (without multi edges or loops) is a pair of two sets $(V,E)$, where $V$ is non-empty and $E$ is a subset of all unordered pairs $\lbrace v_1,v_2\rbrace\in\mathcal{P}(V)$ that fulfil $v_1\neq v_2$. The set $V$ is called the \emph{vertex set} and $E$ the \emph{edge set} of the graph $(V,E)$.
+\item Two vertices $v_1,v_2\in V$ are said to be \emph{adjacent} if $\lbrace v_1,v_2\rbrace$ is contained in $E$.
+\item The \emph{degree} $\deg(v)$ of a vertex $v\in V$ is the number of vertices it is adjacent to.
+\end{thmlist}
+\end{defin}
+
+
+If the reference is clear we will briefly speak of a graph $G$ instead of $G=(V,E)$. If this is the case, then $V(G)=V$ denotes the vertex set of $G$ and $E(G)=E$ its edge set.\\
+A common and more intuitive way of describing a graph $G=(V,E)$ is visualizing it in form of a diagram. To this end, each vertex is represented by a small circle and the edge $\lbrace v_1,v_2\rbrace\in E$ is represented by a segment of a line joining the circles corresponding to $v_1$ and $v_2$.
+
+\begin{exam}\label{ex:Graph}
+Consider the graph $G=(V,E)$ defined by
+\begin{align*}
+V&=\lbrace 1,2,3,4,5\rbrace \text{ and}\\
+E&=\lbrace\lbrace 1,2\rbrace, \lbrace 1, 5\rbrace, \lbrace 2, 3\rbrace, \lbrace 2, 4\rbrace, \lbrace 2, 5 \rbrace, \lbrace 3, 4\rbrace, \lbrace 3, 5\rbrace, \lbrace 4, 5\rbrace\rbrace.
+\end{align*}
+The diagram below visualizes the graph $(V,E).$
+
+\begin{center}
+\includegraphics[scale=1]{./res/Graph}
+%\mbox{
+%\beginpgfgraphicnamed{Graph}
+%\begin{tikzpicture}
+%\foreach \name/\angle/\text in {P-4/234/4, P-5/162/5, 
+%                                  P-1/90/1, P-2/18/2, P-3/-54/3}
+%    \node (\name) at (\angle:1cm) {$\text$};
+%\foreach \from/\to in {1/2,2/3,3/4,4/5,5/1,2/4,3/5,5/2}
+%     \draw[draw=black] (P-\from) -- (P-\to);
+%\end{tikzpicture}
+%\endpgfgraphicnamed
+%}
+\end{center}
+\end{exam}
+
+\begin{defin}
+Let $G=(V,E)$ be a graph and $u,v\in V$.
+\begin{thmlist}
+\item A \emph{$u-v$-walk} is a finite sequence $(u=v_0,\seq{v}=v)$ in which $\lbrace v_{i-1},v_i\rbrace\in E$ for $1\leq i\leq n$.
+\item A \emph{$u-v$-path} is a $u-v$-walk, such that all vertices in the walk except $u$ and $v$ differ pairwise. A path is called \emph{trivial} if it contains only one vertex.
+\item The vertices $u$ and $v$ are \textit{connected} if there exists a $u-v$-walk. The graph $G$ is \emph{connected} if all of its vertices are pairwise connected.
+\item An $u-u$-path $(u=v_0,\seq{v}=u)$ is called \emph{cycle} if $|\lbrace\seq{v}=u\rbrace|>2.$
+\end{thmlist}
+\end{defin}
+
+\begin{rem}
+One proves easily that a graph is connected if and only if there exists a vertex $v_0$, such that all other vertices are connected to $v_0$.
+\end{rem}
+
+\begin{exam}
+Consider the graph $G$ from page\pageref{ex:Graph}again. The finite sequence $(4, 3, 5, 2, 1, 5, 4, 2, 3)$ is a $4-3$-walk in $G$ and $(1,2,4,3,5,1)$ is a cycle in $G$. The diagrams below visualize the $4-3$-walk (a) and the cycle (b).
+
+\begin{center}
+\includegraphics[scale=1]{./res/WalksAndCycles}
+%\mbox{
+%\beginpgfgraphicnamed{WalksAndCycles}
+%\begin{tikzpicture}
+%\foreach \name/\angle/\text in {P-4/234/4, P-5/162/5, P-1/90/1, P-2/18/2, P-3/-54/3}
+%    \node (\name) at (\angle:1cm) {$\text$};
+%\foreach \name/\angle in {Q-4/234, Q-5/162, Q-1/90, Q-2/18/2, Q-3/-54}
+%    \node[draw=none, minimum size=3mm] (\name) at (\angle:1cm) {};
+%\foreach \from/\to in {1/2,2/3,3/4,4/5,5/1,2/4,3/5,5/2}
+%     \draw[draw=black] (P-\from) -- (P-\to);
+%     
+%\draw[line width=2pt, line join=round, triangle 90 cap reversed-stealth, opacity=0.5] (Q-4.base) -- (Q-3.base) -- (Q-5.base) -- (Q-2.east) -- (Q-1.north) -- (Q-5.west) -- (Q-4.west) -- (Q-2.south east) -- (Q-3.east);
+%\node[draw=none] at (0,-1.5) {(a) A $4-3$-walk};
+%     
+%\begin{scope}[shift={(3,0)}]
+%\foreach \name/\angle/\text in {P-4/234/4, P-5/162/5, P-1/90/1, P-2/18/2, P-3/-54/3}
+%    \node (\name) at (\angle:1cm) {$\text$};
+%\foreach \name/\angle in {R-4/234, R-5/162, R-1/90, R-2/18/2, R-3/-54}
+%    \node[draw=none, minimum size=2mm] (\name) at (\angle:1cm) {};
+%\foreach \from/\to in {1/2,2/3,3/4,4/5,5/1,2/4,3/5,5/2}
+%     \draw[draw=black] (P-\from) -- (P-\to);
+%     
+%\draw[line width=2pt, line join=round, triangle 90  cap reversed-stealth, opacity=0.5] (R-1) -- (R-2.base) -- (R-4.base) -- (R-3.base) -- (R-5.base) -- (R-1);
+%\node[draw=none] at (0,-1.5) {(b) A cycle};
+%\end{scope}
+%\end{tikzpicture}
+%\endpgfgraphicnamed
+%}
+\end{center}
+\end{exam}
+%\vspace{-5em}
+\begin{lem} For an arbitrary graph $G$ the following statements hold. \label{thm:Unique Paths}
+\begin{thmlist}
+\item Let $u,v\in V(G)$, then every $u-v$-walk contains an $u-v$-path.\label{thm:Every walk contains a trail}
+\item $G$ contains a cycle if and only if there exist two distinct vertices $u,v\in V(G)$ and two disjoint $u-v$-paths $(u=v_0,\seq{v}=v)$ and $(u=w_0,\seq[m]{w}=v)$, i.e. $v_i\not\in\lbrace\seq[m-1]{w}\rbrace$ for $0<i<n$ and $w_j\not\in\lbrace\seq[n-1]{v}\rbrace$ for $0<j<m$.
+\end{thmlist}
+\end{lem}
+\begin{proof}
+\begin{plist}
+\item We prove the claim by induction on the length $n$ of the $u-v$-walk $(u=v_0,\seq{v}=v)$. If $n=0$ the result is clear. From now on let $n>0$ and the statement be already proven for all walks of shorter length than $n$. If $(u=v_0,\seq{v}=v)$ is a $u-v$-path, we are finished. If not, there exist two indices $i,j\in\lbrace 0,\ldots,n\rbrace$, $i<j$ such that $v_i=v_j$. Then
+\begin{equation*}
+(u=v_0,v_1,\ldots,v_{i-1},v_i=v_j,v_{j+1},\ldots,v_n=v)
+\end{equation*}
+is a shorter $u-v$-walk. The induction hypothesis proves the claim.
+\item If $(u=v_0,\seq{v}=u)$ is a cycle, then by definition $n>0$ and therefore $v_1$ exists. The $u-v_1$-paths $(u,v_1)$ and $(u=v_n,v_{n-1},\ldots,v_1)$ are disjoint by definition of a cycle.\\
+If on the other hand $(u=v_0,\seq{v}=v)$ and $(u=w_0,\seq[m]{w}=v)$ are two disjoint $u-v$-paths, then
+\begin{equation*}
+(u=v_0,\seq{v}=v=w_m,w_{m-1},\ldots,w_0=u)
+\end{equation*}
+is a cycle.
+\end{plist}
+\end{proof}
+
+\begin{defin}
+A connected graph without cycles is called a \emph{tree.}
+\end{defin}
+
+
+\begin{defin}
+Let $(V,E)$ be a graph. A \emph{subgraph} of $(V,E)$ is a graph $(U,F)$, such that $U\subseteq V$ and $F\subseteq (U\times U)\cap E.$
+\end{defin}
+
+\begin{defin}
+\begin{thmlist}
+\item Let $G_1=(V_1,E_1)$ and $G_2=(V_2,E_2)$ be two graphs. A bijection $\varphi\colon V_1 \to V_2$ is called \emph{isomorphism of graphs} if the following condition is met
+\begin{equation*}
+\lbrace v_1,v_2\rbrace\in E_1 \Leftrightarrow \lbrace \varphi(v_1),\varphi(v_2)\rbrace\in E_2.
+\end{equation*}
+\item If $G_1=G_2$, i.e. $\varphi$ maps $V_1$ onto itself, we call $\varphi$ an \emph{automorphism of the graph $G_1$.} The set of all automorphisms onto $G_1$ is denoted by $\Aut(G_1)$.
+\end{thmlist}
+\end{defin}
+\begin{rem}
+Note that an isomorphism of graphs preserves the degree of each vertex by definition.
+\end{rem}
+\begin{thm}\label{thm:Graph-Automorphisms Form a Group}
+Let $G=(V,E)$ be a graph. Then the set $\Aut(G)$ forms a group with respect to the composition of mappings.
+\end{thm}
+\begin{proof}
+The binary operation is well-defined because every pair of automorphisms $\varphi,\psi\in\Aut(G)$ satisfies the following equivalence by definition
+\begin{align*}
+\lbrace v_1,v_2\rbrace\in E&\Leftrightarrow\lbrace \varphi(v_1),\varphi(v_2)\rbrace\in E\\
+&\Leftrightarrow\lbrace \psi(\varphi(v_1)),\psi(\varphi(v_2))\rbrace=\lbrace (\psi\circ\varphi)(v_1),(\psi\circ\varphi)(v_2)\rbrace\in E.
+\end{align*}
+Associativity holds for compositions of arbitrary functions $f\colon V\to V$. Clearly, $\id_V$ is an automorphism of $G$ and fulfils $\id_V\circ\varphi=\varphi\circ\id_V=\varphi$. Since every automorphism $\varphi\in\Aut(G)$ is bijective one finds an inverse mapping $\varphi^{-1}\colon V\to V$. In fact, $\varphi^{-1}\in\Aut(G)$ because for an arbitrary edge $\lbrace v_1,v_2\rbrace\in E$ there exists a unique edge $\lbrace u_1,u_2\rbrace\in E$, such that $\lbrace v_1,v_2\rbrace=\lbrace \varphi(u_1),\varphi(u_2)\rbrace$. Therefore,
+\begin{equation*}
+\lbrace v_1,v_2\rbrace=\lbrace \varphi(u_1),\varphi(u_2)\rbrace\in E\Leftrightarrow\lbrace u_1,u_2\rbrace=\lbrace \varphi^{-1}(v_1),\varphi^{-1}(v_2)\rbrace\in E
+\end{equation*}
+and the claim is proven.
+\end{proof}

@@ -1,4 +1,4 @@
-\input{preambula.inc}
+\input{preambula.inc}%
 \begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
 \node (b) {$\emptyset$}
   child foreach \i in {0,1} {node {$\i$}
@@ -36,11 +36,11 @@
 \path (b-2-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,1)=8$};
 \end{scope}
 
-\node[fill=black!20] at (b-1-1) {1};
-\node[fill=black!20] at (b-1-2) {0};
+\node[fill=black!20] at (b-1-1) {$1$};
+\node[fill=black!20] at (b-1-2) {$0$};
 
-\node[fill=black!40] at (b-2-1-1) {1};
-\node[fill=black!40] at (b-2-1-2) {0};
+\node[fill=black!40] at (b-2-1-1) {$1$};
+\node[fill=black!40] at (b-2-1-2) {$0$};
 
 
 

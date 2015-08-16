@@ -42,24 +42,25 @@ The second statement follows directly from the definition of $\T$.
 The diagram below visualizes the first four levels of $\T$. One identifies each vertex $v$ with the binary sequence obtained by concatenating the entries of the nodes one passes in the diagram when following the unique path from the root to $v$. The existence and uniqueness of this path is proven in \cref{thm:Unique Paths}. For example the black filled vertex corresponds to the sequence $(0,0,1,1)$. The path from the root to $(0,0,1,1)$ is highlighted in the diagram. 
 
 \begin{center}
-\mbox{
-\beginpgfgraphicnamed{BinaryTree}
-\begin{tikzpicture}[level distance=7.5mm]
-
-\node (b) {$\emptyset$}
-  child foreach \i in {0,1} {node {\i}
- {child foreach \j in {0,1} {node {\j}
- {child foreach \k in {0,1} {node {\k}
- {child foreach \l in {0,1} {node {\l}
- {child foreach \m in {0,1} {coordinate edge from parent[dashed]}}}}}}}}};
-
-\node[very thick, fill=black, text=white] at (b-1-1-2-2) {1};	
-\foreach \from/\to in {b/b-1,b-1/b-1-1,b-1-1/b-1-1-2,b-1-1-2/b-1-1-2-2}
-	\node[very thick] at (\from) {}
-	edge[very thick] (\to);
-\end{tikzpicture}
-\endpgfgraphicnamed
-}
+\includegraphics[width=\textwidth]{./res/BinaryTree}
+%\mbox{
+%\beginpgfgraphicnamed{BinaryTree}
+%\begin{tikzpicture}[level distance=7.5mm]
+%
+%\node (b) {$\emptyset$}
+%  child foreach \i in {0,1} {node {\i}
+% {child foreach \j in {0,1} {node {\j}
+% {child foreach \k in {0,1} {node {\k}
+% {child foreach \l in {0,1} {node {\l}
+% {child foreach \m in {0,1} {coordinate edge from parent[dashed]}}}}}}}}};
+%
+%\node[very thick, fill=black, text=white] at (b-1-1-2-2) {1};	
+%\foreach \from/\to in {b/b-1,b-1/b-1-1,b-1-1/b-1-1-2,b-1-1-2/b-1-1-2-2}
+%	\node[very thick] at (\from) {}
+%	edge[very thick] (\to);
+%\end{tikzpicture}
+%\endpgfgraphicnamed
+%}
 \end{center}
 
 \begin{rem}
@@ -82,25 +83,26 @@ Note that adjacency is preserved in $\ST{(\seq{b})}$ for each vertex $v\in\ST{(\
 In the diagram below the graph $\ST{(0)}$ is highlighted as a subtree of $\T$.
 
 \begin{center}
-\beginpgfgraphicnamed{Subtree}
-\begin{tikzpicture}[level distance=7.5mm]
-\node (b) {$\emptyset$}
-  child foreach \i in {0,1} {node {\i}
- {child foreach \j in {0,1} {node {\j}
- {child foreach \k in {0,1} {node {\k}
- {child foreach \l in {0,1} {node {\l}
- {child foreach \m in {0,1} {coordinate edge from parent[dashed]}}}}}}}}};
-
-\begin{scope}[bgn]
-\node[draw=none] [above of=b]  {$\T$};
-\node[draw=none] [above of=b-1] (ST0) {$\ST{(0)}$};
-\end{scope}
-
-\begin{pgfonlayer}{background}
-\filldraw[st] (ST0.north) -- (b-1-1.north west) -- (b-1-1-1.west) -- (b-1-1-1-1.west) -- (b-1-1-1-1-1) -- (b-1-2-2-2-2) -- (b-1-2-2-2.east) -- (b-1-2-2.east) -- (b-1-2.north east) -- cycle; 
-\end{pgfonlayer}
-\end{tikzpicture}
-\endpgfgraphicnamed
+\includegraphics[width=\textwidth]{./res/Subtree}
+%\beginpgfgraphicnamed{Subtree}
+%\begin{tikzpicture}[level distance=7.5mm]
+%\node (b) {$\emptyset$}
+%  child foreach \i in {0,1} {node {\i}
+% {child foreach \j in {0,1} {node {\j}
+% {child foreach \k in {0,1} {node {\k}
+% {child foreach \l in {0,1} {node {\l}
+% {child foreach \m in {0,1} {coordinate edge from parent[dashed]}}}}}}}}};
+%
+%\begin{scope}[bgn]
+%\node[draw=none] [above of=b]  {$\T$};
+%\node[draw=none] [above of=b-1] (ST0) {$\ST{(0)}$};
+%\end{scope}
+%
+%\begin{pgfonlayer}{background}
+%\filldraw[st] (ST0.north) -- (b-1-1.north west) -- (b-1-1-1.west) -- (b-1-1-1-1.west) -- (b-1-1-1-1-1) -- (b-1-2-2-2-2) -- (b-1-2-2-2.east) -- (b-1-2-2.east) -- (b-1-2.north east) -- cycle; 
+%\end{pgfonlayer}
+%\end{tikzpicture}
+%\endpgfgraphicnamed
 \end{center}
 
 \begin{thm}\label{thm:Levels are preserved}

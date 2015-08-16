@@ -107,75 +107,76 @@ In \cref{g:Logarithmic growth} the upper bounds $n_1$ (dashed line) and $n_2$ (c
 
 \begin{figure}
 \begin{centering}
-\mbox{
-\beginpgfgraphicnamed{LogarithmicGrowth}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.2cm,y=0.4cm, every node=[draw=none]]
-\draw[->,color=black] (-0.5,0) -- (50.5,0);
-\foreach \x in {5,10,15,20,25,30,35,40,45}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below, draw=none] {\footnotesize $\x$};
-\draw[->,color=black] (0,-0.5) -- (0,15.5);
-\foreach \y in {2,4,6,8,10,12,14}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left, draw=none] {\footnotesize $\y$};
-\clip(-0.5,-0.5) rectangle (50.5,15.5);
-\draw[thick,dashed,smooth,samples=100,domain=0:50.5] plot(\x,{\x/2+3});
-\draw[thick,smooth,samples=100,domain=0:50.5] plot(\x,{ln(4*\x^2+1)/ln(2)});
-
-\begin{scriptsize}
-\fill  (0,0) circle (1.5pt);
-\fill  (1,1) circle (1.5pt);
-\fill  (2,4) circle (1.5pt);
-\fill  (3,4) circle (1.5pt);
-\fill  (4,4) circle (1.5pt);
-\fill  (5,4) circle (1.5pt);
-\fill  (6,4) circle (1.5pt);
-\fill  (7,4) circle (1.5pt);
-\fill  (8,4) circle (1.5pt);
-\fill  (9,6) circle (1.5pt);
-\fill  (10,6) circle (1.5pt);
-\fill  (11,6) circle (1.5pt);
-\fill  (12,6) circle (1.5pt);
-\fill  (13,6) circle (1.5pt);
-\fill  (14,6) circle (1.5pt);
-\fill  (15,6) circle (1.5pt);
-\fill  (16,6) circle (1.5pt);
-\fill  (17,6) circle (1.5pt);
-\fill  (18,6) circle (1.5pt);
-\fill  (19,6) circle (1.5pt);
-\fill  (20,6) circle (1.5pt);
-\fill  (21,8) circle (1.5pt);
-\fill  (22,8) circle (1.5pt);
-\fill  (23,8) circle (1.5pt);
-\fill  (24,8) circle (1.5pt);
-\fill  (25,8) circle (1.5pt);
-\fill  (26,8) circle (1.5pt);
-\fill  (27,8) circle (1.5pt);
-\fill  (28,8) circle (1.5pt);
-\fill  (29,8) circle (1.5pt);
-\fill  (30,8) circle (1.5pt);
-\fill  (31,8) circle (1.5pt);
-\fill  (32,8) circle (1.5pt);
-\fill  (33,8) circle (1.5pt);
-\fill  (34,8) circle (1.5pt);
-\fill  (35,8) circle (1.5pt);
-\fill  (36,8) circle (1.5pt);
-\fill  (37,8) circle (1.5pt);
-\fill  (38,8) circle (1.5pt);
-\fill  (39,8) circle (1.5pt);
-\fill  (40,8) circle (1.5pt);
-\fill  (41,8) circle (1.5pt);
-\fill  (42,8) circle (1.5pt);
-\fill  (43,8) circle (1.5pt);
-\fill  (44,8) circle (1.5pt);
-\fill  (45,10) circle (1.5pt);
-\fill  (46,10) circle (1.5pt);
-\fill  (47,10) circle (1.5pt);
-\fill  (48,10) circle (1.5pt);
-\fill  (49,10) circle (1.5pt);
-\fill  (50,10) circle (1.5pt);
-\end{scriptsize}
-\end{tikzpicture}
-\endpgfgraphicnamed
-}
+\includegraphics[width=\textwidth]{./res/LogarithmicGrowth}
+%\mbox{
+%\beginpgfgraphicnamed{LogarithmicGrowth}
+%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.2cm,y=0.4cm, every node=[draw=none]]
+%\draw[->,color=black] (-0.5,0) -- (50.5,0);
+%\foreach \x in {5,10,15,20,25,30,35,40,45}
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below, draw=none] {\footnotesize $\x$};
+%\draw[->,color=black] (0,-0.5) -- (0,15.5);
+%\foreach \y in {2,4,6,8,10,12,14}
+%\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left, draw=none] {\footnotesize $\y$};
+%\clip(-0.5,-0.5) rectangle (50.5,15.5);
+%\draw[thick,dashed,smooth,samples=100,domain=0:50.5] plot(\x,{\x/2+3});
+%\draw[thick,smooth,samples=100,domain=0:50.5] plot(\x,{ln(4*\x^2+1)/ln(2)});
+%
+%\begin{scriptsize}
+%\fill  (0,0) circle (1.5pt);
+%\fill  (1,1) circle (1.5pt);
+%\fill  (2,4) circle (1.5pt);
+%\fill  (3,4) circle (1.5pt);
+%\fill  (4,4) circle (1.5pt);
+%\fill  (5,4) circle (1.5pt);
+%\fill  (6,4) circle (1.5pt);
+%\fill  (7,4) circle (1.5pt);
+%\fill  (8,4) circle (1.5pt);
+%\fill  (9,6) circle (1.5pt);
+%\fill  (10,6) circle (1.5pt);
+%\fill  (11,6) circle (1.5pt);
+%\fill  (12,6) circle (1.5pt);
+%\fill  (13,6) circle (1.5pt);
+%\fill  (14,6) circle (1.5pt);
+%\fill  (15,6) circle (1.5pt);
+%\fill  (16,6) circle (1.5pt);
+%\fill  (17,6) circle (1.5pt);
+%\fill  (18,6) circle (1.5pt);
+%\fill  (19,6) circle (1.5pt);
+%\fill  (20,6) circle (1.5pt);
+%\fill  (21,8) circle (1.5pt);
+%\fill  (22,8) circle (1.5pt);
+%\fill  (23,8) circle (1.5pt);
+%\fill  (24,8) circle (1.5pt);
+%\fill  (25,8) circle (1.5pt);
+%\fill  (26,8) circle (1.5pt);
+%\fill  (27,8) circle (1.5pt);
+%\fill  (28,8) circle (1.5pt);
+%\fill  (29,8) circle (1.5pt);
+%\fill  (30,8) circle (1.5pt);
+%\fill  (31,8) circle (1.5pt);
+%\fill  (32,8) circle (1.5pt);
+%\fill  (33,8) circle (1.5pt);
+%\fill  (34,8) circle (1.5pt);
+%\fill  (35,8) circle (1.5pt);
+%\fill  (36,8) circle (1.5pt);
+%\fill  (37,8) circle (1.5pt);
+%\fill  (38,8) circle (1.5pt);
+%\fill  (39,8) circle (1.5pt);
+%\fill  (40,8) circle (1.5pt);
+%\fill  (41,8) circle (1.5pt);
+%\fill  (42,8) circle (1.5pt);
+%\fill  (43,8) circle (1.5pt);
+%\fill  (44,8) circle (1.5pt);
+%\fill  (45,10) circle (1.5pt);
+%\fill  (46,10) circle (1.5pt);
+%\fill  (47,10) circle (1.5pt);
+%\fill  (48,10) circle (1.5pt);
+%\fill  (49,10) circle (1.5pt);
+%\fill  (50,10) circle (1.5pt);
+%\end{scriptsize}
+%\end{tikzpicture}
+%\endpgfgraphicnamed
+%}
 \caption{Upper bounds for the logarithmic growth of $\Gamma$ as in \cref{thm:Upper bound for the growth of Gamma}~(-\hspace{2pt}-), as stated by Bartholdi and \v{S}uni\'{c}~(\textbf{---}) as well as the recursion of \cref{thm:Upper bound for the growth of Gamma}~($\bullet $)}
 \label{g:Logarithmic growth}
 \end{centering}
@@ -216,57 +217,58 @@ if $(\gamma_1,\ldots,\gamma_{2^{k-1}})\in\St[\Gamma]{1}^{2^{k-1}}$. In this nota
 and $(\id,b)=\psi_1(d)$. Thus, \cref{thm:psi k} implies $\psi_2(d)=(\id,\id,a,c)$. \cref{g:psi2(d)} illustrates the idea of the theorem. 
 \begin{figure}
 \begin{center}
-\mbox{
-\beginpgfgraphicnamed{psi2}
-\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
-\node (b) {$\emptyset$}
-  child foreach \i in {0,1} {node {\i}
- {child foreach \j in {0,1} {node {\j}
- {child foreach \k in {0,1} {node {\k}
- {child foreach \l in {0,1} {node {\l}
- {child foreach \m in {0,1} {coordinate edge from parent[dashed]}}}}}}}}};
-
-\begin{scope}[node distance=7mm, font=normall]
-\node[draw=none] [above of=b] (ST) {$d$};
-
-\node[draw=none] [above of=b-1] (ST0) {$\id$};
-\node[draw=none] [above of=b-2] (ST1) {$b$};
-\end{scope}
-
-\begin{scope}[bgn]
-\node[draw=none] [above of=b-1-1] (ST00) {$\id$};
-\node[draw=none] [above of=b-1-2] (ST01) {$\id$};
-\node[draw=none] [above of=b-2-1] (ST10) {$a$};
-\node[draw=none] [above of=b-2-2] (ST11) {$c$};
-\end{scope}
-
-\begin{scope}[node distance=3mm,font=\scriptsize, inner sep=1pt]
-\tikzstyle{every node}=[draw=none]
-\node  [below of=ST] {$\psi_1(d)=(\id,b)$};
-
-\node  [below of=ST0] {$\psi_1(\id)=(\id,\id)$};
-\node  [below of=ST1] {$\psi_1(b)=(a,c)$};
-\end{scope}
-
-\begin{pgfonlayer}{background}
-
-\filldraw[st] 	(ST0.north)  -- (ST01.north) -- (b-1-2-2.east) -- (b-1-2-2-2.east)-- (b-1-2-2-2-2) --
-				(b-1-1-1-1-1) -- (b-1-1-1-1.west) -- (b-1-1-1.west) -- (ST00.north) -- cycle;
-\filldraw[st] 	(ST1.north)  -- (ST11.north) -- (b-2-2-2.east) -- (b-2-2-2-2.east) -- (b-2-2-2-2-2) --
-				(b-2-1-1-1-1) -- (b-2-1-1-1.west) -- (b-2-1-1.west) -- (ST10.north) -- cycle;
-
-\filldraw[st1] 	(ST00.north)  -- (b-1-1-2.east) -- (b-1-1-2-2.east) -- (b-1-1-2-2-2.east) --
-				(b-1-1-1-1-1) -- (b-1-1-1-1.west) -- (b-1-1-1.west) -- cycle;
-\filldraw[st1] 	(ST01.north) -- (b-1-2-2.east) -- (b-1-2-2-2.east)-- (b-1-2-2-2-2) --
-				(b-1-2-1-1-1) -- (b-1-2-1-1.west) -- (b-1-2-1.west) -- cycle;
-\filldraw[st1] 	(ST10.north)  -- (b-2-1-1.west) -- (b-2-1-1-1.west) -- (b-2-1-1-1-1) -- 
-				(b-2-1-2-2-2) -- (b-2-1-2-2.east) -- (b-2-1-2.east) -- cycle;
-\filldraw[st1] 	(ST11.north) -- (b-2-2-1.west) -- (b-2-2-1-1.west) -- (b-2-2-1-1-1) -- 
-				(b-2-2-2-2-2) -- (b-2-2-2-2.east) -- (b-2-2-2.east) -- cycle;
-\end{pgfonlayer}
-\end{tikzpicture}
-\endpgfgraphicnamed
-}
+\includegraphics[width=\textwidth]{./res/psi2}
+%\mbox{
+%\beginpgfgraphicnamed{psi2}
+%\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
+%\node (b) {$\emptyset$}
+%  child foreach \i in {0,1} {node {\i}
+% {child foreach \j in {0,1} {node {\j}
+% {child foreach \k in {0,1} {node {\k}
+% {child foreach \l in {0,1} {node {\l}
+% {child foreach \m in {0,1} {coordinate edge from parent[dashed]}}}}}}}}};
+%
+%\begin{scope}[node distance=7mm, font=normall]
+%\node[draw=none] [above of=b] (ST) {$d$};
+%
+%\node[draw=none] [above of=b-1] (ST0) {$\id$};
+%\node[draw=none] [above of=b-2] (ST1) {$b$};
+%\end{scope}
+%
+%\begin{scope}[bgn]
+%\node[draw=none] [above of=b-1-1] (ST00) {$\id$};
+%\node[draw=none] [above of=b-1-2] (ST01) {$\id$};
+%\node[draw=none] [above of=b-2-1] (ST10) {$a$};
+%\node[draw=none] [above of=b-2-2] (ST11) {$c$};
+%\end{scope}
+%
+%\begin{scope}[node distance=3mm,font=\scriptsize, inner sep=1pt]
+%\tikzstyle{every node}=[draw=none]
+%\node  [below of=ST] {$\psi_1(d)=(\id,b)$};
+%
+%\node  [below of=ST0] {$\psi_1(\id)=(\id,\id)$};
+%\node  [below of=ST1] {$\psi_1(b)=(a,c)$};
+%\end{scope}
+%
+%\begin{pgfonlayer}{background}
+%
+%\filldraw[st] 	(ST0.north)  -- (ST01.north) -- (b-1-2-2.east) -- (b-1-2-2-2.east)-- (b-1-2-2-2-2) --
+%				(b-1-1-1-1-1) -- (b-1-1-1-1.west) -- (b-1-1-1.west) -- (ST00.north) -- cycle;
+%\filldraw[st] 	(ST1.north)  -- (ST11.north) -- (b-2-2-2.east) -- (b-2-2-2-2.east) -- (b-2-2-2-2-2) --
+%				(b-2-1-1-1-1) -- (b-2-1-1-1.west) -- (b-2-1-1.west) -- (ST10.north) -- cycle;
+%
+%\filldraw[st1] 	(ST00.north)  -- (b-1-1-2.east) -- (b-1-1-2-2.east) -- (b-1-1-2-2-2.east) --
+%				(b-1-1-1-1-1) -- (b-1-1-1-1.west) -- (b-1-1-1.west) -- cycle;
+%\filldraw[st1] 	(ST01.north) -- (b-1-2-2.east) -- (b-1-2-2-2.east)-- (b-1-2-2-2-2) --
+%				(b-1-2-1-1-1) -- (b-1-2-1-1.west) -- (b-1-2-1.west) -- cycle;
+%\filldraw[st1] 	(ST10.north)  -- (b-2-1-1.west) -- (b-2-1-1-1.west) -- (b-2-1-1-1-1) -- 
+%				(b-2-1-2-2-2) -- (b-2-1-2-2.east) -- (b-2-1-2.east) -- cycle;
+%\filldraw[st1] 	(ST11.north) -- (b-2-2-1.west) -- (b-2-2-1-1.west) -- (b-2-2-1-1-1) -- 
+%				(b-2-2-2-2-2) -- (b-2-2-2-2.east) -- (b-2-2-2.east) -- cycle;
+%\end{pgfonlayer}
+%\end{tikzpicture}
+%\endpgfgraphicnamed
+%}
 \end{center}
 \caption{$\psi_2(d)=(\id,\id,a,c)$}
 \label{g:psi2(d)}
@@ -325,30 +327,31 @@ The group $\im(\varpi_3)\subseteq\mathfrak{S}_8$ is of order 128.
 Two automorphisms $\varphi,\eta\in\Gamma$ are in the same equivalence class of $\nicefrac{\Gamma}{\St[\Gamma]{3}}$ if and only if $\varphi\eta^{-1}\in\St[\Gamma]{3}$. Hence, their restrictions to the vertices on the first 3 levels must coincide. We can therefore identify $\nicefrac{\Gamma}{\St[\Gamma]{3}}$ with the automorphism group of the finite binary tree $\T_3$ of 15 vertices. The graph  $\T_3$ is visualized in the diagram below.
 
 \begin{center}
-\mbox{
-\beginpgfgraphicnamed{T32}
-\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
-\node (b) {$\emptyset$}
-  child foreach \i in {0,1} {node {\i}
- {child foreach \j in {0,1} {node {\j}
- {child foreach \k in {0,1} {node {\k}
- }}}}};
-
-\begin{scope}[bgn]
-\tikzstyle{every node}=[rectangle,draw=none,font=\small]
-\path[hlarrow] (b-1) .. controls +(3,-0.5) .. (b-2) node [draw=none, midway, above] {$a$};
-
-\path[hlarrow] (b-1-1) .. controls +(1.5,-0.5) .. (b-1-2) node [draw=none, midway, above] {$c$};
-\path[hlarrow] (b-2-1) .. controls +(1.5,-0.5) .. (b-2-2) node [draw=none, midway, above] {$aca$};
-
-\path[hlarrow] (b-1-1-1) .. controls +(0.75,-0.5) .. (b-1-1-2) node [draw=none, midway, below] {$ada$};
-\path[hlarrow] (b-1-2-1) .. controls +(0.75,-0.5) .. (b-1-2-2) node [draw=none, midway, below] {$cadac$};
-\path[hlarrow] (b-2-1-1) .. controls +(0.75,-0.5) .. (b-2-1-2) node [draw=none, midway, below] {$d$};
-\path[hlarrow] (b-2-2-1) .. controls +(0.75,-0.5) .. (b-2-2-2) node [midway, below] {$acadaca$};
-\end{scope}
-\end{tikzpicture}
-\endpgfgraphicnamed
-}
+\includegraphics[width=\textwidth]{./res/T32}
+%\mbox{
+%\beginpgfgraphicnamed{T32}
+%\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
+%\node (b) {$\emptyset$}
+%  child foreach \i in {0,1} {node {\i}
+% {child foreach \j in {0,1} {node {\j}
+% {child foreach \k in {0,1} {node {\k}
+% }}}}};
+%
+%\begin{scope}[bgn]
+%\tikzstyle{every node}=[rectangle,draw=none,font=\small]
+%\path[hlarrow] (b-1) .. controls +(3,-0.5) .. (b-2) node [draw=none, midway, above] {$a$};
+%
+%\path[hlarrow] (b-1-1) .. controls +(1.5,-0.5) .. (b-1-2) node [draw=none, midway, above] {$c$};
+%\path[hlarrow] (b-2-1) .. controls +(1.5,-0.5) .. (b-2-2) node [draw=none, midway, above] {$aca$};
+%
+%\path[hlarrow] (b-1-1-1) .. controls +(0.75,-0.5) .. (b-1-1-2) node [draw=none, midway, below] {$ada$};
+%\path[hlarrow] (b-1-2-1) .. controls +(0.75,-0.5) .. (b-1-2-2) node [draw=none, midway, below] {$cadac$};
+%\path[hlarrow] (b-2-1-1) .. controls +(0.75,-0.5) .. (b-2-1-2) node [draw=none, midway, below] {$d$};
+%\path[hlarrow] (b-2-2-1) .. controls +(0.75,-0.5) .. (b-2-2-2) node [midway, below] {$acadaca$};
+%\end{scope}
+%\end{tikzpicture}
+%\endpgfgraphicnamed
+%}
 \end{center}
 
 Since there are 7 pairs of subtrees (marked by a thick double-tipped arrow) that can switch there position independently, the automorphism group of $\T_3$ is of order $2^7=128$. Thus, we need to prove, that $\Gamma$ contains 7 automorphisms, which switch one of these pairs and leave the others fixed. In the diagram above those automorphisms can be found next to the pair they interchange.\\
@@ -447,266 +450,270 @@ which proves the claim, as we have already shown, that $[\Gamma:B]\leq 8$.
 \begin{figure}
 \begin{center}
 \subfloat[$\varpi_3(b)=(1\,3)(2\,4)(5\,6)$\label{g:pi b}]{
-%\beginpgfgraphicnamed{varpi_of_b}
-\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
-\node (b) {$\emptyset$}
-  child foreach \i in {0,1} {node {\i}
- {child foreach \j in {0,1} {node {\j}
- {child foreach \k in {0,1} {node {\k}
- }}}}};
-
-\begin{scope}[node distance=7mm, font=normall]
-\node[draw=none,rectangle] [above of=b] (ST) {$b$};
-
-\node[draw=none] [above of=b-1] (ST0) {$a$};
-\node[draw=none] [above of=b-2] (ST1) {$c$};
-\end{scope}
-
-\begin{scope}[bgn]
-\node[draw=none] [above of=b-2-1] (ST10) {$a$};
-\node[draw=none] [above of=b-2-2] (ST11) {$d$};
-\end{scope}
-
-\begin{scope}[bgn]
-\tikzstyle{every node}=[rectangle,draw=none,font=\scriptsize]
-
-\path[hlarrow] (b-1-1) .. controls +(1.5,-0.5) .. (b-1-2);
-
-\path[hlarrow] (b-2-1-1) .. controls +(0.75,-0.5) .. (b-2-1-2);
-
-\path (b-1-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,0)=3$};
-\path (b-1-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,1)=4$};
-\path (b-1-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,0)=1$};
-\path (b-1-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,1)=2$};
-
-\path (b-2-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,1)=6$};
-\path (b-2-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,0)=5$};
-\path (b-2-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,0)=7$};
-\path (b-2-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,1)=8$};
-\end{scope}
-
-\node[fill=black!20] at (b-1-1) {1};
-\node[fill=black!20] at (b-1-2) {0};
-
-\node[fill=black!40] at (b-2-1-1) {1};
-\node[fill=black!40] at (b-2-1-2) {0};
-
-
-
-\begin{pgfonlayer}{background}
-
-%\filldraw[st] 	(ST0.north)  -- (b-1-2.north east) -- (b-1-2-2.east) to[out=-45,in=0] (b-1-2-2.south) --(b-1-1-1.south) to[out=-180,in=225] (b-1-1-1.west) -- (b-1-1.north west) -- cycle;
-\filldraw[black!20,line width=10mm, line join=round] 	(ST0.base)  -- (b-1-2.base) -- (b-1-2-2.base) --(b-1-1-1.base)  -- (b-1-1.base) -- cycle;
-\filldraw[black!20,line width=10mm, line join=round] 	(ST1.base)  -- (ST11.base) -- (b-2-2-2.base) -- (b-2-1-1.base) -- (ST10.base) -- cycle;
-
-\filldraw[black!40,line width=10mm, line join=round] 	(ST10.base) -- (b-2-1-1.base)  -- (b-2-1-2.base)  -- cycle;
-\filldraw[black!40,line width=10mm, line join=round] 	(ST11.base) -- (b-2-2-1.base)  -- (b-2-2-2.base)  -- cycle;
-\end{pgfonlayer}
-\end{tikzpicture}
-%\endpgfgraphicnamed
+\includegraphics[width=\textwidth]{./res/varpi_of_b}
+%%\beginpgfgraphicnamed{varpi_of_b}
+%\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
+%\node (b) {$\emptyset$}
+%  child foreach \i in {0,1} {node {\i}
+% {child foreach \j in {0,1} {node {\j}
+% {child foreach \k in {0,1} {node {\k}
+% }}}}};
+%
+%\begin{scope}[node distance=7mm, font=normall]
+%\node[draw=none,rectangle] [above of=b] (ST) {$b$};
+%
+%\node[draw=none] [above of=b-1] (ST0) {$a$};
+%\node[draw=none] [above of=b-2] (ST1) {$c$};
+%\end{scope}
+%
+%\begin{scope}[bgn]
+%\node[draw=none] [above of=b-2-1] (ST10) {$a$};
+%\node[draw=none] [above of=b-2-2] (ST11) {$d$};
+%\end{scope}
+%
+%\begin{scope}[bgn]
+%\tikzstyle{every node}=[rectangle,draw=none,font=\scriptsize]
+%
+%\path[hlarrow] (b-1-1) .. controls +(1.5,-0.5) .. (b-1-2);
+%
+%\path[hlarrow] (b-2-1-1) .. controls +(0.75,-0.5) .. (b-2-1-2);
+%
+%\path (b-1-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,0)=3$};
+%\path (b-1-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,1)=4$};
+%\path (b-1-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,0)=1$};
+%\path (b-1-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,1)=2$};
+%
+%\path (b-2-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,1)=6$};
+%\path (b-2-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,0)=5$};
+%\path (b-2-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,0)=7$};
+%\path (b-2-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,1)=8$};
+%\end{scope}
+%
+%\node[fill=black!20] at (b-1-1) {1};
+%\node[fill=black!20] at (b-1-2) {0};
+%
+%\node[fill=black!40] at (b-2-1-1) {1};
+%\node[fill=black!40] at (b-2-1-2) {0};
+%
+%
+%
+%\begin{pgfonlayer}{background}
+%
+%%\filldraw[st] 	(ST0.north)  -- (b-1-2.north east) -- (b-1-2-2.east) to[out=-45,in=0] (b-1-2-2.south) --(b-1-1-1.south) to[out=-180,in=225] (b-1-1-1.west) -- (b-1-1.north west) -- cycle;
+%\filldraw[black!20,line width=10mm, line join=round] 	(ST0.base)  -- (b-1-2.base) -- (b-1-2-2.base) --(b-1-1-1.base)  -- (b-1-1.base) -- cycle;
+%\filldraw[black!20,line width=10mm, line join=round] 	(ST1.base)  -- (ST11.base) -- (b-2-2-2.base) -- (b-2-1-1.base) -- (ST10.base) -- cycle;
+%
+%\filldraw[black!40,line width=10mm, line join=round] 	(ST10.base) -- (b-2-1-1.base)  -- (b-2-1-2.base)  -- cycle;
+%\filldraw[black!40,line width=10mm, line join=round] 	(ST11.base) -- (b-2-2-1.base)  -- (b-2-2-2.base)  -- cycle;
+%\end{pgfonlayer}
+%\end{tikzpicture}
+%%\endpgfgraphicnamed
 
 }
 
 \subfloat[$\varpi_3(u)=(1\,2)(3\,4)$\label{g:pi u}]{
-\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
-\node (b) {$\emptyset$}
-  child foreach \i in {0,1} {node {\i}
- {child foreach \j in {0,1} {node {\j}
- {child foreach \k in {0,1} {node {\k}
- }}}}};
-
-\begin{scope}[node distance=7mm, font=normall]
-\node[draw=none,rectangle] [above of=b] (ST) {$u=b(ada)b(ada)$};
-
-\node[draw=none] [above of=b-1] (ST0) {$(aba)b$};
-\node[draw=none] [above of=b-2] (ST1) {$\id$};
-\end{scope}
-
-\begin{scope}[bgn]
-\node[draw=none] [above of=b-1-1] (ST00) {$ca$};
-\node[draw=none] [above of=b-1-2] (ST01) {$ac$};
-\end{scope}
-
-\begin{scope}[bgn]
-\tikzstyle{every node}=[rectangle,draw=none,font=\scriptsize]
-
-\path[hlarrow] (b-1-1-1) .. controls +(0.75,-0.5) .. (b-1-1-2);
-
-\path[hlarrow] (b-1-2-1) .. controls +(0.75,-0.5) .. (b-1-2-2);
-
-%\path (b-1-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,1)=2$};
-%\path (b-1-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,0)=1$};
-%\path (b-1-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,1)=4$};
-%\path (b-1-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,0)=3$};
+\includegraphics[width=\textwidth]{./res/varpi_of_u}
+%\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
+%\node (b) {$\emptyset$}
+%  child foreach \i in {0,1} {node {\i}
+% {child foreach \j in {0,1} {node {\j}
+% {child foreach \k in {0,1} {node {\k}
+% }}}}};
 %
-%\path (b-2-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,0)=5$};
-%\path (b-2-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,1)=6$};
-%\path (b-2-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,0)=7$};
-%\path (b-2-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,1)=8$};
-
-\path (b-1-1-1) ++(0,-8mm) node {$2$} -- ++(-16.3135mm,0);
-\path (b-1-1-2) ++(0,-8mm) node {$1$};
-\path (b-1-2-1) ++(0,-8mm) node {$4$};
-\path (b-1-2-2) ++(0,-8mm) node {$3$};
-
-\path (b-2-1-1) ++(0,-8mm) node {$5$};
-\path (b-2-1-2) ++(0,-8mm) node {$6$};
-\path (b-2-2-1) ++(0,-8mm) node {$7$};
-\path (b-2-2-2) ++(0,-8mm) node {$8$};
-\end{scope}
-
-\node[fill=black!40] at (b-1-1-1) {1};
-\node[fill=black!40] at (b-1-1-2) {0};
-
-\node[fill=black!40] at (b-1-2-1) {1};
-\node[fill=black!40] at (b-1-2-2) {0};
-
-
-
-\begin{pgfonlayer}{background}
-
-\filldraw[black!20,line width=10mm, line join=round] 	(ST0.base)  -- (ST01.base) -- (b-1-2-2.base) --(b-1-1-1.base)  -- (ST00.base) -- cycle;
-\filldraw[black!20,line width=10mm, line join=round] 	(ST1.base)  -- (b-2-2.base) -- (b-2-2-2.base) -- (b-2-1-1.base) -- (b-2-1.base) -- cycle;
-
-\filldraw[black!40,line width=10mm, line join=round] 	(ST00.base) -- (b-1-1-1.base)  -- (b-1-1-2.base)  -- cycle;
-\filldraw[black!40,line width=10mm, line join=round] 	(ST01.base) -- (b-1-2-1.base)  -- (b-1-2-2.base)  -- cycle;
-\end{pgfonlayer}
-\end{tikzpicture}
+%\begin{scope}[node distance=7mm, font=normall]
+%\node[draw=none,rectangle] [above of=b] (ST) {$u=b(ada)b(ada)$};
+%
+%\node[draw=none] [above of=b-1] (ST0) {$(aba)b$};
+%\node[draw=none] [above of=b-2] (ST1) {$\id$};
+%\end{scope}
+%
+%\begin{scope}[bgn]
+%\node[draw=none] [above of=b-1-1] (ST00) {$ca$};
+%\node[draw=none] [above of=b-1-2] (ST01) {$ac$};
+%\end{scope}
+%
+%\begin{scope}[bgn]
+%\tikzstyle{every node}=[rectangle,draw=none,font=\scriptsize]
+%
+%\path[hlarrow] (b-1-1-1) .. controls +(0.75,-0.5) .. (b-1-1-2);
+%
+%\path[hlarrow] (b-1-2-1) .. controls +(0.75,-0.5) .. (b-1-2-2);
+%
+%%\path (b-1-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,1)=2$};
+%%\path (b-1-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,0)=1$};
+%%\path (b-1-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,1)=4$};
+%%\path (b-1-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,0)=3$};
+%%
+%%\path (b-2-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,0)=5$};
+%%\path (b-2-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,1)=6$};
+%%\path (b-2-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,0)=7$};
+%%\path (b-2-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,1)=8$};
+%
+%\path (b-1-1-1) ++(0,-8mm) node {$2$} -- ++(-16.3135mm,0);
+%\path (b-1-1-2) ++(0,-8mm) node {$1$};
+%\path (b-1-2-1) ++(0,-8mm) node {$4$};
+%\path (b-1-2-2) ++(0,-8mm) node {$3$};
+%
+%\path (b-2-1-1) ++(0,-8mm) node {$5$};
+%\path (b-2-1-2) ++(0,-8mm) node {$6$};
+%\path (b-2-2-1) ++(0,-8mm) node {$7$};
+%\path (b-2-2-2) ++(0,-8mm) node {$8$};
+%\end{scope}
+%
+%\node[fill=black!40] at (b-1-1-1) {1};
+%\node[fill=black!40] at (b-1-1-2) {0};
+%
+%\node[fill=black!40] at (b-1-2-1) {1};
+%\node[fill=black!40] at (b-1-2-2) {0};
+%
+%
+%
+%\begin{pgfonlayer}{background}
+%
+%\filldraw[black!20,line width=10mm, line join=round] 	(ST0.base)  -- (ST01.base) -- (b-1-2-2.base) --(b-1-1-1.base)  -- (ST00.base) -- cycle;
+%\filldraw[black!20,line width=10mm, line join=round] 	(ST1.base)  -- (b-2-2.base) -- (b-2-2-2.base) -- (b-2-1-1.base) -- (b-2-1.base) -- cycle;
+%
+%\filldraw[black!40,line width=10mm, line join=round] 	(ST00.base) -- (b-1-1-1.base)  -- (b-1-1-2.base)  -- cycle;
+%\filldraw[black!40,line width=10mm, line join=round] 	(ST01.base) -- (b-1-2-1.base)  -- (b-1-2-2.base)  -- cycle;
+%\end{pgfonlayer}
+%\end{tikzpicture}
 }
 
 \subfloat[$\varpi_3(v)=(1\,2)(5\,7)(6\,8)$\label{g:pi v}]{
-\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
-\node (b) {$\emptyset$}
-  child foreach \i in {0,1} {node {\i}
- {child foreach \j in {0,1} {node {\j}
- {child foreach \k in {0,1} {node {\k}
- }}}}};
-
-\begin{scope}[node distance=7mm, font=normall]
-\node[draw=none,rectangle] [above of=b] (ST) {$v=aba$};
-
-\node[draw=none] [above of=b-1] (ST0) {$c$};
-\node[draw=none] [above of=b-2] (ST1) {$a$};
-\end{scope}
-
-\begin{scope}[bgn]
-\node[draw=none] [above of=b-1-1] (ST00) {$a$};
-\node[draw=none] [above of=b-1-2] (ST01) {$d$};
-\end{scope}
-
-\begin{scope}[bgn]
-\tikzstyle{every node}=[rectangle,draw=none,font=\scriptsize]
-
-\path[hlarrow] (b-2-1) .. controls +(1.5,-0.5) .. (b-2-2);
-
-\path[hlarrow] (b-1-1-1) .. controls +(0.75,-0.5) .. (b-1-1-2);
-
-%\path (b-1-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,1)=2$};
-%\path (b-1-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,0)=1$};
-%\path (b-1-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,0)=3$};
-%\path (b-1-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,1)=4$};
+\includegraphics[width=\textwidth]{./res/varpi_of_v}
+%\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
+%\node (b) {$\emptyset$}
+%  child foreach \i in {0,1} {node {\i}
+% {child foreach \j in {0,1} {node {\j}
+% {child foreach \k in {0,1} {node {\k}
+% }}}}};
 %
-%\path (b-2-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,0)=7$};
-%\path (b-2-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,1)=8$};
-%\path (b-2-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,0)=5$};
-%\path (b-2-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,1)=6$};
-
-\path (b-1-1-1) ++(0,-8mm) node {$2$} -- ++(-16.3135mm,0);
-\path (b-1-1-2) ++(0,-8mm) node {$1$};
-\path (b-1-2-1) ++(0,-8mm) node {$3$};
-\path (b-1-2-2) ++(0,-8mm) node {$4$};
-
-\path (b-2-1-1) ++(0,-8mm) node {$7$};
-\path (b-2-1-2) ++(0,-8mm) node {$8$};
-\path (b-2-2-1) ++(0,-8mm) node {$5$};
-\path (b-2-2-2) ++(0,-8mm) node {$6$};
-\end{scope}
-
-\node[fill=black!20] at (b-2-1) {1};
-\node[fill=black!20] at (b-2-2) {0};
-
-\node[fill=black!40] at (b-1-1-1) {1};
-\node[fill=black!40] at (b-1-1-2) {0};
-
-
-
-\begin{pgfonlayer}{background}
-
-\filldraw[black!20,line width=10mm, line join=round] 	(ST0.base)  -- (ST01.base) -- (b-1-2-2.base) --(b-1-1-1.base)  -- (ST00.base) -- cycle;
-\filldraw[black!20,line width=10mm, line join=round] 	(ST1.base)  -- (b-2-2.base) -- (b-2-2-2.base) -- (b-2-1-1.base) -- (b-2-1.base) -- cycle;
-
-\filldraw[black!40,line width=10mm, line join=round] 	(ST00.base) -- (b-1-1-1.base)  -- (b-1-1-2.base)  -- cycle;
-\filldraw[black!40,line width=10mm, line join=round] 	(ST01.base) -- (b-1-2-1.base)  -- (b-1-2-2.base)  -- cycle;
-\end{pgfonlayer}
-\end{tikzpicture}
+%\begin{scope}[node distance=7mm, font=normall]
+%\node[draw=none,rectangle] [above of=b] (ST) {$v=aba$};
+%
+%\node[draw=none] [above of=b-1] (ST0) {$c$};
+%\node[draw=none] [above of=b-2] (ST1) {$a$};
+%\end{scope}
+%
+%\begin{scope}[bgn]
+%\node[draw=none] [above of=b-1-1] (ST00) {$a$};
+%\node[draw=none] [above of=b-1-2] (ST01) {$d$};
+%\end{scope}
+%
+%\begin{scope}[bgn]
+%\tikzstyle{every node}=[rectangle,draw=none,font=\scriptsize]
+%
+%\path[hlarrow] (b-2-1) .. controls +(1.5,-0.5) .. (b-2-2);
+%
+%\path[hlarrow] (b-1-1-1) .. controls +(0.75,-0.5) .. (b-1-1-2);
+%
+%%\path (b-1-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,1)=2$};
+%%\path (b-1-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,0)=1$};
+%%\path (b-1-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,0)=3$};
+%%\path (b-1-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,1)=4$};
+%%
+%%\path (b-2-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,0)=7$};
+%%\path (b-2-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,1)=8$};
+%%\path (b-2-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,0)=5$};
+%%\path (b-2-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,1)=6$};
+%
+%\path (b-1-1-1) ++(0,-8mm) node {$2$} -- ++(-16.3135mm,0);
+%\path (b-1-1-2) ++(0,-8mm) node {$1$};
+%\path (b-1-2-1) ++(0,-8mm) node {$3$};
+%\path (b-1-2-2) ++(0,-8mm) node {$4$};
+%
+%\path (b-2-1-1) ++(0,-8mm) node {$7$};
+%\path (b-2-1-2) ++(0,-8mm) node {$8$};
+%\path (b-2-2-1) ++(0,-8mm) node {$5$};
+%\path (b-2-2-2) ++(0,-8mm) node {$6$};
+%\end{scope}
+%
+%\node[fill=black!20] at (b-2-1) {1};
+%\node[fill=black!20] at (b-2-2) {0};
+%
+%\node[fill=black!40] at (b-1-1-1) {1};
+%\node[fill=black!40] at (b-1-1-2) {0};
+%
+%
+%
+%\begin{pgfonlayer}{background}
+%
+%\filldraw[black!20,line width=10mm, line join=round] 	(ST0.base)  -- (ST01.base) -- (b-1-2-2.base) --(b-1-1-1.base)  -- (ST00.base) -- cycle;
+%\filldraw[black!20,line width=10mm, line join=round] 	(ST1.base)  -- (b-2-2.base) -- (b-2-2-2.base) -- (b-2-1-1.base) -- (b-2-1.base) -- cycle;
+%
+%\filldraw[black!40,line width=10mm, line join=round] 	(ST00.base) -- (b-1-1-1.base)  -- (b-1-1-2.base)  -- cycle;
+%\filldraw[black!40,line width=10mm, line join=round] 	(ST01.base) -- (b-1-2-1.base)  -- (b-1-2-2.base)  -- cycle;
+%\end{pgfonlayer}
+%\end{tikzpicture}
 }
 
 \subfloat[$\varpi_3(w)=(5\,6)(7\,8)$\label{g:pi w}]{
-\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
-\node (b) {$\emptyset$}
-  child foreach \i in {0,1} {node {\i}
- {child foreach \j in {0,1} {node {\j}
- {child foreach \k in {0,1} {node {\k}
- }}}}};
-
-\begin{scope}[node distance=7mm, font=normall]
-\node[draw=none,rectangle] [above of=b] (ST) {$w=(aba)d(aba)d$};
-
-\node[draw=none] [above of=b-1] (ST0) {$\id$};
-\node[draw=none] [above of=b-2] (ST1) {$(aba)b$};
-\end{scope}
-
-\begin{scope}[bgn]
-\node[draw=none] [above of=b-2-1] (ST10) {$ca$};
-\node[draw=none] [above of=b-2-2] (ST11) {$ac$};
-\end{scope}
-
-\begin{scope}[bgn]
-\tikzstyle{every node}=[rectangle,draw=none,font=\scriptsize]
-
-\path[hlarrow] (b-2-1-1) .. controls +(0.75,-0.5) .. (b-2-1-2);
-
-\path[hlarrow] (b-2-2-1) .. controls +(0.75,-0.5) .. (b-2-2-2);
-
-%\path (b-1-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,0)=1$};
-%\path (b-1-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,1)=2$};
-%\path (b-1-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,0)=3$};
-%\path (b-1-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,1)=4$};
+\includegraphics[width=\textwidth]{./res/varpi_of_w}
+%\begin{tikzpicture}[level distance=7.5mm, baseline=(b.base)]
+%\node (b) {$\emptyset$}
+%  child foreach \i in {0,1} {node {\i}
+% {child foreach \j in {0,1} {node {\j}
+% {child foreach \k in {0,1} {node {\k}
+% }}}}};
 %
-%\path (b-2-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,1)=6$};
-%\path (b-2-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,0)=5$};
-%\path (b-2-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,1)=8$};
-%\path (b-2-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,0)=7$};
-
-\path (b-1-1-1) ++(0,-8mm) node {$1$} -- ++(-16.3135mm,0);
-\path (b-1-1-2) ++(0,-8mm) node {$2$};
-\path (b-1-2-1) ++(0,-8mm) node {$3$};
-\path (b-1-2-2) ++(0,-8mm) node {$4$};
-
-\path (b-2-1-1) ++(0,-8mm) node {$6$};
-\path (b-2-1-2) ++(0,-8mm) node {$5$};
-\path (b-2-2-1) ++(0,-8mm) node {$8$};
-\path (b-2-2-2) ++(0,-8mm) node {$7$};
-\end{scope}
-
-\node[fill=black!40] at (b-2-2-1) {1};
-\node[fill=black!40] at (b-2-2-2) {0};
-
-\node[fill=black!40] at (b-2-1-1) {1};
-\node[fill=black!40] at (b-2-1-2) {0};
-
-
-
-\begin{pgfonlayer}{background}
-
-%\filldraw[st] 	(ST0.north)  -- (b-1-2.north east) -- (b-1-2-2.east) to[out=-45,in=0] (b-1-2-2.south) --(b-1-1-1.south) to[out=-180,in=225] (b-1-1-1.west) -- (b-1-1.north west) -- cycle;
-\filldraw[black!20,line width=10mm, line join=round] 	(ST0.base)  -- (b-1-2.base) -- (b-1-2-2.base) --(b-1-1-1.base)  -- (b-1-1.base) -- cycle;
-\filldraw[black!20,line width=10mm, line join=round] 	(ST1.base)  -- (ST11.base) -- (b-2-2-2.base) -- (b-2-1-1.base) -- (ST10.base) -- cycle;
-
-\filldraw[black!40,line width=10mm, line join=round] 	(ST10.base) -- (b-2-1-1.base)  -- (b-2-1-2.base)  -- cycle;
-\filldraw[black!40,line width=10mm, line join=round] 	(ST11.base) -- (b-2-2-1.base)  -- (b-2-2-2.base)  -- cycle;
-\end{pgfonlayer}
-\end{tikzpicture}
+%\begin{scope}[node distance=7mm, font=normall]
+%\node[draw=none,rectangle] [above of=b] (ST) {$w=(aba)d(aba)d$};
+%
+%\node[draw=none] [above of=b-1] (ST0) {$\id$};
+%\node[draw=none] [above of=b-2] (ST1) {$(aba)b$};
+%\end{scope}
+%
+%\begin{scope}[bgn]
+%\node[draw=none] [above of=b-2-1] (ST10) {$ca$};
+%\node[draw=none] [above of=b-2-2] (ST11) {$ac$};
+%\end{scope}
+%
+%\begin{scope}[bgn]
+%\tikzstyle{every node}=[rectangle,draw=none,font=\scriptsize]
+%
+%\path[hlarrow] (b-2-1-1) .. controls +(0.75,-0.5) .. (b-2-1-2);
+%
+%\path[hlarrow] (b-2-2-1) .. controls +(0.75,-0.5) .. (b-2-2-2);
+%
+%%\path (b-1-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,0)=1$};
+%%\path (b-1-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,0,1)=2$};
+%%\path (b-1-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,0)=3$};
+%%\path (b-1-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(0,1,1)=4$};
+%%
+%%\path (b-2-1-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,1)=6$};
+%%\path (b-2-1-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,0,0)=5$};
+%%\path (b-2-2-1) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,1)=8$};
+%%\path (b-2-2-2) ++(0,-8mm) -- ++(-155:18mm) node[midway,sloped] {$\beta_3(1,1,0)=7$};
+%
+%\path (b-1-1-1) ++(0,-8mm) node {$1$} -- ++(-16.3135mm,0);
+%\path (b-1-1-2) ++(0,-8mm) node {$2$};
+%\path (b-1-2-1) ++(0,-8mm) node {$3$};
+%\path (b-1-2-2) ++(0,-8mm) node {$4$};
+%
+%\path (b-2-1-1) ++(0,-8mm) node {$6$};
+%\path (b-2-1-2) ++(0,-8mm) node {$5$};
+%\path (b-2-2-1) ++(0,-8mm) node {$8$};
+%\path (b-2-2-2) ++(0,-8mm) node {$7$};
+%\end{scope}
+%
+%\node[fill=black!40] at (b-2-2-1) {1};
+%\node[fill=black!40] at (b-2-2-2) {0};
+%
+%\node[fill=black!40] at (b-2-1-1) {1};
+%\node[fill=black!40] at (b-2-1-2) {0};
+%
+%
+%
+%\begin{pgfonlayer}{background}
+%
+%%\filldraw[st] 	(ST0.north)  -- (b-1-2.north east) -- (b-1-2-2.east) to[out=-45,in=0] (b-1-2-2.south) --(b-1-1-1.south) to[out=-180,in=225] (b-1-1-1.west) -- (b-1-1.north west) -- cycle;
+%\filldraw[black!20,line width=10mm, line join=round] 	(ST0.base)  -- (b-1-2.base) -- (b-1-2-2.base) --(b-1-1-1.base)  -- (b-1-1.base) -- cycle;
+%\filldraw[black!20,line width=10mm, line join=round] 	(ST1.base)  -- (ST11.base) -- (b-2-2-2.base) -- (b-2-1-1.base) -- (ST10.base) -- cycle;
+%
+%\filldraw[black!40,line width=10mm, line join=round] 	(ST10.base) -- (b-2-1-1.base)  -- (b-2-1-2.base)  -- cycle;
+%\filldraw[black!40,line width=10mm, line join=round] 	(ST11.base) -- (b-2-2-1.base)  -- (b-2-2-2.base)  -- cycle;
+%\end{pgfonlayer}
+%\end{tikzpicture}
 }
 \caption{Projection of $B$ on $\St[\Gamma]{3}$}
 \label{g:B on St Gamma 3}

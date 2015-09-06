@@ -20,7 +20,11 @@ Since $\lbrace b,c,d\rbrace\subseteq\St[\Gamma]{1}$ the group $\langle b,c,d\ran
 An important consequence of \cref{thm:StGamma1 is a proper subset of Gamma} is that $a\not\in\St[\Gamma]{1}$. Thus, $\St[\Gamma]{1}$ is a proper subset of $\Gamma$.
 
 \begin{thm}\label{thm:Conjugation with a inverts the performing of b c d}
-Let $\psi\colon\St{1}\to\AutT^2$ be defined as in \cref{thm:Homomorphism psi}, then the following identities hold
+Let the isomorphism
+\begin{equation*}
+\psi\colon\St{1}\to\AutT^2
+\end{equation*}
+be defined as in \cref{thm:Homomorphism psi}, then the following identities hold
 \begin{align*}
 \psi(aba)&=(c,a),\\
 \psi(aca)&=(d,a) \text{ and}\\
@@ -29,25 +33,33 @@ Let $\psi\colon\St{1}\to\AutT^2$ be defined as in \cref{thm:Homomorphism psi}, t
 \end{thm}
 \begin{proof}
 We will prove the claim for $aba$. The other results follow analogously.\\
-By \cref{thm:StGamma1 is a proper subset of Gamma} the automorphism $aba$ is in $\St[\Gamma]{1}$, thus $aba\in\St{1}$. So $\psi(aba)$ is well-defined. Consider the vertex $(0,b_2,\ldots,b_n)\in\ST{(0)}$. Computing its image under $aba$ we find
+By \cref{thm:StGamma1 is a proper subset of Gamma} the automorphism $aba$ is in $\St[\Gamma]{1}$, thus $aba\in\St{1}$. So $\psi(aba)$ is well-defined. Consider the vertex
 \begin{equation*}
-aba(0,b_2,\ldots,b_n)=ab(1,b_2,\ldots,b_n)=a(1,c(b_2,\ldots,b_n))=(0,c(b_2,\ldots,b_n)).
+(0,b_2,\ldots,b_n)\in\ST{(0)}.
 \end{equation*}
+Computing its image under $aba$ we find
+\begin{align*}
+aba(0,b_2,\ldots,b_n)&=ab(1,b_2,\ldots,b_n)=\\
+&=a(1,c(b_2,\ldots,b_n))=\\
+&=(0,c(b_2,\ldots,b_n)).
+\end{align*}
 Hence, $aba\big\vert_{\ST{(0)}}=c$. As for $(1,b_2,\ldots,b_n)\in\ST{(1)}$, we find
-\begin{equation*}
-aba(1,b_2,\ldots,b_n)=ab(0,b_2,\ldots,b_n)=a(1,a(b_2,\ldots,b_n))=(1,a(b_2,\ldots,b_n)),
-\end{equation*}
+\begin{align*}
+aba(1,b_2,\ldots,b_n)&=ab(0,b_2,\ldots,b_n)=\\
+&=a(1,a(b_2,\ldots,b_n))=\\
+&=(1,a(b_2,\ldots,b_n)),
+\end{align*}
 which implies $aba\big\vert_{\ST{(1)}}=a$.
 \end{proof}
 \begin{rem}
 Let $\gamma=u_0au_1a\ldots u_{l-1}au_lau_{l+1}\in\St{1}$, for some $u_1\ldots u_{l}\in\lbrace b,c,d\rbrace$ and $u_0,u_{l+1}\in\lbrace \id,b,c,d\rbrace.$ Furthermore, let $\psi(u_i)=(v_{i,1},v_{i,2})$ for $1\leq 1\leq l+1$, then 
 \begin{align*}
-\psi(\gamma)	&=\psi(u_0)\psi(au_1a)\ldots\psi(u_{l-1})\psi(au_la)\psi(u_{l+1})=\\
+&\psi(\gamma)	=\psi(u_0)\psi(au_1a)\ldots\psi(u_{l-1})\psi(au_la)\psi(u_{l+1})=\\
 			&=(v_{0,1}v_{1,2}\ldots v_{l-1,1}v_{l,2}v_{l+1,1},v_{0,2}v_{1,1}\ldots v_{l-1,2}v_{l,1}v_{l+1,2})
 \end{align*}
 holds by \cref{thm:Conjugation with a inverts the performing of b c d}. As for $a\gamma a$, we find
 \begin{align*}
-\psi(a\gamma a)	&=\psi(au_0a)\psi(u_1)\ldots\psi(au_{l-1}a)\psi(u_l)\psi(au_{l+1}a)=\\
+&\psi(a\gamma a)	=\psi(au_0a)\psi(u_1)\ldots\psi(au_{l-1}a)\psi(u_l)\psi(au_{l+1}a)=\\
 			&=(v_{0,2}v_{1,1}\ldots v_{l-1,2}v_{l,1}v_{l+1,2},v_{0,1}v_{1,2}\ldots v_{l-1,1}v_{l,2}v_{l+1,1}).
 \end{align*}
 Thus, conjugation with $a$ switches the action of $\gamma$ on the right and the left subtree.
@@ -66,7 +78,8 @@ Note that by definition $\psi_\Gamma(\gamma)=\psi(\gamma)$ for all $\gamma\in\St
 \begin{equation*}
 w=(au_1a)u_2\ldots (au_ma)
 \end{equation*}
-for some $\seq[m]{u}\in\lbrace b,c,d\rbrace$. Since $\gamma$ is in $\St[\Gamma]{1}$, by \cref{thm:StGamma1 is a proper subset of Gamma} there exists an integer $k$, such that $a$ occurs $2k$ times in $w$. As a consequence, $\ell(\gamma)$ equals $4k-1$ and the use of parentheses in the equation above is sound. For $\gamma_1,\gamma_2\in\AutT$, such that $\psi(\gamma)=(\gamma_1,\gamma_2)$ we deduce
+for some $\seq[m]{u}\in\lbrace b,c,d\rbrace$.\\
+Since $\gamma$ is in $\St[\Gamma]{1}$, by \cref{thm:StGamma1 is a proper subset of Gamma} there exists an integer $k$, such that $a$ occurs $2k$ times in $w$. As a consequence, $\ell(\gamma)$ equals $4k-1$ and the use of parentheses in the equation above is sound. For $\gamma_1,\gamma_2\in\AutT$, such that $\psi(\gamma)=(\gamma_1,\gamma_2)$ we deduce
 \begin{equation*}
 (\gamma_1,\gamma_2)=\psi(\gamma)=\psi(au_1a)\psi(u_2)\ldots \psi(au_ma).
 \end{equation*}
@@ -152,9 +165,10 @@ w=au_1 a u_2 a\ldots u_l
 \end{equation*}
 for $l=\frac{k}{2}$ and $\seq[k]{u}\in\lbrace b,c,d\rbrace$.\\
 If $l=2m$ is even, then $w$ contains an even number of automorphisms $a$. Hence, $\gamma\in\St[\Gamma]{1}$ and $(\gamma_1,\gamma_2):=\psi(\gamma)$ is well-defined. For these automorphisms the following identity holds
-\begin{equation*}
-(\gamma_1,\gamma_2)=\psi(\gamma)=\psi(au_1 a u_2 a\ldots u_l)=\psi(au_1 a)\psi(u_2)\ldots\psi(au_{l-1}a)\psi(u_l)
-\end{equation*}
+\begin{align*}
+(\gamma_1,\gamma_2)&=\psi(\gamma)=\psi(au_1 a u_2 a\ldots u_l)=\\
+	&=\psi(au_1 a)\psi(u_2)\ldots\psi(au_{l-1}a)\psi(u_l)
+\end{align*}
 since 4 divides $k$. This identity and \cref{thm:Conjugation with a inverts the performing of b c d} imply that the lengths of $\gamma_1$ and $\gamma_2$ are lower than or equal to $l$. By the induction hypothesis there exist non-negative integers $n_1,n_2$, such that $\gamma_1^{2^{n_1}}=\gamma_2^{2^{n_2}}=\id$. The order of $(\gamma_1,\gamma_2)$ equals the least common multiple of the orders of $\gamma_1$ and $\gamma_2$ and is therefore less than or equal to $2^{\mathrm{max}(n_1,n_2)}$. Since $\psi$ is injective, the order of $\gamma$ equals the order of $\psi(\gamma)=(\gamma_1,\gamma_2)$. Thus $\gamma^{2^{\mathrm{max}(n_1,n_2)}}=\id$.\\
 Finally, let $l=\frac{k}{2}$ be odd, then $k=4m-2$ for some integer $m\geq 2$. Consider the word
 \begin{equation*}
@@ -162,8 +176,11 @@ ww=(au_1 a) u_2 \ldots u_{l-1}(au_la)u_1 (a u_2 a)\ldots u_l
 \end{equation*}
 representing $\gamma^2$, which is of length $8m-4$ and therefore dividable by 4. As before there exist two automorphisms $\alpha,\beta\in\Gamma$ of length less than or equal to $4m-2$, such that
 \begin{align*}
-(\alpha,\beta)&=\psi(\gamma^2)=\psi(au_1 a u_2 a\ldots u_lau_1 a u_2 a\ldots u_l)=\psi(au_1 a u_2 a\ldots u_l)=\\
-&=\psi(au_1 a)\psi(u_2)\ldots\psi(au_{l-2}a)\psi(u_{l-1})\psi(au_l a)\psi(u_1)\ldots\psi(au_{l-1}a)\psi(u_l).
+(\alpha,\beta)=&\psi(\gamma^2)=\psi(au_1 a u_2 a\ldots u_lau_1 a u_2 a\ldots u_l)=\\
+	=&\psi(au_1 a u_2 a\ldots u_l)=\\
+	=&\psi(au_1 a)\psi(u_2)\ldots\\
+	&\ldots\psi(au_{l-2}a)\psi(u_{l-1})\psi(au_l a)\psi(u_1)\ldots\\
+	&\ldots\psi(au_{l-1}a)\psi(u_l).
 \end{align*}
 We finish the proof by distinguishing three cases.
 \begin{clist}

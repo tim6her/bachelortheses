@@ -15,7 +15,7 @@
 % in order to deactivate the time-stamp on the pages
 % ****************************************************************************************************
 \PassOptionsToPackage{eulerchapternumbers,listings,drafting,%
-				 pdfspacing,%floatperchapter,%linedheaders,%
+				 pdfspacing,%linedheaders,%
 				 subfig,beramono,eulermath,parts, a5paper}{classicthesis}										
 % ********************************************************************
 % Available options for classicthesis.sty 
@@ -83,6 +83,7 @@
 % ****************************************************************************************************
 
 
+
 % ****************************************************************************************************
 % 3. Loading some handy packages
 % ****************************************************************************************************
@@ -133,8 +134,7 @@
 \DeclareMathOperator{\lcm}{\mathrm{lcm}}
 \DeclareMathOperator{\ord}{\mathrm{ord}}
 
-
-
+	
 \declaretheorem[
 	name=Theorem,
   	refname={theorem,theorems},		%Lower Case Versions of Theorem Type
@@ -211,7 +211,7 @@
 \PassOptionsToPackage{printonlyused,smaller}{acronym}
 	\usepackage{acronym} % nice macros for handling all acronyms in the thesis
 %\renewcommand*{\acsfont}[1]{\textssc{#1}} % for MinionPro
-\renewcommand{\bflabel}[1]{{#1}\hfill} % fix the list of acronyms
+%\renewcommand{\bflabel}[1]{{#1}\hfill} % fix the list of acronyms
 % ****************************************************************************************************
 
 

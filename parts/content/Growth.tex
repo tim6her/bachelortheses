@@ -78,8 +78,10 @@ by \cref{thm:D16}.
 \end{equation*}
 As for the growth function, it follows
 \begin{align*}
-o(4m-2)	&\leq 4\max(o(4m-3),4)\overset{\text{\cref{eq:o(2m+1)=o(2m)}}}{=} 4\max(o(4m-4),4)\overset{\text{\cref{eq:o(4m)=o(2m)}}}{=}\\
-		&=4\max(o(2m-2),4)\overset{\text{IH}}{\leq} \max\left(2^{n(2m-2)+2}, 2^4\right)=\\
+o(4m-2)	&\leq 4\max(o(4m-3),4)\overset{\text{\cref{eq:o(2m+1)=o(2m)}}}{=}\\
+		&= 4\max(o(4m-4),4)\overset{\text{\cref{eq:o(4m)=o(2m)}}}{=}\\
+		&=4\max(o(2m-2),4)\overset{\text{IH}}{\leq}\\
+		&\leq \max\left(2^{n(2m-2)+2}, 2^4\right)=\\
 		&=\max\left(2^{m+4},2^4\right)\leq 2^{\frac{4m-2}{2}+3}.
 \end{align*}
 The inequality marked with ``IH" holds by induction hypothesis while the last inequality holds by the assumption $m\geq 2$.
@@ -177,7 +179,7 @@ In \cref{g:Logarithmic growth} the upper bounds $n_1$ (dashed line) and $n_2$ (c
 %\end{tikzpicture}
 %\endpgfgraphicnamed
 %}
-\caption{Upper bounds for the logarithmic growth of $\Gamma$ as in \cref{thm:Upper bound for the growth of Gamma}~(-\hspace{2pt}-), as stated by Bartholdi and \v{S}uni\'{c}~(\textbf{---}) as well as the recursion of \cref{thm:Upper bound for the growth of Gamma}~($\bullet $)}
+\caption{Upper bounds for the logarithmic growth of $\Gamma$ as in \cref{thm:Upper bound for the growth of Gamma}~\mbox{(-\hspace{2pt}-)}, as stated by Bartholdi and \v{S}uni\'{c}~(\textbf{---}) as well as the recursion of \cref{thm:Upper bound for the growth of Gamma}~($\bullet $)}
 \label{g:Logarithmic growth}
 \end{centering}
 \end{figure}
@@ -197,15 +199,17 @@ In the following we prove that $\psi_k$ is a well-defined monomorphism of groups
 \begin{thm}\label{thm:psi k}
 The mapping $\psi_k\colon\St[\Gamma]{k}\to\Gamma^{2^k}$ is a monomorphism of groups for $k\geq1$, which satisfies the recursion
 \begin{align}
-\psi_1&=\psi_\Gamma\text{ and}\label{eq:psi1=psiGamma}\\
-\psi_k(\gamma)&=\left((\pi_1\circ\psi_1)(\gamma_1),(\pi_2\circ\psi_1)(\gamma_1),\ldots,(\pi_1\circ\psi_1)(\gamma_{2^{k-1}}),(\pi_2\circ\psi_1)(\gamma_{2^{k-1}})\right),\nonumber\\
+\psi_1=&\psi_\Gamma\text{ and}\label{eq:psi1=psiGamma}\\
+\psi_k(\gamma)=&\left((\pi_1\circ\psi_1)(\gamma_1),(\pi_2\circ\psi_1)(\gamma_1),\ldots\right.\\
+	&\left.\ldots,(\pi_1\circ\psi_1)(\gamma_{2^{k-1}}),(\pi_2\circ\psi_1)(\gamma_{2^{k-1}})\right),\nonumber
 \end{align}
 when $\psi_{k-1}(\gamma)=(\gamma_1,\gamma_2,\ldots,\gamma_{2^{k-1}})$ and $\pi_i\colon\Gamma^2\to\Gamma$ denotes the projection defined by $(\alpha_1,\alpha_2)\mapsto\alpha_i$ for $i\in\lbrace 1,2\rbrace$.
 \end{thm}
 To increase readability we will denote the $2^k$-tupel
-\begin{equation*}
-\left((\pi_1\circ\psi_1)(\gamma_1),(\pi_2\circ\psi_1)(\gamma_1),\ldots,(\pi_1\circ\psi_1)(\gamma_{2^{k-1}}),(\pi_2\circ\psi_1)(\gamma_{2^{k-1}})\right)\in\Gamma^{2^k}
-\end{equation*}
+\begin{align*}
+&\left((\pi_1\circ\psi_1)(\gamma_1),(\pi_2\circ\psi_1)(\gamma_1),\ldots\right.\\
+&\left.\ldots,(\pi_1\circ\psi_1)(\gamma_{2^{k-1}}),(\pi_2\circ\psi_1)(\gamma_{2^{k-1}})\right)\in\Gamma^{2^k}
+\end{align*}
 by 
 \begin{equation}\label{eq:Notation for projections}
 \left(\psi_1(\gamma_1),\ldots,\psi_1(\gamma_{2^{k-1}})\right)_k
@@ -214,7 +218,11 @@ if $(\gamma_1,\ldots,\gamma_{2^{k-1}})\in\St[\Gamma]{1}^{2^{k-1}}$. In this nota
 \begin{equation*}
 (\id,\id,a,c)=((\id,\id),(a,c))_2=(\psi_1(\id),\psi_1(b))_2
 \end{equation*}
-and $(\id,b)=\psi_1(d)$. Thus, \cref{thm:psi k} implies $\psi_2(d)=(\id,\id,a,c)$. \cref{g:psi2(d)} illustrates the idea of the theorem. 
+and $(\id,b)=\psi_1(d)$. Thus, \cref{thm:psi k} implies 
+\begin{equation*}
+\psi_2(d)=(\id,\id,a,c).
+\end{equation*}
+\cref{g:psi2(d)} illustrates the idea of the theorem. 
 \begin{figure}
 \begin{center}
 \includegraphics[width=\textwidth]{./res/psi2}
@@ -300,9 +308,10 @@ while $\psi_k(\gamma)=(\seq[2^k]{\eta})$ and $\psi_{k-1}(\gamma)=(\seq[2^{k-1}]{
 \end{align*}
 Thus, the assumption leads to a contradiction.\\
 As a consequence, 
-\begin{equation*}
-\psi_k(\gamma)=\left((\pi_1\circ\psi_1)(\gamma_1),(\pi_2\circ\psi_1)(\gamma_1),\ldots,(\pi_1\circ\psi_1)(\gamma_{2^{k-1}}),(\pi_2\circ\psi_1)(\gamma_{2^{k-1}})\right)
-\end{equation*}
+\begin{align*}
+\psi_k(\gamma)=&\left((\pi_1\circ\psi_1)(\gamma_1),(\pi_2\circ\psi_1)(\gamma_1),\ldots\right.\\
+	&\left.\ldots,(\pi_1\circ\psi_1)(\gamma_{2^{k-1}}),(\pi_2\circ\psi_1)(\gamma_{2^{k-1}})\right)
+\end{align*}
 is a well defined homomorphism. Since each pair of homomorphisms 
 \begin{equation*}
 \left((\pi_1\circ\psi_1)(\gamma_i),(\pi_2\circ\psi_1)(\gamma_i)\right)\colon\St[\Gamma]{1}\to\Gamma\times\Gamma
@@ -399,20 +408,25 @@ b,\quad u=(bada)^2,\quad v=aba \text{ and } w=(abad)^2.
 Set $B_1=\langle b,u,v,w\rangle$ and consider the images of its generators with respect to the canonical projection $\pi_B\colon\Gamma\to\nicefrac{\Gamma}{B}$. We find
 \begin{align*}
 \pi_B(b)&=B,\\
-\pi_B(u)	&=\pi_B((bada)(bada))=\pi_B(b)\pi_B(ada)\pi_B(b)\pi_B(ada)=\\
-		&=\pi_B(ada)\pi_B(ada)=\pi_B((ada)(ada))=\pi_B(\id)=B,\\
-\pi_B(v)	&=\pi_B(aba)^2=(\pi_B(a)\pi_B(b)\pi_B(a))^2=\pi_B(aa)^2=B \text{ and}\\
-\pi_B(w)	&=\pi_B(abad)^2=(\pi_B(a)\pi_B(b)\pi_B(ad))^2=\pi_B(aad)^2=\\
-		&=\pi_B(d)^2=B.
+\pi_B(u)	&=\pi_B((bada)(bada))=\\
+				&=\pi_B(b)\pi_B(ada)\pi_B(b)\pi_B(ada)=\\
+				&=\pi_B(ada)\pi_B(ada)=\\
+				&=\pi_B((ada)(ada))=\pi_B(\id)=B,\\
+\pi_B(v)	&=\pi_B(aba)^2=(\pi_B(a)\pi_B(b)\pi_B(a))^2=\\
+				&=\pi_B(aa)^2=B \\
+\intertext{ and}
+\pi_B(w)	&=\pi_B(abad)^2=(\pi_B(a)\pi_B(b)\pi_B(ad))^2=\\
+		&=\pi_B(aad)^2=\pi_B(d)^2=B.
 \end{align*}
 As a consequence, all $b,u,v,w$ are contained in $B$ and therefore $B_1\subseteq B$ holds. We continue by proving that $B_1$ is normal, so that $B_1=B$.\\
-By \cref{thm:Three Generators Suffice} it suffices to show that the conjugates of $b,u,v,w$ by $a,b$ and $c$ are contained in $B_1$. As for the conjugates of $b$, we find $aba=v, bbb=b$ and $cbc=b$. The last two identities follow directly from \cref{thm:Three Generators Suffice}. The conjugates by $a$ are
+By \cref{thm:Three Generators Suffice} it suffices to show that the conjugates of $b,u,v,$ $w$ by $a,b$ and $c$ are contained in $B_1$. As for the conjugates of $b$, we find $aba=v, bbb=b$ and $cbc=b$. The last two identities follow directly from \cref{thm:Three Generators Suffice}. The conjugates by $a$ are
 \begin{equation*}
 aua=w, \quad ava=b \text{ and } awa=u.
 \end{equation*}
 Since $b$ is an element of $B_1$, conjugates by $b$ are clear. Thus, the claim is proven by the following three computations, were we use the identity $(ad)^4=\id$, which was proven in \cref{thm:D4}.
 \begin{align*}
-cuc	&=c(bada)(bada)c=(dada)b(ada)c=(dada)(dadaadad)b(ada)c=\\
+cuc	&=c(bada)(bada)c=(dada)b(ada)c=\\
+	&=(dada)(dadaadad)b(ada)c=\\
 	&=(adad)b(ada)c\overset{\text{\cref{thm:Three Generators Suffice}}}{=}(ada)bd(ada)c=\\
 	&=(adab)(dada)(dadaadad)c=(adab)(adad)c=\\
 	&=(adab)(adab)=u^{-1}\in B_1\\
@@ -425,7 +439,11 @@ Remember the homomorphism $\varpi_3\colon\Gamma\to\mathfrak{S}_8$, which maps ea
 \begin{equation*}
 \psi_1(b)=(a,c)\text{ and }\psi_1(c)=(a,d)
 \end{equation*}
-hold, automorphism $b$ interchanges the subtrees $\ST{(0,0)}$ and $\ST{0,1}$ as well as $\ST{1,0,0}$ and $\ST{1,0,1}$. By computing the images of $b((0,0,0)),b((0,0,1)),\ldots,b((1,1,1))$ under $\beta_k$ we find
+hold, automorphism $b$ interchanges the subtrees $\ST{(0,0)}$ and $\ST{0,1}$ as well as $\ST{1,0,0}$ and $\ST{1,0,1}$. By computing the images of 
+\begin{equation*}
+b((0,0,0)),b((0,0,1)),\ldots,b((1,1,1))
+\end{equation*}
+ under $\beta_k$ we find
 \begin{equation*}
 \varpi_3(b)=(1\,3)(2\,4)(5\,6).
 \end{equation*}
@@ -742,23 +760,28 @@ t=(ab)^2,\quad u=(bada)^2\text{ and }w=(abad)^2.
 \begin{plist}
 \item Let $K_1=\langle t,u,w\rangle$. By construction, $t$ is an element of $K$. Since $K$ is a normal subgroup of $\Gamma$, we find
 \begin{align*}
-td^{-1}t^{-1}d=(abab)d(baba)d\overset{\text{\cref{thm:Three Generators Suffice}}}{=}(abad)(abad)=w&\in K\text{ and}\\
+td^{-1}t^{-1}d=(abab)d(baba)d\overset{\text{\cref{thm:Three Generators Suffice}}}{=}&\\
+(abad)(abad)=w&\in K\\
+\intertext{and}
 a^{-1}wa=a(abad)(abad)a=v&\in K.
 \end{align*}
 As a consequence, $K_1\subseteq K$. We prove claim (i) by showing, that $K_1$ is a normal subgroup of $\Gamma$, so that $K_1=K$. This follows from the computations below.
 \begin{align*}
 ata	&=a(ab)(ab)a=baba=t^{-1}\in K_1\\
 btb	&=b(ab)(ab)b=baba=t^{-1}\in K_1\\
-dtd	&=d(ab)(ab)d\overset{\text{\cref{thm:Three Generators Suffice}}}{=}dabadb=dabad(abaaba)b=w^{-1}t\in K_1\\[1em]
+dtd	&=d(ab)(ab)d\overset{\text{\cref{thm:Three Generators Suffice}}}{=}\\
+		&=dabadb=dabad(abaaba)b=w^{-1}t\in K_1\\[1em]
 aua	&=a(bada)(bada)a=(abad)(abad)=w\in K_1\\
 bub	&=b(bada)(bada)b=(adab)(adab)=u^{-1}\in K_1\\
 dud	&=d(bada)(bada)d\overset{\text{\cref{thm:Three Generators Suffice}}}{=}b(dada)b(ada)d=\\
-	&=b(dada)(dadaadad)b(ada)d=b(adad)b(ada)d\overset{\text{\cref{thm:Three Generators Suffice}}}{=}\\
-	&=(bada)b(dada)d=(bada)b(adaddada)(dada)d=\\
+	&=b(dada)(dadaadad)b(ada)d=\\
+	&=b(adad)b(ada)d\overset{\text{\cref{thm:Three Generators Suffice}}}{=}(bada)b(dada)d=\\
+	&=(bada)b(adaddada)(dada)d=\\
 	&=(bada)b(adad)d=(bada)(bada)=u\in K_1\\[1em]
 awa	&=a(abad)(abad)a=(bada)(bada)=u\in K_1\\
-bwb	&=b(abad)(abad)b=ba(bada)(bada)ab=bab(adab)(adab)bab=\\
-	&=(baba)(daba)(daba)(abab)=t^{-1}w^{-1}t\in K_1\\
+bwb	&=b(abad)(abad)b=ba(bada)(bada)ab=\\
+		&=bab(adab)(adab)bab=\\
+		&=(baba)(daba)(daba)(abab)=t^{-1}w^{-1}t\in K_1\\
 dwd	&=d(abad)(abad)d=(daba)(daba)=w^{-1}\in K_1
 \end{align*}
 \item\label{p:Index of K in Gamma} By \cref{thm:B} the quotient group $\nicefrac{B}{K}$ is generated by the equivalence classes of $b$ and $v=aba$. As these automorphisms are self-inverse and $(aba)b\in K$, by the uniqueness of the inverse element their equivalence classes  coincide. As a result we get $\lvert\nicefrac{B}{K}\rvert=[B:K]\leq 2$. Since the index of $B$ in $\Gamma$ equals 8 by \cref{thm:B}, it suffices to prove that $B\neq K$.\\
@@ -775,18 +798,21 @@ It follows that
 while \ref{p:Index of K in Gamma} implies $[\Gamma:K]=2^4.$ Thus, the obvious inclusion $K\subseteq K\St[\Gamma]{3}$ is in fact an equality.
 \item \label{p:Base Case psi(K) contains K} \cref{thm:Conjugation with a inverts the performing of b c d} implies the identity
 \begin{align*}
-\psi_1(w)	&=\psi_1(aba)\psi_1(d)\psi_1(aba)\psi_1(d)=(c,a)(\id,b)(c,a)(\id,b)=\\
-			&=(\id,t)\in\psi_1(K).
+\psi_1(w)	&=\psi_1(aba)\psi_1(d)\psi_1(aba)\psi_1(d)=\\
+			&=(c,a)(\id,b)(c,a)(\id,b)=(\id,t)\in\psi_1(K).
 \end{align*}
 Because $K$ is a normal subgroup of $\Gamma$, the automorphism $wcw^{-1}c$ is an element of $K$. Therefore, the equation above implies
 \begin{align*}
-\psi_1(wcw^{-1}c)	&=\psi_1(w)\psi_1(c)\psi_1(w)^{-1}\psi_1(c)=(\id,t)(a,d)(\id,t^{-1})(a,d)=\\
-					&=(\id,t)(\id,dt^{-1}d)\overset{(i)}{=}(\id,t)(\id,t^{-1}w)=(\id,w)\in\psi_1(K).
+\psi_1(wcw^{-1}c)	&=\psi_1(w)\psi_1(c)\psi_1(w)^{-1}\psi_1(c)=\\
+					&=(\id,t)(a,d)(\id,t^{-1})(a,d)=\\
+					&=(\id,t)(\id,dt^{-1}d)\overset{(i)}{=}(\id,t)(\id,t^{-1}w)=\\
+					&=(\id,w)\in\psi_1(K).
 \end{align*}
 The group $\id\times K$ is contained in $\psi_1(K)$, since
 \begin{align*}
-\psi_1(aca(wcw^{-1}c)aca)	&=\psi(aca)\psi_1(wcw^{-1}c)\psi_1(aca)=(d,a)(\id,w)(d,a)=\\
-							&=(\id,awa)\overset{(i)}{=}(\id,u)\in\psi_1(K).
+\psi_1(aca(wcw^{-1}c)aca)	&=\psi(aca)\psi_1(wcw^{-1}c)\psi_1(aca)=\\
+							&=(d,a)(\id,w)(d,a)=(\id,awa)\overset{(i)}{=}\\
+							&=(\id,u)\in\psi_1(K).
 \end{align*}
 As a consequence of \cref{thm:Conjugation with a inverts the performing of b c d}, the images of $awa,awcw^{-1}ca$ and $ca(wcw^{-1}c)ac\in K$ generate $K\times\id$. Thus, $K\times K\subseteq\psi_1(K)$.
 \item We prove the claim by induction on $k$. The case $k=1$ was shown in \ref{p:Base Case psi(K) contains K}. Hence, we assume the claim to be proven for all mappings $\psi_l\colon\St[\Gamma]{l}\to\Gamma^{2^l}$, where $l<k$. We have seen, that the homomorphisms
@@ -805,19 +831,21 @@ from \cref{thm:psi k}. By the induction hypothesis $K^{2^{k-1}}$ is a subgroup o
 \end{align*}
 holds by \cref{thm:psi k}.
 \item We apply the formula obtained in \cref{thm:psi k} to compute $\psi_3((ab)^8)$. Since the number of occurrences of automorphism $a$ in $(ab)^8$ is even, $(ab)^8\in\St[\Gamma]{1}$ by \cref{thm:StGamma1 is a proper subset of Gamma}. We find
-\begin{equation*}
-\psi_1((ab)^8)=\psi_1(abab)^4=(\psi_1(aba)\psi_1(b))^4=((c,a)(a,c))^4=((ca)^4,(ac)^4).
-\end{equation*}
+\begin{align*}
+\psi_1((ab)^8)&=\psi_1(abab)^4=(\psi_1(aba)\psi_1(b))^4=\\
+						&=((c,a)(a,c))^4=((ca)^4,(ac)^4).
+\end{align*}
 We may apply $\psi_2$ to $(ab)^8$ because $(ca)^4$ and $(ac)^4$ leave the first level of $\T$ invariant. Now \cref{thm:psi k} implies
 \begin{align*}
 \psi_2((ab)^8)	&=\left(\psi_1(caca)^2,\psi_1(acac)^2\right)_2=\\
-				&=\left(((a,d)(d,a))^2,((d,a)(a,d))^2\right)_2=(adad,dada,dada,adad).
+				&=\left(((a,d)(d,a))^2,((d,a)(a,d))^2\right)_2=\\
+				&=(adad,dada,dada,adad).
 \end{align*}
 It follows that 
 \begin{align*}
-\psi_3((ab)^8)	&=(\psi_1(adad),\psi_1(dada),\psi_1(dada),\psi_1(adad))_3=\\
-				&=((b,\id)(\id,b),(\id,b)(b,\id),(\id,b)(b,\id),(b,\id)(\id,b))_3=\\
-				&=(b,b,b,b,b,b,b,b).
+\psi_3	&((ab)^8)=(\psi_1(adad),\psi_1(dada),\psi_1(dada),\psi_1(adad))_3=\\
+			&=((b,\id)(\id,b),(\id,b)(b,\id),(\id,b)(b,\id),(b,\id)(\id,b))_3=\\
+			&=(b,b,b,b,b,b,b,b).
 \end{align*}
 As a consequence, $(ab)^8$ is an element of $\St[\Gamma]{4}$.
 \end{plist}
@@ -832,7 +860,11 @@ Let $n$ be a positive integer. Given an automorphism $\gamma\in K$, such that $\
 \end{equation*}
 \end{lem}
 \begin{proof}
-By \cref{thm:psi k(K)} there exists an automorphism $h\in\St[\Gamma]{5}\subseteq K$, such that
+By \cref{thm:psi k(K)} there exists an automorphism 
+\begin{equation*}
+h\in\St[\Gamma]{5}\subseteq K,
+\end{equation*}
+ such that
 \begin{equation*}
 \psi_5(h)=(\gamma,\id,\ldots,\id),
 \end{equation*}
@@ -841,7 +873,8 @@ where on the right hand side $31=2^5-1$ entries equal the identity. We may rewri
 \psi_5(h)=((\gamma,\id),\psi_1(\id),\ldots,\psi_1(\id))_5,
 \end{equation*}
 with $15=2^4-1$ coordinates equal to $\psi_1(\id)$. We set $\eta=(ab)^8h$, which is an automorphism of $K$ since $(ab)^8$ and $h$ are.\\
-Since $\psi_1$ is injective, the preimage $\psi_1^{-1}(\lbrace(\vartheta_1,\vartheta_2)\rbrace)$ of the singleton $\lbrace(\vartheta_1,\vartheta_2)\rbrace\subseteq K^2$ is a well-defined singleton $\lbrace\vartheta\rbrace\subseteq K$ by \cref{thm:psi k(K)}. Thus, the homomorphism $\psi_1^{-1}\colon K\times K\to K$ is well-defined by $(\vartheta_1,\vartheta_2)\mapsto\vartheta$. As for automorphism $\eta$ it follows, that
+
+Since $\psi_1$ is injective, the preimage $\psi_1^{-1}(\lbrace(\vartheta_1,\vartheta_2)\rbrace)$ of the sing\-le\-ton $\lbrace(\vartheta_1,\vartheta_2)\rbrace\subseteq K^2$ is a well-defined singleton $\lbrace\vartheta\rbrace\subseteq K$ by \cref{thm:psi k(K)}. Thus, the homomorphism $\psi_1^{-1}\colon K\times K\to K$ is well-defined by $(\vartheta_1,\vartheta_2)\mapsto\vartheta$. As for automorphism $\eta$ it follows, that
 \begin{align*}
 \psi_4\left(\eta^2\right)	&=\left(\psi_4\left((ab)^8\right)\psi_4(h)\right)^2\overset{\text{\cref{thm:psi4((ab)8)}}}{=}\\
 				&=\left((a,c,\ldots,a,c)\left(\psi_1^{-1}(\gamma,\id),\id,\ldots,\id\right)\right)^2=\\

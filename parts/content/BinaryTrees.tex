@@ -8,9 +8,10 @@ A \emph{binary rooted tree} $T^{(2)}$ is the graph $(V,E)$, where the vertex set
 V:=\lbrace (b_i)_{i=1}^n\mid n\in \Z, n\geq 0, b_i\in\lbrace 0,1\rbrace\text{ for }1\leq i\leq n\rbrace,
 \end{equation*}
 is the set of all finite binary sequences including the empty sequence $(\emptyset)$. Two vertices $(b_i)_{i=1}^n,(c_i)_{i=1}^m\in V$ are adjacent if $|m-n|=1$ and the longer sequence can be obtained be concatenating 0 or 1 to the shorter sequence. Formally, the edge set $E$ of $T^{(2)}$ is defined as follows
-\begin{equation*}
-E:=\lbrace \lbrace(b_i)_{i=1}^n,(b'_i)_{i=1}^m\rbrace\in V\times V\mid m=n+1\text{ and } b_i=b'_i\text{ for } 1\leq i\leq n\rbrace.
-\end{equation*}
+\begin{align*}
+E:=\lbrace \lbrace(b_i)_{i=1}^n,(b'_i)_{i=1}^m\rbrace\in V\times V\mid& m=n+1\text{ and }\\
+& b_i=b'_i\text{ for } 1\leq i\leq n\rbrace.
+\end{align*}
 For $n\in\N$, a vertex $(b_i)_{i=1}^n$ is \emph{on the $n$-th level} of $T^{(2)}$. The level of a vertex  is denoted by $|(b_i)_{i=1}^n|=n.$
 \end{defin}
 In the course of this thesis we will encounter many mappings with domain $\VT$. To increase readability, the image of a vertex $(\seq{b})\in\VT$ under a function $f\colon \VT\to X$ is denoted by $f(\seq{b})$ instead of $f((\seq{b}))$.
@@ -30,7 +31,11 @@ The binary tree $\T$ fulfils the following two properties
 \end{thm}
 \begin{proof}
 The sequence $((\emptyset),(b_1),(b_1,b_2),\ldots,(\seq{b}))$ is a $(\emptyset)-(\seq{b})$-path for every vertex $(\seq{b})\neq(\emptyset)\in\VT.$ Hence, $\T$ is connected.\\
-Assume $(u=v_0,\seq{v}=u)$ to be a cycle in $\T$, then there exists an index $i\in\lbrace 0,\ldots,n-1\rbrace$, such that $|v_i|=\max\lbrace |v_0|,|v_1|,\ldots,|v_{n-1}|\rbrace$. If $i=0$, the symbol $v_{i-1}=v_{-1}$ shall denote $v_{n-1}$, so that $v_i$ and $v_{i-1}$ are adjacent for $0\leq i\leq n-1$.\\
+Assume $(u=v_0,\seq{v}=u)$ to be a cycle in $\T$, then there exists an index $i\in\lbrace 0,\ldots,n-1\rbrace$, such that 
+\begin{equation*}
+|v_i|=\max\lbrace |v_0|,|v_1|,\ldots,|v_{n-1}|\rbrace.
+\end{equation*}
+If $i=0$, the symbol $v_{i-1}=v_{-1}$ shall denote $v_{n-1}$, so that $v_i$ and $v_{i-1}$ are adjacent for $0\leq i\leq n-1$.\\
 We find $|v_{i-1}|=|v_{i+1}|=|v_i|-1$ since the adjacency of $v_i$ to $v_{i\pm 1}$ implies $||v_i|-|v_{i\pm 1}||=1.$ If $v_i=(\seq[m]{b})$, there exists only one vertex on level $|v_i|-1$, which is adjacent to vertex $v_i$, namely $(\seq[m-1]{b})$. It follows, that
 \begin{equation*}
 v_{i-1}=(\seq[m-1]{b})=v_{i+1}.
@@ -68,13 +73,13 @@ It is easy but rather technical to prove that the converse of \cref{thm:Binary T
 \end{rem}
 
 \begin{defin}
-For a given sequence $(\seq{b})$, the subgraph $(V,E)$ of $\T$ with the vertex set 
+For a given sequence $(\seq{b})$, the subgraph $G$ of $\T$ with the vertex set 
 \begin{equation*}
-V=\left\lbrace (\seq[n]{c},c_{n+1},\ldots,c_{n+k})\in\VT \,\middle\vert\, c_i=b_i \text{ for } 1\leq i\leq n\right\rbrace
+V(G)=\left\lbrace (\seq[n]{b},c_{n+1},\ldots,c_{n+k})\in\VT \right\rbrace
 \end{equation*}
 containing all vertices corresponding to a sequence, that starts with $(\seq{b})$, and the edge set
 \begin{equation*}
-E=\mathcal{P}(V)\cap \VT
+E(G)=\mathcal{P}(V)\cap \VT
 \end{equation*}
 is denoted by $\ST{(\seq{b})}$.
 \end{defin}
@@ -114,7 +119,7 @@ Every automorphism $\varphi\in\AutT$ preserves the levels of $\T$, i.e.
 
 \begin{proof}
 We prove the claim by induction on the level $n$ of a vertex $(\seq{b})\in\VT$. If $n$ equals 0, $(\seq{b})$ is the root of $\T$ and therefore the only vertex of degree 2. Hence, $\varphi(\seq{b})=(\seq{b})$ and the claim is proven.\\
-We proceed by assuming the result to be shown for all vertices on levels less than $n$. Since, $\varphi(\seq{b})$ is adjacent to $\varphi(\seq[n-1]{b})$, the identity
+We proceed by assuming the result to be shown for all vertices on levels less than $n$. Since, $\varphi(\seq{b})$ is adjacent to the vertex $\varphi(\seq[n-1]{b})$, the identity
 \begin{equation*}
 \big\lvert\lvert\varphi(\seq{b})\rvert-\lvert\varphi(\seq[n-1]{b})\rvert\big\rvert=1
 \end{equation*}
@@ -136,7 +141,8 @@ which identifies each vertex on level $k$ with an integer. Secondly, we consider
 By construction the function $p_k$ maps each automorphism of $\T$ to its action on the vertices on level $k$. Assume $p_k(\varphi)=\sigma$ and $p_k(\psi)=\tau$, then
 \begin{align*}
 \beta_k((\varphi\circ\tau)(\beta_k^{-1}(i)))=&(\beta_k\circ\varphi\circ\tau\circ \beta_k^{-1})(i)=\\
-=&((\beta_k\circ\varphi\circ \beta_k^{-1})\circ(\beta_k\circ\tau\circ \beta_k^{-1}))(i)=(\sigma\circ\tau)(i).
+=&((\beta_k\circ\varphi\circ \beta_k^{-1})\circ(\beta_k\circ\tau\circ \beta_k^{-1}))(i)=\\
+=&(\sigma\circ\tau)(i).
 \end{align*}
 Thus, $p_k$ is a homomorphism of groups.
 
@@ -151,7 +157,11 @@ Each automorphism $\varphi\in\St{k}$ preserves the first $k$ levels point-wise, 
 \end{equation*}
 \end{pro}
 \begin{proof}
-Assume there exists a vertex $(\seq{b})\in\bigcup_{i=0}^k\mathrm{L}(i)$, such that 
+Assume there exists a vertex 
+\begin{equation*}
+(\seq{b})\in\bigcup_{i=0}^k\mathrm{L}(i),
+\end{equation*}
+such that 
 \begin{equation*}
 \varphi(\seq{b})\neq (\seq{b})
 \end{equation*}

@@ -97,7 +97,11 @@ Consider the graph $G$ from page\pageref{ex:Graph}again. The finite sequence $(4
 \end{equation*}
 is a shorter $u-v$-walk. The induction hypothesis proves the claim.
 \item If $(u=v_0,\seq{v}=u)$ is a cycle, then by definition $n>0$ and therefore $v_1$ exists. The $u-v_1$-paths $(u,v_1)$ and $(u=v_n,v_{n-1},\ldots,v_1)$ are disjoint by definition of a cycle.\\
-If on the other hand $(u=v_0,\seq{v}=v)$ and $(u=w_0,\seq[m]{w}=v)$ are two disjoint $u-v$-paths, then
+If on the other hand 
+\begin{equation*}
+(u=v_0,\seq{v}=v) \text{ and } (u=w_0,\seq[m]{w}=v) 
+\end{equation*}
+are two disjoint $u-v$-paths, then
 \begin{equation*}
 (u=v_0,\seq{v}=v=w_m,w_{m-1},\ldots,w_0=u)
 \end{equation*}
@@ -133,11 +137,13 @@ Let $G=(V,E)$ be a graph. Then the set $\Aut(G)$ forms a group with respect to t
 The binary operation is well-defined because every pair of automorphisms $\varphi,\psi\in\Aut(G)$ satisfies the following equivalence by definition
 \begin{align*}
 \lbrace v_1,v_2\rbrace\in E&\Leftrightarrow\lbrace \varphi(v_1),\varphi(v_2)\rbrace\in E\\
-&\Leftrightarrow\lbrace \psi(\varphi(v_1)),\psi(\varphi(v_2))\rbrace=\lbrace (\psi\circ\varphi)(v_1),(\psi\circ\varphi)(v_2)\rbrace\in E.
+&\Leftrightarrow\lbrace \psi(\varphi(v_1)),\psi(\varphi(v_2))\rbrace=\\
+&=\lbrace (\psi\circ\varphi)(v_1),(\psi\circ\varphi)(v_2)\rbrace\in E.
 \end{align*}
 Associativity holds for compositions of arbitrary functions $f\colon V\to V$. Clearly, $\id_V$ is an automorphism of $G$ and fulfils $\id_V\circ\varphi=\varphi\circ\id_V=\varphi$. Since every automorphism $\varphi\in\Aut(G)$ is bijective one finds an inverse mapping $\varphi^{-1}\colon V\to V$. In fact, $\varphi^{-1}\in\Aut(G)$ because for an arbitrary edge $\lbrace v_1,v_2\rbrace\in E$ there exists a unique edge $\lbrace u_1,u_2\rbrace\in E$, such that $\lbrace v_1,v_2\rbrace=\lbrace \varphi(u_1),\varphi(u_2)\rbrace$. Therefore,
-\begin{equation*}
-\lbrace v_1,v_2\rbrace=\lbrace \varphi(u_1),\varphi(u_2)\rbrace\in E\Leftrightarrow\lbrace u_1,u_2\rbrace=\lbrace \varphi^{-1}(v_1),\varphi^{-1}(v_2)\rbrace\in E
-\end{equation*}
+\begin{align*}
+\lbrace v_1,v_2\rbrace&=\lbrace \varphi(u_1),\varphi(u_2)\rbrace\in E\Leftrightarrow\\
+&\Leftrightarrow \lbrace u_1,u_2\rbrace=\lbrace \varphi^{-1}(v_1),\varphi^{-1}(v_2)\rbrace\in E
+\end{align*}
 and the claim is proven.
 \end{proof}

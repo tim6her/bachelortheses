@@ -1,8 +1,8 @@
 Given $(M_i)_{i\in I}$ a family of $R$-modules, indexed by $I$. The set of all indexed families $(x_i)_{i\in I}$ where $x_i\in M_i$ for all $i\in I$ is called the \emph{Cartesian product of the modules $(M_i)_{i\in I}$} and is denoted by $\prod\limits_{i\in I} M_i$. If $M_i=M$ for all $i\in I$ we rather note $M^I$ for their Cartesian product.
 
-\begin{prop}\label{prop.DirectProduct}
+\begin{pro}\label{prop.DirectProduct}
 The Cartesian product $\prod_{i\in I} M_i$ of the family of $R$-modules $(M_i)_{i\in I}$ is an $R$-module with respect to component-wise addition and component-wise scalar-multiplication, i.e. $(x_i)_{i\in I}+(y_i)_{i\in I}:=(x_i+y_i)_{i\in I}$ and $a\ast(x_i)_{i\in I}:=(a\ast x_i)_{i\in I}$.
-\end{prop}
+\end{pro}
 
 To prove the proposition above one has to to verify all module axioms in a straight forward way.
 
@@ -12,9 +12,9 @@ We call the $R$-module $\left(\prod_{i\in I} M_i,+,\ast\right)$ introduced in Pr
 
 For every $j\in I$ we call the mapping $\pi_j\colon \prod_{i\in I} M_i\to M_j$ defined by $\pi_j((x_i)_{i\in I})=x_j$ \emph{projection} on the factor $M_j$. One verifies easily that $\pi_j$ is a homomorphism for every $j$ in $I$. These projections fulfil the following universal property:
 
-\begin{prop}[Universal Property of the Direct Product]
+\begin{pro}[Universal Property of the Direct Product]
 Let $(\varphi_i)_{i\in I}$ be an indexed family of module-homomorphisms $\varphi_i\colon M\to M_i$. Then there exists a unique homomorphism $\varphi\colon M\to \prod_{i\in I} M_i$ such that $\varphi_i=\pi_i\circ\varphi$ for all $i\in I$.
-\end{prop}
+\end{pro}
 
 One can visualize the proposition above with the following commutative diagram.
 
@@ -33,13 +33,13 @@ One can visualize the proposition above with the following commutative diagram.
 Consider the mapping $\varphi\colon M\to \prod_{i\in I} M_i$ defined by $\varphi(x)=(\varphi_i(x))_{i\in I}$. It is a homomorphism and fulfils $\varphi_i=\pi_i\circ\varphi$ for all $i\in I$. The uniqueness follows from the construction of $\varphi$.
 \end{proof}
 
-\begin{theo}\label{theo.DirectSum}
+\begin{thm}\label{theo.DirectSum}
 Let $\prod_{i\in I} M_i$ be the direct product of the indexed family of $R$-modules $(M_i)_{i\in I}$. The set
 \begin{equation*}
 \bigoplus_{i\in I}M_i=\left\lbrace (x_i)_{i\in I}\in \prod_{i\in I} M_i \middle\arrowvert x_i=0 \textnormal{ for all but finitely many } i\right\rbrace
 \end{equation*}
 is a submodule of the direct product.
-\end{theo}
+\end{thm}
 
 \begin{proof}
 At first, we notice $0=(0)_{i\in I}\in \bigoplus_{i\in I}M_i$. Hence, $\bigoplus_{i\in I}M_i\neq\emptyset$. Let $(x_i)_{i\in I}$ and $(y_i)_{i\in I}$ be in $\bigoplus_{i\in I}M_i$ then the sets
@@ -50,18 +50,18 @@ are finite per definition. Considering $(x_i)_{i\in I}+(y_i)_{i\in I}$, we find 
 \end{proof}
 
 \begin{defin}
-\begin{compactenum}
+\begin{exlist}
 \item The submodule $\bigoplus_{i\in I}M_i$ introduced in Theorem~\ref{theo.DirectSum} is called \emph{direct sum} of the modules $(M_i)_{i\in I}$.
 \item If $I$ is finite, i.e. by renumbering we have $I=\lbrace 1,2,\ldots r\rbrace$, then $\bigoplus_{i\in I}M_i=\prod_{i\in I} M_i$ and the direct sum is rather denoted by $M_1\oplus M_2\oplus\ldots\oplus M_r$.
 \item If $M_i=M$ for all $i\in I$ we note $M^{(I)}$ for the direct sum $\bigoplus_{i\in I}M_i$. When $I$ is finite, i.e. $|I|=r\in\N$, then $M^r=M^I=M^{(I)}$.
-\end{compactenum}
+\end{exlist}
 \end{defin}
 
 For every $i\in I$ we define a mapping $\iota_i\colon M_i\to \bigoplus_{i\in I}M_i$ by $\iota_i(x)=(x_j)_{j\in I}$ such that $x_i=x$ and $x_j=0$ if $j\neq i$. The mapping $\iota_i$ is homomorphism and is called \textit{embedding} in the $i$-th component. The embeddings fulfil the following universal property:
 
-\begin{prop}[Universal Property of the Direct Sum]\label{prop.UniversalPropertyDirectSum}
+\begin{pro}[Universal Property of the Direct Sum]\label{prop.UniversalPropertyDirectSum}
 Let $(\varphi_i)_{i\in I}$ be an indexed family of module-homomorphisms $\varphi_i\colon M_i\to M$, then there exists a unique homomorphism $\varphi\colon\bigoplus_{i\in I}M_i\to M$ such that $\varphi_i=\varphi\circ\iota_i$.
-\end{prop}
+\end{pro}
 
 One can visualize the proposition above with the following commutative diagram.
 \begin{center}

@@ -54,7 +54,7 @@ for all $a,b\in R$ and all $x,y\in M$. Hence $(M,+,\ast)$ is a module.
 \end{enumerate}
 \end{exam}
 
-In Example~\secref{ex.module}{ex.genModule} we have seen that every ring-homomorphism $\varphi\colon R\rightarrow\End(M)$ induces exactly one scalar multiplication, such that $a\ast x=(\varphi(a))(x)$. On the other hand, one verifies easily that every scalar multiplication induces one and only one ring-homomorphism $\varphi\colon R\rightarrow\End(M)$, such that $(\varphi(a))(x)=a\ast x$. Let now $M$ be an $R$-module. For an arbitrary $a\in R$ consider the mapping $\ell_a\colon M\rightarrow M$ defined by $x\mapsto a\ast x$. As a result of module axiom (iii) we see $\ell_a$ is a group-homomorphism. We define a mapping $\varphi\colon R\rightarrow \End(M)$ by $a \mapsto \ell_a$. At first, we note that module axiom (i) implies $\varphi(1)=\id$. Let $a,b$ be two arbitrary elements in $R$, then
+In \cref{ex.genModule} we have seen that every ring-homomorphism $\varphi\colon R\rightarrow\End(M)$ induces exactly one scalar multiplication, such that $a\ast x=(\varphi(a))(x)$. On the other hand, one verifies easily that every scalar multiplication induces one and only one ring-homomorphism $\varphi\colon R\rightarrow\End(M)$, such that $(\varphi(a))(x)=a\ast x$. Let now $M$ be an $R$-module. For an arbitrary $a\in R$ consider the mapping $\ell_a\colon M\rightarrow M$ defined by $x\mapsto a\ast x$. As a result of module axiom (iii) we see $\ell_a$ is a group-homomorphism. We define a mapping $\varphi\colon R\rightarrow \End(M)$ by $a \mapsto \ell_a$. At first, we note that module axiom (i) implies $\varphi(1)=\id$. Let $a,b$ be two arbitrary elements in $R$, then
 \begin{align*}
 (\varphi(a+b))(x)=\ell_{a+b}(x)=(a+b)x\overset{\text{Ax. (iv)}}{=}ax+bx=\ell_a(x)+\ell_b(x)=(\varphi(a)+\varphi(b))(x)\\
 \intertext{and}
@@ -105,7 +105,7 @@ Implication (i)$\Rightarrow$(ii) is clear. To prove the other direction, we cons
 \item Every module $M$ contains the submodules $M$ and $\lbrace 0\rbrace$. Therefore, these submodules are called \emph{trivial}.
 \item Given a vector space $V$, the linear subspaces of $V$ are its submodules.
 \item If we view a unital ring $R$ as a left module over itself, being a submodule of $R$ is equivalent to being a left ideal of $R$.
-\item An $F$-vector space $V$ viewed as a module over the ring of its endomorphisms $\End_F(V)$ contains only the trivial submodules. See Example~\secref{exam.Bases of Modules}{exam. Generating set of V over EndFV} for further details.
+\item An $F$-vector space $V$ viewed as a module over the ring of its endomorphisms $\End_F(V)$ contains only the trivial submodules. See \cref{exam. Generating set of V over EndFV} for further details.
 \item In the case of an Abelian group $G$ viewed as a $\Z$-module, being a submodule is equivalent to being a subgroup.
 \end{enumerate}\end{exam}
 

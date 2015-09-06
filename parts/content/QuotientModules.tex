@@ -1,19 +1,19 @@
 Given an $R$-module $M$ which contains a submodule $N$, then $(N,+)$ is a normal subgroup of $(M,+)$. Hence, the relation $\equiv$ defined by $x\equiv y:\Leftrightarrow x-y\in N$ is an equivalence relation on $M$, which is compatible with addition, therefore the set of all equivalence classes $\MtN$ is an Abelian group called quotient group $M$ modulo $N$. The following theorem shows, that the quotient group $\MtN$ carries a module structure over $R$.
 
-\begin{theo} \label{theo.quotient module}
+\begin{thm} \label{theo.quotient module}
 Let $M$ be an $R$-module which contains the submodule $N$ and define the operation $\ast\colon R\times \MtN\rightarrow \MtN$ by $a(x+N)=ax+N$. This operation is well-defined and $(\MtN,+,\ast)$ is a module over $R$, where + is the addition on the quotient group $\MtN$.
-\end{theo}
+\end{thm}
 
 \begin{proof}
 At first we verify that the mapping $\ast$ is well-defined. Let therefore $x\equiv x'$. We need to prove that $ax\equiv ax'$. Since $x\equiv x'$ there exists an $n\in N$ such that $x=x'+n$ and therefore $ax-ax'=ax-a(x-n)=an\in N$ since $N$ is a submodule of $M$. Hence, $ax\equiv ax'$ and $ax+N=ax'+N$. 
 
 It remains to prove that the four module axioms are satisfied. For all $a,b\in R$ and all $x+N,y+N\in \MtN$ we have
-\begin{compactenum}
+\begin{exlist}
 \item $1(x+N)=x+N$,
 \item $a(b(x+N))=a(bx+N)=abx+N=(ab)(x+N)$,
 \item $a((x+N)+(y+N))=a(x+y+N)=a(x+y)+N=ax+ay+N=(ax+N)+(ay+N)=a(x+N)+a(y+N)$ and
 \item $(a+b)(x+N)=(a+b)x+N=ax+bx+N=(ax+N)+(bx+N)=a(x+N)+b(x+N)$.
-\end{compactenum}
+\end{exlist}
 Hence, $(\MtN,+,\ast)$ is a module.
 \end{proof}
 
@@ -33,9 +33,9 @@ x\equiv y\Leftrightarrow x-y\in N_0\leq M \;\text{and}\; \faktor{M}{\equiv}=\fak
 \end{enumerate}
 \end{rem}
 
-\begin{theo}[Universal Property]\label{theo.Universal Property}
+\begin{thm}[Universal Property]\label{theo.Universal Property}
 Let $\varphi\colon M \to M'$ be a homomorphism of $R$-modules and let $N$ be a submodule of $M$. The canonical projection of $M$ to $\MtN$ is denoted by $\pi$. If $N$ is a submodule of $\ker(\varphi)$ then there exists a unique homomorphism $\bar{\varphi}\colon \MtN\rightarrow M'$ such that $\bar{\varphi}\circ\pi=\varphi$. Moreover, $\ker(\bar{\varphi})=\ker(\varphi)/N$ and the following equivalence holds: $\bar{\varphi}$ is an isomorphism iff $\varphi$ is an epimorphism and $\ker(\varphi)=N$.
-\end{theo}
+\end{thm}
 
 The statement of Theorem~\ref{theo.Universal Property} can be visualized by the following commutative diagram.
 
@@ -65,13 +65,13 @@ Let $\varphi\colon M\to M'$ be $R$-linear, then we have
 Let $N=\ker(\varphi)$ then the corollary follows from Theorem~\ref{theo.Universal Property}.
 \end{proof}
 
-\begin{theo}[Comparison Principle] \label{theo.Comparison Principle}
+\begin{thm}[Comparison Principle] \label{theo.Comparison Principle}
 Let $M$ be an $R$-module which contains the submodule $N$ and $\pi\colon M\to\MtN$ the canonical projection. The set of all submodules of $M$ which contain $N$ shall be denoted by $S(M,N):=\lbrace M'\leq M \mid M'\supseteq N\rbrace$ and the set of all submodules of $\MtN$ by $S(\MtN)$. Furthermore, $\mathcal{P}(\MtN)$ denotes the power set of $\MtN$. We define a mapping $\varphi\colon S(M,N)\to \mathcal{P}(\MtN)$ by
 \begin{equation*}
 \varphi(M'):=\pi(M')=\left\lbrace x+N\in \MTN \middle\arrowvert x\in M'\right\rbrace.
 \end{equation*}
 Then $\varphi$ is injective, $\im(\varphi)=S(\MtN)$ and $\varphi(M')\cong\nicefrac{M'}{N}$ for all $M'\in S(M,N)$.
-\end{theo}
+\end{thm}
 \begin{proof}
 At first we verify that $x+N\in \varphi(M')$ is equivalent to $x\in M'$. Assume $x+N$ is an element of $\varphi(M')$ then there exists an $x'\in M'$ such that $x+N=x'+N$. This implies the existence of an $n\in N$ such that $x'=x+n$. It follows $x+n\in M'$ and $x\in M'$ because $M'\supseteq N$. The other direction is trivial.
 
@@ -90,10 +90,10 @@ Theorem~\ref{theo.Comparison Principle} implies directly the following corollary
 
 \begin{cor}
 Let $M$ be an $R$-module which contains the submodule $N$, then the following statements hold:
-\begin{compactenum}
+\begin{exlist}
 \item Given a submodule $M'$ such that $N\leq M'\leq M$, then $\nicefrac{M'}{N}\leq\MtN$.
 \item Given a quotient module $S$ such that $S\leq\MtN$, then there exists a submodule $M'$ with $N\leq M'\leq M$ such that $\nicefrac{M'}{N}=S$.
-\end{compactenum}
+\end{exlist}
 \end{cor}
 
 \begin{cor}[Isomorphism Theorems]

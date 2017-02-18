@@ -1,4 +1,5 @@
 # Bachelortheses
+![CC-BY-SA](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)
 
 These are my bachelortheses which were submitted 
 to my supervisor ao. Univ.-Prof. Dr. Karl Auinger

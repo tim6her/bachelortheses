@@ -1,4 +1,4 @@
-Given an $R$-module $M$ which contains a submodule $N$, then $(N,+)$ is a normal subgroup of $(M,+)$. Hence, the relation $\equiv$ defined by $x\equiv y:\Leftrightarrow x-y\in N$ is an equivalence relation on $M$, which is compatible with addition, therefore the set of all equivalence classes $\MtN$ is an Abelian group called quotient group $M$ modulo $N$. The following theorem shows, that the quotient group $\MtN$ carries a module structure over $R$.
+Given an $R$-module $M$ which contains a submodule $N$, then by commutativity $(N,+)$ is a normal subgroup of $(M,+)$. Hence, the relation $\equiv$ defined by $x\equiv y:\Leftrightarrow x-y\in N$ is an equivalence relation on $M$, which is compatible with addition, therefore the set of all equivalence classes $\MtN$ is an Abelian group called quotient group $M$ modulo $N$. The following theorem shows, that the quotient group $\MtN$ carries a module structure over $R$.
 
 \begin{thm} \label{theo.quotient module}
 Let $M$ be an $R$-module which contains the submodule $N$ and define the operation $\ast\colon R\times \MtN\rightarrow \MtN$ by $a(x+N)=ax+N$. This operation is well-defined and $(\MtN,+,\ast)$ is a module over $R$, where + is the addition on the quotient group $\MtN$.
@@ -8,36 +8,36 @@ Let $M$ be an $R$-module which contains the submodule $N$ and define the operati
 At first we verify that the mapping $\ast$ is well-defined. Let therefore $x\equiv x'$. We need to prove that $ax\equiv ax'$. Since $x\equiv x'$ there exists an $n\in N$ such that $x=x'+n$ and therefore $ax-ax'=ax-a(x-n)=an\in N$ since $N$ is a submodule of $M$. Hence, $ax\equiv ax'$ and $ax+N=ax'+N$. 
 
 It remains to prove that the four module axioms are satisfied. For all $a,b\in R$ and all $x+N,y+N\in \MtN$ we have
-\begin{exlist}
+\begin{enumerate}
 \item $1(x+N)=x+N$,
 \item $a(b(x+N))=a(bx+N)=abx+N=(ab)(x+N)$,
 \item $a((x+N)+(y+N))=a(x+y+N)=a(x+y)+N=ax+ay+N=(ax+N)+(ay+N)=a(x+N)+a(y+N)$ and
 \item $(a+b)(x+N)=(a+b)x+N=ax+bx+N=(ax+N)+(bx+N)=a(x+N)+b(x+N)$.
-\end{exlist}
+\end{enumerate}
 Hence, $(\MtN,+,\ast)$ is a module.
 \end{proof}
 
 \begin{defin}
-We shall call the module $(\MtN,+,\ast)$ introduced in Theorem~\ref{theo.quotient module} the \emph{quotient module $M$ modulo $N$}.
+We shall call the module $(\MtN,+,\ast)$ introduced in \cref{theo.quotient module} the \emph{quotient module $M$ modulo $N$}.
 \end{defin}
 
 \begin{rem}
-\begin{enumerate}
-\item In Theorem~\ref{theo.quotient module} we have seen that every $R$-submodule $N$ of $M$ induces an equivalence relation $\equiv$ on $M$  such that $\equiv$ is compatible with addition and scalar multiplication, i.e. $w\equiv x$ and $y\equiv z$ implies $w+y\equiv x+z$ and $aw\equiv ax$ for all $a\in R$. 
+\begin{exlist}
+\item In \cref{theo.quotient module} we have seen that every $R$-sub\-mod\-ule $N$ of $M$ induces an equivalence relation $\equiv$ on $M$  such that $\equiv$ is compatible with addition and scalar multiplication, i.e. $w\equiv x$ and $y\equiv z$ implies $w+y\equiv x+z$ and $aw\equiv ax$ for all $a\in R$. 
 
 Let on the other hand $\equiv$ be an equivalence relation on $M$ that is compatible with addition and scalar multiplication, then there exists a submodule $N\leq M$ such that $x\equiv y\Leftrightarrow x-y\in N$. To prove this we consider two elements $x,y\in M$ with $x\equiv y$. This is equivalent to $x-y\equiv 0$ since $-y\equiv -y$ and $\equiv$ is compatible with addition. Let $N_0$ denote the equivalence class of 0, i.e. $N_0:=\lbrace z\in M|z\equiv 0\rbrace$. This set is not empty because $0\equiv 0$. Furthermore, $N_0$ is a submodule of $M$ because for all $z ,w\in N_0$ and all $a\in R$ the identities $z +w\equiv 0+0$ and $az\equiv a0$ hold. We conclude
 \begin{equation*}
 x\equiv y\Leftrightarrow x-y\in N_0\leq M \;\text{and}\; \faktor{M}{\equiv}=\faktor{M}{N_0}.
 \end{equation*}
 \item Consider the mapping $\pi\colon M\rightarrow \MtN$ defined by $x\mapsto x+N$. We notice that $\pi$ is a group-epimorphism. Moreover, it is a module-epimorphism. Given an arbitrary $a\in R$ and $x\in M$ we have $\pi(ax)=ax+N=a(x+N)=a\pi(x)$. We call the mapping $\pi$ \emph{canonical projection of $M$ to $\MtN$}. The kernel of $\pi$ is $N$.
-\end{enumerate}
+\end{exlist}
 \end{rem}
 
 \begin{thm}[Universal Property]\label{theo.Universal Property}
 Let $\varphi\colon M \to M'$ be a homomorphism of $R$-modules and let $N$ be a submodule of $M$. The canonical projection of $M$ to $\MtN$ is denoted by $\pi$. If $N$ is a submodule of $\ker(\varphi)$ then there exists a unique homomorphism $\bar{\varphi}\colon \MtN\rightarrow M'$ such that $\bar{\varphi}\circ\pi=\varphi$. Moreover, $\ker(\bar{\varphi})=\ker(\varphi)/N$ and the following equivalence holds: $\bar{\varphi}$ is an isomorphism iff $\varphi$ is an epimorphism and $\ker(\varphi)=N$.
 \end{thm}
 
-The statement of Theorem~\ref{theo.Universal Property} can be visualized by the following commutative diagram.
+The statement of \cref{theo.Universal Property} can be visualized by the following commutative diagram.
 
 \begin{center}
 \begin{tikzpicture}
@@ -62,7 +62,7 @@ Let $\varphi\colon M\to M'$ be $R$-linear, then we have
 \end{equation*}
 \end{cor}
 \begin{proof}
-Let $N=\ker(\varphi)$ then the corollary follows from Theorem~\ref{theo.Universal Property}.
+Let $N=\ker(\varphi)$ then the corollary follows from \cref{theo.Universal Property}.
 \end{proof}
 
 \begin{thm}[Comparison Principle] \label{theo.Comparison Principle}
@@ -75,7 +75,7 @@ Then $\varphi$ is injective, $\im(\varphi)=S(\MtN)$ and $\varphi(M')\cong\nicefr
 \begin{proof}
 At first we verify that $x+N\in \varphi(M')$ is equivalent to $x\in M'$. Assume $x+N$ is an element of $\varphi(M')$ then there exists an $x'\in M'$ such that $x+N=x'+N$. This implies the existence of an $n\in N$ such that $x'=x+n$. It follows $x+n\in M'$ and $x\in M'$ because $M'\supseteq N$. The other direction is trivial.
 
-To prove that $\varphi$ is injective we consider two submodules $M_1,M_2\in S(M,N)$ such that $\varphi(M_1)=\varphi(M_2)$. Then the following equivalence holds:
+To prove that $\varphi$ is injective we consider two submodules $M_1$ and $M_2\in S(M,N)$ such that $\varphi(M_1)=\varphi(M_2)$. Then the following equivalence holds:
 \begin{equation*}
 x\in M_1\Leftrightarrow x+N\in \varphi(M_1)\Leftrightarrow x+N\in\varphi(M_2)\Leftrightarrow x\in M_2.
 \end{equation*}
@@ -85,27 +85,26 @@ Next we verify $\im(\varphi)=S(\MtN)$. Since $\pi$ is a homomorphism $\varphi(M'
 In order to prove $\varphi(M')\cong\nicefrac{M'}{N}$ consider the embedding $\iota\colon \nicefrac{M'}{N}\to\MtN$ defined by $x+N\mapsto x+N$. It is a monomorphism with $\im(\iota)=\lbrace x+N\in\MtN \mid x\in M'\rbrace=\varphi(M')$.
 \end{proof}
 
-
-Theorem~\ref{theo.Comparison Principle} implies directly the following corollary.
+\cref{theo.Comparison Principle} implies directly the following corollary.
 
 \begin{cor}
 Let $M$ be an $R$-module which contains the submodule $N$, then the following statements hold:
-\begin{exlist}
+\begin{thmlist}
 \item Given a submodule $M'$ such that $N\leq M'\leq M$, then $\nicefrac{M'}{N}\leq\MtN$.
 \item Given a quotient module $S$ such that $S\leq\MtN$, then there exists a submodule $M'$ with $N\leq M'\leq M$ such that $\nicefrac{M'}{N}=S$.
-\end{exlist}
+\end{thmlist}
 \end{cor}
 
 \begin{cor}[Isomorphism Theorems]
 Given an $R$-module $M$ which contains the submodules $N_1,N_2$, then we have
-\begin{enumerate}
+\begin{thmlist}
 \item $$\faktor{N_1}{\left(N_1\cap N_2\right)}\cong\faktor{\left(N_1+N_2\right)}{N_2}$$
 \item and if $N_2\subseteq N1$ $$\faktor{\left(\faktor{M}{N_2}\right)}{\left(\faktor{N_1}{N_2}\right)}\cong\faktor{M}{N_1}.$$
-\end{enumerate}
+\end{thmlist}
 \end{cor}
 \begin{proof}
-\begin{enumerate}
-\item Consider the mapping $\alpha\colon N_1\to \nicefrac{\left(N_1+N_2\right)}{N_2}$ defined by $\alpha(x)=x+N_2$. It is the composition of the embedding $N_1\to N_1+N_2$, $x\mapsto x$ and the canonical projection $N_1+N_2\to\nicefrac{\left(N_1+N_2\right)}{N_2}$, $x\mapsto x+N_2$, hence $\alpha$ is a homomorphism. The kernel of $\alpha$ is $N_1\cap N_2$ and $\alpha$ is surjective, because for an arbitrary $x+N_2\in\nicefrac{\left(N_1+N_2\right)}{N_2}$ there exist $n\in N_1$ and $m\in N_2$ such that $x+N_2=n+m+N_2=n+N_2=\alpha(n)$. Now Corollary~\ref{cor.Homomorphism Theorem} implies the claim. 
-\item Consider the canonical projection $\pi\colon M\to \nicefrac{M}{N_1}$, $x\mapsto x+N_1$. Because $N_2\leq N_2=\ker(\pi)$ and $\nicefrac{M}{N_1}=\im(\pi)$, Theorem~\ref{theo.Universal Property} implies the existence of an epimorphism $\bar{\pi}\colon \nicefrac{M}{N_2}\to\nicefrac{M}{N_1}$ with $\ker(\bar{\pi})=\nicefrac{\ker(\pi)}{N_2}=\nicefrac{N_1}{N_2}$. Again Corollary~\ref{cor.Homomorphism Theorem} implies the claim.
-\end{enumerate}
+\begin{plist}
+\item Consider the mapping $\alpha\colon N_1\to \nicefrac{\left(N_1+N_2\right)}{N_2}$ def\-ined by $\alpha(x)=x+N_2$. It is the composition of the embedding $N_1\to N_1+N_2$, $x\mapsto x$ and the canonical projection $N_1+N_2\to\nicefrac{\left(N_1+N_2\right)}{N_2}$, $x\mapsto x+N_2$, hence $\alpha$ is a homomorphism. The kernel of $\alpha$ is $N_1\cap N_2$ and $\alpha$ is surjective, because for an arbitrary $x+N_2\in\nicefrac{\left(N_1+N_2\right)}{N_2}$ there exist $n\in N_1$ and $m\in N_2$ such that $x+N_2=n+m+N_2=n+N_2=\alpha(n)$. Now \cref{cor.Homomorphism Theorem} implies the claim. 
+\item Consider the canonical projection $\pi\colon M\to \nicefrac{M}{N_1}$, $x\mapsto x+N_1$. Because $N_2\leq N_2=\ker(\pi)$ and $\nicefrac{M}{N_1}=\im(\pi)$, \cref{theo.Universal Property} implies the existence of an epimorphism $\bar{\pi}\colon \nicefrac{M}{N_2}\to\nicefrac{M}{N_1}$ with $\ker(\bar{\pi})=\nicefrac{\ker(\pi)}{N_2}=\nicefrac{N_1}{N_2}$. Again \cref{cor.Homomorphism Theorem} implies the claim.
+\end{plist}
 \end{proof}

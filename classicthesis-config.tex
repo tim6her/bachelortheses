@@ -237,6 +237,8 @@
 \newlist{clist}{enumerate}{2}
 \setlist[clist]{label*=(\alph*), ref=(\alph*),noitemsep,leftmargin=0pt,itemindent=2\parindent} 
 
+% TODO: Indent vor Absätzen
+
 \usepackage{multienum}
 % ****************************************************************************************************
 
@@ -308,7 +310,7 @@
 % ********************************************************************
 \hypersetup{%
     %draft,	% = no hyperlinking at all (useful in b/w printouts)
-    colorlinks=false, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
     % uncomment the following line if you want to have black links (e.g., for printing)
     %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
     breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
@@ -330,14 +332,16 @@
 \usepackage[capitalize]{cleveref}
 
 \Crefname{thm}{Thm.}{Thms.}
-\Crefname{lem}{Lemma}{Lemmas.}
+\Crefname{lem}{Lem.}{Lemmata}
 \Crefname{pro}{Prop.}{Props.}
 \Crefname{cor}{Cor.}{Cors.}
+\Crefname{exam}{Example}{Examples}
 
 \addtotheorempostheadhook[thm]{\crefalias{thmlisti}{thm}}
 \addtotheorempostheadhook[lem]{\crefalias{thmlisti}{lem}}
 \addtotheorempostheadhook[pro]{\crefalias{thmlisti}{pro}}
 \addtotheorempostheadhook[cor]{\crefalias{thmlisti}{cor}}
+\addtotheorempostheadhook[exam]{\crefalias{exlisti}{exam}}
 
 
 

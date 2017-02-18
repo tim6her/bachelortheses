@@ -134,35 +134,54 @@
 \DeclareMathOperator{\lcm}{\mathrm{lcm}}
 \DeclareMathOperator{\ord}{\mathrm{ord}}
 
+
+\declaretheoremstyle[
+    spaceabove=6pt, spacebelow=6pt,
+    headfont=\normalfont\scshape,
+    notefont=\mdseries, notebraces={(}{)},
+    bodyfont=\normalfont\itshape,
+    postheadspace=1em,
+    ]{scthm}
+\declaretheoremstyle[
+    spaceabove=6pt, spacebelow=6pt,
+    headfont=\normalfont\scshape,
+    notefont=\mdseries, notebraces={(}{)},
+    bodyfont=\normalfont,
+    postheadspace=1em,
+    ]{scdef}
 	
 \declaretheorem[
-	name=Theorem,
+	name=theorem,
   	refname={theorem,theorems},		%Lower Case Versions of Theorem Type
   	Refname={Theorem,Theorems},
+    style=scthm,
   	numberwithin=section]{thm}
 \declaretheorem[
-	name=Lemma,
+	name=lemma,
 	refname={lemma,lemmas},
 	Refname={Lemma,Lemmas},
+    style=scthm,
 	sibling=thm]{lem}
 \declaretheorem[
-	name=Proposition,
+	name=proposition,
 	refname={proposition,propositions},
 	Refname={Proposition,Propositions},
+    style=scthm,
 	sibling=thm]{pro}
 \declaretheorem[
-	name=Corollary,
+	name=corollary,
 	refname={corollary,corollarys},
 	Refname={Corollary,Corollarys},
+    style=scthm,
 	sibling=thm]{cor}
 
 \declaretheorem[
-	name=Definition,
-	style=definition,
+	name=definition,
+	style=scdef,
 	sibling=thm]{defin}
 \declaretheorem[
-	name=Example,
-	style=definition,
+	name=example,
+	style=scdef,
 	sibling=thm]{exam}
 	
 \declaretheorem[

@@ -8,12 +8,12 @@ The Cartesian product $\prod_{i\in I} M_i$ of the family of $R$-modules $(M_i)_{
 To prove the proposition above one has to to verify all module axioms in a straight forward way.
 
 \begin{defin}
-We call the $R$-module $\left(\prod_{i\in I} M_i,+,\ast\right)$ introduced in Proposition~\ref{prop.DirectProduct} the \emph{direct product} of the family of modules $(M_i)_{i\in I}$.
+We call the $R$-module $\left(\prod_{i\in I} M_i,+,\ast\right)$ introduced in \cref{prop.DirectProduct} the \emph{direct product} of the family of modules $(M_i)_{i\in I}$.
 \end{defin}
 
 For every $j\in I$ we call the mapping $\pi_j\colon \prod_{i\in I} M_i\to M_j$ defined by $\pi_j((x_i)_{i\in I})=x_j$ \emph{projection} on the factor $M_j$. One verifies easily that $\pi_j$ is a homomorphism for every $j$ in $I$. These projections fulfil the following universal property:
 
-\begin{pro}[Universal Property of the Direct Product]
+\begin{pro}[universal property of the direct product]
 Let $(\varphi_i)_{i\in I}$ be an indexed family of module-homomorphisms $\varphi_i\colon M\to M_i$. Then there exists a unique homomorphism $\varphi\colon M\to \prod_{i\in I} M_i$ such that $\varphi_i=\pi_i\circ\varphi$ for all $i\in I$.
 \end{pro}
 
@@ -54,7 +54,7 @@ are finite per definition. Considering $(x_i)_{i\in I}+(y_i)_{i\in I}$, we find 
 
 \begin{defin}
 \begin{thmlist}
-\item The submodule $\bigoplus_{i\in I}M_i$ introduced in Theorem~\ref{theo.DirectSum} is called \emph{direct sum} of the modules $(M_i)_{i\in I}$.
+\item The submodule $\bigoplus_{i\in I}M_i$ introduced in \cref{theo.DirectSum} is called \emph{direct sum} of the modules $(M_i)_{i\in I}$.
 \item If $I$ is finite, i.e. by renumbering we have $I=\lbrace 1,2,\ldots r\rbrace$, then $\bigoplus_{i\in I}M_i=\prod_{i\in I} M_i$ and the direct sum is rather denoted by $M_1\oplus M_2\oplus\ldots\oplus M_r$.
 \item If $M_i=M$ for all $i\in I$ we note $M^{(I)}$ for the direct sum $\bigoplus_{i\in I}M_i$. When $I$ is finite, i.e. $|I|=r\in\N$, then $M^r=M^I=M^{(I)}$.
 \end{thmlist}
@@ -62,7 +62,7 @@ are finite per definition. Considering $(x_i)_{i\in I}+(y_i)_{i\in I}$, we find 
 
 For every $i\in I$ we define a mapping $\iota_i\colon M_i\to \bigoplus_{i\in I}M_i$ by $\iota_i(x)=(x_j)_{j\in I}$ such that $x_i=x$ and $x_j=0$ if $j\neq i$. The mapping $\iota_i$ is homomorphism and is called \textit{embedding} in the $i$-th component. The embeddings fulfil the following universal property:
 
-\begin{pro}[Universal Property of the Direct Sum]\label{prop.UniversalPropertyDirectSum}
+\begin{pro}[universal property of the direct sum]\label{prop.UniversalPropertyDirectSum}
 Let $(\varphi_i)_{i\in I}$ be an indexed family of module-homomorphisms $\varphi_i\colon M_i\to M$, then there exists a unique homomorphism $\varphi\colon\bigoplus_{i\in I}M_i\to M$ such that $\varphi_i=\varphi\circ\iota_i$.
 \end{pro}
 

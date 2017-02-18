@@ -12,11 +12,11 @@ for all $x,y \in M$ and all $a \in R$.
 \end{thmlist}
 \end{defin}
 
-Note that the first postulate in the definition of a module-homomorphism implies that $\varphi$ is a group-homomorphism. We can therefore apply statements of group-homomorphisms to mod\-ule-ho\-mo\-morph\-isms. For example every module-homomorphism $\varphi\colon M\rightarrow M'$ satisfies $\varphi(0)=0$ and $\varphi(-x)=-\varphi(x)$.
+Note that the first postulate in the definition of a module-homomorphism implies that $\varphi$ is a group-homomorphism. We can therefore apply statements of group-homomorphisms to mo\-dule-ho\-mo\-morph\-isms. For example, every mo\-dule-ho\-mo\-morph\-ism $\varphi\colon M\rightarrow M'$ satisfies $\varphi(0)=0$ and $\varphi(-x)=-\varphi(x)$.
 
 \begin{exam}
 \begin{exlist}
-\item Given a modul $M$, the mapping $\id_M\colon M \rightarrow M$ defined by $x\mapsto x$ is an automorphism. We  call this mapping the \emph{identity} (mapping) on $M$.
+\item Given a modul $M$, the map $\id_M\colon M \rightarrow M$ defined by $x\mapsto x$ is an automorphism. We  call this mapping the \emph{identity} (mapping) on $M$.
 \item Let $M$ and $M'$ be $R$-modules. The mapping $\varphi\colon M\rightarrow M'$ defined by $x\mapsto 0$ is a homomorphism with $\ker(\varphi)=M$. 
 \item Let $G$ and $H$ be two $\Z$-modules like the one defined in \cref{ex.Z module}, then every group-homomorphism $\varphi\colon G\rightarrow H$ is a module-homomorphism. To prove this one verifies $\varphi(rx)=r\varphi(x)$ for all $r\in\Z$, $z\geq 0$ per induction on $r$. If $r<0$, we note that 
 \begin{equation*}
@@ -25,7 +25,10 @@ Note that the first postulate in the definition of a module-homomorphism implies
 \end{exlist}
 \end{exam}
 
-\begin{lem}\label{lm.Composition of Homo} Let $M, N$ and $O$ be $R$-modules and $\varphi\colon M\rightarrow N$, $\psi\colon N\rightarrow O$ homomorphisms, then $\psi\circ\varphi\colon M\rightarrow O$ is a homomorphism.
+\begin{lem}\label{lm.Composition of Homo} 
+Let $M, N$ and $O$ be $R$-modules and
+     \[\varphi\colon M\rightarrow N, \quad \psi\colon N\rightarrow O\] 
+homomorphisms, then $\psi\circ\varphi\colon M\rightarrow O$ is a homomorphism.
 \end{lem}
 \begin{proof}
 When $\varphi$ and $\psi$ are viewd as homomorphisms of groups, the statement above holds. Hence, it is enough to prove the compatibility with scalar multiplication. Let therefore $a$ be in $R$ and $x$ be in $N$, then $\psi(\varphi(ax))=\psi(a\varphi(x))=a\psi(\varphi(x))$.

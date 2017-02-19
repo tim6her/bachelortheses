@@ -1,3 +1,5 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_GB
 \cref{exam.basis of G} leads directly to the following definition.
 \begin{defin}
 An $R$-module $M$ is called \emph{free} over $R$ if it has a base over $R$.
@@ -24,12 +26,13 @@ We consider the following diagram where $\gamma_{\varphi(B)}$ denotes the homomo
   	edge [->] node[right,comment] {$\gamma_{\varphi(B)}$} (M2);
 \end{tikzpicture}
 \end{center}
-This diagram commutates because of the findings in Theorem~\ref{theo.Homomorphisms of free modules}. Since $\gamma_B$ is bijective $\gamma_{\varphi(B)}$ is injective or surjective respectively if and only if $\varphi$ is injective or surjective, which proves the claim.
+This diagram commutates because of the findings in \cref{theo.Homomorphisms of free modules}.
+Since $\gamma_B$ is bijective $\gamma_{\varphi(B)}$ is injective or surjective respectively if and only if $\varphi$ is injective or surjective, which proves the claim.
 \end{proof}
 The proposition above implies that if $M'$ is isomorphic to the free module $M$ then $M'$ is free.
 
 
-The following example, which can be found in \cite[p.194]{jantzen2005algebra}, shows that the concept of dimensions as we know it for vector spaces can not be generalized for free modules over arbitrary rings. We will see that the cardinality of a basis of a free $R$-module is in general not unique.
+The following example, which can be found in \cite[p.~194]{jantzen2005algebra}, shows that the concept of dimensions as we know it for vector spaces can not be generalized for free modules over arbitrary rings. We will see that the cardinality of a basis of a free $R$-module is in general not unique.
 \begin{exam}
 Let $F$ be a field then the polynomial ring $F[X]$ is an $F$-vector space and the set $R:=\End_F(F[X])$ of all endomorphisms in $F[X]$ is a ring with respect to point-wise addition and composition of mappings. We view $R$ as a module over itself and find that $\id_{F[X]}$ is a basis of $R$ over $R$, since for every $\varphi\in R$ the identity $\varphi=\varphi\circ id_{F[X]}$ holds and this decomposition is unique.
 
@@ -46,7 +49,7 @@ We will now show that the cardinality of a finite basis of an $R$-module is uniq
 
 \begin{lem}\label{lm.SigmaModule}
 Let $M$ be an $R$-module and $\mathfrak{I}$ a left ideal in $R$ then the following statements hold.
-\begin{exlist}
+\begin{thmlist}
 \item The subset \label{lm.Sigma}
 \begin{equation*}
 S:=\left\lbrace\sum_{i=1}^n \mathfrak{a}_ix_i\mid n\in\N, \mathfrak{a}_i\in \mathfrak{I}, x_i\in M, 1\leq i\leq n\right\rbrace
@@ -56,15 +59,18 @@ is a submodule of $M$.
 \begin{equation*}
 (a+\mathfrak{I})(x+S):=ax+S.
 \end{equation*}
-\end{exlist}
+\end{thmlist}
 \end{lem}
 \begin{proof}
 \begin{enumerate}
 \item Let $J,K$ be finite subsets of $\N$ and $\mathfrak{a}_j\in \mathfrak{I}$ for all $j\in J$, $\mathfrak{b}_k\in \mathfrak{I}$ for all $k\in K$ and  $x_i\in M$ for all $i\in J\cup K$. We define $\mathfrak{a}_j:=0$ if $j\in K \setminus J$ and $\mathfrak{b}_k:=0$ if $k\in J\setminus K$. It follows that $\sum_{j\in J}\mathfrak{a}_jx_j\in S$, $\sum_{k\in K}\mathfrak{b}_kx_k\in S$ and therefore
-\begin{equation*}
-\sum_{j\in J}\mathfrak{a}_jx_j+\sum_{k\in K}\mathfrak{a}_kx_k=\sum_{i\in J\cup K} \mathfrak{a}_ix_i+\sum_{i\in J\cup K} \mathfrak{b}_ix_i=\sum_{i\in J\cup K} (\mathfrak{a}_i+\mathfrak{b}_i)x_i\in S.
-\end{equation*} 
- Given an arbitrary $c\in R$ we find $c\sum_{j\in J}\mathfrak{a}_jx_j=\sum_{j\in J}c\mathfrak{a}_jx_j\in S$ since $\mathfrak{I}$ is a left ideal in $R$.
+\begin{align*}
+\sum_{j\in J}\mathfrak{a}_jx_j+\sum_{k\in K}\mathfrak{a}_kx_k &= \sum_{i\in J\cup K} \mathfrak{a}_ix_i+\sum_{i\in J\cup K} \mathfrak{b}_ix_i=\\
+    &=\sum_{i\in J\cup K} (\mathfrak{a}_i+\mathfrak{b}_i)x_i\in S.
+\end{align*} 
+Given an arbitrary $c\in R$ we find
+ \[c\sum_{j\in J}\mathfrak{a}_jx_j=\sum_{j\in J}c\mathfrak{a}_jx_j\in S\]
+since $\mathfrak{I}$ is a left ideal in $R$.
 \item At first we notice that $(\nicefrac{M}{S}, +)$ is an Abelian group since $\nicefrac{M}{S}$ is an $R$-module.
 
 Secondly, we need to verify the validity of the definition of the scalar multiplication. Let $a\equiv a'$ with respect to the equivalence relation on $R$ induced by $\mathfrak{I}$. We show that $ax\equiv a'x$ with respect to the equivalence relation on $M$ induced by $S$ for all $x\in M$. Since $a\equiv a'$ there exists an element $\mathfrak{b}\in\mathfrak{I}$ such that $a=a'+\mathfrak{b}$, therefore $ax-a'x=ax-(a-\mathfrak{b})x=\mathfrak{b}x\in S$ and the claim is proven. On the other hand, let $x\equiv x'$. One needs to verify $ax\equiv ax'$ for all $a\in R$. Since $x\equiv x'$ there exists a sum $\sum_{i=1}^n\mathfrak{b}_iy_i\in S$ such that $x=x'+\sum_{i=1}^n\mathfrak{b}_iy_i$ and therefore $ax-ax'=a\sum_{i=1}^n\mathfrak{b}_iy_i=\sum_{i=1}^na\mathfrak{b}_iy_i\in S$ since $\mathfrak{b}_i\in\mathfrak{I}$ and $\mathfrak{I}$ is an ideal.

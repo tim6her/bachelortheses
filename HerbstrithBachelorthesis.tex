@@ -4,10 +4,21 @@
                 footinclude=false,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
                 BCOR=5mm,a5paper,fontsize=11pt,british,%
                 %draft
-                ]{book}
+                ]{scrbook}
 \input{classicthesis-config}
 \begin{document}
-\tableofcontents
+%********************************************************************
+% Frontmatter
+%*******************************************************
+\include{FrontBackmatter/DirtyTitlepage}
+\include{FrontBackmatter/Titlepage}
+\include{FrontBackmatter/Titleback}
+\cleardoublepage\include{FrontBackmatter/Foreword}
+\pagestyle{scrheadings}
+\cleardoublepage\include{FrontBackmatter/Contents}
+%********************************************************************
+% Mainmatter
+%*******************************************************
 \part{Introduction to Module Theory}
 \begin{refsection}
 \input{parts/HerbstrithModuln2012}
@@ -19,5 +30,13 @@ and its Connection to Burnside’s Problems}
 \input{parts/HerbstrithBurnsideProblem2013}
 \end{refsection}
 
+% ********************************************************************
+% Backmatter
+%*******************************************************
+\appendix
 
+%********************************************************************
+% Other Stuff in the Back
+%*******************************************************
+\cleardoublepage\include{FrontBackmatter/Colophon}
 \end{document}

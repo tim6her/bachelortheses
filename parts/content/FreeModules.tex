@@ -5,7 +5,7 @@
 An $R$-module $M$ is called \emph{free} over $R$ if it has a base over $R$.
 \end{defin}
 
-Theorem~\ref{theo.Homomorphisms of free modules} implies a different approach of characterising mono-, epi- and isomorphisms of free modules.
+\cref{theo.Homomorphisms of free modules} implies a different approach of characterising mono-, epi- and isomorphisms of free modules.
 \begin{cor}
 Let $\varphi\colon M\to M'$ be a homomorphism of $R$-modules and $B:=(v_i)_{i\in I}$ a basis of $M$ then the following statements hold.
 \begin{exlist}
@@ -88,7 +88,9 @@ The family $v_1+S,\ldots,v_n+S$ is a generating set of $\nicefrac{M}{S}$ over $\
 \sum_{i=1}^n(a_i+\mathfrak{I})(v_i+S)=\sum_{i=1}^n(a_iv_i+S)=\sum_{i=1}^na_iv_i+S=x+S.
 \end{equation*}
 
-Let $a_1+\mathfrak{I},\ldots,a_n+\mathfrak{I}$ be elements of $\nicefrac{R}{\mathfrak{I}}$ that fulfil $\sum_{i=1}^n(a_i+\mathfrak{I})(v_i+S)=S$. We will prove $a_i\in\mathfrak{I}$ for $1\leq i\leq n$ then Corollary~\ref{lm.Linear Independence} implies the claim. We note that 
+Let $a_1+\mathfrak{I},\ldots,a_n+\mathfrak{I}$ be elements of $\nicefrac{R}{\mathfrak{I}}$ that fulfil
+\[\sum_{i=1}^n(a_i+\mathfrak{I})(v_i+S)=S.\]
+We will prove $a_i\in\mathfrak{I}$ for $1\leq i\leq n$ then \cref{lm.Linear Independence} implies the claim. We note that 
 \begin{equation*}
 0+S=S=\sum_{i=1}^n(a_i+\mathfrak{I})(v_i+S)=\left(\sum_{i=1}^n a_iv_i\right)+S.
 \end{equation*}
@@ -96,12 +98,12 @@ It follows that there exists an $s\in S$ such that $0+s=\sum_{i=1}^n a_iv_i$. Le
 \begin{equation*}
 \sum_{i=1}^n a_iv_i=s=\sum_{j=1}^m\mathfrak{b}_j\sum_{i=1}^mc_{ij}v_i=\sum_{i=1}^n\left(\sum_{j=1}^m\mathfrak{b}_jc_{ij}\right)v_i.
 \end{equation*}
-Now Lemma~\ref{lm.Linear Independence} implies $a_i=\sum_{j=1}^m\mathfrak{b}_jc_{ij}\in \mathfrak{I}$ for $1\leq i\leq n$.
+Now \cref{lm.Linear Independence} implies $a_i=\sum_{j=1}^m\mathfrak{b}_jc_{ij}\in \mathfrak{I}$ for $1\leq i\leq n$.
 \end{proof}
 
 \begin{thm}
 Let $M$ be a free module over the commutative ring $R\neq\lbrace 0\rbrace$ then every basis of $M$ over $R$ has the same cardinality.
 \end{thm}
 \begin{proof}
-Let $\seq{v}$ and $\seq[m]{w}$ be bases of $M$. Since $R$ is commutative $R$ contains a maximal ideal $\mathfrak{I}$. (see \cite[Thm.III.3.6]{jantzen2005algebra}) Therefore, $\nicefrac{R}{\mathfrak{I}}$ is a field (see \cite[p.93]{lang2002algebra}) and $\nicefrac{M}{S}$ is a vector space, if $S$ denotes the submodule of \cref{lm.Sigma}. Lemma~\ref{lm.basis of M to Sigma} implies that $v_1+S,\ldots,v_n+S$ as well as $w_1+S,\ldots,w_m+S$ are bases of $\nicefrac{M}{S}$ over $\nicefrac{R}{\mathfrak{I}}$. Since the cardinality of bases of vector spaces is unique it follows $n=m$.
+Let $\seq{v}$ and $\seq[m]{w}$ be bases of $M$. Since $R$ is commutative $R$ contains a maximal ideal $\mathfrak{I}$. (see \cite[Thm.III.3.6]{jantzen2005algebra}) Therefore, $\nicefrac{R}{\mathfrak{I}}$ is a field (see \cite[p.93]{lang2002algebra}) and $\nicefrac{M}{S}$ is a vector space, if $S$ denotes the submodule of \cref{lm.Sigma}. \cref{lm.basis of M to Sigma} implies that $v_1+S,\ldots,v_n+S$ as well as $w_1+S,\ldots,w_m+S$ are bases of $\nicefrac{M}{S}$ over $\nicefrac{R}{\mathfrak{I}}$. Since the cardinality of bases of vector spaces is unique it follows $n=m$.
 \end{proof}

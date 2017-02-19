@@ -1,7 +1,7 @@
 We will continue with a brief study of the connection between homomorphisms of free modules and matrices.
 
 \begin{pro}\label{prop.Commutative Diagram of Free Modules}
-Let $\varphi\colon M\to M'$ be a homomorphism of free $R$-modules, let the family $B:=(v_i)_{i\in I}$ be a base of $M$ and let $C:=(w_j)_{j\in J}$ be a base of $M'$. Then there exists a unique homomorphism $\bar{\varphi}\colon R^{(I)}\to R^{(J)}$ such that the following diagram, where $\gamma_B\colon R^{(I)}\to M$ and $\gamma_C\colon R^{(J)}\to M'$ denote mappings like the one in Theorem~\ref{lem.Generating Set Homomorphism}, commutates.
+Let $\varphi\colon M\to M'$ be a homomorphism of free $R$-modules, let the family $B:=(v_i)_{i\in I}$ be a base of $M$ and let $C:=(w_j)_{j\in J}$ be a base of $M'$. Then there exists a unique homomorphism $\bar{\varphi}\colon R^{(I)}\to R^{(J)}$ such that the following diagram, where $\gamma_B\colon R^{(I)}\to M$ and $\gamma_C\colon R^{(J)}\to M'$ denote mappings like the one in \cref{lem.Generating Set Homomorphism}, commutates.
 \begin{center}
 \begin{tikzpicture}
   \node (M) at ( 0,2)  {$M$};
@@ -34,7 +34,7 @@ Given an arbitrary pair $x,y\in R^n$ and an $a\in R$ the following identities ho
 \end{proof}
 
 \begin{rem}
-The set $\End_R(M)$ of all endomorphisms in a free $R$-module $M$ is a ring with respect to point-wise addition and composition  by Lemma~\ref{lm.Composition of Homo} and \cref{prop.Homomorphisms are Group}. If $M$ has a finite base over $R$ there exists an $n\in\N$ such that $M\cong R^n$. In Proposition~\ref{prop.Commutative Diagram of Free Modules} we have seen that there exists a bijection $\Gamma\colon\End_R(M)\to\End_R(R^n)$ defined by $\varphi\mapsto\gamma^{-1}\circ\varphi\circ\gamma$. This mapping is a isomorphism of rings because for all $\varphi,\psi\in\End_R(M)$ the following identities are satisfied:
+The set $\End_R(M)$ of all endomorphisms in a free $R$-module $M$ is a ring with respect to point-wise addition and composition  by \cref{lm.Composition of Homo} and \cref{prop.Homomorphisms are Group}. If $M$ has a finite base over $R$ there exists an $n\in\N$ such that $M\cong R^n$. In \cref{prop.Commutative Diagram of Free Modules} we have seen that there exists a bijection $\Gamma\colon\End_R(M)\to\End_R(R^n)$ defined by $\varphi\mapsto\gamma^{-1}\circ\varphi\circ\gamma$. This mapping is a isomorphism of rings because for all $\varphi,\psi\in\End_R(M)$ the following identities are satisfied:
 \begin{exlist}
 \item $\Gamma(\varphi+\psi)=\gamma^{-1}\circ(\varphi+\psi)\circ\gamma =\gamma^{-1}\circ(\varphi\circ\gamma+\psi\circ\gamma)= (\gamma^{-1}\circ\varphi\circ\gamma)+(\gamma^{-1}\circ\psi\circ\gamma)=\Gamma(\varphi)+\Gamma(\psi)$ and
 \item $\Gamma(\varphi\circ\psi)=\gamma^{-1}\circ(\varphi\circ\psi)\circ\gamma =\gamma^{-1}\circ\varphi\circ\gamma^{-1}\circ\gamma\circ\psi\circ\gamma =\Gamma(\varphi)\circ\Gamma(\psi)$.
@@ -80,7 +80,7 @@ and
 \end{pmatrix}=\\
 &=[\varphi][\psi].
 \end{align*}
-The homomorphism $[\;\cdot\;]$ is injective because $\ker([\;\cdot\;])=\lbrace 0\rbrace$. Corollary~\ref{cor.Matrix implies Homomorphism} implies the surjectivity.
+The homomorphism $[\;\cdot\;]$ is injective because $\ker([\;\cdot\;])=\lbrace 0\rbrace$. \cref{cor.Matrix implies Homomorphism} implies the surjectivity.
 \end{proof}
 
-The proposition above implies that we can identify endomorphisms of free modules over commutative rings with matrices over these rings. Note that Proposition~\ref{prop.Matrix isomorph Homomorphism} can not be generalized to free modules over non-commutative rings because  Proposition~\ref{cor.Matrix implies Homomorphism} does not hold for non-commutative rings.
+The proposition above implies that we can identify endomorphisms of free modules over commutative rings with matrices over these rings. Note that \cref{prop.Matrix isomorph Homomorphism} can not be generalized to free modules over non-commutative rings because  \cref{cor.Matrix implies Homomorphism} does not hold for non-commutative rings.

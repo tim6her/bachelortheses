@@ -164,7 +164,8 @@ d:=&\psi^{-1}(\id,b).
 
 The recursive manner of the definitions above should become clear by studying an easy example. For this purpose, it will be convenient to denote a vertex $(\seq{b},\seq[m]{c})$ by $(\mathbf{b},\mathbf{c})$ if $\mathbf{b}=(\seq{b})$ and $\mathbf{c}=(\seq[m]{c})$. Occasionally the same vertex will be symbolized by $(\seq{b},\mathbf{c})$.
 \begin{exam}
-Consider the vertex $v:=(1,1,0,0)\in\VT$. In the following we will compute its image under $c$. Automorphism $c$ applies $a$ to the left and $d$ to the right subtree of $\T$ (see \cref{g:Automorphism c a}). Since $v\in\ST{(1)}$, automorphism $d$ is applied to the subsequence $(1,0,0)$, i.e. $c(1,1,0,0)=(1,d(1,0,0))$ (see \cref{g:Automorphism c b}). As for $\ST{(0)}$, automorphism $a$ switches the positions of its left and right subtree. This is indicated by a double-tipped arrow in diagram \ref{g:Automorphism c b}.\\
+Consider the vertex $v:=(1,1,0,0)\in\VT$. In the following we will compute its image under $c$. Automorphism $c$ applies $a$ to the left and $d$ to the right subtree of $\T$ (see \cref{g:Automorphism c a}). Since $v\in\ST{(1)}$, automorphism $d$ is applied to the subsequence $(1,0,0)$, i.e. $c(1,1,0,0)=(1,d(1,0,0))$ (see \cref{g:Automorphism c b}). As for $\ST{(0)}$, automorphism $a$ switches the positions of its left and right subtree. This is indicated by a double-tipped arrow in diagram \ref{g:Automorphism c b}.
+
 Coming back to $c(v)=(1,d(1,0,0))$, automorphism $d$ acts by the identity on $\ST{(1,0)}$ and by $b$ on $\ST{(1,1)}$. Because $v$ is in $\ST{(1,1)}$, it follows that $(1,d(1,0,0))=(1,1,b(0,0))$ (see \cref{g:Automorphism c c}). Finally, $b$ applies automorphism $a$ to the last entry of $v$ and we find $c(1,1,0,0)=(1,1,0,1)$ (see \cref{g:Automorphism c d}).
 \end{exam}
 
@@ -199,7 +200,8 @@ The proof of \cref{thm:Gammas Generators are Self-Inverse} is taken from \cite{h
 a^2(\seq{b})	&=a(\lvert b_1-1\rvert,b_2,\ldots,b_n)=\\
 			&=(\lvert\lvert b_1-1\rvert-1\rvert,b_2,\ldots,b_n)=(\seq{b})
 \end{align*}
-for all vertices $(\seq{b})\in\VT$. Thus, the claim is clear for $a^2.$\\
+for all vertices $(\seq{b})\in\VT$. Thus, the claim is clear for $a^2.$
+
 Since $b,c$ and $d$ are in $\St{1},$ their squares $b^2,c^2$ and $d^2$ are as well. Therefore, they leave the vertices on level 1 fixed. In regard of the homomorphism $\varphi$ as in \cref{thm:Homomorphism psi}, the squared generators of $\Gamma$ fulfil
 \begin{align*}
 \psi(b^2)	&=\psi(b)^2=(a,c)^2=(a^2,c^2)=(\id,c^2),\\

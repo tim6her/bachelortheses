@@ -29,3 +29,5 @@
 *.bcf
 *.lol
 *.?tc*
+*.fls
+*.fdb_latexmk

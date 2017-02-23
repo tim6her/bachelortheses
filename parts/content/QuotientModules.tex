@@ -34,7 +34,7 @@ x\equiv y\Leftrightarrow x-y\in N_0\leq M \;\text{and}\; \faktor{M}{\equiv}=\fak
 \end{rem}
 
 \begin{thm}[Universal Property]\label{theo.Universal Property}
-Let $\varphi\colon M \to M'$ be a homomorphism of $R$-modules and let $N$ be a submodule of $M$. The canonical projection of $M$ to $\MtN$ is denoted by $\pi$. If $N$ is a submodule of $\ker(\varphi)$ then there exists a unique homomorphism $\bar{\varphi}\colon \MtN\rightarrow M'$ such that $\bar{\varphi}\circ\pi=\varphi$. Moreover, $\ker(\bar{\varphi})=\ker(\varphi)/N$ and the following equivalence holds: $\bar{\varphi}$ is an isomorphism iff $\varphi$ is an epimorphism and $\ker(\varphi)=N$.
+Let $\varphi\colon M \to M'$ be a homomorphism of $R$-modules and let $N$ be a submodule of $M$. The canonical projection of $M$ to $\MtN$ is denoted by $\pi$. If $N$ is a submodule of $\ker(\varphi)$ then there exists a unique homomorphism $\overline{\varphi}\colon \MtN\rightarrow M'$ such that $\overline{\varphi}\circ\pi=\varphi$. Moreover, $\ker(\overline{\varphi})=\ker(\varphi)/N$ and the following equivalence holds: $\overline{\varphi}$ is an isomorphism iff $\varphi$ is an epimorphism and $\ker(\varphi)=N$.
 \end{thm}
 
 The statement of \cref{theo.Universal Property} can be visualized by the following commutative diagram.
@@ -45,14 +45,14 @@ The statement of \cref{theo.Universal Property} can be visualized by the followi
   \node (M2) at (3,1.5) {$M'$}
     	edge [<-] node[above,comment] {$\varphi$} (M);
   \node (MtN) at (0,0) {$\MTN$}
-  	edge [->, dashed] node[below,comment] {$\exists !\bar{\varphi}$} (M2)
+  	edge [->, dashed] node[below,comment] {$\exists !\overline{\varphi}$} (M2)
   	edge [<-] node[left,comment] {$\pi$} (M);
 \end{tikzpicture}
 \end{center}
 
 
 \begin{proof}
-We notice that there exists a unique group-homomorphism $\bar{\varphi}$ such that $\bar{\varphi}\circ\pi=\varphi$. The mapping $\bar{\varphi}$ is defined by $\bar{\varphi}(x+N)=\varphi(x)$. It remains to verify that $\bar{\varphi}$ is a module-homomorphism. Let therefore be $a\in R$ and $x+N\in \MtN$, then $\bar{\varphi}(a(x+N))=\bar{\varphi}(ax+N)=\varphi(ax)=a\varphi(x)=a\bar{\varphi}(x+N)$. The other statements are clear, since they hold for every group-homomorphism.
+We notice that there exists a unique group-homomorphism $\overline{\varphi}$ such that $\overline{\varphi}\circ\pi=\varphi$. The mapping $\overline{\varphi}$ is defined by $\overline{\varphi}(x+N)=\varphi(x)$. It remains to verify that $\overline{\varphi}$ is a module-homomorphism. Let therefore be $a\in R$ and $x+N\in \MtN$, then $\overline{\varphi}(a(x+N))=\overline{\varphi}(ax+N)=\varphi(ax)=a\varphi(x)=a\overline{\varphi}(x+N)$. The other statements are clear, since they hold for every group-homomorphism.
 \end{proof}
 
 \begin{cor}[Homomorphism Theorem] \label{cor.Homomorphism Theorem}
@@ -105,6 +105,6 @@ Given an $R$-module $M$ which contains the submodules $N_1,N_2$, then we have
 \begin{proof}
 \begin{plist}
 \item Consider the mapping $\alpha\colon N_1\to \nicefrac{\left(N_1+N_2\right)}{N_2}$ def\-ined by $\alpha(x)=x+N_2$. It is the composition of the embedding $N_1\to N_1+N_2$, $x\mapsto x$ and the canonical projection $N_1+N_2\to\nicefrac{\left(N_1+N_2\right)}{N_2}$, $x\mapsto x+N_2$, hence $\alpha$ is a homomorphism. The kernel of $\alpha$ is $N_1\cap N_2$ and $\alpha$ is surjective, because for an arbitrary $x+N_2\in\nicefrac{\left(N_1+N_2\right)}{N_2}$ there exist $n\in N_1$ and $m\in N_2$ such that $x+N_2=n+m+N_2=n+N_2=\alpha(n)$. Now \cref{cor.Homomorphism Theorem} implies the claim. 
-\item Consider the canonical projection $\pi\colon M\to \nicefrac{M}{N_1}$, $x\mapsto x+N_1$. Because $N_2\leq N_2=\ker(\pi)$ and $\nicefrac{M}{N_1}=\im(\pi)$, \cref{theo.Universal Property} implies the existence of an epimorphism $\bar{\pi}\colon \nicefrac{M}{N_2}\to\nicefrac{M}{N_1}$ with $\ker(\bar{\pi})=\nicefrac{\ker(\pi)}{N_2}=\nicefrac{N_1}{N_2}$. Again \cref{cor.Homomorphism Theorem} implies the claim.
+\item Consider the canonical projection $\pi\colon M\to \nicefrac{M}{N_1}$, $x\mapsto x+N_1$. Because $N_2\leq N_2=\ker(\pi)$ and $\nicefrac{M}{N_1}=\im(\pi)$, \cref{theo.Universal Property} implies the existence of an epimorphism $\overline{\pi}\colon \nicefrac{M}{N_2}\to\nicefrac{M}{N_1}$ with $\ker(\overline{\pi})=\nicefrac{\ker(\pi)}{N_2}=\nicefrac{N_1}{N_2}$. Again \cref{cor.Homomorphism Theorem} implies the claim.
 \end{plist}
 \end{proof}

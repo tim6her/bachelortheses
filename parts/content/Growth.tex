@@ -6,8 +6,10 @@ denote the set of the orders of all automorphisms which are at most of length $k
 \begin{equation*}
 o(k):=\max(O_k).
 \end{equation*}
-Since $O_k\subseteq O_{k+1}$ the function $o$ is monotonically increasing.\\
-The main result of this section is that the first Grigorchuk group is not a counterexample to the bounded Burnside's problem, \ie for each non-negative integer $M$, there exists an automorphism $\gamma\in\Gamma$, such that the order of $\gamma$ exceeds $M$.\\
+Since $O_k\subseteq O_{k+1}$ the function $o$ is monotonically increasing.
+
+The main result of this section is that the first Grigorchuk group is not a counterexample to the bounded Burnside's problem, \ie for each non-negative integer $M$, there exists an automorphism $\gamma\in\Gamma$, such that the order of $\gamma$ exceeds $M$.
+
 Under close inspection of the proof of \cref{thm:Gamma is a 2 group} one can derive an upper bound for the growth of $\Gamma$.
 \begin{cor}\label{thm:Upper bound for the growth of Gamma}
 The growth of $\Gamma$ is bound by an exponential function. More precisely
@@ -32,12 +34,14 @@ This suffices because
 \begin{equation*}
 O_k=O_{k-1}\cup \lbrace\ord(\gamma)\vert \gamma\in\Gamma,\ell(\gamma)=k\rbrace
 \end{equation*} 
-and the right hand side of Inequality~(\ref{eq:Upper bound for the growth of Gamma}) is monotonically increasing.\\
+and the right hand side of Inequality~(\ref{eq:Upper bound for the growth of Gamma}) is monotonically increasing.
+
 Firstly, suppose $k=2m+1$ is odd. If this is the case, \hyperlink{thm:k is odd}{it was shown} that $\gamma$ is conjugate to an automorphism $\eta$ with $\ell(\eta)\leq k-1$. It follows, $o(2m+1)\leq o(2m)$ and by the monotonicity of $o$
 \begin{equation}\label{eq:o(2m+1)=o(2m)}
 o(2m+1)=o(2m).
 \end{equation}
-Thus, the statement is proven for odd length $k$, since the right hand side of \cref{eq:Upper bound for the growth of Gamma} is monotonically increasing.\\
+Thus, the statement is proven for odd length $k$, since the right hand side of \cref{eq:Upper bound for the growth of Gamma} is monotonically increasing.
+
 Secondly, assume four divides $k$, \ie there exists an integer $m$, such that $k=4m$. In the proof of \cref{thm:Gamma is a 2 group} we have seen, that the automorphisms $\gamma_1$ and $\gamma_2$ satisfying $(\gamma_1,\gamma_2)=\psi(\gamma)$, are at most of length $\frac{k}{2}=2m$. The injectivity of $\psi$ implies, that
 \begin{equation*}
 \ord(\gamma)=\max(\ord(\gamma_1),\ord(\gamma_2))
@@ -46,7 +50,8 @@ since the orders of $\gamma_1$ and $\gamma_2$ are powers of 2 by \cref{thm:Gamma
 \begin{equation}
 o(4m)=o(2m)\label{eq:o(4m)=o(2m)}
 \end{equation}
-for the growth function $o$, which proves the claim, because the right hand side of Inequality \ref{eq:Upper bound for the growth of Gamma} is monotonically increasing.\\
+for the growth function $o$, which proves the claim, because the right hand side of Inequality \ref{eq:Upper bound for the growth of Gamma} is monotonically increasing.
+
 Finally, assume $k=4m-2$ for some integer $m\geq 2$. Analogously to the proof of  \cref{thm:Gamma is a 2 group} we may suppose the word $w$ of length $k$ representing $\gamma$ to start with automorphism $a$, \ie
 \begin{equation*}
 w=au_1 a u_2 a\ldots u_l.
@@ -84,7 +89,7 @@ o(4m-2)	&\leq 4\max(o(4m-3),4)\overset{\text{\cref{eq:o(2m+1)=o(2m)}}}{=}\\
 		&\leq \max\left(2^{n(2m-2)+2}, 2^4\right)=\\
 		&=\max\left(2^{m+4},2^4\right)\leq 2^{\frac{4m-2}{2}+3}.
 \end{align*}
-The inequality marked with ``IH" holds by induction hypothesis while the last inequality holds by the assumption $m\geq 2$.
+The inequality marked with `IH' holds by induction hypothesis while the last inequality holds by the assumption $m\geq 2$.
 \end{proof}
 
 Let as above $n\colon\N_0\to\N_0$ denote a function that serves as an upper bound for the logarithmic growth of $\Gamma$, \ie
@@ -93,7 +98,7 @@ Let as above $n\colon\N_0\to\N_0$ denote a function that serves as an upper boun
 \end{equation*}
 for all integers $k\geq 0$. In the proof of the corollary we have derived sufficient recursive conditions for $n$, namely the initial conditions
 \begin{equation*}
-n(0)\geq 0,\quad n(1)\geq 1\quad \text{and}\quad n(2)\geq 4\\
+n(0)\geq 0,\quad n(1)\geq 1\quad \text{and}\quad n(2)\geq 4
 \end{equation*}
 as well as
 \begin{align*}
@@ -419,7 +424,8 @@ Set $B_1=\langle b,u,v,w\rangle$ and consider the images of its generators with 
 \pi_B(w)	&=\pi_B(abad)^2=(\pi_B(a)\pi_B(b)\pi_B(ad))^2=\\
 		&=\pi_B(aad)^2=\pi_B(d)^2=B.
 \end{align*}
-As a consequence, all $b,u,v,w$ are contained in $B$ and therefore $B_1\subseteq B$ holds. We continue by proving that $B_1$ is normal, so that $B_1=B$.\\
+As a consequence, all $b,u,v,w$ are contained in $B$ and therefore $B_1\subseteq B$ holds. We continue by proving that $B_1$ is normal, so that $B_1=B$.
+
 By \cref{thm:Three Generators Suffice} it suffices to show that the conjugates of $b,u,v,$ $w$ by $a,b$ and $c$ are contained in $B_1$. As for the conjugates of $b$, we find $aba=v, bbb=b$ and $cbc=b$. The last two identities follow directly from \cref{thm:Three Generators Suffice}. The conjugates by $a$ are
 \begin{equation*}
 aua=w, \quad ava=b \text{ and } awa=u.
@@ -435,7 +441,8 @@ cvc	&=c(aba)c=bd(aba)db=b(daba)(dabaabad)db=\\
 	&=b(daba)(daba)(aba)b=bw^{-1}vb\in B_1\\
 cwc	&=c(abad)(abad)c=bd(aba)(daba)b=bw^{-1}b\in B_1
 \end{align*}
-We will now consider the index of $B=B_1$ in $\Gamma$. In the canonical projection $\pi_B\colon\Gamma\to\nicefrac{\Gamma}{B}$ the image of $b$ is $B$. Thus, \cref{thm:Three Generators Suffice} implies, that $\pi_B(b)=\pi_B(c)$. As a consequence, $\nicefrac{\Gamma}{B}$ is generated by the images of $a$ and $d$. It follows from \cref{thm:D4}, that the order of $\nicefrac{\Gamma}{B}$ is bound by $\lvert\langle a,d\rangle\rvert=\lvert D_4\rvert=8$.\\
+We will now consider the index of $B=B_1$ in $\Gamma$. In the canonical projection $\pi_B\colon\Gamma\to\nicefrac{\Gamma}{B}$ the image of $b$ is $B$. Thus, \cref{thm:Three Generators Suffice} implies, that $\pi_B(b)=\pi_B(c)$. As a consequence, $\nicefrac{\Gamma}{B}$ is generated by the images of $a$ and $d$. It follows from \cref{thm:D4}, that the order of $\nicefrac{\Gamma}{B}$ is bound by $\lvert\langle a,d\rangle\rvert=\lvert D_4\rvert=8$.
+
 Remember the homomorphism $\varpikern_3\colon\Gamma\to\mathfrak{S}_8$, which maps each automorphism to its permutation of the vertices on level 3. Since
 \begin{equation*}
 \psi_1(b)=(a,c)\text{ and }\psi_1(c)=(a,d)
@@ -785,9 +792,11 @@ bwb	&=b(abad)(abad)b=ba(bada)(bada)ab=\\
 		&=(baba)(daba)(daba)(abab)=t^{-1}w^{-1}t\in K_1\\
 dwd	&=d(abad)(abad)d=(daba)(daba)=w^{-1}\in K_1
 \end{align*}
-\item\label{p:Index of K in Gamma} By \cref{thm:B} the quotient group $\nicefrac{B}{K}$ is generated by the equivalence classes of $b$ and $v=aba$. As these automorphisms are self-inverse and $(aba)b\in K$, by the uniqueness of the inverse element their equivalence classes  coincide. As a result we get $\lvert\nicefrac{B}{K}\rvert=[B:K]\leq 2$. Since the index of $B$ in $\Gamma$ equals 8 by \cref{thm:B}, it suffices to prove that $B\neq K$.\\
+\item\label{p:Index of K in Gamma} By \cref{thm:B} the quotient group $\nicefrac{B}{K}$ is generated by the equivalence classes of $b$ and $v=aba$. As these automorphisms are self-inverse and $(aba)b\in K$, by the uniqueness of the inverse element their equivalence classes  coincide. As a result we get $\lvert\nicefrac{B}{K}\rvert=[B:K]\leq 2$. Since the index of $B$ in $\Gamma$ equals 8 by \cref{thm:B}, it suffices to prove that $B\neq K$.
+
 For this purpose, we consider the subgroup $\varpikern_3(K)\subseteq \mathfrak{S}_8$. Using \textsc{Wolfram Mathematica$^\circledR$ 9} and the routine of \ref{sec:Appendix} Appendix, one finds $\lvert\varpikern_3(K)\rvert=8$. In the proof of \cref{thm:B} we have seen, that $\lvert\varpikern_3(B)\rvert=16$, so that the claim is proven.
-\item Since $\lbrace t,u,w\rbrace\subseteq\St[\Gamma]{1}$ the inclusion $\St[\Gamma]{1}\subseteq K$ is trivial.\\
+\item Since $\lbrace t,u,w\rbrace\subseteq\St[\Gamma]{1}$ the inclusion $\St[\Gamma]{1}\subseteq K$ is trivial.
+
 Consider the canonical projection $\pi\colon\Gamma\to\St[\Gamma]{3}$. There exists an isomorphism between $\nicefrac{K}{\St[\Gamma]{3}}=\pi(K)$ and $\nicefrac{K}{(K\cap\St[\Gamma]{3})}$. This follows from the fact, that two elements $\gamma,\eta$ of $K$ are in the same equivalence class of the group $\nicefrac{K}{\St[\Gamma]{3}}$ if and only if $\gamma\eta^{-1}\in K$ is contained in $\St[\Gamma]{3}$. Therefore, the composition $\gamma\eta^{-1}$ is an element of $K\cap\St[\Gamma]{3}$. The quotient group $\nicefrac{K}{K\cap\St[\Gamma]{3}}$ is isomorph to $\nicefrac{K\St[\Gamma]{3}}{\St[\Gamma]{3}}$ by the first isomorphism theorem , so that
 \begin{equation*}
 [K\St[\Gamma]{3}:\St[\Gamma]{3}]=[K:K\cap\St[\Gamma]{3}]=\lvert \pi(K)\rvert=\lvert\varpikern_3(K)\rvert=2^3=8.
@@ -873,7 +882,7 @@ where on the right hand side $31=2^5-1$ entries equal the identity. We may rewri
 \begin{equation*}
 \psi_5(h)=((\gamma,\id),\psi_1(\id),\ldots,\psi_1(\id))_5,
 \end{equation*}
-with $15=2^4-1$ coordinates equal to $\psi_1(\id)$. We set $\eta=(ab)^8h$, which is an automorphism of $K$ since $(ab)^8$ and $h$ are.\\
+with $15=2^4-1$ coordinates equal to $\psi_1(\id)$. We set $\eta=(ab)^8h$, which is an automorphism of $K$ since $(ab)^8$ and $h$ are.
 
 Since $\psi_1$ is injective, the preimage $\psi_1^{-1}(\lbrace(\vartheta_1,\vartheta_2)\rbrace)$ of the sing\-le\-ton $\lbrace(\vartheta_1,\vartheta_2)\rbrace\subseteq K^2$ is a well-defined singleton $\lbrace\vartheta\rbrace\subseteq K$ by \cref{thm:psi k(K)}. Thus, the homomorphism $\psi_1^{-1}\colon K\times K\to K$ is well-defined by $(\vartheta_1,\vartheta_2)\mapsto\vartheta$. As for automorphism $\eta$ it follows, that
 \begin{align*}
@@ -902,6 +911,7 @@ Let $n$ be a positive integer. There exists an automorphism $\gamma_{n}\in K\sub
 \end{thm}
 
 \begin{proof}
-We prove the theorem by induction on $n$. The case $n=1$ is clear since $\id\in K$.\\
+We prove the theorem by induction on $n$. The case $n=1$ is clear since $\id\in K$.
+
 As induction hypothesis we assume the claim to be proven for all positive integers smaller than or equal to $n$, so that there exists an automorphism $\gamma_n\in K$, satisfying $\ord(\gamma_n)\geq 2^n$. \cref{thm:Inductive Step Infinite Growth} proves the existence of an automorphism $\gamma_{n+1}$ with an order exceeding $2^{n+1}$. Hence, the induction is finished.
 \end{proof}

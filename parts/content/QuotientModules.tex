@@ -1,3 +1,5 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_GB
 Given an $R$-module $M$ which contains a submodule $N$, then by commutativity $(N,+)$ is a normal subgroup of $(M,+)$. Hence, the relation $\equiv$ defined by $x\equiv y:\Leftrightarrow x-y\in N$ is an equivalence relation on $M$, which is compatible with addition, therefore the set of all equivalence classes $\MtN$ is an Abelian group called quotient group $M$ modulo $N$. The following theorem shows, that the quotient group $\MtN$ carries a module structure over $R$.
 
 \begin{thm} \label{theo.quotient module}
@@ -23,9 +25,9 @@ We call the module $(\MtN,+,\ast)$ introduced in \cref{theo.quotient module} the
 
 \begin{rem}
 \begin{exlist}
-\item In \cref{theo.quotient module} we have seen that every $R$-sub\-mod\-ule $N$ of $M$ induces an equivalence relation $\equiv$ on $M$  such that $\equiv$ is compatible with addition and scalar multiplication, i.e. $w\equiv x$ and $y\equiv z$ implies $w+y\equiv x+z$ and $aw\equiv ax$ for all $a\in R$. 
+\item In \cref{theo.quotient module} we have seen that every $R$-sub\-mod\-ule $N$ of $M$ induces an equivalence relation $\equiv$ on $M$  such that $\equiv$ is compatible with addition and scalar multiplication, \ie $w\equiv x$ and $y\equiv z$ implies $w+y\equiv x+z$ and $aw\equiv ax$ for all $a\in R$. 
 
-Let on the other hand $\equiv$ be an equivalence relation on $M$ that is compatible with addition and scalar multiplication, then there exists a submodule $N\leq M$ such that $x\equiv y\Leftrightarrow x-y\in N$. To prove this we consider two elements $x,y\in M$ with $x\equiv y$. This is equivalent to $x-y\equiv 0$ since $-y\equiv -y$ and $\equiv$ is compatible with addition. Let $N_0$ denote the equivalence class of 0, i.e. $N_0:=\lbrace z\in M|z\equiv 0\rbrace$. This set is not empty because $0\equiv 0$. Furthermore, $N_0$ is a submodule of $M$ because for all $z ,w\in N_0$ and all $a\in R$ the identities $z +w\equiv 0+0$ and $az\equiv a0$ hold. We conclude
+Let on the other hand $\equiv$ be an equivalence relation on $M$ that is compatible with addition and scalar multiplication, then there exists a submodule $N\leq M$ such that $x\equiv y\Leftrightarrow x-y\in N$. To prove this we consider two elements $x,y\in M$ with $x\equiv y$. This is equivalent to $x-y\equiv 0$ since $-y\equiv -y$ and $\equiv$ is compatible with addition. Let $N_0$ denote the equivalence class of 0, \ie $N_0:=\lbrace z\in M|z\equiv 0\rbrace$. This set is not empty because $0\equiv 0$. Furthermore, $N_0$ is a submodule of $M$ because for all $z ,w\in N_0$ and all $a\in R$ the identities $z +w\equiv 0+0$ and $az\equiv a0$ hold. We conclude
 \begin{equation*}
 x\equiv y\Leftrightarrow x-y\in N_0\leq M \;\text{and}\; \faktor{M}{\equiv}=\faktor{M}{N_0}.
 \end{equation*}
@@ -80,7 +82,7 @@ To prove that $\varphi$ is injective we consider two submodules $M_1$ and $M_2\i
 x\in M_1\Leftrightarrow x+N\in \varphi(M_1)\Leftrightarrow x+N\in\varphi(M_2)\Leftrightarrow x\in M_2.
 \end{equation*}
 
-Next we verify $\im(\varphi)=S(\MtN)$. Since $\pi$ is a homomorphism $\varphi(M')=\pi(M')$ is a submodule of $\MtN$ for all submodules $M'$ of $M$. On the other hand, if $S$ is a submodule of $\MtN$, i.e. $S\in S(\MtN)$, then $\pi^{-1}(S)\leq M$. Seeing that $N\in S$ we find $N\subseteq\pi^{-1}(S)$. Therefore there exists an $M'\in S(M,N)$ such that $\varphi(M')=S$, which was to be shown.
+Next we verify $\im(\varphi)=S(\MtN)$. Since $\pi$ is a homomorphism $\varphi(M')=\pi(M')$ is a submodule of $\MtN$ for all submodules $M'$ of $M$. On the other hand, if $S$ is a submodule of $\MtN$, \ie $S\in S(\MtN)$, then $\pi^{-1}(S)\leq M$. Seeing that $N\in S$ we find $N\subseteq\pi^{-1}(S)$. Therefore there exists an $M'\in S(M,N)$ such that $\varphi(M')$ equals $S$, which was to be shown.
 
 In order to prove $\varphi(M')\cong\nicefrac{M'}{N}$ consider the embedding $\iota\colon \nicefrac{M'}{N}\to\MtN$ defined by $x+N\mapsto x+N$. It is a monomorphism with $\im(\iota)=\lbrace x+N\in\MtN \mid x\in M'\rbrace=\varphi(M')$.
 \end{proof}

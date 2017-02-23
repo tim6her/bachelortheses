@@ -1,3 +1,5 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_GB
  \begin{defin}
 Let $M,M'$ be two modules over a unital ring $R$ and let $\varphi : M \ra M'$ be a mapping. 
 \begin{thmlist}
@@ -12,13 +14,14 @@ for all $x,y \in M$ and all $a \in R$.
 \end{thmlist}
 \end{defin}
 
-Note that the first postulate in the definition of a module-homomorphism implies that $\varphi$ is a group-homomorphism. We can therefore apply statements of group-homomorphisms to mo\-dule-ho\-mo\-morph\-isms. For example, every mo\-dule-ho\-mo\-morph\-ism $\varphi\colon M\rightarrow M'$ satisfies $\varphi(0)=0$ and $\varphi(-x)=-\varphi(x)$.
+Note that the first postulate in the definition of a module\-/homomorphism implies that $\varphi$ is a group-homomorphism. We can therefore apply statements of group-homomorphisms to mo\-dule-ho\-mo\-morph\-isms. For example, every mo\-dule-ho\-mo\-morph\-ism $\varphi\colon M\rightarrow M'$ satisfies $\varphi(0)=0$ and $\varphi(-x)=-\varphi(x)$.
 
 \begin{exam}
 \begin{exlist}
 \item Given a modul $M$, the map $\id_M\colon M \rightarrow M$ defined by $x\mapsto x$ is an automorphism. We  call this mapping the \emph{identity} (mapping) on $M$.
 \item Let $M$ and $M'$ be $R$-modules. The mapping $\varphi\colon M\rightarrow M'$ defined by $x\mapsto 0$ is a homomorphism with $\ker(\varphi)=M$. 
-\item Let $G$ and $H$ be two $\Z$-modules like the one defined in \cref{ex.Z module}, then every group-homomorphism $\varphi\colon G\rightarrow H$ is a module-homomorphism. To prove this one verifies $\varphi(rx)=r\varphi(x)$ for all $r\in\Z$, $z\geq 0$ per induction on $r$. If $r<0$, we note that 
+\item Let $G$ and $H$ be two $\Z$-modules like the one defined in Example \ref{ex.Z module}, then every group\-/homomorphism $\varphi\colon G\rightarrow H$ is a module\-/homomorphism. %NOTE: Sloppy ref
+To prove this one verifies $\varphi(rx)=r\varphi(x)$ for all $r\in\Z$, $z\geq 0$ per induction on $r$. If $r<0$, we note that 
 \begin{equation*}
 \varphi(rx)=\varphi(-1(\lvert r\rvert x))=-\varphi(\lvert r\rvert x)=-\lvert r\rvert\varphi(x)=r\varphi(x).
 \end{equation*}
@@ -47,8 +50,8 @@ Let $M,M'$ be $R$-modules and $\varphi\colon M\rightarrow M'$ a homomorphism, th
 \begin{proof}
 \begin{plist}
 \item We notice that $\varphi(N)$ is an Abelian subgroup of $M'$ and $\varphi^{-1}(N')$ is an Abelian subgroup of $M$. Hence, it is enough to verify that these groups are closed under scalar multiplication. For this purpose, let $a$ be an arbitrary element in $R$ and $y$ be in $\varphi(N)$, then there exists an $x\in N$ such that $\varphi(x)=y$. We note $a\varphi(x)=\varphi(ax)\in\varphi(N)$, because $ax\in N$. If $x$ is an element of $\varphi^{-1}(N')$, then there exists a $y\in N'$ such that $\varphi(x)=y$ and we have $\varphi(ax)=a\varphi(x)=ay\in N'$, from which follows $ax\in \varphi^{-1}(N')$.
-\item Considering $N=M$ and $N'=\lbrace 0\rbrace$ statement (ii) follows from (i).
-\item Since $\varphi$ viewed as a group-homomorphism is injective iff $\ker(\varphi)={0}$, this statement is clear.
+\item Considering $N=M$ and $N'=\lbrace 0\rbrace$ statement (ii) follows from claim~(i).
+\item Since $\varphi$ viewed as a group-homomorphism is injective if and only if $\ker(\varphi)={0}$, this statement is clear.
 \end{plist}
 \end{proof}
 
@@ -69,7 +72,7 @@ Let $M,M'$ be $R$-modules and $\varphi\colon M\rightarrow M'$ a homomorphism, th
 \end{plist}
 \end{proof}
 
-We will continue with a brief study of the algebraic structure of module-homomorphisms.
+We will continue with a brief study of the algebraic structure of module\-/homomorphisms.
 
 \begin{pro}\label{prop.Homomorphisms are Module}
 Let $M,M'$ be modules over the unital ring $R$ and let $\Hom_R(M,M')$ denote the set of all homomorphisms $\varphi\colon M\to M'$, then

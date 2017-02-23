@@ -283,13 +283,30 @@
 
 \usepackage{enumitem}
 \newlist{thmlist}{enumerate}{1}			% thmlist-s may only be used in theorem environments
-\setlist[thmlist]{label=(\roman{thmlisti}), ref=\thethm.(\roman{thmlisti}),noitemsep}
+\setlist[thmlist]{label=(\roman{thmlisti}),
+                  ref=\thethm.(\roman{thmlisti}),
+                  noitemsep}
 \newlist{exlist}{enumerate}{2}
-\setlist[exlist]{label=(\arabic{exlisti}), ref=\thethm.(\arabic{exlisti}),noitemsep,leftmargin=0pt,itemindent=2\parindent}
+\setlist[exlist]{label=(\arabic{exlisti}),
+                 ref=\thethm.(\arabic{exlisti}),
+                 noitemsep,
+                 itemindent=2\parindent,
+                 leftmargin=*,
+                 listparindent=\parindent}
 \newlist{plist}{enumerate}{1}
-\setlist[plist]{label=(\roman{plisti}), ref=(\roman{plisti}),noitemsep,leftmargin=0pt,itemindent=2\parindent}
+\setlist[plist]{label=(\roman{plisti}),
+                ref=(\roman{plisti}),
+                noitemsep,
+                itemindent=2\parindent,
+                leftmargin=*,
+                listparindent=\parindent}
 \newlist{clist}{enumerate}{2}
-\setlist[clist]{label*=(\alph*), ref=(\alph*),noitemsep,leftmargin=0pt,itemindent=2\parindent} 
+\setlist[clist]{label*=(\alph*),
+                ref=(\alph*)
+                noitemsep,
+                itemindent=2\parindent,
+                leftmargin=*,
+                listparindent=\parindent} 
 
 % TODO: Indent vor Absätzen
 

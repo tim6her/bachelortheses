@@ -3,7 +3,7 @@
 We will continue with a brief study of the connection between homomorphisms of free modules and matrices.
 
 \begin{pro}\label{prop.Commutative Diagram of Free Modules}
-Let $\varphi\colon M\to M'$ be a homomorphism of free $R$-modules, let the family $B:=(v_i)_{i\in I}$ be a base of $M$ and let $C:=(w_j)_{j\in J}$ be a base of $M'$. Then there exists a unique homomorphism $\bar{\varphi}\colon R^{(I)}\to R^{(J)}$ such that the following diagram, where $\gamma_B\colon R^{(I)}\to M$ and $\gamma_C\colon R^{(J)}\to M'$ denote mappings like the one in \cref{lem.Generating Set Homomorphism}, commutates.
+Let $\varphi\colon M\to M'$ be a homomorphism of free $R$-modules, let the family $B:=(v_i)_{i\in I}$ be a base of $M$ and let $C:=(w_j)_{j\in J}$ be a base of $M'$. Then there exists a unique homomorphism $\overline{\varphi}\colon R^{(I)}\to R^{(J)}$ such that the following diagram, where $\gamma_B\colon R^{(I)}\to M$ and $\gamma_C\colon R^{(J)}\to M'$ denote mappings like the one in \cref{lem.Generating Set Homomorphism}, commutates.
 \begin{center}
 \begin{tikzpicture}
   \node (M) at ( 0,2)  {$M$};
@@ -12,13 +12,13 @@ Let $\varphi\colon M\to M'$ be a homomorphism of free $R$-modules, let the famil
   \node (RI) at (0,0) {$R^{(I)}$}
   	edge [->] node[left,comment] {$\gamma_B$} (M);
   \node (RJ) at (2,0) {$R^{(J)}$}
-  	edge [<-, dashed] node[below,comment] {$\exists !\bar{\varphi}$} (RI)
+  	edge [<-, dashed] node[below,comment] {$\exists !\overline{\varphi}$} (RI)
   	edge [->] node[right,comment] {$\gamma_C$} (M2);
 \end{tikzpicture}
 \end{center}
 \end{pro}
 \begin{proof}
-Since $B$ is a base of $M$ and $C$ is a base of $M'$ the mappings $\gamma_B$ and $\gamma_C$ are isomorphisms. We define a homomorphism by $\bar{\varphi}:=\gamma_C^{-1}\circ\varphi\circ\gamma_B$. Clearly this homomorphism satisfies $\gamma_C\circ\bar{\varphi}\circ\gamma_B^{-1}=\varphi$ which proves the existence of such a homomorphism. Moreover, $\bar{\varphi}$ is unique by construction.
+Since $B$ is a base of $M$ and $C$ is a base of $M'$ the mappings $\gamma_B$ and $\gamma_C$ are isomorphisms. We define a homomorphism by $\overline{\varphi}:=\gamma_C^{-1}\circ\varphi\circ\gamma_B$. Clearly this homomorphism satisfies $\gamma_C\circ\overline{\varphi}\circ\gamma_B^{-1}=\varphi$ which proves the existence of such a homomorphism. Moreover, $\overline{\varphi}$ is unique by construction.
 \end{proof}
 
 \begin{cor}\label{cor.Matrix implies Homomorphism}

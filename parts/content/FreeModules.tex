@@ -36,6 +36,7 @@ The following example, which can be found in \cite[p.~194]{jantzen2005algebra}, 
 \begin{exam}
 Let $F$ be a field then the polynomial ring $F[X]$ is an $F$-vector space and the set $R:=\End_F(F[X])$ of all endomorphisms in $F[X]$ is a ring with respect to point-wise addition and composition of mappings. We view $R$ as a module over itself and find that $\id_{F[X]}$ is a basis of $R$ over $R$, since for every $\varphi\in R$ the identity $\varphi=\varphi\circ id_{F[X]}$ holds and this decomposition is unique.
 
+\sloppypar
 On the other hand we consider the endomorphisms $f_1,f_2\in R$ defined by
 \begin{eqnarray*}
 f_1(X^i):=\begin{cases} X^{\frac{i}{2}} & \text{if } 2\mid i\\ 0&\text{if } 2\nmid i\\\end{cases}, &  f_2(X^i):=\begin{cases} 0 & \text{if } 2\mid i\\ X^{\frac{i-1}{2}}&\text{if } 2\nmid i\\\end{cases}.
@@ -45,7 +46,7 @@ The set $\lbrace f_1,f_2\rbrace$ is linearly independent over $R$ because $g_1\c
 Consequently, $R$ has a basis containing one element and a basis containing two elements which implies $R^1\cong R^2$. It follows per induction on $n$ that $R\cong R^n$ for all $n\in\N$.
 \end{exam} 
 
-We will now show that the cardinality of a finite basis of an $R$-module is unique, if $R\neq\lbrace 0\rbrace$ and $R$ is commutative.
+We will now show that the cardinality of a finite basis of an $R$\-/module is unique, if $R\neq\lbrace 0\rbrace$ and $R$ is commutative.
 
 \begin{lem}\label{lm.SigmaModule}
 Let $M$ be an $R$-module and $\mathfrak{I}$ a left ideal in $R$ then the following statements hold.
@@ -62,7 +63,7 @@ is a submodule of $M$.
 \end{thmlist}
 \end{lem}
 \begin{proof}
-\begin{enumerate}
+\begin{plist}
 \item Let $J,K$ be finite subsets of $\N$ and $\mathfrak{a}_j\in \mathfrak{I}$ for all $j\in J$, $\mathfrak{b}_k\in \mathfrak{I}$ for all $k\in K$ and  $x_i\in M$ for all $i\in J\cup K$. We define $\mathfrak{a}_j:=0$ if $j\in K \setminus J$ and $\mathfrak{b}_k:=0$ if $k\in J\setminus K$. It follows that $\sum_{j\in J}\mathfrak{a}_jx_j\in S$, $\sum_{k\in K}\mathfrak{b}_kx_k\in S$ and therefore
 \begin{align*}
 \sum_{j\in J}\mathfrak{a}_jx_j+\sum_{k\in K}\mathfrak{a}_kx_k &= \sum_{i\in J\cup K} \mathfrak{a}_ix_i+\sum_{i\in J\cup K} \mathfrak{b}_ix_i=\\
@@ -76,7 +77,7 @@ since $\mathfrak{I}$ is a left ideal in $R$.
 Secondly, we need to verify the validity of the definition of the scalar multiplication. Let $a\equiv a'$ with respect to the equivalence relation on $R$ induced by $\mathfrak{I}$. We show that $ax\equiv a'x$ with respect to the equivalence relation on $M$ induced by $S$ for all $x\in M$. Since $a\equiv a'$ there exists an element $\mathfrak{b}\in\mathfrak{I}$ such that $a=a'+\mathfrak{b}$, therefore $ax-a'x=ax-(a-\mathfrak{b})x=\mathfrak{b}x\in S$ and the claim is proven. On the other hand, let $x\equiv x'$. One needs to verify $ax\equiv ax'$ for all $a\in R$. Since $x\equiv x'$ there exists a sum $\sum_{i=1}^n\mathfrak{b}_iy_i\in S$ such that $x=x'+\sum_{i=1}^n\mathfrak{b}_iy_i$ and therefore $ax-ax'=a\sum_{i=1}^n\mathfrak{b}_iy_i=\sum_{i=1}^na\mathfrak{b}_iy_i\in S$ since $\mathfrak{b}_i\in\mathfrak{I}$ and $\mathfrak{I}$ is an ideal.
 
 The four module axioms are now proven in a straight forward way.
-\end{enumerate}
+\end{plist}
 \end{proof}
 
 \begin{lem}\label{lm.basis of M to Sigma}

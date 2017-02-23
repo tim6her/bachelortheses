@@ -45,8 +45,8 @@ SubgroupSn[GenIn_, n_] :=
   ]
 \end{lstlisting}
 
-The program code in \cref{lst.pi 3(B)} calls the procedure \verb+SubgroupSn+ to compute the subgroup $\varpi_3(B)\subseteq\mathfrak{S}_8$. The images of the generators $b,u,v$ and $w$ under $\varpi_3$ are stored in \verb+pib+, \verb+piu+, \verb+piv+ and \verb+piw+. The integers contained in these lists correspond to the numbers below the diagrams in \cref{g:pi b,g:pi u,g:pi v,g:pi w}.
-\begin{lstlisting}[float, caption=Computing $\varpi_3(B)\subseteq\mathfrak{S}_8$,
+The program code in \cref{lst.pi 3(B)} calls the procedure \verb+SubgroupSn+ to compute the subgroup $\varpikern_3(B)\subseteq\mathfrak{S}_8$. The images of the generators $b,u,v$ and $w$ under $\varpikern_3$ are stored in \verb+pib+, \verb+piu+, \verb+piv+ and \verb+piw+. The integers contained in these lists correspond to the numbers below the diagrams in \cref{g:pi b,g:pi u,g:pi v,g:pi w}.
+\begin{lstlisting}[float, caption=Computing $\varpikern_3(B)\subseteq\mathfrak{S}_8$,
                    label=lst.pi 3(B),
                    language=Mathematica, 
                    numbers=left,
@@ -61,9 +61,9 @@ Gen = {pib, piu, piv, piw};
 
 SubgroupSn[Gen, 8]
 \end{lstlisting}
-We find that the image of $B$ under $\varpi_3$ is the following subgroup
+We find that the image of $B$ under $\varpikern_3$ is the following subgroup
 \begin{align*}
-\varpi_3(B)=\lbrace	&\epsilon,(1\, 3)(2\, 4)(5\, 6),   (1\, 4)(2\, 3)(5\, 6), (1\, 2)(3\, 4),\\
+\varpikern_3(B)=\lbrace	&\epsilon,(1\, 3)(2\, 4)(5\, 6),   (1\, 4)(2\, 3)(5\, 6), (1\, 2)(3\, 4),\\
                     & (1\, 4\, 2\, 3)(5\, 7\, 6\, 8),	(1\, 3\, 2\, 4)(5\, 8\, 6\, 7),   (1\, 2)(5\, 7)(6\, 8),\\
                     & (1\, 3\, 2\, 4)(5\, 7\, 6\, 8),	(1\, 4\, 2\, 3)(5\, 8\, 6\, 7),   (3\, 4)(5\, 7)(6\, 8),\\
                     & (1\, 3)(2\, 4)(7\, 8),   (5\, 6)(7\, 8), 
@@ -90,7 +90,7 @@ As a result, automorphism $t$ is mapped to the permutation
 \begin{equation*}
 (1\,4\,2\,3)(5\,7\,6\,8)\in\mathfrak{S}_8,
 \end{equation*}
-so that we may apply the algorithm described above to find $\varpi_3(K)$.
+so that we may apply the algorithm described above to find $\varpikern_3(K)$.
 \begin{lstlisting}[language=Mathematica, numbers=left, numberstyle=\tiny, stepnumber=2, numbersep=5pt]
 pit = {4, 3, 1, 2, 7, 8, 6, 5};
 piu = {2, 1, 4, 3, 5, 6, 7, 8};
@@ -99,9 +99,9 @@ Gen = {pit, piu, piw};
 
 SubgroupSn[Gen, 8];
 \end{lstlisting}
-We conclude, that the image of $K$ under $\varpi_3$ is
+We conclude, that the image of $K$ under $\varpikern_3$ is
 \begin{align*}
-\varpi_3(K)=\lbrace	&\epsilon,(1\, 3)(2\, 4)(5\, 6), (1\, 4)(2\, 3)(5\, 6), (1\, 2)(3\, 4),   \\
+\varpikern_3(K)=\lbrace	&\epsilon,(1\, 3)(2\, 4)(5\, 6), (1\, 4)(2\, 3)(5\, 6), (1\, 2)(3\, 4),   \\
 									&(1\, 4\, 2\, 3)(5\, 7\, 6\, 8), (1\, 3\, 2\, 4)(5\, 8\, 6\, 7), \\
 									&(1\, 2)(5\, 7)(6\, 8),   (1\, 3\, 2\, 4)(5\, 7\, 6\, 8)\rbrace.
 \end{align*}

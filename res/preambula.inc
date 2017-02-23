@@ -1,6 +1,6 @@
 \documentclass[]{standalone}
-\usepackage{mathpazo}
-\usepackage[euler-digits]{eulervm}
+\usepackage{ebgaramond}
+\usepackage{ebgaramond-maths}
 
 \usepackage{amsmath}
 \DeclareMathOperator{\id}{id}

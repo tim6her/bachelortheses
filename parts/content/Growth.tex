@@ -1,4 +1,6 @@
-In this final section we will discuss the growth of the first Grigorchuk group, \ie we will study the relation of the length of a word $w$ in the alphabet $\lbrace a,b,c,d\rbrace$ and the order of the automorphism represented by $w$. More formally, let
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_GB
+In this final section we will discuss the growth of the first Grigorchuk group, \ie{} we will study the relation of the length of a word $w$ in the alphabet $\lbrace a,b,c,d\rbrace$ and the order of the automorphism represented by $w$. More formally, let
 \begin{equation*}
 O_k:=\lbrace \ord(\gamma)\vert\gamma\in\Gamma,\ell(\gamma)\leq k\rbrace
 \end{equation*}
@@ -8,7 +10,7 @@ o(k):=\max(O_k).
 \end{equation*}
 Since $O_k\subseteq O_{k+1}$ the function $o$ is monotonically increasing.
 
-The main result of this section is that the first Grigorchuk group is not a counterexample to the bounded Burnside's problem, \ie for each non-negative integer $M$, there exists an automorphism $\gamma\in\Gamma$, such that the order of $\gamma$ exceeds $M$.
+The main result of this section is that the first Grigorchuk group is not a counterexample to the bounded Burnside's problem, \ie{} for each non-negative integer $M$, there exists an automorphism $\gamma\in\Gamma$, such that the order of $\gamma$ exceeds $M$.
 
 Under close inspection of the proof of \cref{thm:Gamma is a 2 group} one can derive an upper bound for the growth of $\Gamma$.
 \begin{cor}\label{thm:Upper bound for the growth of Gamma}
@@ -42,7 +44,7 @@ o(2m+1)=o(2m).
 \end{equation}
 Thus, the statement is proven for odd length $k$, since the right hand side of \cref{eq:Upper bound for the growth of Gamma} is monotonically increasing.
 
-Secondly, assume four divides $k$, \ie there exists an integer $m$, such that $k=4m$. In the proof of \cref{thm:Gamma is a 2 group} we have seen, that the automorphisms $\gamma_1$ and $\gamma_2$ satisfying $(\gamma_1,\gamma_2)=\psi(\gamma)$, are at most of length $\frac{k}{2}=2m$. The injectivity of $\psi$ implies, that
+Secondly, assume four divides $k$, \ie{} there exists an integer $m$, such that $k=4m$. In the proof of \cref{thm:Gamma is a 2 group} we have seen, that the automorphisms $\gamma_1$ and $\gamma_2$ satisfying $(\gamma_1,\gamma_2)=\psi(\gamma)$, are at most of length $\frac{k}{2}=2m$. The injectivity of $\psi$ implies, that
 \begin{equation*}
 \ord(\gamma)=\max(\ord(\gamma_1),\ord(\gamma_2))
 \end{equation*}
@@ -52,7 +54,7 @@ o(4m)=o(2m)\label{eq:o(4m)=o(2m)}
 \end{equation}
 for the growth function $o$, which proves the claim, because the right hand side of Inequality \ref{eq:Upper bound for the growth of Gamma} is monotonically increasing.
 
-Finally, assume $k=4m-2$ for some integer $m\geq 2$. Analogously to the proof of  \cref{thm:Gamma is a 2 group} we may suppose the word $w$ of length $k$ representing $\gamma$ to start with automorphism $a$, \ie
+Finally, assume $k=4m-2$ for some integer $m\geq 2$. Analogously to the proof of  \cref{thm:Gamma is a 2 group} we may suppose the word $w$ of length $k$ representing $\gamma$ to start with automorphism $a$, \ie{}
 \begin{equation*}
 w=au_1 a u_2 a\ldots u_l.
 \end{equation*}
@@ -92,7 +94,7 @@ o(4m-2)	&\leq 4\max(o(4m-3),4)\overset{\text{\cref{eq:o(2m+1)=o(2m)}}}{=}\\
 The inequality marked with `IH' holds by induction hypothesis while the last inequality holds by the assumption $m\geq 2$.
 \end{proof}
 
-Let as above $n\colon\N_0\to\N_0$ denote a function that serves as an upper bound for the logarithmic growth of $\Gamma$, \ie
+Let as above $n\colon\N_0\to\N_0$ denote a function that serves as an upper bound for the logarithmic growth of $\Gamma$, \ie{}
 \begin{equation*}
 \log_2(o(k))\leq n(k)
 \end{equation*}
@@ -106,7 +108,7 @@ n(k)\geq n(k-1)&\quad\text{if } k>2,\\
 n(4m)\geq n(2m)&\quad\text{if } m\geq 1\text{ and}\\
 n(4m-2)\geq n(2m-2)+2&\quad\text{if } m\geq 1.
 \end{align*}
-\cref{thm:Upper bound for the growth of Gamma} shows, that $n_1(k)=\frac{k}{2}+3$ serves as an upper bound for the logarithmic growth of $\Gamma$. However, note that this is far from optimal. \textcite{2006math} recently published a paper stating, that one may choose $n_2(k):=\log_2(4k^2+1)$ as such a function. Their result, which was obtained by studying $\Gamma$ as a group defined by finite state automata, implies a polynomial growth of $\Gamma$, \ie
+\cref{thm:Upper bound for the growth of Gamma} shows, that $n_1(k)=\frac{k}{2}+3$ serves as an upper bound for the logarithmic growth of $\Gamma$. However, note that this is far from optimal. \textcite{2006math} recently published a paper stating, that one may choose $n_2(k):=\log_2(4k^2+1)$ as such a function. Their result, which was obtained by studying $\Gamma$ as a group defined by finite state automata, implies a polynomial growth of $\Gamma$, \ie{}
 \begin{equation*}
 o(k)\leq 4k^2+1.
 \end{equation*}
@@ -800,14 +802,15 @@ For this purpose, we consider the subgroup $\varpikern_3(K)\subseteq \mathfrak{S
 \item Since $\lbrace t,u,w\rbrace\subseteq\St[\Gamma]{1}$ the inclusion $\St[\Gamma]{1}\subseteq K$ is trivial.
 
 Consider the canonical projection $\pi\colon\Gamma\to\St[\Gamma]{3}$. There exists an isomorphism between $\nicefrac{K}{\St[\Gamma]{3}}=\pi(K)$ and $\nicefrac{K}{(K\cap\St[\Gamma]{3})}$. This follows from the fact, that two elements $\gamma,\eta$ of $K$ are in the same equivalence class of the group $\nicefrac{K}{\St[\Gamma]{3}}$ if and only if $\gamma\eta^{-1}\in K$ is contained in $\St[\Gamma]{3}$. Therefore, the composition $\gamma\eta^{-1}$ is an element of $K\cap\St[\Gamma]{3}$. The quotient group $\nicefrac{K}{K\cap\St[\Gamma]{3}}$ is isomorph to $\nicefrac{K\St[\Gamma]{3}}{\St[\Gamma]{3}}$ by the first isomorphism theorem , so that
-\begin{equation*}
-[K\St[\Gamma]{3}:\St[\Gamma]{3}]=[K:K\cap\St[\Gamma]{3}]=\lvert \pi(K)\rvert=\lvert\varpikern_3(K)\rvert=2^3=8.
-\end{equation*}
+\begin{align*}
+[K\St[\Gamma]{3}:\St[\Gamma]{3}]&=[K:K\cap\St[\Gamma]{3}]=\lvert \pi(K)\rvert=\\
+        &=\lvert\varpikern_3(K)\rvert=2^3=8.
+\end{align*}
 It follows that
 \begin{equation*}
 [\Gamma:K\St[\Gamma]{3}]=\frac{[\Gamma:\St[\Gamma]{3}]}{[K\St[\Gamma]{3}:\St[\Gamma]{3}]}=\frac{2^7}{2^3}=2^4,
 \end{equation*}
-while \ref{p:Index of K in Gamma} implies $[\Gamma:K]=2^4.$ Thus, the obvious inclusion $K\subseteq K\St[\Gamma]{3}$ is in fact an equality.
+while \ref{p:Index of K in Gamma} implies $[\Gamma:K]=2^4.$ Thus, the obvious inclusion $K\subseteq \St[\Gamma]{3}$ is in fact an equality.
 \item \label{p:Base Case psi(K) contains K} \cref{thm:Conjugation with a inverts the performing of b c d} implies the identity
 \begin{align*}
 \psi_1(w)	&=\psi_1(aba)\psi_1(d)\psi_1(aba)\psi_1(d)=\\
@@ -826,7 +829,7 @@ The group $\id\times K$ is contained in $\psi_1(K)$, since
 							&=(d,a)(\id,w)(d,a)=(\id,awa)\overset{(i)}{=}\\
 							&=(\id,u)\in\psi_1(K).
 \end{align*}
-As a consequence of \cref{thm:Conjugation with a inverts the performing of b c d}, the images of $awa,awcw^{-1}ca$ and $ca(wcw^{-1}c)ac\in K$ generate $K\times\id$. Thus, $K\times K\subseteq\psi_1(K)$.
+As a consequence of \cref{thm:Conjugation with a inverts the performing of b c d}, the images of the automorphisms $awa,awcw^{-1}ca$ and $ca(wcw^{-1}c)ac\in K$ generate $K\times\id$. Thus, $K\times K\subseteq\psi_1(K)$.
 \item We prove the claim by induction on $k$. The case $k=1$ was shown in \ref{p:Base Case psi(K) contains K}. Hence, we assume the claim to be proven for all mappings $\psi_l\colon\St[\Gamma]{l}\to\Gamma^{2^l}$, where $l<k$. We have seen, that the homomorphisms
 \begin{align*}
 \psi_{\text{left}}\colon \St[\Gamma]{1}\to \Gamma,&\text{ defined by }\gamma\mapsto(\pi_1\circ\psi_1)(\gamma),\\
@@ -842,7 +845,7 @@ from \cref{thm:psi k}. By the induction hypothesis $K^{2^{k-1}}$ is a subgroup o
 						&\subseteq(\psi_{1}(K),\ldots,\psi_{1}(K))_K\subseteq K^{2^k}.
 \end{align*}
 holds by \cref{thm:psi k}.
-\item We apply the formula obtained in \cref{thm:psi k} to compute $\psi_3((ab)^8)$. Since the number of occurrences of automorphism $a$ in $(ab)^8$ is even, $(ab)^8\in\St[\Gamma]{1}$ by \cref{thm:StGamma1 is a proper subset of Gamma}. We find
+\item We apply the formula obtained in \cref{thm:psi k} to compute the image $\psi_3((ab)^8)$. Since the number of occurrences of automorphism $a$ in $(ab)^8$ is even, $(ab)^8\in\St[\Gamma]{1}$ by \cref{thm:StGamma1 is a proper subset of Gamma}. We find
 \begin{align*}
 \psi_1((ab)^8)&=\psi_1(abab)^4=(\psi_1(aba)\psi_1(b))^4=\\
 						&=((c,a)(a,c))^4=((ca)^4,(ac)^4).
@@ -855,8 +858,10 @@ We may apply $\psi_2$ to $(ab)^8$ because $(ca)^4$ and $(ac)^4$ leave the first 
 \end{align*}
 It follows that 
 \begin{align*}
-\psi_3	&((ab)^8)=(\psi_1(adad),\psi_1(dada),\psi_1(dada),\psi_1(adad))_3=\\
-			&=((b,\id)(\id,b),(\id,b)(b,\id),(\id,b)(b,\id),(b,\id)(\id,b))_3=\\
+\psi_3	&((ab)^8)=\\
+            &=(\psi_1(adad),\psi_1(dada),\psi_1(dada),\psi_1(adad))_3=\\
+            &=((b,\id)(\id,b),(\id,b)(b,\id),\\
+            &\quad \quad \quad (\id,b)(b,\id),(b,\id)(\id,b))_3=\\
 			&=(b,b,b,b,b,b,b,b).
 \end{align*}
 As a consequence, $(ab)^8$ is an element of $\St[\Gamma]{4}$.

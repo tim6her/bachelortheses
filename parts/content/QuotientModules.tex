@@ -1,9 +1,11 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = en_GB
-Given an $R$-module $M$ which contains a submodule $N$, then by commutativity $(N,+)$ is a normal subgroup of $(M,+)$. Hence, the relation $\equiv$ defined by $x\equiv y:\Leftrightarrow x-y\in N$ is an equivalence relation on $M$, which is compatible with addition, therefore the set of all equivalence classes $\MtN$ is an abelian group called quotient group $M$ modulo $N$. The following theorem shows, that the quotient group $\MtN$ carries a module structure over $R$.
+Given an $R$-module $M$ which contains a submodule $N$, then by commutativity $(N,+)$ is a normal subgroup of $(M,+)$. Hence, the relation $\equiv$ defined by $x\equiv y:\Leftrightarrow x-y\in N$ is an equivalence relation on $M$, which is compatible with addition, therefore the set of all equivalence classes $\MtN$ is an Abelian group called quotient group $M$ modulo $N$. The following theorem shows, that the quotient group $\MtN$ carries a module structure over $R$.
 
 \begin{thm} \label{theo.quotient module}
-Let $M$ be an $R$-module which contains the submodule $N$ and define the operation $\ast\colon R\times \MtN\rightarrow \MtN$ by $a(x+N)=ax+N$. This operation is well-defined and $(\MtN,+,\ast)$ is a module over $R$, where + is the addition on the quotient group $\MtN$.
+Let $M$ be an $R$-module which contains the submodule $N$ and define the operation 
+\[ \ast\colon R\times \MtN\rightarrow \MtN\;\text{ by }\;a(x+N)=ax+N. \]
+This operation is well-defined and $(\MtN,+,\ast)$ is a module over $R$, where + is the addition on the quotient group $\MtN$.
 \end{thm}
 
 \begin{proof}
@@ -13,8 +15,11 @@ It remains to prove that the four module axioms are satisfied. For all $a,b\in R
 \begin{enumerate}
 \item $1(x+N)=x+N$,
 \item $a(b(x+N))=a(bx+N)=abx+N=(ab)(x+N)$,
-\item $a((x+N)+(y+N))=a(x+y+N)=a(x+y)+N=ax+ay+N=(ax+N)+(ay+N)=a(x+N)+a(y+N)$ and
-\item $(a+b)(x+N)=(a+b)x+N=ax+bx+N=(ax+N)+(bx+N)=a(x+N)+b(x+N)$.
+\item $a((x+N)+(y+N))=a(x+y+N)=a(x+y)+N=$
+    $=ax+ay+N=(ax+N)+(ay+N)=\\
+    =a(x+N)+a(y+N)$ and
+\item $(a+b)(x+N)=(a+b)x+N=ax+bx+N=\\
+    =(ax+N)+(bx+N)=a(x+N)+b(x+N)$.
 \end{enumerate}
 Hence, $(\MtN,+,\ast)$ is a module.
 \end{proof}
@@ -25,9 +30,9 @@ We call the module $(\MtN,+,\ast)$ introduced in \cref{theo.quotient module} the
 
 \begin{rem}
 \begin{exlist}
-\item In \cref{theo.quotient module} we have seen that every $R$-sub\-mod\-ule $N$ of $M$ induces an equivalence relation $\equiv$ on $M$  such that $\equiv$ is compatible with addition and scalar multiplication, \ie $w\equiv x$ and $y\equiv z$ implies $w+y\equiv x+z$ and $aw\equiv ax$ for all $a\in R$. 
+\item In \cref{theo.quotient module} we have seen that every $R$-sub\-mod\-ule $N$ of $M$ induces an equivalence relation $\equiv$ on $M$  such that $\equiv$ is compatible with addition and scalar multiplication, \ie{} $w\equiv x$ and $y\equiv z$ implies $w+y\equiv x+z$ and $aw\equiv ax$ for all $a\in R$. 
 
-Let on the other hand $\equiv$ be an equivalence relation on $M$ that is compatible with addition and scalar multiplication, then there exists a submodule $N\leq M$ such that $x\equiv y\Leftrightarrow x-y\in N$. To prove this we consider two elements $x,y\in M$ with $x\equiv y$. This is equivalent to $x-y\equiv 0$ since $-y\equiv -y$ and $\equiv$ is compatible with addition. Let $N_0$ denote the equivalence class of 0, \ie $N_0:=\lbrace z\in M|z\equiv 0\rbrace$. This set is not empty because $0\equiv 0$. Furthermore, $N_0$ is a submodule of $M$ because for all $z ,w\in N_0$ and all $a\in R$ the identities $z +w\equiv 0+0$ and $az\equiv a0$ hold. We conclude
+Let on the other hand $\equiv$ be an equivalence relation on $M$ that is compatible with addition and scalar multiplication, then there exists a submodule $N\leq M$ such that $x\equiv y\Leftrightarrow x-y\in N$. To prove this we consider two elements $x,y\in M$ with $x\equiv y$. This is equivalent to $x-y\equiv 0$ since $-y\equiv -y$ and $\equiv$ is compatible with addition. Let $N_0$ denote the equivalence class of 0, \ie{} $N_0:=\lbrace z\in M|z\equiv 0\rbrace$. This set is not empty because $0\equiv 0$. Furthermore, $N_0$ is a submodule of $M$ because for all $z ,w\in N_0$ and all $a\in R$ the identities $z +w\equiv 0+0$ and $az\equiv a0$ hold. We conclude
 \begin{equation*}
 x\equiv y\Leftrightarrow x-y\in N_0\leq M \;\text{and}\; \faktor{M}{\equiv}=\faktor{M}{N_0}.
 \end{equation*}
@@ -35,7 +40,7 @@ x\equiv y\Leftrightarrow x-y\in N_0\leq M \;\text{and}\; \faktor{M}{\equiv}=\fak
 \end{exlist}
 \end{rem}
 
-\begin{thm}[Universal Property]\label{theo.Universal Property}
+\begin{thm}[universal property]\label{theo.Universal Property}
 Let $\varphi\colon M \to M'$ be a homomorphism of $R$-modules and let $N$ be a submodule of $M$. The canonical projection of $M$ to $\MtN$ is denoted by $\pi$. If $N$ is a submodule of $\ker(\varphi)$ then there exists a unique homomorphism $\overline{\varphi}\colon \MtN\rightarrow M'$ such that $\overline{\varphi}\circ\pi=\varphi$. Moreover, $\ker(\overline{\varphi})=\ker(\varphi)/N$ and the following equivalence holds: $\overline{\varphi}$ is an isomorphism iff $\varphi$ is an epimorphism and $\ker(\varphi)=N$.
 \end{thm}
 
@@ -57,7 +62,7 @@ The statement of \cref{theo.Universal Property} can be visualized by the followi
 We notice that there exists a unique group-homomorphism $\overline{\varphi}$ such that $\overline{\varphi}\circ\pi=\varphi$. The mapping $\overline{\varphi}$ is defined by $\overline{\varphi}(x+N)=\varphi(x)$. It remains to verify that $\overline{\varphi}$ is a module-homomorphism. Let therefore be $a\in R$ and $x+N\in \MtN$, then $\overline{\varphi}(a(x+N))=\overline{\varphi}(ax+N)=\varphi(ax)=a\varphi(x)=a\overline{\varphi}(x+N)$. The other statements are clear, since they hold for every group-homomorphism.
 \end{proof}
 
-\begin{cor}[Homomorphism Theorem] \label{cor.Homomorphism Theorem}
+\begin{cor}[homomorphism theorem] \label{cor.Homomorphism Theorem}
 Let $\varphi\colon M\to M'$ be $R$-linear, then we have
 \begin{equation*}
 \faktor{M}{\ker(\varphi)}\cong\im(\varphi)
@@ -67,7 +72,7 @@ Let $\varphi\colon M\to M'$ be $R$-linear, then we have
 Let $N=\ker(\varphi)$ then the corollary follows from \cref{theo.Universal Property}.
 \end{proof}
 
-\begin{thm}[Comparison Principle] \label{theo.Comparison Principle}
+\begin{thm}[comparison principle] \label{theo.Comparison Principle}
 Let $M$ be an $R$-module which contains the submodule $N$ and $\pi\colon M\to\MtN$ the canonical projection. The set of all submodules of $M$ which contain $N$ shall be denoted by $S(M,N):=\lbrace M'\leq M \mid M'\supseteq N\rbrace$ and the set of all submodules of $\MtN$ by $S(\MtN)$. Furthermore, $\mathcal{P}(\MtN)$ denotes the power set of $\MtN$. We define a mapping $\varphi\colon S(M,N)\to \mathcal{P}(\MtN)$ by
 \begin{equation*}
 \varphi(M'):=\pi(M')=\left\lbrace x+N\in \MTN \middle\arrowvert x\in M'\right\rbrace.
@@ -82,7 +87,7 @@ To prove that $\varphi$ is injective we consider two submodules $M_1$ and $M_2\i
 x\in M_1\Leftrightarrow x+N\in \varphi(M_1)\Leftrightarrow x+N\in\varphi(M_2)\Leftrightarrow x\in M_2.
 \end{equation*}
 
-Next we verify $\im(\varphi)=S(\MtN)$. Since $\pi$ is a homomorphism $\varphi(M')=\pi(M')$ is a submodule of $\MtN$ for all submodules $M'$ of $M$. On the other hand, if $S$ is a submodule of $\MtN$, \ie $S\in S(\MtN)$, then $\pi^{-1}(S)\leq M$. Seeing that $N\in S$ we find $N\subseteq\pi^{-1}(S)$. Therefore there exists an $M'\in S(M,N)$ such that $\varphi(M')$ equals $S$, which was to be shown.
+Next we verify $\im(\varphi)=S(\MtN)$. Since $\pi$ is a homomorphism $\varphi(M')=\pi(M')$ is a submodule of $\MtN$ for all submodules $M'$ of $M$. On the other hand, if $S$ is a submodule of $\MtN$, \ie{} $S\in S(\MtN)$, then $\pi^{-1}(S)\leq M$. Seeing that $N\in S$ we find $N\subseteq\pi^{-1}(S)$. Therefore there exists an $M'\in S(M,N)$ such that $\varphi(M')$ equals $S$, which was to be shown.
 
 In order to prove $\varphi(M')\cong\nicefrac{M'}{N}$ consider the natural embedding $\iota\colon \nicefrac{M'}{N}\to\MtN$ defined by $x+N\mapsto x+N$. It is a monomorphism with $\im(\iota)=\lbrace x+N\in\MtN \mid x\in M'\rbrace=\varphi(M')$.
 \end{proof}
@@ -97,7 +102,7 @@ Let $M$ be an $R$-module which contains the submodule $N$, then the following st
 \end{thmlist}
 \end{cor}
 
-\begin{cor}[Isomorphism Theorems]
+\begin{cor}[isomorphism theorems]
 Given an $R$-module $M$ which contains the submodules $N_1,N_2$, then we have
 \begin{thmlist}
 \item $$\faktor{N_1}{\left(N_1\cap N_2\right)}\cong\faktor{\left(N_1+N_2\right)}{N_2}$$

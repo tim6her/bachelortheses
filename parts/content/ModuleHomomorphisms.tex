@@ -86,7 +86,7 @@ defined by $(a\ast\varphi)(x)=a\varphi(x)$.
 \end{pro}
 \begin{proof}
 \begin{plist}
-\item Let $\Hom(M,M')$ denote the set of all group-ho\-mo\-morph\-isms of $M$ to $M'$, then $(\Hom(M,M'),+)$ is an abelian group. Hence, it is enough to verify that $\Hom_R(M,M')$ is a subgroup of $\Hom(M,M')$.
+\item \sloppypar Let $\Hom(M,M')$ denote the set of all group-ho\-mo\-morph\-isms of $M$ to $M'$, then $(\Hom(M,M'),+)$ is an abelian group. Hence, it is enough to verify that $\Hom_R(M,M')$ is a subgroup of the homomorphism group $\Hom(M,M')$.
 
 Given two homomorphisms $\varphi,\psi\in\Hom_R(M,M')$ and an element $a\in R$, we find
 \begin{align*}
@@ -112,7 +112,9 @@ Secondly, we need to prove the four module-axioms, for this purpose we consider 
 \end{proof}
 
 \begin{rem}
-Let $M$ a module over a commutative unital ring $R$. If we view $R$ as a module over itself like we did in \cref{ex.RingAsModule}, \cref{prop.Homomorphisms are Module} implies that $\Hom_R(R,M)$ is an $R$-module. The mapping $F\colon\Hom_R(R,M)\to M$ defined by $\varphi\mapsto\varphi(1)$ is a homomorphism, because 
+Let $M$ a module over a commutative unital ring $R$. If we view $R$ as a module over itself like we did in \cref{ex.RingAsModule}, \cref{prop.Homomorphisms are Module} implies that $\Hom_R(R,M)$ is an $R$-module. The mapping 
+\[ F\colon\Hom_R(R,M)\to M\;\text{ defined by }\;\varphi\mapsto\varphi(1) \]
+is a homomorphism, because 
 \begin{equation*}
 F(\varphi+\psi)=(\varphi+\psi)(1)=\varphi(1)+\psi(1)=F(\varphi)+F(\psi)
 \end{equation*}

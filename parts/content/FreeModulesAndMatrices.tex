@@ -52,7 +52,7 @@ Let $R$ be a commutative ring with 1, then $R^n$ is a module and the following i
 \end{equation*}
 \end{pro}
 \begin{proof}
-We study the mapping $\left[\;\cdot\;\right]\colon\End_R(R^n)\to\mathrm{M}_n(R)$ defined by
+We study the mapping $\left[\,\cdot\,\right]\colon\End_R(R^n)\to\mathrm{M}_n(R)$ defined by
 \begin{equation*}
 [\varphi]:=
 \begin{pmatrix}
@@ -62,7 +62,7 @@ We study the mapping $\left[\;\cdot\;\right]\colon\End_R(R^n)\to\mathrm{M}_n(R)$
 \pi_n(\varphi(e_1)) & \pi_n(\varphi(e_2)) & \ldots & \pi_n(\varphi(e_n))
 \end{pmatrix},
 \end{equation*}
-where $e_i\in R^n$ denotes the family $\left(e_{i1}\;\ldots\;e_{in}\right)^t$, $e_{ii}=1$, $e_{ij}=0$ if $i\neq j$ and $\pi_i$ is the projection on the $i$-th component. Since the $j$-th column of the matrix $[\varphi]$ equals $\varphi(e_j)$ we define the abbreviation $[\varphi]=\left(\varphi(e_1)\;\ldots\varphi(e_n)\;\right)$ for this matrix. The mapping $\left[\;\cdot\;\right]$ is a ring-homomorphism, because for every pair of module-homomorphisms $\varphi,\psi\in\End_R(R^n)$ the following identities hold:
+where $e_i\in R^n$ denotes the family $\left(e_{i1}\;\ldots\;e_{in}\right)^t$, $e_{ii}=1$, $e_{ij}=0$ if $i\neq j$ and $\pi_i$ is the projection on the $i$-th component. Since the $j$-th column of the matrix $[\varphi]$ equals $\varphi(e_j)$ we define the abbreviation $[\varphi]=\left(\varphi(e_1)\;\ldots\varphi(e_n)\;\right)$ for this matrix. The mapping $\left[\,\cdot\,\right]$ is a ring-homomorphism, because for every pair of module-homomorphisms $\varphi,\psi\in\End_R(R^n)$ the following identities hold:
 \begin{align*}
 [\varphi&+\psi]=\begin{pmatrix}(\varphi+\psi)(e_1) & \dots & (\varphi+\psi)(e_n)\end{pmatrix}=\\
     &=\begin{pmatrix}\varphi(e_1)+\psi(e_1) & \dots & \varphi(e_n)+\psi(e_n)\end{pmatrix}=\\
@@ -87,7 +87,7 @@ and
 \end{smallmatrix}\right)=\\
 &=[\varphi][\psi].
 \end{align*}
-The homomorphism $[\;\cdot\;]$ is injective because $\ker([\;\cdot\;])=\lbrace 0\rbrace$. \cref{cor.Matrix implies Homomorphism} implies the surjectivity.
+The homomorphism $[\,\cdot\,]$ is injective because $\ker([\,\cdot\,])=\lbrace 0\rbrace$. Now \cref{cor.Matrix implies Homomorphism} implies the surjectivity.
 \end{proof}
 
-\cref{prop.Matrix isomorph Homomorphism} implies that we can identify endomorphisms of free modules over commutative rings with matrices over these rings. Note that this proposition can not be generalized to free modules over non-commutative rings because  \cref{cor.Matrix implies Homomorphism} does not hold for non-commutative rings.
+\cref{prop.Matrix isomorph Homomorphism} implies that we can identify endomorphisms of free modules over commutative rings with matrices over these rings. Note that this proposition can not be generalized to free modules over non\-/commutative rings because  \cref{cor.Matrix implies Homomorphism} does not hold for non-commutative rings.

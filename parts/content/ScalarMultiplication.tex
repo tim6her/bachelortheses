@@ -1,6 +1,6 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = en_GB
-\begin{defin} Let $(M,+)$ be an Abelian group and $(R,+,\cdot)$ be a ring with 1. We call the triple $(M,+,\ast)$, where $\ast\colon R\times M\ra M$, $(a,x)\mt a\ast x$ is an operation, that fulfils the following four axioms:
+\begin{defin} Let $(M,+)$ be an abelian group and $(R,+,\cdot)$ be a ring with 1. We call the triple $(M,+,\ast)$, where $\ast\colon R\times M\ra M$, $(a,x)\mt a\ast x$ is an operation, that fulfils the following four axioms:
 \begin{multienumerate}
 \mitemxx{$1\ast x=x$,}{$a\ast(b\ast x)=(a\cdot b)\ast x$,}
 \mitemxx{$a\ast(x+y)=a\ast x+a\ast y$ and}{$(a+b)\ast x=a\ast x+b\ast x$}
@@ -10,7 +10,7 @@ for all $a,b \in R$ and all $x,y \in M$, a \emph{left $R$-module} or a \textit{l
 
 Analogously, one can define a right $R$-module. More precisely:
 
-Given an unital ring $(R,+,\cdot)$ an Abelian group $(M,+)$ endowed by an operation $\ast\colon M \times R \ra G$, $(x,a)\mt x\ast a$ such that for all $x,y\in M$ and all $a,b\in R$ we have
+Given an unital ring $(R,+,\cdot)$ an abelian group $(M,+)$ endowed by an operation $\ast\colon M \times R \ra G$, $(x,a)\mt x\ast a$ such that for all $x,y\in M$ and all $a,b\in R$ we have
 \begin{multienumerate}
 \mitemxx{$x\ast 1=x$,}{$(x\ast a)\ast b=x\ast (a\cdot b)$,}
 \mitemxx{$(x+y)\ast a=x\ast a+y\ast a$ and}{$x\ast (a+b)=x\ast a+x\ast b$,}
@@ -34,7 +34,7 @@ Furthermore, we will write $ax$ instead of $a\ast x$ and $ab$ instead of $a\cdot
 \item Every field $F$ is especially a unital ring. Hen\-ce an $F$-vector space is an $F$-module.
 Therefore one can view modules as a generalization of vector spaces.
 \item Every unital ring $(R,+,\cdot)$ is a module over itself, if we define $a\ast b:= a\cdot b$. \label{ex.RingAsModule}
-\item Consider the trivial group $\lbrace 0\rbrace$. This Abelian group is a module over any unital ring. Therefore, this module is called \emph{trivial}. Refer to \cref{lm.basicProp}.(ii) for details.
+\item Consider the trivial group $\lbrace 0\rbrace$. This abelian group is a module over any unital ring. Therefore, this module is called \emph{trivial}. Refer to \cref{lm.basicProp}.(ii) for details.
 %NOTE: ^ I can't find a way to reference multienum.
 \item Given a vector space $V$ over a field $F$, let $\End_F(V)$ denote the set of all $F$-linear maps of $V$ into itself. Then $\End_F(V)$ is a unital ring with respect to point-wise addition and composition of mappings. We define the operation $\Phi:\End_F(V)\times V \ra V$ by $(\varphi,x) \mt \varphi(x)$, which satisfies
 \begin{enumerate}
@@ -47,7 +47,7 @@ Therefore one can view modules as a generalization of vector spaces.
 =\Phi(\varphi,x)+\Phi (\varphi,y)$
 \end{enumerate}
 for all $x,y\in V$ and all $\varphi, \psi \in \End_F(V)$. Hence, $(V,+,\Phi)$ is an $\End_F(V)$-module. This example originated in a comment by \cite{lang2002algebra} on page 118.\label{exam.Vector Space as EndFV-module}
-\item \label{ex.Z module} Let $(G,+)$ be an Abelian group. We define an operation $\ast : \Z\times G \ra G$ by
+\item \label{ex.Z module} Let $(G,+)$ be an abelian group. We define the scalar multipilcation $\ast : \Z\times G \ra G$ by
 \begin{equation*}
 r\ast x:=\left. \begin{cases}
 \overbrace{x+x+\ldots+x}^{r \textnormal{ addends}} & \textnormal{if } r>0 \\ 
@@ -55,8 +55,8 @@ r\ast x:=\left. \begin{cases}
 -(\underbrace{x+x+\ldots+x}_{\lvert r\rvert \textnormal{ addends}}) & \textnormal{if } r<0
 \end{cases} \right.
 \end{equation*}
-This operation satisfies all module axioms. Hence, every Abelian group can be viewed as a $\Z$-module.
-\item \label{ex.genModule} Let $(M,+)$ be an Abelian group. The set $\End(M)$ of all group-endomorphisms of $M$ is a unital ring, with respect to point-wise addition and composition of mappings. For an arbitrary unital ring $R$ and a ring-homomorphism $\varphi\colon R\to\End(M)$, which satisfies $\varphi(1)=\id$, we define the operation $\ast\colon R\times M\rightarrow M$ by $a\ast x:=(\varphi (a))(x)$. This operation has the following properties:
+This operation satisfies all module axioms. Hence, every abelian group can be viewed as a $\Z$-module.
+\item \label{ex.genModule} Let $(M,+)$ be an abelian group. The set $\End(M)$ of all group-endomorphisms of $M$ is a unital ring, with respect to point-wise addition and composition of mappings. For an arbitrary unital ring $R$ and a ring-homomorphism $\varphi\colon R\to\End(M)$, which satisfies $\varphi(1)=\id$, we define the operation $\ast\colon R\times M\rightarrow M$ by $a\ast x:=(\varphi (a))(x)$. This operation has the following properties:
 \begin{enumerate}
 \item $1\ast x=(\varphi(1))(x)=\id(x)=x$,
 \item $a\ast(b\ast x)=a\ast(\varphi(b))(x)=\varphi(a)((\varphi(b))(x))=$\\
@@ -115,7 +115,7 @@ Let $M$ be an $R$-module and $N\subseteq M$ be a non-empty subset, then the foll
 \end{thmlist}
 \end{lem}
 \begin{proof}
-Implication (i)$\Rightarrow$(ii) is clear. To prove the other direction, we consider two elements $x,y\in N$. We know $-1\in R$ which implies $-y=(-1)y\in N$ and therefore $x-y\in N$. Hence, $(N,+)$ is a group. Since the addition is commutative on the whole set $M$, the group $(N,+)$ is Abelian. The same argument can be applied to verify the four module axioms. Therefore $N$ is a submodule of $M$. 
+Implication (i)$\Rightarrow$(ii) is clear. To prove the other direction, we consider two elements $x,y\in N$. We know $-1\in R$ which implies $-y=(-1)y\in N$ and therefore $x-y\in N$. Hence, $(N,+)$ is a group. Since the addition is commutative on the whole set $M$, the group $(N,+)$ is abelian. The same argument can be applied to verify the four module axioms. Therefore $N$ is a submodule of $M$. 
 \end{proof}
 
 \begin{exam}\begin{exlist}
@@ -123,7 +123,7 @@ Implication (i)$\Rightarrow$(ii) is clear. To prove the other direction, we cons
 \item Given a vector space $V$, the linear subspaces of $V$ are its submodules.
 \item If we view a unital ring $R$ as a left module over itself, being a submodule of $R$ is equivalent to being a left ideal of $R$.
 \item An $F$-vector space $V$ viewed as a module over the ring of its endomorphisms $\End_F(V)$ contains only the trivial submodules. See \cref{exam. Generating set of V over EndFV} for further details.
-\item In the case of an Abelian group $G$ viewed as a $\Z$-module, being a submodule is equivalent to being a subgroup.
+\item In the case of an abelian group $G$ viewed as a $\Z$-module, being a submodule is equivalent to being a subgroup.
 \end{exlist}\end{exam}
 
 \begin{lem} \label{lem.submodules}

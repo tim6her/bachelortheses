@@ -1,6 +1,6 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = en_GB
-Given an $R$-module $M$ which contains a submodule $N$, then by commutativity $(N,+)$ is a normal subgroup of $(M,+)$. Hence, the relation $\equiv$ defined by $x\equiv y:\Leftrightarrow x-y\in N$ is an equivalence relation on $M$, which is compatible with addition, therefore the set of all equivalence classes $\MtN$ is an Abelian group called quotient group $M$ modulo $N$. The following theorem shows, that the quotient group $\MtN$ carries a module structure over $R$.
+Given an $R$-module $M$ which contains a submodule $N$, then by commutativity $(N,+)$ is a normal subgroup of $(M,+)$. Hence, the relation $\equiv$ defined by $x\equiv y:\Leftrightarrow x-y\in N$ is an equivalence relation on $M$, which is compatible with addition, therefore the set of all equivalence classes $\MtN$ is an abelian group called quotient group $M$ modulo $N$. The following theorem shows, that the quotient group $\MtN$ carries a module structure over $R$.
 
 \begin{thm} \label{theo.quotient module}
 Let $M$ be an $R$-module which contains the submodule $N$ and define the operation $\ast\colon R\times \MtN\rightarrow \MtN$ by $a(x+N)=ax+N$. This operation is well-defined and $(\MtN,+,\ast)$ is a module over $R$, where + is the addition on the quotient group $\MtN$.
@@ -84,7 +84,7 @@ x\in M_1\Leftrightarrow x+N\in \varphi(M_1)\Leftrightarrow x+N\in\varphi(M_2)\Le
 
 Next we verify $\im(\varphi)=S(\MtN)$. Since $\pi$ is a homomorphism $\varphi(M')=\pi(M')$ is a submodule of $\MtN$ for all submodules $M'$ of $M$. On the other hand, if $S$ is a submodule of $\MtN$, \ie $S\in S(\MtN)$, then $\pi^{-1}(S)\leq M$. Seeing that $N\in S$ we find $N\subseteq\pi^{-1}(S)$. Therefore there exists an $M'\in S(M,N)$ such that $\varphi(M')$ equals $S$, which was to be shown.
 
-In order to prove $\varphi(M')\cong\nicefrac{M'}{N}$ consider the embedding $\iota\colon \nicefrac{M'}{N}\to\MtN$ defined by $x+N\mapsto x+N$. It is a monomorphism with $\im(\iota)=\lbrace x+N\in\MtN \mid x\in M'\rbrace=\varphi(M')$.
+In order to prove $\varphi(M')\cong\nicefrac{M'}{N}$ consider the natural embedding $\iota\colon \nicefrac{M'}{N}\to\MtN$ defined by $x+N\mapsto x+N$. It is a monomorphism with $\im(\iota)=\lbrace x+N\in\MtN \mid x\in M'\rbrace=\varphi(M')$.
 \end{proof}
 
 \cref{theo.Comparison Principle} implies directly the following corollary.
@@ -92,7 +92,7 @@ In order to prove $\varphi(M')\cong\nicefrac{M'}{N}$ consider the embedding $\io
 \begin{cor}
 Let $M$ be an $R$-module which contains the submodule $N$, then the following statements hold:
 \begin{thmlist}
-\item Given a submodule $M'$ such that $N\leq M'\leq M$, then $\nicefrac{M'}{N}\leq\MtN$.
+\item Given a submodule $M'$ such that $N\leq M'\leq M$, then $\nicefrac{M'}{N}$ is a submodule of $\MtN$.
 \item Given a quotient module $S$ such that $S\leq\MtN$, then there exists a submodule $M'$ with $N\leq M'\leq M$ such that $\nicefrac{M'}{N}=S$.
 \end{thmlist}
 \end{cor}

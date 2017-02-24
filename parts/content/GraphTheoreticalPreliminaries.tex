@@ -11,13 +11,14 @@
 
 If the reference is clear we will briefly speak of a graph $G$ instead of $G=(V,E)$. If this is the case, then $V(G)=V$ denotes the vertex set of $G$ and $E(G)=E$ its edge set.
 
-A common and more intuitive way of describing a graph $G=(V,E)$ is visualizing it in form of a diagram. To this end, each vertex is represented by a small circle and the edge $\lbrace v_1,v_2\rbrace\in E$ is represented by a segment of a line joining the circles corresponding to $v_1$ and $v_2$.
+A common and more intuitive way of describing a graph $G$ is visualizing it in form of a diagram. To this end, each vertex is represented by a small circle and the edge $\lbrace v_1,v_2\rbrace\in E(G)$ is represented by a segment of a line joining the circles corresponding to $v_1$ and $v_2$.
 
 \begin{exam}\label{ex:Graph}
 Consider the graph $G=(V,E)$ defined by
 \begin{align*}
-V&=\lbrace 1,2,3,4,5\rbrace \text{ and}\\
-E&=\lbrace\lbrace 1,2\rbrace, \lbrace 1, 5\rbrace, \lbrace 2, 3\rbrace, \lbrace 2, 4\rbrace, \lbrace 2, 5 \rbrace, \lbrace 3, 4\rbrace, \lbrace 3, 5\rbrace, \lbrace 4, 5\rbrace\rbrace.
+V = &\lbrace 1,2,3,4,5\rbrace \text{ and}\\
+E = &\lbrace\lbrace 1,2\rbrace, \lbrace 1, 5\rbrace, \lbrace 2, 3\rbrace, \lbrace 2, 4\rbrace, \\
+ & \lbrace 2, 5 \rbrace, \lbrace 3, 4\rbrace, \lbrace 3, 5\rbrace, \lbrace 4, 5\rbrace\rbrace.
 \end{align*}
 The diagram below visualizes the graph $(V,E).$
 
@@ -43,7 +44,8 @@ Let $G=(V,E)$ be a graph and $u,v\in V$.
 \item A \emph{$u-v$-walk} is a finite sequence $(u=v_0,\seq{v}=v)$ in which $\lbrace v_{i-1},v_i\rbrace\in E$ for $1\leq i\leq n$.
 \item A \emph{$u-v$-path} is a $u-v$-walk, such that all vertices in the walk except $u$ and $v$ differ pairwise. A path is called \emph{trivial} if it contains only one vertex.
 \item The vertices $u$ and $v$ are \textit{connected} if there exists a $u-v$-walk. The graph $G$ is \emph{connected} if all of its vertices are pairwise connected.
-\item An $u-u$-path $(u=v_0,\seq{v}=u)$ is called \emph{cycle} if $|\lbrace\seq{v}=u\rbrace|>2.$
+\item An $u-u$-path $(u=v_0,\seq{v}=u)$ is called \emph{cycle} if 
+\[|\lbrace\seq{v}=u\rbrace|>2.\]
 \end{thmlist}
 \end{defin}
 
@@ -99,7 +101,9 @@ Consider the graph $G$ from page~\pageref{ex:Graph} again. The finite sequence $
 (u=v_0,v_1,\ldots,v_{i-1},v_i=v_j,v_{j+1},\ldots,v_n=v)
 \end{equation*}
 is a shorter $u-v$-walk. The induction hypothesis proves the claim.
-\item If $(u=v_0,\seq{v}=u)$ is a cycle, then by definition $n>0$ and therefore $v_1$ exists. The $u-v_1$-paths $(u,v_1)$ and $(u=v_n,v_{n-1},\ldots,v_1)$ are disjoint by definition of a cycle.\\
+\item If $(u=v_0,\seq{v}=u)$ is a cycle, then by definition $n>0$ and therefore $v_1$ exists. The $u-v_1$-paths $(u,v_1)$ and
+\[(u=v_n,v_{n-1},\ldots,v_1)\]
+are disjoint by definition of a cycle.\\
 If on the other hand 
 \begin{equation*}
 (u=v_0,\seq{v}=v) \text{ and } (u=w_0,\seq[m]{w}=v) 
@@ -137,7 +141,7 @@ Note that an isomorphism of graphs preserves the degree of each vertex by defini
 Let $G=(V,E)$ be a graph. Then the set $\Aut(G)$ forms a group with respect to the composition of mappings.
 \end{thm}
 \begin{proof}
-The binary operation is well-defined because every pair of automorphisms $\varphi,\psi\in\Aut(G)$ satisfies the following equivalence by definition
+The binary operation is well-defined because by definition every pair of automorphisms $\varphi,\psi\in\Aut(G)$ satisfies the following equivalence
 \begin{align*}
 \lbrace v_1,v_2\rbrace\in E&\Leftrightarrow\lbrace \varphi(v_1),\varphi(v_2)\rbrace\in E\\
 &\Leftrightarrow\lbrace \psi(\varphi(v_1)),\psi(\varphi(v_2))\rbrace=\\

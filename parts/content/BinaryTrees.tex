@@ -84,7 +84,7 @@ V(G)=\left\lbrace (\seq[n]{b},c_{n+1},\ldots,c_{n+k})\in\VT \right\rbrace
 \end{equation*}
 containing all vertices corresponding to a sequence, that starts with $(\seq{b})$, and the edge set
 \begin{equation*}
-E(G)=\mathcal{P}(V)\cap \VT
+E(G)=\mathcal{P}(V(G))\cap \VT
 \end{equation*}
 is denoted by $\ST{(\seq{b})}$.
 \end{defin}
@@ -124,9 +124,13 @@ Every automorphism $\varphi\in\AutT$ preserves the levels of $\T$, \ie
 \end{thm}
 
 \begin{proof}
-We prove the claim by induction on the level $n$ of a vertex $(\seq{b})\in\VT$. If $n$ equals 0, $(\seq{b})$ is the root of $\T$ and therefore the only vertex of degree 2. Hence, $\varphi(\seq{b})=(\seq{b})$ and the claim is proven.
+We prove the claim by induction on the level $n$ of a vertex 
+\[ (\seq{b})\in\VT.\]
+If $n$ equals $ 0 $, $(\seq{b})=\emptyset$ is the root of $\T$ and therefore the only vertex of degree $ 2 $. Hence, $\varphi(\seq{b})=(\seq{b})$ and the claim is proven.
 
-We proceed by assuming the result to be shown for all vertices on levels less than $n$. Since, $\varphi(\seq{b})$ is adjacent to the vertex $\varphi(\seq[n-1]{b})$, the identity
+We proceed by assuming the result to be shown for all vertices on levels less than $n$. Since, $\varphi(\seq{b})$ is adjacent to the vertex 
+\[ \varphi(\seq[n-1]{b}), \] 
+the identity
 \begin{equation*}
 \big\lvert\lvert\varphi(\seq{b})\rvert-\lvert\varphi(\seq[n-1]{b})\rvert\big\rvert=1
 \end{equation*}

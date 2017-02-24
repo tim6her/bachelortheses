@@ -64,7 +64,7 @@ We study the mapping $\left[\;\cdot\;\right]\colon\End_R(R^n)\to\mathrm{M}_n(R)$
 \end{equation*}
 where $e_i\in R^n$ denotes the family $\left(e_{i1}\;\ldots\;e_{in}\right)^t$, $e_{ii}=1$, $e_{ij}=0$ if $i\neq j$ and $\pi_i$ is the projection on the $i$-th component. Since the $j$-th column of the matrix $[\varphi]$ equals $\varphi(e_j)$ we define the abbreviation $[\varphi]=\left(\varphi(e_1)\;\ldots\varphi(e_n)\;\right)$ for this matrix. The mapping $\left[\;\cdot\;\right]$ is a ring-homomorphism, because for every pair of module-homomorphisms $\varphi,\psi\in\End_R(R^n)$ the following identities hold:
 \begin{align*}
-[\varphi+\psi]&=\begin{pmatrix}(\varphi+\psi)(e_1) & \dots & (\varphi+\psi)(e_n)\end{pmatrix}=\\
+[\varphi&+\psi]=\begin{pmatrix}(\varphi+\psi)(e_1) & \dots & (\varphi+\psi)(e_n)\end{pmatrix}=\\
     &=\begin{pmatrix}\varphi(e_1)+\psi(e_1) & \dots & \varphi(e_n)+\psi(e_n)\end{pmatrix}=\\
     &=\begin{pmatrix}\varphi(e_1) & \ldots & \varphi(e_n)\end{pmatrix}+\begin{pmatrix}\psi(e_1) & \ldots & \psi(e_n)\end{pmatrix}=\\
     &=[\varphi]+[\psi]
@@ -73,7 +73,7 @@ and
 \begin{align*}
 &[\varphi\circ\psi]=\begin{pmatrix}(\varphi\circ\psi)(e_1) & \ldots & (\varphi\circ\psi)(e_n)\end{pmatrix}=\\
 &=\begin{pmatrix}\varphi(\psi(e_1)) & \ldots & \varphi(\psi(e_n))\end{pmatrix}=\\
-&=\begin{pmatrix}\varphi(\sum_{j=1}^n\underbrace{\pi_j(\psi(e_1))}_{\in R}e_j) & \ldots & \varphi(\sum_{j=1}^n\underbrace{\pi_j(\psi(e_n))}_{\in R}e_j)\end{pmatrix}=\\
+&=\left(\begin{smallmatrix}\varphi(\sum_{j=1}^n\underbrace{\pi_j(\psi(e_1))}_{\in R}e_j) & \ldots & \varphi(\sum_{j=1}^n\underbrace{\pi_j(\psi(e_n))}_{\in R}e_j)\end{smallmatrix}\right)=\\
 &=\begin{pmatrix}\sum_{j=1}^n\pi_j(\psi(e_1))\varphi(e_j) & \ldots & \sum_{j=1}^n\pi_j(\psi(e_n))\varphi(e_j)\end{pmatrix}=\\
 &=\left(\begin{smallmatrix}
 \pi_1(\sum_{j=1}^n\pi_j(\psi(e_1))\varphi(e_j)) & \ldots & \pi_1(\sum_{j=1}^n\pi_j(\psi(e_n))\varphi(e_j))\\

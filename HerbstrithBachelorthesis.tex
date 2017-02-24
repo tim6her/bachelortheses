@@ -1,7 +1,8 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = en_GB
-\documentclass[ twoside,openright,titlepage,numbers=noenddot,headinclude,
-                footinclude=false,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
+\documentclass[ twoside,openright,titlepage,%numbers=noenddot,
+                headinclude,
+                footinclude=false,cleardoublepage=empty,
                 BCOR=5mm,a5paper,fontsize=11pt,british,%
                 %draft
                 ]{scrbook}
@@ -15,15 +16,16 @@
 %********************************************************************
 % Frontmatter
 %*******************************************************
+\pagestyle{empty}
 \include{FrontBackmatter/DirtyTitlepage}
 \include{FrontBackmatter/Titlepage}
 \include{FrontBackmatter/Titleback}
 \cleardoublepage\include{FrontBackmatter/Foreword}
-\pagestyle{scrheadings}
 \cleardoublepage\include{FrontBackmatter/Contents}
 %********************************************************************
 % Mainmatter
 %*******************************************************
+\pagestyle{scrheadings}
 \startcontents[parts]
 \part{Introduction to Module Theory}
 \begin{refsection}

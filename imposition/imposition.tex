@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage[a3paper]{geometry}
+\usepackage{filecontents}
+
+\begin{filecontents}{imposition_final.tex}
+    \documentclass{article}
+    \usepackage[a3paper]{geometry}
+    \usepackage{pdfpages}
+    \begin{document}
+        \includepdf[pages=-,signature=3,landscape,angle=180]{imposition.pdf}
+    \end{document}
+\end{filecontents}
+
+\usepackage{pdfpages}
+\begin{document}
+    \includepdf[pages=-,signature*=16,landscape,angle=180]{../HerbstrithBachelorthesis.pdf}
+\end{document}

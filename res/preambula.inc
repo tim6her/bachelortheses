@@ -7,7 +7,7 @@
 \newcommand{\T}{T^{(2)}}
 \newcommand{\ST}[1]{\T_{#1}}
 
-\usepackage[dvipsnames]{xcolor}
+\usepackage[dvipsnames, cmyk]{xcolor}
 \usepackage{tikz}
 \usepackage{pgfcore}
 \usetikzlibrary{arrows}

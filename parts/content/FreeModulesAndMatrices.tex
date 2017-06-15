@@ -3,7 +3,7 @@
 We will continue with a brief study of the connection between homomorphisms of free modules and matrices.
 
 \begin{pro}\label{prop.Commutative Diagram of Free Modules}
-Let $\varphi\colon M\to M'$ be a homomorphism of free $R$-modules, let the family $B:=(v_i)_{i\in I}$ be a base of $M$ and let $C:=(w_j)_{j\in J}$ be a base of $M'$. Then there exists a unique homomorphism $\overline{\varphi}\colon R^{(I)}\to R^{(J)}$ such that the following diagram, where $\gamma_B\colon R^{(I)}\to M$ and $\gamma_C\colon R^{(J)}\to M'$ denote mappings like the one in \cref{lem.Generating Set Homomorphism}, commutates.
+Let $\varphi\colon M\to M'$ be a homomorphism of free $R$-modules, let the family $B:=(v_i)_{i\in I}$ be a base of $M$ and let $C:=(w_j)_{j\in J}$ be a base of $M'$. Then there exists a unique homomorphism $\overline{\varphi}\colon R^{(I)}\to R^{(J)}$ such that the following diagram, where $\gamma_B\colon R^{(I)}\to M$ and $\gamma_C\colon R^{(J)}\to M'$ denote mappings like the one in \cref{lem.Generating Set Homomorphism}, commutes.
 \begin{center}
 \begin{tikzpicture}
   \node (M) at ( 0,2)  {$M$};
@@ -38,7 +38,7 @@ Given an arbitrary pair $x,y\in R^n$ and an $a\in R$ the following identities ho
 \begin{rem}
 The set $\End_R(M)$ of all endomorphisms in a free $R$-mod\-ule $M$ is a ring with respect to point-wise addition and composition  by \cref{lm.Composition of Homo} and \cref{prop.Homomorphisms are Group}.
 If $M$ has a finite base over $R$ there exists an $n\in\N$ such that $M\cong R^n$. In \cref{prop.Commutative Diagram of Free Modules} we have seen that there exists a bijection $\Gamma\colon\End_R(M)\to\End_R(R^n)$ defined by $\varphi\mapsto\gamma^{-1}\circ\varphi\circ\gamma$.
-This mapping is a isomorphism of rings because for all $\varphi,\psi\in\End_R(M)$ the following identities are satisfied:
+This mapping is an isomorphism of rings because for all $\varphi,\psi\in\End_R(M)$ the following identities are satisfied:
 \begin{exlist}
 \item $\Gamma(\varphi+\psi)=\gamma^{-1}\circ(\varphi+\psi)\circ\gamma =\gamma^{-1}\circ(\varphi\circ\gamma+\psi\circ\gamma)= (\gamma^{-1}\circ\varphi\circ\gamma)+(\gamma^{-1}\circ\psi\circ\gamma)=\Gamma(\varphi)+\Gamma(\psi)$ and
 \item $\Gamma(\varphi\circ\psi)=\gamma^{-1}\circ(\varphi\circ\psi)\circ\gamma =\gamma^{-1}\circ\varphi\circ\gamma^{-1}\circ\gamma\circ\psi\circ\gamma =\Gamma(\varphi)\circ\Gamma(\psi)$.
@@ -46,7 +46,7 @@ This mapping is a isomorphism of rings because for all $\varphi,\psi\in\End_R(M)
 \end{rem}
 
 \begin{pro}\label{prop.Matrix isomorph Homomorphism}
-Let $R$ be a commutative ring with 1, then $R^n$ is a module and the following isomorphism of rings exists:
+Let $R$ be a commutative ring with 1 then $R^n$ is a module and the following isomorphism of rings exists:
 \begin{equation*}
 \End_R(R^n)\cong \mathrm{M}_n(R).
 \end{equation*}
@@ -62,7 +62,7 @@ We study the mapping $\left[\,\cdot\,\right]\colon\End_R(R^n)\to\mathrm{M}_n(R)$
 \pi_n(\varphi(e_1)) & \pi_n(\varphi(e_2)) & \ldots & \pi_n(\varphi(e_n))
 \end{pmatrix},
 \end{equation*}
-where $e_i\in R^n$ denotes the family $\left(e_{i1}\;\ldots\;e_{in}\right)^t$, $e_{ii}=1$, $e_{ij}=0$ if $i\neq j$ and $\pi_i$ is the projection on the $i$-th component. Since the $j$-th column of the matrix $[\varphi]$ equals $\varphi(e_j)$ we define the abbreviation $[\varphi]=\left(\varphi(e_1)\;\ldots\varphi(e_n)\;\right)$ for this matrix. The mapping $\left[\,\cdot\,\right]$ is a ring-homomorphism, because for every pair of module-homomorphisms $\varphi,\psi\in\End_R(R^n)$ the following identities hold:
+where $e_i\in R^n$ denotes the family $\left(e_{i1}\;\ldots\;e_{in}\right)^t$, $e_{ii}=1$, $e_{ij}=0$ if $i\neq j$ and $\pi_i$ is the projection on the $i$-th component. Since the $j$-th column of the matrix $[\varphi]$ equals $\varphi(e_j)$ we define the abbreviation $[\varphi]=\left(\varphi(e_1)\;\ldots\varphi(e_n)\;\right)$ for this matrix. The mapping $\left[\,\cdot\,\right]$ is a ring-homomorphism because for every pair of module-homomorphisms $\varphi,\psi\in\End_R(R^n)$ the following identities hold:
 \begin{align*}
 [\varphi&+\psi]=\begin{pmatrix}(\varphi+\psi)(e_1) & \dots & (\varphi+\psi)(e_n)\end{pmatrix}=\\
     &=\begin{pmatrix}\varphi(e_1)+\psi(e_1) & \dots & \varphi(e_n)+\psi(e_n)\end{pmatrix}=\\

@@ -9,7 +9,7 @@
 \end{defin}
 
 
-If the reference is clear we will briefly speak of a graph $G$ instead of $G=(V,E)$. If this is the case, then $V(G)=V$ denotes the vertex set of $G$ and $E(G)=E$ its edge set.
+If the reference is clear, we will briefly speak of a graph $G$ instead of $G=(V,E)$. If this is the case then $V(G)=V$ denotes the vertex set of $G$ and $E(G)=E$ its edge set.
 
 A common and more intuitive way of describing a graph $G$ is visualizing it in form of a diagram. To this end, each vertex is represented by a small circle and the edge $\lbrace v_1,v_2\rbrace\in E(G)$ is represented by a segment of a line joining the circles corresponding to $v_1$ and $v_2$.
 
@@ -44,7 +44,7 @@ Let $G=(V,E)$ be a graph and $u,v\in V$.
 \item A \emph{$u-v$-walk} is a finite sequence $(u=v_0,\seq{v}=v)$ in which $\lbrace v_{i-1},v_i\rbrace\in E$ for $1\leq i\leq n$.
 \item A \emph{$u-v$-path} is a $u-v$-walk, such that all vertices in the walk except $u$ and $v$ differ pairwise. A path is called \emph{trivial} if it contains only one vertex.
 \item The vertices $u$ and $v$ are \textit{connected} if there exists a $u-v$-walk. The graph $G$ is \emph{connected} if all of its vertices are pairwise connected.
-\item An $u-u$-path $(u=v_0,\seq{v}=u)$ is called \emph{cycle} if 
+\item A $u-u$-path $(u=v_0,\seq{v}=u)$ is called \emph{cycle} if 
 \[|\lbrace\seq{v}=u\rbrace|>2.\]
 \end{thmlist}
 \end{defin}
@@ -54,7 +54,7 @@ One proves easily that a graph is connected if and only if there exists a vertex
 \end{rem}
 
 \begin{exam}
-Consider the graph $G$ from page~\pageref{ex:Graph} again. The finite sequence $(4, 3, 5, 2, 1, 5, 4, 2, 3)$ is a $4-3$-walk in $G$ and the sequence $(1,2,4,3,5,1)$ is a cycle in $G$. The diagrams below visualize the $4-3$-walk (a) and the cycle (b).
+Consider the graph $G$ above again. The finite sequence $(4, 3, 5, 2, 1, 5, 4, 2, 3)$ is a $4-3$-walk in $G$ and the sequence $(1,2,4,3,5,1)$ is a cycle in $G$. The diagrams below visualize the $4-3$-walk (a) and the cycle (b).
 
 \begin{center}
 \includegraphics[scale=1]{./res/WalksAndCycles}
@@ -90,8 +90,8 @@ Consider the graph $G$ from page~\pageref{ex:Graph} again. The finite sequence $
 %\vspace{-5em}
 \begin{lem} For an arbitrary graph $G$ the following statements hold. \label{thm:Unique Paths}
 \begin{thmlist}
-\item Let $u,v\in V(G)$, then every $u-v$-walk contains an $u-v$-path.\label{thm:Every walk contains a trail}
-\item $G$ contains a cycle if and only if there exist two distinct vertices $u,v\in V(G)$ and two disjoint $u-v$-paths $(u=v_0,\seq{v}=v)$ and $(u=w_0,\seq[m]{w}=v)$, \ie $v_i\not\in\lbrace\seq[m-1]{w}\rbrace$ for $0<i<n$ and $w_j\not\in\lbrace\seq[n-1]{v}\rbrace$ for $0<j<m$.
+\item Let $u,v\in V(G)$ then every $u-v$-walk contains a $u-v$-path.\label{thm:Every walk contains a trail}
+\item $G$ contains a cycle if and only if there exist two distinct vertices $u,v\in V(G)$ and two disjoint $u-v$-paths $(u=v_0,\seq{v}=v)$ and $(u=w_0,\seq[m]{w}=v)$, \ie, $v_i\not\in\lbrace\seq[m-1]{w}\rbrace$ for $0<i<n$ and $w_j\not\in\lbrace\seq[n-1]{v}\rbrace$ for $0<j<m$.
 \end{thmlist}
 \end{lem}
 \begin{proof}
@@ -101,14 +101,14 @@ Consider the graph $G$ from page~\pageref{ex:Graph} again. The finite sequence $
 (u=v_0,v_1,\ldots,v_{i-1},v_i=v_j,v_{j+1},\ldots,v_n=v)
 \end{equation*}
 is a shorter $u-v$-walk. The induction hypothesis proves the claim.
-\item If $(u=v_0,\seq{v}=u)$ is a cycle, then by definition $n>0$ and therefore $v_1$ exists. The $u-v_1$-paths $(u,v_1)$ and
+\item If $(u=v_0,\seq{v}=u)$ is a cycle then by definition $n>0$ and therefore $v_1$ exists. The $u-v_1$-paths $(u,v_1)$ and
 \[(u=v_n,v_{n-1},\ldots,v_1)\]
 are disjoint by definition of a cycle.\\
 If on the other hand 
 \begin{equation*}
 (u=v_0,\seq{v}=v) \text{ and } (u=w_0,\seq[m]{w}=v) 
 \end{equation*}
-are two disjoint $u-v$-paths, then
+are two disjoint $u-v$-paths then
 \begin{equation*}
 (u=v_0,\seq{v}=v=w_m,w_{m-1},\ldots,w_0=u)
 \end{equation*}
@@ -131,7 +131,7 @@ Let $(V,E)$ be a graph. A \emph{subgraph} of $(V,E)$ is a graph $(U,F)$, such th
 \begin{equation*}
 \lbrace v_1,v_2\rbrace\in E_1 \Leftrightarrow \lbrace \varphi(v_1),\varphi(v_2)\rbrace\in E_2.
 \end{equation*}
-\item If $G_1=G_2$, \ie $\varphi$ maps $V_1$ onto itself, we call $\varphi$ an \emph{automorphism of the graph $G_1$.} The set of all automorphisms onto $G_1$ is denoted by $\Aut(G_1)$.
+\item If $G_1=G_2$,  \ie, $\varphi$ maps $V_1$ onto itself, we call $\varphi$ an \emph{automorphism of the graph $G_1$.} The set of all automorphisms of $G_1$ is denoted by $\Aut(G_1)$.
 \end{thmlist}
 \end{defin}
 \begin{rem}

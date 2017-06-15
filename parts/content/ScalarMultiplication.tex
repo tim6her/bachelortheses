@@ -19,11 +19,11 @@ is called a \emph{right $R$-module.}
 
 \begin{rem}
 \begin{exlist}
-\item For all rings $R:=(S,+,\cdot)$ we define the \textit{opposite Ring} $R^{op}:=(S,+,\circ)$ of $R$ as the ring with the operation $\circ$, defined by $a\circ b:= b\cdot a$ for all $a,b \in S$. Let $(M,+,\ast)$ be a right $R$-module.
+\item For all rings $R:=(S,+,\cdot)$ we define the \textit{opposite ring} $R^{op}:=(S,+,\circ)$ of $R$ as the ring with the operation $\circ$, defined by $a\circ b:= b\cdot a$ for all $a,b \in S$. Let $(M,+,\ast)$ be a right $R$-module.
 By defining $x\tilde{\ast}a:=a\ast x$ for all $a\in S$ and all $x\in M$, the module $(M,+,\tilde{\ast})$ becomes a left $R^{op}$-module.
 Hence, all statements on left modules can be translated into equivalent findings on right modules and vice versa.
 In the following we shall therefore exclusively deal with left modules and will simply write module instead of left module.
-\item When it is clear which operations are meant, we will note $M$ instead of $(M,+,\ast)$ for such a left module over the ring $R)$.
+\item When it is clear which operations are meant, we will note $M$ instead of $(M,+,\ast)$ for such a left module over the ring $R$.
 Furthermore, we will write $ax$ instead of $a\ast x$ and $ab$ instead of $a\cdot b$.
 \item In analogy to vector spaces we call the operation $\ast$ \emph{scalar multiplication}.
 \end{exlist}
@@ -31,9 +31,9 @@ Furthermore, we will write $ax$ instead of $a\ast x$ and $ab$ instead of $a\cdot
 
 \begin{exam}\label{ex.module}
 \begin{exlist}
-\item Every field $F$ is especially a unital ring. Hen\-ce an $F$-vector space is an $F$-module.
-Therefore one can view modules as a generalization of vector spaces.
-\item Every unital ring $(R,+,\cdot)$ is a module over itself, if we define $a\ast b:= a\cdot b$. \label{ex.RingAsModule}
+\item Every field $F$ is especially a unital ring. Hen\-ce, an $F$-vector space is an $F$-module.
+Therefore, one can view modules as a generalization of vector spaces.
+\item Every unital ring $(R,+,\cdot)$ is a module over itself if we define $a\ast b:= a\cdot b$. \label{ex.RingAsModule}
 \item Consider the trivial group $\lbrace 0\rbrace$. This abelian group is a module over any unital ring. Therefore, this module is called \emph{trivial}. Refer to \cref{lm.basicProp}.(ii) for details.
 %NOTE: ^ I can't find a way to reference multienum.
 \item Given a vector space $V$ over a field $F$, let $\End_F(V)$ denote the set of all $F$-linear maps of $V$ into itself. Then $\End_F(V)$ is a unital ring with respect to point-wise addition and composition of mappings. We define the operation $\Phi:\End_F(V)\times V \ra V$ by $(\varphi,x) \mt \varphi(x)$, which satisfies
@@ -46,7 +46,7 @@ Therefore one can view modules as a generalization of vector spaces.
 \item $\Phi(\varphi+\psi,x)=(\varphi+\psi)(x)=\varphi(x)+\psi(x)=\\
 =\Phi(\varphi,x)+\Phi (\varphi,y)$
 \end{enumerate}
-for all $x,y\in V$ and all $\varphi, \psi \in \End_F(V)$. Hence, $(V,+,\Phi)$ is an $\End_F(V)$-module. This example originated in a comment by \cite{lang2002algebra} on page 118.\label{exam.Vector Space as EndFV-module}
+for all $x,y\in V$ and all $\varphi, \psi \in \End_F(V)$. Hence, $(V,+,\Phi)$ is an $\End_F(V)$-module. This example originated in a comment by \textcite{lang2002algebra} on page 118.\label{exam.Vector Space as EndFV-module}
 \item \label{ex.Z module} Let $(G,+)$ be an abelian group. We define the scalar multipilcation $\ast : \Z\times G \ra G$ by
 \begin{equation*}
 r\ast x:=\left. \begin{cases}
@@ -70,7 +70,7 @@ for all $a,b\in R$ and all $x,y\in M$. Hence $(M,+,\ast)$ is a module.
 \end{exlist}
 \end{exam}
 
-In \cref{ex.genModule} we have seen that every ring-ho\-mo\-morph\-ism $\varphi\colon R\rightarrow\End(M)$ induces exactly one scalar multiplication, such that $a\ast x=(\varphi(a))(x)$. On the other hand, one verifies easily that every scalar multiplication induces one and only one ring-ho\-mo\-morph\-ism $\varphi\colon R\rightarrow\End(M)$, such that $(\varphi(a))(x)=a\ast x$. Let now $M$ be an $R$-module. For an arbitrary $a\in R$ consider the mapping $\ell_a\colon M\rightarrow M$ defined by $x\mapsto a\ast x$. As a result of module axiom (iii) we see $\ell_a$ is a group-homomorphism. We define a mapping $\varphi\colon R\rightarrow \End(M)$ by $a \mapsto \ell_a$. At first, we note that module axiom (i) implies $\varphi(1)=\id$. Let $a,b$ be two arbitrary elements in $R$, then
+In \cref{ex.genModule} we have seen that every ring-ho\-mo\-morph\-ism $\varphi\colon R\rightarrow\End(M)$ induces exactly one scalar multiplication, such that $a\ast x=(\varphi(a))(x)$. On the other hand, one verifies easily that every scalar multiplication induces one and only one ring-ho\-mo\-morph\-ism $\varphi\colon R\rightarrow\End(M)$, such that $(\varphi(a))(x)=a\ast x$. To see this, let $M$ be an $R$-module. For an arbitrary $a\in R$ consider the mapping $\ell_a\colon M\rightarrow M$ defined by $x\mapsto a\ast x$. As a result of module axiom (iii) we see $\ell_a$ is a group-homomorphism. We define a mapping $\varphi\colon R\rightarrow \End(M)$ by $a \mapsto \ell_a$. At first, we note that module axiom (i) implies $\varphi(1)=\id$. Let $a,b$ be two arbitrary elements in $R$, then
 \begin{align*}
 (\varphi(a+b))(x)=\ell_{a+b}(x)=(a+b)x\overset{\text{Ax. (iv)}}{=}\\
 =ax+bx=\ell_a(x)+\ell_b(x)=(\varphi(a)+\varphi(b))(x)\\
@@ -80,7 +80,7 @@ In \cref{ex.genModule} we have seen that every ring-ho\-mo\-morph\-ism $\varphi\
 \end{align*}
 Hence, $\varphi$ is a ring-ho\-mo\-morph\-ism and we have found the desired form. Due to the construction of $\varphi$ this ring-homomorphism is  unique. 
 
-\begin{lem}\label{lm.basicProp}For any $R$-module $M$, the following identities hold for all elements $a,\seq{a}\in R$ and all $x,\seq[m]{x}\in M$:
+\begin{lem}\label{lm.basicProp}For any $R$-module $M$ the following identities hold for all elements $a,\seq{a}\in R$ and all $x,\seq[m]{x}\in M$:
 \begin{multienumerate}
 \mitemxx{$0x=0$,}{$a0=0$,}
 \mitemxx{$(-1)x=-x$,}{$(-a)x=a(-x)=-(ax)$,}
@@ -108,7 +108,7 @@ One proves (vi) analogously. The generalization of the last two module axioms wh
 \end{defin}  
 
 \begin{lem}\label{lm.SubMod}
-Let $M$ be an $R$-module and $N\subseteq M$ be a non-empty subset, then the following statements are equivalent:
+Let $M$ be an $R$-module and $N\subseteq M$ be a non-empty subset. The following statements are equivalent.
 \begin{thmlist}
 \item $N$ is a submodule of $M$.
 \item $x+y\in N$ and $ax\in N$ for all $a\in R$ and for all $x,y\in N$
@@ -127,12 +127,12 @@ Implication (i)$\Rightarrow$(ii) is clear. To prove the other direction, we cons
 \end{exlist}\end{exam}
 
 \begin{lem} \label{lem.submodules}
-Let $M$ be an $R$-module, then the following statements hold:
+Let $M$ be an $R$-module then the following statements hold.
 \begin{thmlist}
 \item Given a non-empty index set $I$ and $N_i\leq M\;\forall i\in I$, then the intersection $\bigcap\limits_{i\in I}N_i$ is a submodule of $M$. \label{lm.IntersectionOfSubmods}
 \item Given a positive integer $n\in\Z$ and $N_i\leq M\;\forall i\in \lbrace 0,1,\ldots,n\rbrace$, then the  set of sums 
 \begin{equation*}
-\sum\limits_{i=0}^n N_i:=\left\lbrace x\in M\middle\arrowvert\forall i\in\lbrace 0,1,\ldots ,n\rbrace ,\exists x_i\in N_i\colon x=\sum_{i=0}^nx_i\right\rbrace
+\sum\limits_{i=0}^n N_i:=\left\lbrace \sum_{i=0}^nx_i \middle\arrowvert x_i\in N_i, 1 \leq i \leq n\right\rbrace
 \end{equation*}
 is a submodule of $M$.
 \item Let $N_1$ and $N_2$ be submodules of $M$, then $N_1\cup N_2\leq M$ is equivalent to $N_1\subseteq N_2$ or $N_2\subseteq N_1$.

@@ -3,7 +3,7 @@
  \begin{defin}
 Let $M,M'$ be two modules over a unital ring $R$ and let $\varphi : M \ra M'$ be a mapping. 
 \begin{thmlist}
-\item We call $\varphi$ a \emph{module-homomorphism} or \textit{$R$-linear}, if it satisfies
+\item We call $\varphi$ a \emph{module-homomorphism} or \textit{$R$-linear} if it satisfies
 \begin{exlist}
 \item $\varphi(x+y)=\varphi(x)+\varphi(y)$ and
 \item $\varphi(ax)=a\varphi(x)$
@@ -20,7 +20,7 @@ Note that the first postulate in the definition of a module\-/homomorphism impli
 \begin{exlist}
 \item Given a modul $M$, the map $\id_M\colon M \rightarrow M$ defined by $x\mapsto x$ is an automorphism. We  call this mapping the \emph{identity} (mapping) on $M$.
 \item Let $M$ and $M'$ be $R$-modules. The mapping $\varphi\colon M\rightarrow M'$ defined by $x\mapsto 0$ is a homomorphism with $\ker(\varphi)=M$. 
-\item Let $G$ and $H$ be two $\Z$-modules like the one defined in Example \ref{ex.Z module}, then every group\-/homomorphism $\varphi\colon G\rightarrow H$ is a module\-/homomorphism. %NOTE: Sloppy ref
+\item Let $G$ and $H$ be two $\Z$-modules like the one defined in Example~\ref{ex.Z module} then every group\-/homomorphism $\varphi\colon G\rightarrow H$ is a module\-/homomorphism. %NOTE: Sloppy ref
 To prove this one verifies $\varphi(rx)=r\varphi(x)$ for all $r\in\Z$, $z\geq 0$ per induction on $r$. If $r<0$, we note that 
 \begin{equation*}
 \varphi(rx)=\varphi(-1(\lvert r\rvert x))=-\varphi(\lvert r\rvert x)=-\lvert r\rvert\varphi(x)=r\varphi(x).
@@ -31,16 +31,16 @@ To prove this one verifies $\varphi(rx)=r\varphi(x)$ for all $r\in\Z$, $z\geq 0$
 \begin{lem}\label{lm.Composition of Homo} 
 Let $M, N$ and $O$ be $R$-modules and
      \[\varphi\colon M\rightarrow N, \quad \psi\colon N\rightarrow O\] 
-homomorphisms, then $\psi\circ\varphi\colon M\rightarrow O$ is a homomorphism.
+homomorphisms then $\psi\circ\varphi\colon M\rightarrow O$ is a homomorphism.
 \end{lem}
 \begin{proof}
-When $\varphi$ and $\psi$ are viewd as homomorphisms of groups, the statement above holds. Hence, it is enough to prove the compatibility with scalar multiplication. Let therefore $a$ be in $R$ and $x$ be in $N$, then $\psi(\varphi(ax))=\psi(a\varphi(x))=a\psi(\varphi(x))$.
+When $\varphi$ and $\psi$ are viewd as homomorphisms of groups, the statement above holds. Hence, it is enough to prove the compatibility with scalar multiplication. Let therefore $a$ be in $R$ and $x$ be in $N$ then $\psi(\varphi(ax))=\psi(a\varphi(x))=a\psi(\varphi(x))$.
 \end{proof}
 
-One verifies easily that \cref{lm.Composition of Homo} holds for monomorphisms as well, i.e. let $M, N, O$ be $R$-modules and $\varphi\colon M\rightarrow N$, $\psi\colon N\rightarrow O$ monomorphisms, then $\psi\circ\varphi\colon N\rightarrow O$ is a monomorphism. Moreover, the statement remains true for epi- and isomorphisms.
+One verifies easily that \cref{lm.Composition of Homo} holds for monomorphisms as well, \ie, let $M, N, O$ be $R$-modules and $\varphi\colon M\rightarrow N$, $\psi\colon N\rightarrow O$ monomorphisms then $\psi\circ\varphi\colon N\rightarrow O$ is a monomorphism. Moreover, the statement remains true for epi- and isomorphisms.
 
 \begin{lem}
-Let $M,M'$ be $R$-modules and $\varphi\colon M\rightarrow M'$ a homomorphism, then the following statements hold:
+Let $M,M'$ be $R$-modules and $\varphi\colon M\rightarrow M'$ a homomorphism then the following statements hold:
 \begin{thmlist}
 \item Let $N$ be a submodule of $M$ and $N'$ a submodule of $M'$ then $\varphi(N)\leq M'$ and $\varphi^{-1}(N') \leq M$.
 \item $\ker(\varphi)\leq M$ and $\im(\varphi)\leq M'$.
@@ -49,14 +49,14 @@ Let $M,M'$ be $R$-modules and $\varphi\colon M\rightarrow M'$ a homomorphism, th
 \end{lem}
 \begin{proof}
 \begin{plist}
-\item We notice that $\varphi(N)$ is an abelian subgroup of $M'$ and $\varphi^{-1}(N')$ is an abelian subgroup of $M$. Hence, it is enough to verify that these groups are closed under scalar multiplication. For this purpose, let $a$ be an arbitrary element in $R$ and $y$ be in $\varphi(N)$, then there exists an $x\in N$ such that $\varphi(x)=y$. We note $a\varphi(x)=\varphi(ax)\in\varphi(N)$, because $ax\in N$. If $x$ is an element of $\varphi^{-1}(N')$, then there exists a $y\in N'$ such that $\varphi(x)=y$ and we have $\varphi(ax)=a\varphi(x)=ay\in N'$, from which follows $ax\in \varphi^{-1}(N')$.
+\item We notice that $\varphi(N)$ is an abelian subgroup of $M'$ and $\varphi^{-1}(N')$ is an abelian subgroup of $M$. Hence, it is enough to verify that these groups are closed under scalar multiplication. For this purpose, let $a$ be an arbitrary element in $R$ and $y$ be in $\varphi(N)$ then there exists an $x\in N$ such that $\varphi(x)=y$. We note $a\varphi(x)=\varphi(ax)\in\varphi(N)$, because $ax\in N$. If $x$ is an element of $\varphi^{-1}(N')$ then there exists a $y\in N'$ such that $\varphi(x)=y$ and we have $\varphi(ax)=a\varphi(x)=ay\in N'$, from which follows $ax\in \varphi^{-1}(N')$.
 \item Considering $N=M$ and $N'=\lbrace 0\rbrace$ statement (ii) follows from claim~(i).
 \item Since $\varphi$ viewed as a group-homomorphism is injective if and only if $\ker(\varphi)={0}$, this statement is clear.
 \end{plist}
 \end{proof}
 
 \begin{lem}
-Let $M,M'$ be $R$-modules and $\varphi\colon M\rightarrow M'$ a homomorphism, then the following statements hold:
+Let $M,M'$ be $R$-modules and $\varphi\colon M\rightarrow M'$ a homomorphism then the following statements hold:
 \begin{thmlist}
 \item If $\varphi$ is an isomorphism then $\varphi^{-1}$ is an isomorphism.
 \item The mapping $\varphi$ is an isomorphism if and only if there exits a homomorphism $\psi\colon M'\rightarrow M$ such that $\psi\circ\varphi=\id_M$ and $\varphi\circ\psi=\id_{M'}$.
@@ -64,7 +64,7 @@ Let $M,M'$ be $R$-modules and $\varphi\colon M\rightarrow M'$ a homomorphism, th
 \end{lem}
 \begin{proof}
 \begin{plist}
-\item Owing to the fact that $\varphi^{-1}$ is a group-isomorphism, it is enough to verify the compatibility with scalar multiplication. Let therefore $a$ be an arbitrary element in $R$ and $y$ in $M'$, then there exists an $x\in M$ such that $\varphi(x)=y$. Hence, we have
+\item Owing to the fact that $\varphi^{-1}$ is a group-isomorphism, it is enough to verify the compatibility with scalar multiplication. Let therefore $a$ be an arbitrary element in $R$ and $y$ in $M'$ then there exists an $x\in M$ such that $\varphi(x)=y$. Hence, we have
 \begin{equation*}
 \varphi^{-1}(ay)=\varphi^{-1}(a\varphi(x))=\varphi^{-1}(\varphi(ax))=ax=a\varphi^{-1}(y).
 \end{equation*}
@@ -75,18 +75,18 @@ Let $M,M'$ be $R$-modules and $\varphi\colon M\rightarrow M'$ a homomorphism, th
 We will continue with a brief study of the algebraic structure of module\-/homomorphisms.
 
 \begin{pro}\label{prop.Homomorphisms are Module}
-Let $M,M'$ be modules over the unital ring $R$ and let $\Hom_R(M,M')$ denote the set of all homomorphisms $\varphi\colon M\to M'$, then
+Let $M,M'$ be modules over the unital ring $R$ and let $\Hom_R(M,M')$ denote the set of all homomorphisms $\varphi\colon M\to M'$ then
 \begin{thmlist}
 \item \label{prop.Homomorphisms are Group} $\Hom_R(M,M')$ is an abelian group, with respect to the operation \[+\colon\Hom_R(M,M')\times\Hom_R(M,M')\to\Hom_R(M,M')\]
 defined by $(\varphi+\psi)(x)=\varphi(x)+\psi(x)$.
-\item If $R$ is commutative, then $\Hom_R(M,M')$ is an $R$-module, with respect to the operations $+$ and 
+\item If $R$ is commutative then $\Hom_R(M,M')$ is an $R$-module, with respect to the operations $+$ and 
 \[\ast\colon R\times\Hom_R(M,M')\to\Hom_R(M,M')\]
 defined by $(a\ast\varphi)(x)=a\varphi(x)$.
 \end{thmlist}
 \end{pro}
 \begin{proof}
 \begin{plist}
-\item \sloppypar Let $\Hom(M,M')$ denote the set of all group-ho\-mo\-morph\-isms of $M$ to $M'$, then $(\Hom(M,M'),+)$ is an abelian group. Hence, it is enough to verify that $\Hom_R(M,M')$ is a subgroup of the homomorphism group $\Hom(M,M')$.
+\item \sloppypar Let $\Hom(M,M')$ denote the set of all group-ho\-mo\-morph\-isms of $M$ to $M'$ then $(\Hom(M,M'),+)$ is an abelian group. Hence, it is enough to verify that $\Hom_R(M,M')$ is a subgroup of the homomorphism group $\Hom(M,M')$.
 
 Given two homomorphisms $\varphi,\psi\in\Hom_R(M,M')$ and an element $a\in R$, we find
 \begin{align*}

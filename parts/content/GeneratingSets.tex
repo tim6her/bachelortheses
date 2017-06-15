@@ -15,15 +15,15 @@ Let $M$ be an $R$-Module and $S\subseteq M$ a subset.
 Note that this definition is valid because of the findings that were proven in \cref{lm.IntersectionOfSubmods}. The following lemma provides a different characterization of generating sets.
 
 \begin{thm}\label{lem.Generating Set Homomorphism}
-Given an arbitrary index set $I$, such that $(x_i)_{i\in I}$ is a family of elements in an $R$-module $M$, then the mapping
+Given an arbitrary index set $I$, such that $(x_i)_{i\in I}$ is a family of elements in an $R$-module $M$ then the mapping
 \begin{equation*}
 \gamma\colon R^{(I)}\to M \text{ defined by } (a_i)_{i\in I}\mapsto \sum_{i\in I} a_i x_i
 \end{equation*}
-is a module homomorphism with $\im(\gamma)=\langle ((x_i)_{i\in I}\rangle_R$.
+is a module homomorphism with $\im(\gamma)=\langle (x_i)_{i\in I}\rangle_R$.
 \end{thm}
 In the theorem above the ring $R$ is viewed as a module over itself.
 \begin{proof}
-Consider the family of mappings $\varphi_{x_i}\colon R\to M$ defined by $a\mapsto ax_i$. Module axiom (ii) and (iv) imply, that $\varphi_{x_i}$ is a homomorphism. The mapping $\gamma\colon R^{(I)}\to M$ defined by $(a_i)_{i\in I}\mapsto\sum_{i\in I} a_ix_i$ is a homomorphism, such that $\varphi_{x_i}=\gamma\circ\iota_i$, where $\iota_i\colon R\to R^{(I)}$ is the embedding of $R$ in the $i$-th component of $R^{(I)}$, for all $i\in I$, by \cref{prop.UniversalPropertyDirectSum}.
+Consider the family of mappings $\varphi_{x_i}\colon R\to M$ defined by $a\mapsto ax_i$. Module axiom (ii) and (iv) imply, that $\varphi_{x_i}$ is a homomorphism. The mapping $\gamma\colon R^{(I)}\to M$ defined by $(a_i)_{i\in I}\mapsto\sum_{i\in I} a_ix_i$ is a homomorphism, such that $\varphi_{x_i}=\gamma\circ\iota_i$, where $\iota_i\colon R\to R^{(I)}$ is the embedding of $R$ in the $i$-th component of $R^{(I)}$ for all $i\in I$ by \cref{prop.UniversalPropertyDirectSum}.
 
 To prove $\im(\gamma)=\langle (x_i)_{i\in I}\rangle_R$ we note that $\im(\gamma)$ is a submodule of $M$ that contains $x_i$ for all $i\in I$. Hence, $\im(\gamma)\supseteq\langle (x_i)_{i\in I}\rangle_R$. On the other hand, let $N$ be a submodule of $M$ that contains $\lbrace x_i\mid i\in I\rbrace$. Then $\sum_{i\in J} a_i x_i\in N$ for all finite subsets $J\subseteq I$, which implies $\im(\gamma)=\langle (x_i)_{i\in I}\rangle_R$ because $\im(\gamma)=\lbrace\sum_{i\in J} a_i x_i| J\subseteq I, J \text{ finite}\rbrace$.
 \end{proof}
@@ -46,10 +46,10 @@ The following Corollary gives alternative characterizations of linear independen
 Let $(x_i)_{i\in I}$ be an indexed family in an $R$-module $M$ then the following statements are equivalent.
 \begin{thmlist}
 \item $(x_i)_{i\in I}$ is linear independent over $R$.
-\item If $\sum_{i\in I}a_i x_i=0$, where only a finite number of $a_i\in R$ is unequal to 0, then $a_i=0$ for all $i\in I$.
+\item If $\sum_{i\in I}a_i x_i=0$, where only a finite number of $a_i\in R$ is unequal to $0$ then $a_i=0$ for all $i\in I$.
 \item If 
 \[\sum_{i\in I}a_i x_i=\sum_{i\in I}b_i x_i,\]
-where only a finite number of $a_i,b_i\in R$ is unequal to 0, then $a_i=b_i$ for all $i\in I$.\label{lm.All Scalars are 0}
+where only a finite number of $a_i,b_i\in R$ is unequal to $0$ then $a_i=b_i$ for all $i\in I$.\label{lm.All Scalars are 0}
 \item For every strict subset $J\subsetneq I$ the submodule $\langle (a_i)_{i\in J}\rangle_R$ is a strict subset of $\langle (a_i)_{i\in I}\rangle_R$.
 \end{thmlist}
 \end{cor}
@@ -87,10 +87,10 @@ Let
 \begin{equation*}
 0\longrightarrow M'\overset{\varphi_1}{\longrightarrow} M\overset{\varphi_2}{\longrightarrow} M''\longrightarrow 0
 \end{equation*}
-be a short exact sequence of $R$-modules, then
+be a short exact sequence of $R$-modules then
 \begin{thmlist}
 \item $M''$ is finitely generated if $M$ is finitely generated and
-\item if $M'$ and $M''$ are finitely generated, then $M$ is finitely generated.\label{lem.M' M'' implies M}
+\item if $M'$ and $M''$ are finitely generated then $M$ is finitely generated.\label{lem.M' M'' implies M}
 \end{thmlist}
 \end{lem}
 
@@ -101,7 +101,7 @@ be a short exact sequence of $R$-modules, then
 for some $a_i\in R$ because $\varphi_2$ is surjective. Therefore, $\varphi_2(v_1),\ldots\varphi_2(v_n)$ is a finite generating set of $M''$.
 \item Let $\seq[r]{u}\in M'$ be a generating set of $M'$ and $\seq[s]{w}\in M''$ a generating set of $M''$.
 We will prove that
-\[\varphi_1(u_1),\ldots,\varphi_1(u_r),v_1,\ldots,v_s\in M\]
+\[\varphi_1(u_1),\ldots,\varphi_1(u_r),v_1,\ldots,v_s\in M,\]
 where $v_i\in\varphi_2^{-1}(w_i)$ for $i\in\lbrace 1,\ldots,s\rbrace$, is a generating set of $M$ over $R$.
 Let therefore $x$ be an arbitrary element of $M$.
 Since $\seq[s]{w}$ is a generating set of $M''$ we can write 
@@ -110,7 +110,7 @@ Since $\seq[s]{w}$ is a generating set of $M''$ we can write
 \underbrace{\sum_{i=1}^s a_i v_i}_{\in M}
 \left. \vphantom{\sum_{i=1}^s}\right)
 \end{equation*}
-for some $\seq[s]{a}\in R$. Since $\nicefrac{M}{\ker(\varphi_2)}\cong M''$ (with respect to $\bar{\varphi}_2$ see \cref{theo.Universal Property} and \cref{cor.Homomorphism Theorem}) we find $x\in \sum_{i=1}^s a_i v_i+\ker(\varphi_2)$ and therefore $x=\sum_{i=1}^s a_i v_i+k$ where $k\in\ker(\varphi_2)$. Because $\im(\varphi_1)=\ker(\varphi_2)$ part (i) implies that $\varphi_1(u_1),\ldots,\varphi_1(u_r)$ is a generating set of $\ker(\varphi_2)\subseteq M$. Hence, $x=\sum_{i=1}^s a_i v_i+\sum_{j=1}^s b_j \varphi_1(u_j)$ for some $\seq[s]{b}\in R$. Which proves the claim.
+for some $\seq[s]{a}\in R$. Since $\nicefrac{M}{\ker(\varphi_2)}\cong M''$ (see \cref{theo.Universal Property} and \cref{cor.Homomorphism Theorem}) we find $x\in \sum_{i=1}^s a_i v_i+\ker(\varphi_2)$ and therefore $x=\sum_{i=1}^s a_i v_i+k$ where $k\in\ker(\varphi_2)$. Because $\im(\varphi_1)=\ker(\varphi_2)$, part (i) implies that $\varphi_1(u_1),\ldots,\varphi_1(u_r)$ is a generating set of $\ker(\varphi_2)\subseteq M$. Hence, $x=\sum_{i=1}^s a_i v_i+\sum_{j=1}^s b_j \varphi_1(u_j)$ for some $\seq[s]{b}\in R$. Which proves the claim.
 \end{plist}
 \end{proof}
 
@@ -118,15 +118,15 @@ One of the main results in linear algebra is that every vector space over a fiel
 
 \begin{exam}\label{exam.Bases of Modules}
 \begin{exlist}
-\item Let $R$ be a unital ring, then $\lbrace 1\rbrace$ is a basis of $R$, because $a=a1$ for all $a\in R$ and this decomposition is unique.
-\item Let $V$ be an $F$-vector space. In \cref{exam.Vector Space as EndFV-module} we have seen, that $V$ is an $\End_F(V)$-module. If $\seq{b}\in V$ is a basis of $V$ over $F$, then $\lbrace b_1 \rbrace$ is a generating set of $V$ over $\End_F(V)$, because for every $v\in V$ we can define a linear mapping 
+\item Let $R$ be a unital ring then $\lbrace 1\rbrace$ is a basis of $R$, because $a=a1$ for all $a\in R$ and this decomposition is unique.
+\item Let $V$ be an $F$-vector space. In \cref{exam.Vector Space as EndFV-module} we have seen, that $V$ is an $\End_F(V)$-module. If $\seq{b}\in V$ is a basis of $V$ over $F$ then $\lbrace b_1 \rbrace$ is a generating set of $V$ over $\End_F(V)$, because for every $v\in V$ we can define a linear mapping 
 \begin{equation*}
 \varphi_v\colon V\to V \text{ by } \varphi_v(b_i):= \begin{cases}v & \text{if } i=1\\ 0 & \text{if } i\neq 1\end{cases}.
 \end{equation*}
 Therefore the mapping $\gamma\colon \End_F(V)\to V$ defined by $\varphi\mapsto \varphi(b_1)$ is surjective and not injective if $n>1$.
 
 Note that this implies that $V$ contains only the trivial submodules because for every $x\in V\setminus\lbrace 0\rbrace$ we can find a basis $\seq{\hat{b}}$ such that $x=\hat{b}_1$ and $\langle x\rangle_{\End_F(V)}=V$ is the smallest submodule that contains $x$. \label{exam. Generating set of V over EndFV}
-\item Let $G\neq\lbrace 0\rbrace$ be a finite group viewed as a $\Z$-module, then $G$ does not have a basis over $\Z$. Let $n=|G|$. We assume that $G$ has a basis $B$. If $B$ is empty then $\langle B\rangle_{\Z} =\lbrace 0\rbrace$ which is a contradiction to $G\neq\lbrace 0\rbrace$. If, on the other hand, $B$ is non-empty with $x\in B$ we consider the $n+1$ elements $x,2x,\ldots,(n+1)x$. Since $n=| G|$ there exist $1\leq k<\ell\leq n+1$ such that $kx=\ell x$. Which is a contradiction to the assumption that $B$ is a basis of $G$ over $\Z$.\label{exam.basis of G}
+\item Let $G\neq\lbrace 0\rbrace$ be a finite group viewed as a $\Z$-module then $G$ does not have a basis over $\Z$. Let $n=|G|$. We assume that $G$ has a basis $B$. If $B$ is empty then $\langle B\rangle_{\Z} =\lbrace 0\rbrace$ which is a contradiction to $G\neq\lbrace 0\rbrace$. If, on the other hand, $B$ is non-empty with $x\in B$ we consider the $n+1$ elements $x,2x,\ldots,(n+1)x$. Since $n=| G|$ there exist $1\leq k<\ell\leq n+1$ such that $kx=\ell x$. Which is a contradiction to the assumption that $B$ is a basis of $G$ over $\Z$.\label{exam.basis of G}
 \end{exlist}
 \end{exam}
 

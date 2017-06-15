@@ -34,10 +34,10 @@ The proposition above implies that if $M'$ is isomorphic to the free module $M$ 
 
 The following example, which can be found in \cite[p.~194]{jantzen2005algebra}, shows that the concept of dimensions as we know it for vector spaces can not be generalized for free modules over arbitrary rings. We will see that the cardinality of a basis of a free $R$-module is in general not unique.
 \begin{exam}
-Let $F$ be a field then the polynomial ring $F[X]$ is an $F$-vector space and the set $R:=\End_F(F[X])$ of all endomorphisms in $F[X]$ is a ring with respect to point-wise addition and composition of mappings. We view $R$ as a module over itself and find that $\id_{F[X]}$ is a basis of $R$ over $R$, since for every $\varphi\in R$ the identity $\varphi=\varphi\circ id_{F[X]}$ holds and this decomposition is unique.
+Let $F$ be a field then the polynomial ring $F[X]$ is an $F$-vector space and the set $R:=\End_F(F[X])$ of all endomorphisms in $F[X]$ is a ring with respect to point-wise addition and composition of mappings. We view $R$ as a module over itself and find that $\id_{F[X]}$ is a basis of $R$ over $R$ since for every $\varphi\in R$ the identity $\varphi=\varphi\circ id_{F[X]}$ holds and this decomposition is unique.
 
 \sloppypar
-On the other hand we consider the endomorphisms $f_1,f_2\in R$ defined by
+On the other hand, we consider the endomorphisms $f_1,f_2\in R$ defined by
 \begin{eqnarray*}
 f_1(X^i):=\begin{cases} X^{\frac{i}{2}} & \text{if } 2\mid i\\ 0&\text{if } 2\nmid i\\\end{cases}, &  f_2(X^i):=\begin{cases} 0 & \text{if } 2\mid i\\ X^{\frac{i-1}{2}}&\text{if } 2\nmid i\\\end{cases}.
 \end{eqnarray*}
@@ -46,7 +46,7 @@ The set $\lbrace f_1,f_2\rbrace$ is linearly independent over $R$ because $g_1\c
 Consequently, $R$ has a basis containing one element and a basis containing two elements which implies $R^1\cong R^2$. It follows per induction on $n$ that $R\cong R^n$ for all $n\in\N$.
 \end{exam} 
 
-We will now show that the cardinality of a finite basis of an $R$\-/module is unique, if $R\neq\lbrace 0\rbrace$ and $R$ is commutative.
+We will now show that the cardinality of a finite basis of an $R$\-/module is unique if $R\neq\lbrace 0\rbrace$ and $R$ is commutative.
 
 \begin{lem}\label{lm.SigmaModule}
 Let $M$ be an $R$-module and $\mathfrak{I}$ a left ideal in $R$ then the following statements hold.
@@ -74,14 +74,14 @@ Given an arbitrary $c\in R$ we find
 since $\mathfrak{I}$ is a left ideal in $R$.
 \item At first we notice that $(\nicefrac{M}{S}, +)$ is an abelian group since $\nicefrac{M}{S}$ is an $R$-module.
 
-Secondly, we need to verify the validity of the definition of the scalar multiplication. Let $a\equiv a'$ with respect to the equivalence relation on $R$ induced by $\mathfrak{I}$. We show that $ax\equiv a'x$ with respect to the equivalence relation on $M$ induced by $S$ for all $x\in M$. Since $a\equiv a'$ there exists an element $\mathfrak{b}\in\mathfrak{I}$ such that $a=a'+\mathfrak{b}$, therefore $ax-a'x=ax-(a-\mathfrak{b})x=\mathfrak{b}x\in S$ and the claim is proven. On the other hand, let $x\equiv x'$. One needs to verify $ax\equiv ax'$ for all $a\in R$. Since $x\equiv x'$ there exists a sum $\sum_{i=1}^n\mathfrak{b}_iy_i\in S$ such that $x=x'+\sum_{i=1}^n\mathfrak{b}_iy_i$ and therefore $ax-ax'=a\sum_{i=1}^n\mathfrak{b}_iy_i=\sum_{i=1}^na\mathfrak{b}_iy_i\in S$ since $\mathfrak{b}_i\in\mathfrak{I}$ and $\mathfrak{I}$ is an ideal.
+Secondly, we need to verify the validity of the definition of the scalar multiplication. Let $a\equiv a'$ with respect to the equivalence relation on $R$ induced by $\mathfrak{I}$. We show that $ax\equiv a'x$ with respect to the equivalence relation on $M$ induced by $S$ for all $x\in M$. Since $a\equiv a'$ there exists an element $\mathfrak{b}\in\mathfrak{I}$ such that $a=a'+\mathfrak{b}$ therefore $ax-a'x=ax-(a-\mathfrak{b})x=\mathfrak{b}x\in S$ and the claim is proven. On the other hand, let $x\equiv x'$. One needs to verify $ax\equiv ax'$ for all $a\in R$. Since $x\equiv x'$ there exists a sum $\sum_{i=1}^n\mathfrak{b}_iy_i\in S$ such that $x=x'+\sum_{i=1}^n\mathfrak{b}_iy_i$ and therefore $ax-ax'=a\sum_{i=1}^n\mathfrak{b}_iy_i=\sum_{i=1}^na\mathfrak{b}_iy_i\in S$ since $\mathfrak{b}_i\in\mathfrak{I}$ and $\mathfrak{I}$ is an ideal.
 
 The four module axioms are now proven in a straight forward way.
 \end{plist}
 \end{proof}
 
 \begin{lem}\label{lm.basis of M to Sigma}
-Let $M$ be a free $R$-module and $\mathfrak{I}$ an ideal in $R$. If we consider a basis $\seq{v}$ of $M$ over $R$ and the submodule $S$ like in \cref{lm.Sigma}, then $v_1+S,\ldots,v_n+S$ is a basis of $\nicefrac{M}{S}$ over $\nicefrac{R}{\mathfrak{I}}$.
+Let $M$ be a free $R$-module and $\mathfrak{I}$ an ideal in $R$. If we consider a basis $\seq{v}$ of $M$ over $R$ and the submodule $S$ like in \cref{lm.Sigma} then $v_1+S,\ldots,v_n+S$ is a basis of $\nicefrac{M}{S}$ over $\nicefrac{R}{\mathfrak{I}}$.
 \end{lem}
 \begin{proof}
 The family $v_1+S,\ldots,v_n+S$ is a generating set of $\nicefrac{M}{S}$ over $\nicefrac{R}{\mathfrak{I}}$ because for an arbitrary $x+S\in\nicefrac{M}{S}$ there exists a decomposition $x=\sum_{i=1}^na_iv_i$ which leads us to 
@@ -95,7 +95,7 @@ We will prove $a_i\in\mathfrak{I}$ for $1\leq i\leq n$ then \cref{lm.Linear Inde
 \begin{equation*}
 0+S=S=\sum_{i=1}^n(a_i+\mathfrak{I})(v_i+S)=\left(\sum_{i=1}^n a_iv_i\right)+S.
 \end{equation*}
-It follows that there exists an $s\in S$ such that $0+s=\sum_{i=1}^n a_iv_i$. Let $s=\sum_{j=1}^m\mathfrak{b}_jx_j$ for $\mathfrak{b}_j\in \mathfrak{I}$ and $x_j\in M$, then there exist $c_{ij}\in R$ for $1\leq i\leq n$ and $1\leq j\leq m$ such that $x_j=\sum_{i=1}^mc_{ij}v_i$. It follows that
+It follows that there exists an $s\in S$ such that $0+s=\sum_{i=1}^n a_iv_i$. Let $s=\sum_{j=1}^m\mathfrak{b}_jx_j$ for $\mathfrak{b}_j\in \mathfrak{I}$ and $x_j\in M$ then there exist $c_{ij}\in R$ for $1\leq i\leq n$ and $1\leq j\leq m$ such that $x_j=\sum_{i=1}^mc_{ij}v_i$. It follows that
 \begin{equation*}
 \sum_{i=1}^n a_iv_i=s=\sum_{j=1}^m\mathfrak{b}_j\sum_{i=1}^mc_{ij}v_i=\sum_{i=1}^n\left(\sum_{j=1}^m\mathfrak{b}_jc_{ij}\right)v_i.
 \end{equation*}
@@ -106,5 +106,5 @@ Now \cref{lm.Linear Independence} implies $a_i=\sum_{j=1}^m\mathfrak{b}_jc_{ij}\
 Let $M$ be a free module over the commutative ring $R\neq\lbrace 0\rbrace$ then every basis of $M$ over $R$ has the same cardinality.
 \end{thm}
 \begin{proof}
-Let $\seq{v}$ and $\seq[m]{w}$ be bases of $M$. Since $R$ is commutative $R$ contains a maximal ideal $\mathfrak{I}$. (see \cite[Thm.III.3.6]{jantzen2005algebra}) Therefore, $\nicefrac{R}{\mathfrak{I}}$ is a field (see \cite[p.93]{lang2002algebra}) and $\nicefrac{M}{S}$ is a vector space, if $S$ denotes the submodule of \cref{lm.Sigma}. \cref{lm.basis of M to Sigma} implies that $v_1+S,\ldots,v_n+S$ as well as $w_1+S,\ldots,w_m+S$ are bases of $\nicefrac{M}{S}$ over $\nicefrac{R}{\mathfrak{I}}$. Since the cardinality of bases of vector spaces is unique it follows $n=m$.
+Let $\seq{v}$ and $\seq[m]{w}$ be bases of $M$. Since $R$ is commutative $R$ contains a maximal ideal $\mathfrak{I}$. (see \cite[Thm.III.3.6]{jantzen2005algebra}) Therefore, $\nicefrac{R}{\mathfrak{I}}$ is a field (see \cite[p.93]{lang2002algebra}) and $\nicefrac{M}{S}$ is a vector space. If $S$ denotes the submodule of \cref{lm.Sigma} then \cref{lm.basis of M to Sigma} implies that $v_1+S,\ldots,v_n+S$ as well as $w_1+S,\ldots,w_m+S$ are bases of $\nicefrac{M}{S}$ over $\nicefrac{R}{\mathfrak{I}}$. Since the cardinality of bases of vector spaces is unique it follows $n=m$.
 \end{proof}
